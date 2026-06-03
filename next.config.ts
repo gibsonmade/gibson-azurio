@@ -2,9 +2,12 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const isExport = process.env.EXPORT === "true";
+const basePath = process.env.BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
   ...(isExport ? { output: "export" } : {}),
+  basePath,
+  ...(isExport ? { trailingSlash: true } : {}),
   images: {
     unoptimized: isExport,
   },
