@@ -10,6 +10,7 @@ import CommonCursorTrailTransparent, {
 } from "@/components/animations/CommonCursorTrailTransparent";
 import HeroGridParallax from "./HeroGridParallax";
 import HeroTypewriterWord from "./HeroTypewriterWord";
+import HeroLiquidMetal from "./HeroLiquidMetal";
 import { siteCopy } from "@/data/siteCopy";
 export default function Hero() {
   const { hero } = siteCopy.home;
@@ -106,8 +107,11 @@ export default function Hero() {
               <div className="mxd-hero-05__top">
                 <div className="mxd-hero-05__headline">
                   <h1 className="loading-split">
-                    <span className="mxd-hero-05__title-main">
-                      {hero.headline}
+                    <span
+                      className="mxd-hero-05__title-main"
+                      style={{ display: "flex", justifyContent: "center" }}
+                    >
+                      <HeroLiquidMetal />
                     </span>
                     <small className="mxd-hero-05__subtitle">
                       <span className="mxd-hero-05__subtitle-part">

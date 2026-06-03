@@ -10,6 +10,7 @@ import type { MenuLinkItem } from "@/types/menu";
 import { insightLinks, worksLinks } from "@/data/menu";
 import { useMxdMenuGsap, useMxdMenuGsapRefs } from "@/hooks/useMxdMenuGsap";
 import TextScramble from "@/components/animations/TextScramble";
+import Logo8bit from "@/components/common/Logo8bit";
 
 function normalizePath(p: string): string {
   if (!p) return "/";
@@ -110,15 +111,7 @@ export default function Nav({
           {/* Menu Logo Start */}
           <div className="mxd-menu__logo">
             <Link href={`/`} className="menu-logo">
-              {/* logo icon */}
-              <svg
-                className="menu-logo__image"
-                xmlns="http://www.w3.org/2000/svg"
-                version="1.1"
-                viewBox="0 0 42.4 36"
-              >
-                <path d="M25.8,13.8h2.8v5.5h-2.8v-5.5ZM13.8,16.6v2.8h2.8v-5.5h-2.8v2.8ZM32.2,0v2.8h-2.8V0h2.8ZM26.7,5.5h2.8v-2.8h-2.8v2.8ZM21.2,5.5h-5.5v2.8h11.1v-2.8h-5.5ZM12.8,2.8v2.8h2.8v-2.8h-2.8ZM10.1,0v2.8h2.8V0h-2.8ZM7.3,5.5v5.5h2.8V2.8h-2.8v2.8ZM4.5,13.8v2.8H0v2.8h2.8v2.8H0v2.8h2.8v11.1h2.8v-8.3h5.5v-2.8h-5.5v-8.3h1.9v-5.5h-2.9v2.8ZM35,5.5v-2.8h-2.8v8.3h2.8v-5.5ZM42.4,19.4v-2.8h-4.7v-5.5h-2.8v5.5h1.9v8.3h-5.5v2.8h5.5v8.3h2.8v-11.1h2.8v-2.8h-2.8v-2.8h2.8Z" />
-              </svg>
+              <Logo8bit className="menu-logo__image" />
               {/* logo text */}
               <div className="menu-logo__text">
                 <span ref={headerSlots[0]}>Gibsooon</span>
@@ -131,7 +124,7 @@ export default function Nav({
             <div ref={g.mediaWrapper} className="menu-media__wrapper">
               <Image
                 alt="Gibsooon menu visual showing a strategic conversation"
-                src="/img-temp/backgrounds/1920x1280_bg01.webp"
+                src="/img-temp/uploads/gibson-nav.jpeg"
                 width={1920}
                 height={1280}
                 priority
@@ -454,6 +447,13 @@ export default function Nav({
               <div className="mxd-menu__shadow" />
               <div className="mxd-menu__data">
                 <div className="menu-data__left">
+                  <Link
+                    href="/project-launch"
+                    style={{ opacity: 0.4, fontSize: "0.7em", marginRight: "1.25rem", letterSpacing: "0.06em" }}
+                    className="menu-data__text"
+                  >
+                    Project Launch
+                  </Link>
                   <p ref={footerSlots[0]} className="menu-data__text">
                     Digital systems{" "}
                     <svg

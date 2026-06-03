@@ -153,6 +153,13 @@ export function initStackCardsEffects(refs: StackCardsRefs): () => void {
     return () => {};
   }
 
+  // Cards 1–3 use `scale: 2 - progress` in their enter triggers (start=2, end=1).
+  // Without an explicit initial set, they sit at scale:1 until the trigger first fires,
+  // then jump to scale:2 — a visible pop. Pre-set them to 2 so the zoom is smooth.
+  refs.cardMedias.forEach((media, index) => {
+    if (index > 0 && media) gsap.set(media, { scale: 2 });
+  });
+
   let baseSize = getBaseSize();
   let lastProgress = 0;
   let introRevealed = false;
@@ -212,7 +219,10 @@ export function initStackCardsEffects(refs: StackCardsRefs): () => void {
       ScrollTrigger.create({
         trigger: card,
         start: "top top",
-        end: isLastCard ? "+=100vh" : "top top",
+        // Non-last cards: end 1px past the last card's top reaching the viewport top.
+        // The tiny offset prevents all three pins from resolving in the same scroll frame
+        // as card 3's pin begins, which caused a one-frame visual artifact.
+        end: isLastCard ? "+=100vh" : "top+=1 top",
         endTrigger: isLastCard ? undefined : cards[cards.length - 1],
         pin: true,
         pinSpacing: isLastCard,
