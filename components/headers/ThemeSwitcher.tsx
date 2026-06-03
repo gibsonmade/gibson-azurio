@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { safeLocalSet } from "@/lib/template/safeStorage";
+import { safeLocalGet, safeLocalSet } from "@/lib/template/safeStorage";
 import TextScramble from "../animations/TextScramble";
 
 const STORAGE_KEY = "template.theme";
@@ -23,6 +23,12 @@ export default function ThemeSwitcher({
   const [theme, setTheme] = useState<Theme>(initialTheme);
 
   useEffect(() => {
+    const saved = safeLocalGet(STORAGE_KEY) as Theme | null;
+    if (saved && saved !== theme) setTheme(saved);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  useEffect(() => {
     applyTheme(theme);
   }, [theme]);
 
@@ -30,7 +36,6 @@ export default function ThemeSwitcher({
     setTheme((t) => {
       const next = t === "dark" ? "light" : "dark";
       safeLocalSet(STORAGE_KEY, next);
-      document.cookie = `${STORAGE_KEY}=${next}; path=/; max-age=31536000; samesite=lax`;
       return next;
     });
   }, []);

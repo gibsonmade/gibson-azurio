@@ -4,7 +4,6 @@ import Header1 from "@/components/headers/Header1";
 import TemplateRuntimeProvider from "@/components/common/TemplateRuntimeProvider";
 import MenuRuntimeShell from "@/components/headers/MenuRuntimeShell";
 import { Metadata } from "next";
-import { cookies } from "next/headers";
 import { siteCopy } from "@/data/siteCopy";
 
 const manrope = Manrope({
@@ -17,21 +16,17 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
-export const dynamic = "force-static";
-
 export const metadata: Metadata = {
   title: siteCopy.seo.title,
   description: siteCopy.seo.description,
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = await cookies();
-  const cookieTheme = cookieStore.get("template.theme")?.value;
-  const initialTheme = cookieTheme === "dark" ? "dark" : "light";
+  const initialTheme = "dark" as const;
 
   return (
     <html
