@@ -10,15 +10,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText.js";
 import { initVelocityMarqueeRows } from "@/lib/template/stackCardsEffects";
+import { siteCopy } from "@/data/siteCopy";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-const INTRO_CARD = {
-  leftTags: ["Strategy", "UX/UI", "AI Systems", "Backend"],
-  rightTags: ["Branding", "Websites", "Enterprise", "Apps"],
-  titleLines: ["Messy ideas", "useful systems"],
-  href: "/about",
-};
+const INTRO_CARD = siteCopy.home.introDivider;
 
 const INTRO_MARQUEE_WORDS = [
   ...INTRO_CARD.leftTags,

@@ -20,9 +20,9 @@ export default function Process() {
                             className="manifest manifest-m mxd-split-lines active-cursor-accent"
                             animation="splitLines"
                           >
-                            I work across the full arc of digital — strategy, design, and build.
+                            How I work: clarify the moment, design the path, then build toward launch.
                             <span>
-                              Whether you need clarity before you design, craft before you launch, or technical execution to ship — I&apos;ve been doing this for 20+ years.
+                              The work starts by making the messy parts explicit, then turning them into decisions, interfaces, and systems people can actually use.
                             </span>
                           </CommonAnimatedText>
                         </Link>
@@ -37,52 +37,52 @@ export default function Process() {
             <div className="mxd-process-points">
               <div className="container-fluid p-0">
                 <div className="row g-0">
-                  {/* UX Strategy */}
+                  {/* Clarify */}
                   <div className="col-12 col-xl-4 mxd-process-points__item mxd-grid-item">
                     <CommonScrollAnimated className="mxd-process-points__divider top anim-uni-clip-in" as="div" animation="clipIn" />
                     <CommonScrollAnimated className="mxd-process-points__title anim-uni-in-up" as="div" animation="inUp">
                       <div className="mxd-process-points__icon"><i className="ph ph-crosshair" /></div>
-                      <p>UX Strategy</p>
+                      <p>Clarify</p>
                     </CommonScrollAnimated>
                     <div className="mxd-process-points__descr">
                       <CommonAnimatedText as="p" className="t-medium mxd-split-lines" animation="splitLines">
-                        Research, discovery, and strategic clarity — aligning what users need with what the business should build.
+                        Name the business moment, the user problem, and the decision points that need to become clear before the team commits.
                       </CommonAnimatedText>
                     </div>
                     <CommonScrollAnimated className="mxd-process-points__time anim-uni-in-up" as="div" animation="inUp">
-                      <span className="tag tag-m meta-time">Home Depot · CarMax · Mini Murals</span>
+                      <span className="tag tag-m meta-time">Discovery · Research · Strategy</span>
                     </CommonScrollAnimated>
                   </div>
-                  {/* Digital Design */}
+                  {/* Design */}
                   <div className="col-12 col-xl-4 mxd-process-points__item mxd-grid-item">
                     <CommonScrollAnimated className="mxd-process-points__divider top anim-uni-clip-in" as="div" animation="clipIn" />
                     <CommonScrollAnimated className="mxd-process-points__title anim-uni-in-up" as="div" animation="inUp">
                       <div className="mxd-process-points__icon"><i className="ph ph-bezier-curve" /></div>
-                      <p>Digital Design</p>
+                      <p>Design</p>
                     </CommonScrollAnimated>
                     <div className="mxd-process-points__descr">
                       <CommonAnimatedText as="p" className="t-medium mxd-split-lines" animation="splitLines">
-                        Brand systems, product interfaces, and visual language that earn trust and guide action — from logo and identity to Figma-built UI.
+                        Shape the experience into brand systems, product flows, content, and visual patterns that earn trust and guide action.
                       </CommonAnimatedText>
                     </div>
                     <CommonScrollAnimated className="mxd-process-points__time anim-uni-in-up" as="div" animation="inUp">
-                      <span className="tag tag-m meta-time">Figma · Motion · Design systems</span>
+                      <span className="tag tag-m meta-time">Figma · Brand systems · Product UX</span>
                     </CommonScrollAnimated>
                   </div>
-                  {/* Technical Expertise */}
+                  {/* Launch */}
                   <div className="col-12 col-xl-4 mxd-process-points__item mxd-grid-item">
                     <CommonScrollAnimated className="mxd-process-points__divider top anim-uni-clip-in" as="div" animation="clipIn" />
                     <CommonScrollAnimated className="mxd-process-points__title anim-uni-in-up" as="div" animation="inUp">
                       <div className="mxd-process-points__icon"><i className="ph ph-codesandbox-logo" /></div>
-                      <p>Technical Expertise</p>
+                      <p>Launch</p>
                     </CommonScrollAnimated>
                     <div className="mxd-process-points__descr">
                       <CommonAnimatedText as="p" className="t-medium mxd-split-lines" animation="splitLines">
-                        Building what&apos;s designed — responsive sites, AI-powered workflows, and scalable applications that actually launch.
+                        Build the useful version, connect the right workflows, and create a launch path the team can maintain and improve.
                       </CommonAnimatedText>
                     </div>
                     <CommonScrollAnimated className="mxd-process-points__time anim-uni-in-up" as="div" animation="inUp">
-                      <span className="tag tag-m meta-time">React · Next.js · AI workflows</span>
+                      <span className="tag tag-m meta-time">Next.js · AI workflows · Iteration</span>
                     </CommonScrollAnimated>
                     <CommonScrollAnimated className="mxd-process-points__divider bottom anim-uni-clip-in" as="div" animation="clipIn" />
                   </div>

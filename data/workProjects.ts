@@ -83,7 +83,7 @@ export const workProjects: WorkProject[] = [
       "The work helped teams shift project experiences from product-by-product browsing toward guided material selection and more consistent reusable patterns across the Home Depot digital ecosystem.",
     reviewStatus:
       "Needs review for team size, publishable visuals, A/B testing details, and any measurable outcomes.",
-    cursorImage: "/img-temp/works/700x700_pr01.webp",
+    cursorImage: "/img-temp/uploads/case-study/homedepot/gibson-decks.jpg",
   },
   {
     slug: "carmax",
@@ -129,7 +129,7 @@ export const workProjects: WorkProject[] = [
       "The work supports a high-traffic funnel receiving over one million monthly visitors and helps customers move from sell intent to an understandable offer and clearer next step.",
     reviewStatus:
       "Needs review for exact title phrasing, top-three product experience claim, one-million-plus visitors phrasing, and specific A/B outcomes.",
-    cursorImage: "/img-temp/works/700x700_pr02.webp",
+    cursorImage: "/img-temp/uploads/case-study/carmax/gibson-cars.jpg",
   },
   {
     slug: "mini-murals",
@@ -175,7 +175,7 @@ export const workProjects: WorkProject[] = [
       "The project made 250+ murals by 40+ artists easier to discover and helped bring public art into Houston neighborhoods, art districts, and areas with limited public art access.",
     reviewStatus:
       "Needs review for exact award phrasing, official nomination wording, CTO title preference, and final visual assets.",
-    cursorImage: "/img-temp/works/700x700_pr03.webp",
+    cursorImage: "/img-temp/uploads/case-study/minimurals/gibson-mural.jpg",
   },
   {
     slug: "chi-st-lukes",
@@ -198,7 +198,7 @@ export const workProjects: WorkProject[] = [
       "CHI St. Luke's",
       "A coming-soon story about simplifying a healthcare web experience for multiple audiences."
     ),
-    cursorImage: "/img-temp/works/showcase-grid-x3/pr04-01.webp",
+    cursorImage: "/img-temp/uploads/case-study/chistlukes/gibson-healthcare.jpg",
   },
   {
     slug: "ritual",
@@ -221,7 +221,7 @@ export const workProjects: WorkProject[] = [
       "Ritual",
       "A coming-soon story about turning a boutique fitness concept into a polished digital presence."
     ),
-    cursorImage: "/img-temp/works/showcase-grid-x3/pr05-01.webp",
+    cursorImage: "/img-temp/uploads/case-study/ritual/gibson-tulum.jpg",
   },
   {
     slug: "staterra",
@@ -266,7 +266,7 @@ export const workProjects: WorkProject[] = [
       "The concept became a more launch-ready brand, public website, inquiry funnel, and private platform foundation, with confidential property data kept out of public-facing materials.",
     reviewStatus:
       "Needs review for exact spelling, category language, public-safe screenshots/mockups, and whether 100+ Houston listings can be published.",
-    cursorImage: "/img-temp/works/700x700_pr01.webp",
+    cursorImage: "/img-temp/uploads/case-study/staterra/gibson-building.jpg",
   },
   {
     slug: "wiab-ai",
@@ -289,7 +289,7 @@ export const workProjects: WorkProject[] = [
       "Wiab AI",
       "A coming-soon story about practical AI workflows, operator control, and usable product experiences."
     ),
-    cursorImage: "/img-temp/works/700x700_pr02.webp",
+    cursorImage: "/img-temp/uploads/case-study/wiab/gibson-robot.jpg",
   },
   {
     slug: "cactus-club",
@@ -312,7 +312,7 @@ export const workProjects: WorkProject[] = [
       "Cactus Club",
       "A coming-soon hospitality concept shaped around quick discovery, confident planning, and a distinctive local voice."
     ),
-    cursorImage: "/img-temp/works/700x700_pr03.webp",
+    cursorImage: "/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg",
   },
   {
     slug: "academy-sports-outdoors",
@@ -335,7 +335,7 @@ export const workProjects: WorkProject[] = [
       "Academy Sports + Outdoors",
       "A coming-soon story about mobile-first omnichannel strategy at retail scale."
     ),
-    cursorImage: "/img-temp/works/showcase-grid-x3/pr04-01.webp",
+    cursorImage: "/img-temp/uploads/case-study/academy/gibson-sports.jpg",
   },
 ];
 

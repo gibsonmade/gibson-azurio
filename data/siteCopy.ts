@@ -19,6 +19,12 @@ export const siteCopy = {
       socialHref: "https://www.instagram.com/",
       scrollLabel: "Scroll to explore",
     },
+    introDivider: {
+      leftTags: ["Strategy", "UX/UI", "AI workflows", "Launch systems"],
+      rightTags: ["Brands", "Websites", "Products", "Working prototypes"],
+      titleLines: ["Messy ideas", "working systems"],
+      href: "/about",
+    },
     about: {
       button: "About me",
       href: "/about",
@@ -97,6 +103,26 @@ export const siteCopy = {
       "Launch execution",
       "Digital products",
     ],
+    stats: [
+      {
+        value: "250+",
+        label: "public artworks made discoverable",
+      },
+      {
+        value: "40+",
+        label: "artists represented",
+      },
+      {
+        value: "1M+",
+        label: "monthly visitors supported in a product funnel",
+      },
+      {
+        value: "10k+",
+        label: "starting point for end-to-end launch engagements",
+      },
+    ],
+    resumeIntro:
+      "The through-line is helping teams move from ambiguity to something usable: a clearer customer journey, a sharper brand, a better product flow, or a launch system that can keep improving.",
     workHistory: [
       {
         years: "2012-2016",
@@ -139,6 +165,32 @@ export const siteCopy = {
       button: "Talk through a project",
       headline: "Tell Gibson what needs to become real.",
     },
+    testimonials: [
+      {
+        name: "Jacob Sullivan",
+        company: "Straterra",
+        context: "Founder-led launch",
+        quoteLead: "I was referred to Gibson for a website",
+        quoteAccent:
+          "and ended up gaining a design and technology partner for several of my other projects.",
+      },
+      {
+        name: "Aaron Peterson",
+        company: "Cactus Club",
+        context: "AI workflow and product iteration",
+        quoteLead: "Gibson helped me automate parts of my business",
+        quoteAccent:
+          "and brought clearer product thinking to an app that needed to keep evolving.",
+      },
+      {
+        name: "Mini Murals",
+        company: "Civic art initiative",
+        context: "Brand, web, and discovery systems",
+        quoteLead: "The work helped turn public art into something people could find",
+        quoteAccent:
+          "with a brand, website, and interactive map that made hundreds of murals easier to explore.",
+      },
+    ],
   },
     contact: {
     metadataTitle: "Contact Gibson Hall | Gibsooon",

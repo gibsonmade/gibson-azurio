@@ -15,7 +15,9 @@ const heroTypewriterWords = [
 
 export default function HeroTypewriterWord() {
   const [wordIndex, setWordIndex] = useState(0);
-  const [visibleChars, setVisibleChars] = useState(0);
+  const [visibleChars, setVisibleChars] = useState(
+    heroTypewriterWords[0].length,
+  );
   const [isDeleting, setIsDeleting] = useState(false);
   const word = heroTypewriterWords[wordIndex];
   const displayWord = word.slice(0, visibleChars);

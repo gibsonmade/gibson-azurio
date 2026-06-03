@@ -65,6 +65,20 @@ export default function InnerHeadline() {
                                   {about.introLead} <span>{about.introAccent}</span>
                                 </CommonAnimatedText>
                               </div>
+                              <CommonLoadItem index={1}>
+                                <div className="about-intro-stats loading-item">
+                                  {about.stats.map((stat) => (
+                                    <div className="about-intro-stats__item" key={stat.value}>
+                                      <span className="about-intro-stats__value">
+                                        {stat.value}
+                                      </span>
+                                      <span className="about-intro-stats__label">
+                                        {stat.label}
+                                      </span>
+                                    </div>
+                                  ))}
+                                </div>
+                              </CommonLoadItem>
                             </div>
                             <div className="col-12 col-xl-3 mxd-grid-item">
                               <div className="inner-headline__tags align-end-desktop tags-large-subtitle">

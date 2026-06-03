@@ -144,7 +144,7 @@ export const resourcePatterns: ResourcePattern[] = [
       "services-card__title",
       "services-card__descr",
     ],
-    source: "components/homes/index-creative-agency/ServicesStack.tsx",
+    source: "components/other-pages/services/ServicesDescriptionStack.tsx",
     referenceRoute: "/",
   },
   {
@@ -153,9 +153,9 @@ export const resourcePatterns: ResourcePattern[] = [
     previewType: "stats",
     tags: ["metrics", "about", "internal"],
     description:
-      "High-contrast numeric proof rows used for experience, selected metrics, and capabilities.",
-    classNames: ["mxd-stats-lines", "mxd-stats-lines__item", "stats-line__number"],
-    source: "components/other-pages/about-me/StatisticsLines.tsx",
+      "Compact numeric proof row merged into the About page intro.",
+    classNames: ["about-intro-stats", "about-intro-stats__item", "about-intro-stats__value"],
+    source: "components/other-pages/about-me/InnerHeadline.tsx",
     referenceRoute: "/about",
   },
   {

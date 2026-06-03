@@ -1,30 +1,21 @@
 "use client";
 
 import BlurSection from "@/components/animations/BlurSection";
-import { initCtaMarqueeToLeft } from "@/lib/template/ctaMarqueeEffects";
 import Link from "next/link";
-import Image from "next/image";
-import { useLayoutEffect, useRef } from "react";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
 import { siteCopy } from "@/data/siteCopy";
 export default function CTAWithMarquee() {
-  const marqueeTrackRef = useRef<HTMLDivElement | null>(null);
   const { cta } = siteCopy.home;
 
-  useLayoutEffect(() => {
-    return initCtaMarqueeToLeft(marqueeTrackRef.current);
-  }, []);
   return (
     <>
       <BlurSection className="mxd-section bg-color-opposite">
         <div className="mxd-container fullwidth-container">
-          {/* Block - CTA with Matter.js Objects Start */}
           <div className="mxd-block">
-            <div className="mxd-promo transparent">
+            <div className="mxd-promo transparent home-simple-cta">
               <div className="mxd-promo__wrap auto-height">
-                {/* content */}
                 <div className="mxd-promo__content">
                   <CommonScrollAnimated
                     className="mxd-promo__btngroup anim-uni-in-up"
@@ -56,262 +47,9 @@ export default function CTAWithMarquee() {
                     </Link>
                   </div>
                 </div>
-                {/* marquee */}
-                <div className="mxd-promo__marquee">
-                  {/* Marquee Divider Start */}
-                  <div className="marquee marquee-left--gsap">
-                    <div
-                      className="marquee__toleft marquee__images"
-                      ref={marqueeTrackRef}
-                    >
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            {cta.tags[0]}
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_01.webp"
-                            width={1200}
-                            height={1200}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            {cta.tags[1]}
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_02.webp"
-                            width={1200}
-                            height={685}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            {cta.tags[2]}
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_03.webp"
-                            width={700}
-                            height={700}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            {cta.tags[3]}
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_04.webp"
-                            width={737}
-                            height={1200}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            {cta.tags[4]}
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_05.webp"
-                            width={800}
-                            height={1200}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            {cta.tags[5]}
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_06.webp"
-                            width={1200}
-                            height={1200}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            {cta.tags[6]}
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_07.webp"
-                            width={1200}
-                            height={900}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            {cta.tags[7]}
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_08.webp"
-                            width={737}
-                            height={1200}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            {cta.tags[8]}
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_09.webp"
-                            width={800}
-                            height={1200}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            {cta.tags[9]}
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_10.webp"
-                            width={1200}
-                            height={873}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Photography
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_01.webp"
-                            width={1200}
-                            height={1200}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            3D Models
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_02.webp"
-                            width={1200}
-                            height={685}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Development
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_03.webp"
-                            width={700}
-                            height={700}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Illustrations
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_04.webp"
-                            width={737}
-                            height={1200}
-                          />
-                        </div>
-                      </div>
-                      {/* single item */}
-                      <div className="marquee__item item-imageblock">
-                        <div className="marquee__tags">
-                          <TextScramble className="tag tag-s tag-medium-opposite mxd-scramble">
-                            Fashion
-                          </TextScramble>
-                        </div>
-                        <div className="marquee__image">
-                          <Image
-                            alt=""
-                            src="/img-temp/cta/mar_05.webp"
-                            width={800}
-                            height={1200}
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  {/* Marquee Divider End */}
-                </div>
               </div>
             </div>
           </div>
-          {/* Block - CTA with Matter.js Objects End */}
         </div>
       </BlurSection>
     </>

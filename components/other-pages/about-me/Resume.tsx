@@ -31,8 +31,7 @@ export default function Resume() {
                         className="manifest manifest-s mxd-split-lines"
                         animation="splitLines"
                       >
-                        {about.introLead}
-                        <span>{about.introAccent}</span>
+                        {about.resumeIntro}
                       </CommonAnimatedText>
                     </div>
                   </div>

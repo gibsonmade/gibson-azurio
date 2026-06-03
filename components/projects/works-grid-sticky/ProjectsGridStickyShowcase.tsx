@@ -8,18 +8,6 @@ import { workProjects } from "@/data/workProjects";
 import Image from "next/image";
 import Link from "next/link";
 
-const CARD_IMAGES = [
-  "/img-temp/works/showcase-sticky/pr01-01.webp",
-  "/img-temp/works/showcase-sticky/pr02-01.webp",
-  "/img-temp/works/showcase-sticky/pr03-01.webp",
-  "/img-temp/works/showcase-grid-x3/pr02-01.webp",
-  "/img-temp/works/showcase-grid-x3/pr05-01.webp",
-  "/img-temp/works/showcase-grid-x3/pr03-01.webp",
-  "/img-temp/works/showcase-grid-x3/pr04-01.webp",
-  "/img-temp/works/700x700_pr03.webp",
-  "/img-temp/works/700x700_pr01.webp",
-] as const;
-
 export default function ProjectsGridStickyShowcase() {
   return (
     <CommonLoadAnimation>
@@ -48,7 +36,7 @@ export default function ProjectsGridStickyShowcase() {
                         >
                           <Image
                             alt={`${project.name} case study preview`}
-                            src={CARD_IMAGES[index] ?? project.cursorImage}
+                            src={project.cursorImage}
                             width={1500}
                             height={1000}
                           />

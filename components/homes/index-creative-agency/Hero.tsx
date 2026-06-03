@@ -1,7 +1,5 @@
-import CommonLoadAnimation, {
-  CommonLoadItem,
-} from "@/components/animations/CommonLoadAnimation";
 import TextScramble from "@/components/animations/TextScramble";
+import { CommonLoadItem } from "@/components/animations/CommonLoadAnimation";
 import SmoothAnchorLink from "@/components/common/SmoothAnchorLink";
 import CommonCursorTrailTransparent, {
   CommonCursorTrailContent,
@@ -10,15 +8,13 @@ import CommonCursorTrailTransparent, {
 } from "@/components/animations/CommonCursorTrailTransparent";
 import HeroGridParallax from "./HeroGridParallax";
 import HeroTypewriterWord from "./HeroTypewriterWord";
-import HeroLiquidMetal from "./HeroLiquidMetal";
 import { siteCopy } from "@/data/siteCopy";
 export default function Hero() {
   const { hero } = siteCopy.home;
 
   return (
-    <CommonLoadAnimation>
-      <>
-        <CommonCursorTrailTransparent
+    <>
+      <CommonCursorTrailTransparent
           as="div"
           className="mxd-section mxd-hero-section no-padding-desktop mxd-hero-special cursor-trail-transparent loading-wrap"
         >
@@ -106,12 +102,12 @@ export default function Hero() {
               {/* top group */}
               <div className="mxd-hero-05__top">
                 <div className="mxd-hero-05__headline">
-                  <h1 className="loading-split">
+                  <h1>
                     <span
                       className="mxd-hero-05__title-main"
                       style={{ display: "flex", justifyContent: "center" }}
                     >
-                      <HeroLiquidMetal />
+                      Gibson Hall
                     </span>
                     <small className="mxd-hero-05__subtitle">
                       <span className="mxd-hero-05__subtitle-part">
@@ -177,6 +173,5 @@ export default function Hero() {
           </div>
         </CommonCursorTrailTransparent>
       </>
-    </CommonLoadAnimation>
   );
 }

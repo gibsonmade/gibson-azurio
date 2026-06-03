@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import Hero from "@/components/homes/index-creative-agency/Hero";
 import ParallaxDividerVideo from "@/components/homes/index-creative-agency/ParallaxDividerVideo";
 import About from "@/components/homes/index-creative-agency/About";
-import ProjectsGrid from "@/components/homes/index-creative-agency/ProjectsGrid";
-import ServicesStack from "@/components/homes/index-creative-agency/ServicesStack";
+import ProjectsMarquee from "@/components/homes/index-creative-agency/ProjectsMarquee";
+import ServicesDescriptionStack from "@/components/other-pages/services/ServicesDescriptionStack";
 import CTAWithMarquee from "@/components/homes/index-creative-agency/CTAWithMarquee";
 import { siteCopy } from "@/data/siteCopy";
 export const metadata: Metadata = {
@@ -18,8 +18,8 @@ export default function IndexCreativeAgencyPage() {
         <Hero />
         <ParallaxDividerVideo />
         <About />
-        <ProjectsGrid />
-        <ServicesStack />
+        <ProjectsMarquee />
+        <ServicesDescriptionStack />
         <CTAWithMarquee />
       </>
       <Footer2 />

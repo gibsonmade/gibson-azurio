@@ -50,7 +50,8 @@ export default function InnerHeadline() {
                                   className="medium loading-split"
                                   animation="splitLinesLoad"
                                 >
-                                  Serious projects <span>for serious moments</span>
+                                  Selected work across retail, automotive, civic art,
+                                  and <span>founder-led launches</span>
                                 </CommonAnimatedText>
                               </div>
                               {/* <div class="inner-headline__subtitle">
