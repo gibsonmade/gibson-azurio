@@ -5,6 +5,11 @@
 @import "../public/css/main.css";
 @import "./menu-open.css";
 
+/* Muted placeholder fill shown while images load or when they fail (e.g. GitHub Pages preview) */
+img {
+  background-color: color-mix(in srgb, var(--t-bright) 7%, var(--base));
+}
+
 /* Prevent rubber-band overscroll and horizontal bleed on mobile */
 html,
 body {
