@@ -17,6 +17,11 @@ const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
 });
 
+// Static export (GitHub Pages) can't read cookies server-side; default to light,
+// ThemeSwitcher restores the saved preference from localStorage on mount.
+export const dynamic =
+  process.env.EXPORT === "true" ? "force-static" : "auto";
+
 export const metadata: Metadata = {
   title: siteCopy.seo.title,
   description: siteCopy.seo.description,
