@@ -400,7 +400,7 @@ export function bindMxdMenuGsap(
   };
 
   const onKeyDown = (e: KeyboardEvent) => {
-    if (e.key === "Escape" && isOpen) closeMenuAnimated();
+    if (e.key === "Escape" && isMenuOpen) closeMenuAnimated();
   };
 
   toggle.addEventListener("click", onToggleClick);

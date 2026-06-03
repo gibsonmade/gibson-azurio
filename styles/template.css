@@ -81,6 +81,10 @@ body {
   color: var(--t-bright);
   fill: currentColor;
 }
+.mxd-menu__contain {
+  mix-blend-mode: normal;
+}
+
 .mxd-menu__caption p {
   color: var(--t-medium);
   letter-spacing: 0;
