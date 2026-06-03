@@ -80,8 +80,10 @@ export default function ParallaxDividerVideo() {
     updateClip(0);
     gsap.set(image, { scale: 0.9 });
     gsap.set(cover, { opacity: 0 });
-    gsap.set(titleLines, { y: "100%" });
-    if (description) gsap.set(description, { y: "40px", opacity: 0 });
+    gsap.set(introMarquee, { opacity: 0.05 });
+    // Title starts visible — no initial hide
+    gsap.set(titleLines, { y: "0%" });
+    if (description) gsap.set(description, { y: 0, opacity: 1 });
 
     const showContent = () => {
       gsap.to(titleLines, {
@@ -102,7 +104,7 @@ export default function ParallaxDividerVideo() {
     };
 
     const hideContent = () => {
-      gsap.to(titleLines, { y: "100%", duration: 0.5, ease: "common" });
+      // Title stays visible on scroll back — only description hides
       if (description) {
         gsap.to(description, {
           y: "40px",
@@ -127,18 +129,18 @@ export default function ParallaxDividerVideo() {
 
         if (coverOpacity >= 0.4 && coverOpacity <= 0.75) {
           const fadeProgress = (coverOpacity - 0.4) / (0.75 - 0.4);
-          gsap.set(introMarquee, { opacity: 1 - fadeProgress });
+          gsap.set(introMarquee, { opacity: 0.05 * (1 - fadeProgress) });
         } else if (coverOpacity < 0.4) {
-          gsap.set(introMarquee, { opacity: 1 });
+          gsap.set(introMarquee, { opacity: 0.05 });
         } else {
           gsap.set(introMarquee, { opacity: 0 });
         }
 
-        if (self.progress >= 0.82 && !contentVisible) {
+        if (self.progress >= 0.25 && !contentVisible) {
           contentVisible = true;
           showContent();
         }
-        if (self.progress < 0.82 && contentVisible) {
+        if (self.progress < 0.25 && contentVisible) {
           contentVisible = false;
           hideContent();
         }
