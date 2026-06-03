@@ -5,11 +5,6 @@
 @import "../public/css/main.css";
 @import "./menu-open.css";
 
-/* Muted placeholder fill shown while images load or when they fail (e.g. GitHub Pages preview) */
-img {
-  background-color: color-mix(in srgb, var(--t-bright) 7%, var(--base));
-}
-
 /* Prevent rubber-band overscroll and horizontal bleed on mobile */
 html,
 body {
@@ -1254,6 +1249,62 @@ body {
   .resource-icon-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}
+
+/* ---- Work + Contact page: reduce excessive inner-headline top padding ---- */
+.inner-headline__content.has-medium-title {
+  padding-top: 8rem;
+}
+@media only screen and (min-width: 768px) {
+  .inner-headline__content.has-medium-title {
+    padding-top: 9rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .inner-headline__content.has-medium-title {
+    padding-top: 8rem;
+  }
+}
+
+/* ---- Light mode: work page / lab page permanent header (logo, nav, switcher forced white) ---- */
+[color-scheme="light"] .mxd-header-permanent .mxd-logo,
+[color-scheme="light"] .mxd-header-permanent .mxd-logo__text,
+[color-scheme="light"] .mxd-header-permanent .mxd-header__link,
+[color-scheme="light"] .mxd-header-permanent .mxd-color-switcher {
+  color: var(--t-bright);
+}
+
+/* ---- Light mode: hamburger lines (closed state always uses nl-white in main.css) ---- */
+[color-scheme="light"] .hamburger__line {
+  background-color: var(--t-bright);
+}
+
+/* ---- Nav data bar: Gibsooon link + hover ---- */
+.menu-data__text a {
+  color: var(--t-bright);
+}
+.no-touch .menu-data__text a:hover {
+  color: var(--accent);
+}
+.menu-data__text svg {
+  fill: var(--t-muted);
+}
+
+/* ---- Light mode: "Available for freelance" badge (hardcoded white in main.css) ---- */
+[color-scheme="light"] .mxd-hero__mark.permanent {
+  color: var(--t-bright);
+}
+
+/* ---- Nav X close button: spin + color on hover when active ---- */
+.mxd-menu__hamburger.active .hamburger__line {
+  transition: background-color 0.2s ease, transform 0.3s ease;
+}
+.no-touch .mxd-menu__hamburger.active:hover .hamburger__line {
+  background-color: var(--accent);
+}
+.no-touch .mxd-menu__hamburger.active:hover {
+  transform: rotate(90deg);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 @media (max-width: 767px) {

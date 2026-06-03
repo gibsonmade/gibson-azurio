@@ -399,14 +399,20 @@ export function bindMxdMenuGsap(
     closeMenuAnimated();
   };
 
+  const onKeyDown = (e: KeyboardEvent) => {
+    if (e.key === "Escape" && isOpen) closeMenuAnimated();
+  };
+
   toggle.addEventListener("click", onToggleClick);
   nav.addEventListener("click", onAccordionClick, true);
   nav.addEventListener("click", onNavLinkClick);
+  window.addEventListener("keydown", onKeyDown);
 
   const dispose = () => {
     toggle.removeEventListener("click", onToggleClick);
     nav.removeEventListener("click", onAccordionClick, true);
     nav.removeEventListener("click", onNavLinkClick);
+    window.removeEventListener("keydown", onKeyDown);
     killTimeline();
     resetSubmenus(menuRows);
     [

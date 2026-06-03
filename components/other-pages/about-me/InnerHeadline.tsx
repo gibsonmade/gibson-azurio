@@ -28,7 +28,7 @@ export default function InnerHeadline() {
                         <div className="inner-headline__breadcrumbs loading-fade">
                           <div className="breadcrumbs__nav">
                             <span>
-                              <Link href={`/index-personal-portfolio`}>
+                              <Link href={`/`}>
                                 <TextScramble className="mxd-scramble">
                                   Home
                                 </TextScramble>

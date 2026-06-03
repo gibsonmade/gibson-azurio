@@ -9,7 +9,7 @@ import CommonServicesStack, {
 
 const IMG_W = 1200;
 const IMG_H = 1300;
-const IMG_ALT = "Gibsooon Sample Image";
+const IMG_ALT = "Gibson Hall work sample";
 
 type Card = {
   subtitle: string;
@@ -23,79 +23,55 @@ type Card = {
 const CARDS: Card[] = [
   {
     subtitle: "01 / Services",
-    title: "Innovative design",
+    title: "UX Strategy",
     tagCols: [
-      ["UI/UX", "Web design", "Applications", "Print design"],
-      ["Packaging", "Motion", "3D models"],
+      ["Discovery", "User research", "Journey mapping", "Product strategy"],
+      ["Offer design", "Roadmaps", "Workshops", "Positioning"],
     ],
     image: "/img-temp/services/services-stack/s01.webp",
     descrClass: "t-large t-bold services-card__descr",
     descr: (
       <>
-        We create visually compelling designs that enhance user experience.
+        Clarity before craft.
         <span>
-          From UI/UX design to stunning websites, mobile apps, and print
-          materials, we make sure your brand&apos;s visuals resonate with your
-          audience.
+          I help teams get aligned on what to build and why — through research,
+          facilitation, and systems thinking.
         </span>
       </>
     ),
   },
   {
     subtitle: "02 / Services",
-    title: "Creative development",
+    title: "Digital Design",
     tagCols: [
-      ["Frontend", "Interactions", "Backend", "E-Commerce"],
-      ["Mobile Apps", "Maintenance", "Support"],
+      ["Brand systems", "Logo design", "Websites", "Product UX"],
+      ["Figma", "Design systems", "Motion", "Visual identity"],
     ],
     image: "/img-temp/services/services-stack/s02.webp",
     descrClass: "t-bold t-large services-card__descr",
     descr: (
       <>
-        We build high-performance websites and applications using modern
-        technologies.
+        Design that earns trust and guides action.
         <span>
-          Our solutions are designed to be scalable and functional for optimal
-          performance.
+          From brand identity to product interfaces, every pixel has a purpose.
         </span>
       </>
     ),
   },
   {
     subtitle: "03 / Services",
-    title: "Brand Identity",
+    title: "Technical Expertise",
     tagCols: [
-      ["Brand strategy", "Logo design", "Guidelines"],
-      ["Visual identity", "Rebranding"],
+      ["Next.js", "React", "CMS", "WordPress"],
+      ["AI workflows", "Automation", "iOS Apps", "Launch support"],
     ],
     image: "/img-temp/services/services-stack/s03.webp",
     descrClass: "t-bold t-large services-card__descr",
     descr: (
       <>
-        From logo design to comprehensive brand strategies, we ensure your
-        business stands out with a{" "}
+        Full-stack execution — from concept to deployed product.
         <span>
-          unique visual identity and consistent messaging across all
-          touchpoints.
-        </span>
-      </>
-    ),
-  },
-  {
-    subtitle: "04 / Services",
-    title: "Marketing solutions",
-    tagCols: [
-      ["Strategy", "Social media", "SEO Optimization"],
-      ["Email", "Campaigns"],
-    ],
-    image: "/img-temp/services/services-stack/s04.webp",
-    descrClass: "t-bold t-large services-card__descr",
-    descr: (
-      <>
-        We develop and execute tailored digital marketing strategies.
-        <span>
-          SEO and content marketing, social media management and paid campaigns
-          - we help you reach and engage your target audience effectively.
+          Building responsive sites, AI-powered systems, and everything in between.
         </span>
       </>
     ),

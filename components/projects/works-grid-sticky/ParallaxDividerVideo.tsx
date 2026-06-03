@@ -1,5 +1,4 @@
 import UkiyoParallax from "@/components/animations/UkiyoParallax";
-import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
 import BlurSection from "@/components/animations/BlurSection";
 
 export default function ParallaxDividerVideo() {
@@ -21,18 +20,12 @@ export default function ParallaxDividerVideo() {
                   height: "100%",
                 }}
               >
-                <AutoplayLoopVideo
-                  poster="video/1280x720_stone-geometry-banner.webp"
-                  sources={[
-                    {
-                      type: "video/mp4",
-                      src: "video/1280x720_stone-geometry.mp4",
-                    },
-                    {
-                      type: "video/webm",
-                      src: "video/1280x720_stone-geometry.webm",
-                    },
-                  ]}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/video/1280x720_stone-geometry-banner.webp"
+                  alt=""
+                  aria-hidden="true"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               </UkiyoParallax>
             </div>

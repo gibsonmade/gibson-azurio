@@ -454,26 +454,34 @@ export default function Nav({
                   >
                     Project Launch
                   </Link>
-                  <p ref={footerSlots[0]} className="menu-data__text">
-                    Digital systems{" "}
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      version="1.1"
-                      viewBox="0 0 18 18"
-                    >
-                      <path d="M2.6,6.4v2.6H0V3.9h2.6v2.6ZM15.4,3.9v5.1h2.6V3.9h-2.6ZM12.9,11.6h2.6v-2.6h-2.6v2.6ZM2.6,9v2.6h2.6v-2.6h-2.6ZM10.3,14.1h2.6v-2.6h-2.6v2.6ZM5.1,11.6v2.6h2.6v-2.6h-2.6ZM7.7,3.9V1.3H2.6v2.6h5.1ZM15.4,3.9V1.3h-5.1v2.6h5.1ZM10.3,6.4v-2.6h-2.6v2.6h2.6ZM7.7,16.7h2.6v-2.6h-2.6v2.6Z" />
-                    </svg>{" "}
-                    {/* <i class="ph-fill ph-heart t-additional"></i> */}
-                    by{" "}
-                    <a
-                      ref={footerSlots[1]}
-                      href="/"
-                    >
-                      <TextScramble className="mxd-scramble">
-                        Gibsooon
-                      </TextScramble>
-                    </a>
-                  </p>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
+                    <p ref={footerSlots[0]} className="menu-data__text" style={{ display: "flex", alignItems: "center", gap: "0.7rem" }}>
+                      {/* 8-bit unicorn icon */}
+                      <svg width="16" height="14" viewBox="0 0 18 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="5" y="0" width="2" height="1"/>
+                        <rect x="4" y="1" width="3" height="1"/>
+                        <rect x="3" y="2" width="5" height="1"/>
+                        <rect x="2" y="3" width="14" height="1"/>
+                        <rect x="1" y="4" width="16" height="1"/>
+                        <rect x="0" y="5" width="18" height="1"/>
+                        <rect x="0" y="6" width="18" height="1"/>
+                        <rect x="1" y="7" width="16" height="1"/>
+                        <rect x="2" y="8" width="13" height="1"/>
+                        <rect x="3" y="9" width="11" height="1"/>
+                        <rect x="4" y="10" width="9" height="1"/>
+                        <rect x="5" y="11" width="7" height="1"/>
+                        <rect x="6" y="12" width="5" height="1"/>
+                        <rect x="7" y="13" width="3" height="1"/>
+                      </svg>
+                      Design Systems &amp; Useful Digital Tools
+                    </p>
+                    <p className="menu-data__text" style={{ opacity: 0.45, fontSize: "0.82em" }}>
+                      Strategy, craft, and code — rare in one place.{" "}
+                      <a ref={footerSlots[1]} href="/">
+                        <TextScramble className="mxd-scramble">Gibsooon</TextScramble>
+                      </a>
+                    </p>
+                  </div>
                 </div>
                 <div className="menu-data__right">
                   <p ref={footerSlots[2]} className="menu-data__text">
