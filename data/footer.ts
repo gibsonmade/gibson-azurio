@@ -1,0 +1,147 @@
+import type { MenuLinkItem } from "@/types/menu";
+export type Footer1NavBlock = {
+  title: string;
+  links: MenuLinkItem[];
+};
+
+export type Footer1NavColumn = {
+  className: string;
+  blocks: Footer1NavBlock[];
+};
+
+export const footer1NavColumns: Footer1NavColumn[] = [
+  {
+    className: "col-12 col-md-4 mxd-grid-item",
+    blocks: [
+      {
+        title: "/ Pages",
+        links: [
+          { href: "/", label: "Home" },
+          { href: "/work", label: "Work" },
+          { href: "/about", label: "About" },
+          { href: "/lab", label: "Lab" },
+          { href: "/lab/patterns", label: "Patterns" },
+          { href: "/lab/images", label: "Images" },
+          { href: "/lab/icons", label: "Icons" },
+          { href: "/contact", label: "Contact" },
+        ],
+      },
+    ],
+  },
+  {
+    className: "col-12 col-md-4 mxd-grid-item",
+    blocks: [
+      {
+        title: "/ Case studies",
+        links: [
+          { href: "/work/the-home-depot", label: "The Home Depot" },
+          { href: "/work/carmax", label: "CarMax" },
+          { href: "/work/mini-murals", label: "Mini Murals" },
+          { href: "/work/staterra", label: "Straterra" },
+        ],
+      },
+      {
+        title: "/ Coming soon",
+        links: [
+          { href: "/work/academy-sports-outdoors", label: "Academy Sports + Outdoors" },
+          { href: "/work/chi-st-lukes", label: "CHI St. Luke's" },
+          { href: "/work/ritual", label: "Ritual" },
+          { href: "/work/wiab-ai", label: "Wiab AI" },
+          { href: "/work/cactus-club", label: "Cactus Club" },
+        ],
+      },
+    ],
+  },
+  {
+    className: "col-12 col-md-4 mxd-grid-item",
+    blocks: [
+      {
+        title: "/ Focus",
+        links: [
+          { href: "/work", label: "Product strategy" },
+          { href: "/work", label: "UX leadership" },
+          { href: "/work", label: "Brand systems" },
+          { href: "/work", label: "AI workflows" },
+          { href: "/contact", label: "Launch support" },
+        ],
+      },
+    ],
+  },
+];
+
+export type Footer1PromoItem = {
+  href: string;
+  iconSrc: string;
+  iconAlt: string;
+  iconWidth: number;
+  iconHeight: number;
+  /** Text before the highlighted span */
+  textLead: string;
+  /** Second line inside `<span>` */
+  textSpan: string;
+};
+
+export const footer1PromoItems: Footer1PromoItem[] = [
+  {
+    href: "/work/the-home-depot",
+    iconSrc: "/img-temp/demo/logo-rayo.svg",
+    iconAlt: "The Home Depot case study icon",
+    iconWidth: 56,
+    iconHeight: 56,
+    textLead: "Enterprise retail and project-shopping ",
+    textSpan: "UX systems",
+  },
+  {
+    href: "/work/carmax",
+    iconSrc: "/img-temp/demo/logo-blayden.svg",
+    iconAlt: "CarMax case study icon",
+    iconWidth: 56,
+    iconHeight: 56,
+    textLead: "High-traffic automotive retail ",
+    textSpan: "product design",
+  },
+  {
+    href: "/work/mini-murals",
+    iconSrc: "/img-temp/demo/logo-braxton.svg",
+    iconAlt: "Mini Murals case study icon",
+    iconWidth: 56,
+    iconHeight: 56,
+    textLead: "Civic art discovery and maps ",
+    textSpan: "digital platform",
+  },
+];
+
+export type Footer1BackgroundImage = {
+  wrapperClass: string;
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
+export const footer1BackgroundImages: Footer1BackgroundImage[] = [
+  {
+    wrapperClass: "footer-background__img1",
+    src: "/img-temp/demo/clouds-01.webp",
+    width: 1400,
+    height: 469,
+    alt: "Gibsooon Footer Background Image",
+  },
+  {
+    wrapperClass: "footer-background__img2",
+    src: "/img-temp/demo/clouds-02.webp",
+    width: 1200,
+    height: 401,
+    alt: "Gibsooon Footer Background Image",
+  },
+];
+
+export const footer1ForegroundImages: Footer1BackgroundImage[] = [
+  {
+    wrapperClass: "footer-foreground__img1",
+    src: "/img-temp/demo/clouds-03.webp",
+    width: 1200,
+    height: 374,
+    alt: "Gibsooon Footer Foreground Image",
+  },
+];

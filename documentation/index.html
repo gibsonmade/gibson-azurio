@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-select.min.css" />
+  <!-- icon css-->
+  <link rel="stylesheet" href="assets/elagent-icon/style.css" />
+  <link rel="stylesheet" href="assets/font-awesome/css/all.css" />
+  <link rel="stylesheet" href="assets/niceselectpicker/nice-select.css" />
+  <link rel="stylesheet" href="assets/font-size/css/rvfs.css" />
+  <link rel="stylesheet" href="assets/animation/animate.css" />
+  <link rel="stylesheet" href="assets/video/video-js.css" />
+  <link rel="stylesheet" href="assets/tooltipster/css/tooltipster.bundle.css" />
+  <link rel="stylesheet" href="assets/prism/prism.css" />
+  <link rel="stylesheet" href="assets/prism/prism-coy.css" />
+  <link rel="stylesheet" href="assets/magnify-pop/magnific-popup.css" />
+  <link rel="stylesheet" href="assets/mcustomscrollbar/jquery.mCustomScrollbar.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <title>Gibsooon Next.js Project Documentation</title>
+</head>
+
+<body class="doc full-width-doc sticky-nav-doc onepage-doc" data-spy="scroll" data-target=".navbar" data-offset="0">
+  <div class="body_wrapper sticky_menu">
+    <nav class="navbar navbar-expand-lg menu_one menu_logo_change">
+      <div class="container-fluid pl-60 pr-60">
+        <a class="navbar-brand" href="index.html">
+          <img class="logo" src="img/logo.png" alt="logo" />
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+          data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="menu_toggle">
+            <span class="hamburger">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="hamburger-cross">
+              <span></span>
+              <span></span>
+            </span>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="ml-auto navbar-nav menu">
+            <li class="nav-item">
+              <a href="https://themeforest.net/item/Gibsooon-digital-agency-personal-portfolio-nextjs-template/63087539"
+                target="_blank" class="nav-link dropdown-toggle">Awesome templates</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://themeforest.net/item/Gibsooon-digital-agency-personal-portfolio-nextjs-template/63087539"
+                target="_blank" class="nav-link dropdown-toggle">Purchase</a>
+            </li>
+            <li class="nav-item">
+              <a href="https://themeforest.net/item/Gibsooon-digital-agency-personal-portfolio-nextjs-template/63087539"
+                target="_blank" class="action_btn btn_small_two">Buy More Template <i class="arrow_right"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="doc_documentation_area onepage_doc_area" id="sticky_doc">
+      <div class="overlay_bg"></div>
+      <div class="container-fluid pl-60 pr-60">
+        <div class="row doc-container">
+          <div class="col-lg-2 doc_mobile_menu doc-sidebar display_none">
+            <!-- Start Asid area  -->
+            <aside class="doc_left_sidebarlist">
+              <h3 class="nav_title">Doc NAVIGATION</h3>
+              <div class="scroll">
+                <ul class="list-unstyled nav-sidebar doc-nav">
+                  <li class="nav-item">
+                    <a href="#getting_started" class="nav-link"><img src="img/onepage-icon/smiles-icon.png"
+                        alt="" />Getting Started</a>
+                    <ul class="list-unstyled dropdown_nav">
+                      <li class="nav-item">
+                        <a href="#requirements" class="nav-link">Requirements</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#whats_included" class="nav-link">What's Included</a>
+                      </li>
+                    </ul>
+                    <span class="icon">
+                      <i class="icon_plus"></i>
+                      <i class="icon_minus-06"></i>
+                    </span>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#React_installation" class="nav-link"><img src="img/nextjs.png" alt="Frisk" />Next.js
+                      Installation</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#basic_site_setting" class="nav-link"><img src="img/side-nav/rc12.png" alt="Frisk" />Basic
+                      Site Setting</a>
+                    <ul class="list-unstyled dropdown_nav">
+                      <li class="nav-item">
+                        <a href="#change_site_title_and_favicon" class="nav-link">Change Site Title and Favicon</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#change_logo" class="nav-link">Change Logo</a>
+                      </li>
+                    </ul>
+                    <span class="icon">
+                      <i class="icon_plus"></i>
+                      <i class="icon_minus-06"></i>
+                    </span>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#template_options" class="nav-link"><img src="img/side-nav/gear.png" alt="Frisk" />Template
+                      Options</a>
+                    <ul class="list-unstyled dropdown_nav">
+                      <li class="nav-item">
+                        <a href="#header" class="nav-link">Header</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#hero" class="nav-link">Hero Section</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#homepages" class="nav-link">Homepages</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a href="#service" class="nav-link">Service</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#projects" class="nav-link">Portfolio</a>
+                      </li>
+
+                      <li class="nav-item">
+                        <a href="#blog" class="nav-link">Blog</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#contact" class="nav-link"> Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#copy-right" class="nav-link">Footer</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#all-data" class="nav-link">All Data</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#error" class="nav-link">404</a>
+                      </li>
+                    </ul>
+                    <span class="icon">
+                      <i class="icon_plus"></i>
+                      <i class="icon_minus-06"></i>
+                    </span>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="#change-log" class="nav-link"><img src="img/side-nav/document2.png" alt="Frisk" />Change
+                      Log</a>
+                  </li>
+                </ul>
+              </div>
+            </aside>
+            <!-- End Asid area  -->
+          </div>
+          <div class="col-lg-8 col-md-8">
+            <div class="documentation_info" id="post">
+              <article class="pt-0 documentation_body doc-section" id="getting_started">
+                <div class="shortcode_title">
+                  <h1>Getting Started</h1>
+                  <p>
+                    Welcome to
+                    <strong>Gibsooon Next.js Project Documentation</strong>.
+                    This guide is tailored to your current project:
+                    <strong>Gibsooon-nextjs</strong>.
+                  </p>
+                  <p>
+                    Built with modern technologies
+                    <strong>Next.js + TypeScript + CSS</strong>, this
+                    high-quality and well-organized template is designed for
+                    AI, technology, SaaS, and digital agency websites. It
+                    includes a wide range of custom sections, multiple home
+                    pages, inner pages, and extensive design flexibility.
+                  </p>
+                  <p>
+                    This is a complete and highly customizable Next.js
+                    template to help you build professional website layouts
+                    quickly and efficiently.
+                  </p>
+                </div>
+                <div class="shortcode_title" id="requirements">
+                  <h2>Requirements</h2>
+                  <p>
+                    Before installing the template, make sure your environment
+                    is ready. You should have <strong>Node.js</strong> and
+                    <strong>Yarn</strong> installed on your computer.
+                  </p>
+                </div>
+                <h3 class="c_head load-order-2" id="php-configuration-limits">
+                  Recommended Node.js and Yarn versions
+                </h3>
+                <img class="w-100 img-thumbnail" src="img/educrat/installation/1.png" alt="installation" />
+                <br />
+                <br />
+                <img class="w-100 img-thumbnail" src="img/educrat/installation/2.png" alt="installation" />
+                <br />
+                <br />
+                <h4 class="c_head load-order-2" id="php-configuration-limits">
+                  Install Yarn
+                </h4>
+                <img class="w-100 img-thumbnail" src="img/educrat/installation/3.png" alt="installation" />
+                <br />
+                <br />
+
+                <div class="shortcode_title" id="whats_included">
+                  <h2>What's Included</h2>
+                  <p>
+                    This documentation was originally packaged with the
+                    template. For your current setup, use the files in
+                    <strong>Gibsooon-nextjs</strong> directly. The project root
+                    includes all Next.js source code, assets, and
+                    configuration files used in this guide.
+                  </p>
+                  <img class="w-100 img-thumbnail" src="img/Gibsooon/file.png" alt="whats-included" />
+                </div>
+
+                <h3 class="c_head load-order-2" id="template-package">
+                  After purchasing the template from ThemeForest, you will
+                  receive the following items:
+                </h3>
+                <div class="steps-panel">
+                  <ul class="ordered-list">
+                    <li>
+                      <strong>Gibsooon-nextjs</strong> - Your active Next.js
+                      project source code
+                    </li>
+                    <li>
+                      <strong>License</strong> - This folder contains the
+                      terms and conditions of the license.
+                    </li>
+                    <li>
+                      <strong>Documentation</strong> - This folder contains
+                      the documentation you are reading now.
+                    </li>
+                  </ul>
+                </div>
+              </article>
+              <article class="documentation_body doc-section" id="React_installation">
+                <div class="shortcode_title">
+                  <h2>Next.js Installation</h2>
+                  <p>
+                    Follow the steps below to run the project locally and
+                    prepare it for deployment:
+                  </p>
+                </div>
+                <div class="steps-panel">
+                  <ol class="ordered-list">
+                    <li>
+                      <strong>Run on localhost</strong> -
+                      <ol class="ordered-list">
+                        <li>Open your terminal or command prompt</li>
+                        <li>Run <code>yarn install</code></li>
+                        <li>
+                          Run <code>yarn dev</code> (starts the development
+                          server at http://localhost:3000)
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      <strong>Deploying to Netlify</strong> -
+                      <a href="https://www.youtube.com/watch?v=Bj_r9AJpv0I&pp=ygUVbmV4dGpzIGRlcGxveSBuZXRsaWZ5"
+                        data-ytdl-video-id="TbQ4kWX29lQ">https://www.youtube.com/watch?v=Bj_r9AJpv0I&pp=ygUVbmV4dGpzIGRlcGxveSBuZXRsaWZ5</a><span
+                        title="Download using YouTube Downloader by Addoncrop" class="ytdl-handle-btn"></span>
+                    </li>
+                  </ol>
+                  <br />
+                  <br />
+
+                  <ol class="ordered-list">
+                    <li>
+                      <strong>Create and run a production build locally</strong>
+                      -
+                      <ol class="ordered-list">
+                        <li>Open your terminal or command prompt</li>
+                        <li>
+                          Run <code>yarn build</code> (creates an optimized
+                          production build)
+                        </li>
+                        <li>
+                          Run <code>yarn start</code> (starts the production
+                          server at <strong>http://localhost:3000</strong>)
+                        </li>
+                      </ol>
+                    </li>
+                    <li>
+                      <strong>Deploying to Vercel</strong> -
+                      <a href="https://youtu.be/AiiGjB2AxqA"
+                        data-ytdl-video-id="AiiGjB2AxqA">https://youtu.be/AiiGjB2AxqA</a><span
+                        title="Download using YouTube Downloader by Addoncrop" class="ytdl-handle-btn"></span>
+                    </li>
+                  </ol>
+                  <br />
+                  <br />
+                  <h5 class="ml-20">Other Scripts</h5>
+                  <ol class="ordered-list">
+                    <li>Open your terminal or command prompt</li>
+                    <li>
+                      Run <code>yarn format</code> to format the project with
+                      Prettier
+                    </li>
+                    <li>
+                      Run <code>yarn lint</code> to check ESLint rules, or
+                      <code>yarn lint:fix</code> to apply auto-fixable ESLint
+                      issues
+                    </li>
+                  </ol>
+                </div>
+              </article>
+              <article class="documentation_body doc-section" id="basic_site_setting">
+                <div class="shortcode_title" id="change_site_title_and_favicon">
+                  <h2 class="load-order-2">Change Site Title and Favicon</h2>
+                  <p>
+                    To update the site title and favicon, open the
+                    <strong>Gibsooon-nextjs</strong> project in your editor and
+                    follow the screenshots below.
+                  </p>
+
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/fav.png"
+                      alt="Change favicon in app/layout.tsx and public/favicon.ico" />
+                    <figcaption class="text-center">
+                      Follow this screenshot to update the favicon image.
+                    </figcaption>
+                  </figure>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/meta.png"
+                      alt="Change metadata title & description" />
+                    <figcaption class="text-center">
+                      Follow this screenshot to update the page title.
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="shortcode_title" id="change_logo">
+                  <h2 class="load-order-2">Change Logo</h2>
+                  <p>To change the site logo, follow the steps below.</p>
+                  <div class="steps-panel">
+                    <ol class="ordered-list">
+                      <li>
+                        In your project, go to:
+                        <span class="direction_steps">
+                          <span class="direction_step">components</span>
+                          <span class="direction_step">headers</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/logo.png" alt="Update header logo component" />
+                    <figcaption class="text-center">
+                      Follow this screenshot to update the logo.
+                    </figcaption>
+                  </figure>
+                </div>
+              </article>
+
+              <article class="documentation_body doc-section" id="template_options">
+                <div class="shortcode_title" id="header">
+                  <h2 class="load-order-2" id="header_title">Header</h2>
+                  <p>
+                    To update the header menu content, follow this screenshot.
+                  </p>
+                  <div class="steps-panel">
+                    <ol class="ordered-list">
+                      <li>
+                        In your project, go to:
+                        <span class="direction_steps">
+                          <span class="direction_step">components</span>
+                          <span class="direction_step">headers</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/header.png"
+                      alt="Header structure in components/headers" />
+                    <figcaption class="text-center">
+                      Update the header menu content.
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="shortcode_title" id="hero">
+                  <h2 class="load-order-2" id="hero_title">Hero Section</h2>
+                  <p>
+                    To update the Hero section content, follow this
+                    screenshot.
+                  </p>
+                  <div class="steps-panel">
+                    <ol class="ordered-list">
+                      <li>
+                        In your project, go to:
+                        <span class="direction_steps">
+                          <span class="direction_step">components</span>
+                          <span class="direction_step">homes &gt; home-*/Hero*.tsx</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/hero.png" alt="Hero section component example" />
+                    <figcaption class="text-center">
+                      Update the Hero section content.
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="shortcode_title" id="homepages">
+                  <h2 class="load-order-2" id="homepages_title">
+                    Home Page Structure
+                  </h2>
+                  <p>
+                    To update home page content and structure, follow this
+                    screenshot.
+                  </p>
+                  <div class="steps-panel">
+                    <ol class="ordered-list">
+                      <li>
+                        In your project, go to:
+                        <span class="direction_steps">
+                          <span class="direction_step">app</span>
+                          <span class="direction_step">(homes)</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/homes.png" alt="Home pages under app/(homes)" />
+                    <figcaption class="text-center">
+                      Follow this screenshot to update home page content.
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="shortcode_title" id="service">
+                  <h2 class="load-order-2" id="homepages_title">
+                    Service Page Structure
+                  </h2>
+                  <p>
+                    To update service page content and structure, follow this
+                    screenshot.
+                  </p>
+                  <div class="steps-panel">
+                    <ol class="ordered-list">
+                      <li>
+                        In your project, go to:
+                        <span class="direction_steps">
+                          <span class="direction_step">app</span>
+                          <span class="direction_step">(other-pages) &gt; services &gt; page.tsx</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/services.png"
+                      alt="Services page under app/(other-pages)/services" />
+                    <figcaption class="text-center">
+                      Follow this screenshot to update the service page
+                      content.
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="shortcode_title" id="blog">
+                  <h2 class="load-order-2" id="blog_archive_title">Blog</h2>
+                  <p>
+                    To update blog pages and their folder structure, follow
+                    this screenshot.
+                  </p>
+                  <div class="steps-panel">
+                    <ol class="ordered-list">
+                      <li>
+                        In your project, go to:
+                        <span class="direction_steps">
+                          <span class="direction_step">app</span>
+                          <span class="direction_step">(blogs)</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/blogs.png" alt="Blog pages under app/(blogs)" />
+                    <figcaption class="text-center">
+                      Follow this screenshot to update blog content.
+                    </figcaption>
+                  </figure>
+                </div>
+                <div class="shortcode_title" id="projects">
+                  <h2 class="load-order-2" id="blog_archive_title">
+                    Portfolio
+                  </h2>
+                  <p>
+                    To update portfolio pages and their folder structure,
+                    follow this screenshot.
+                  </p>
+                  <div class="steps-panel">
+                    <ol class="ordered-list">
+                      <li>
+                        In your project, go to:
+                        <span class="direction_steps">
+                          <span class="direction_step">app</span>
+                          <span class="direction_step">(projects) &gt; works-default, works-grid,
+                            works-grid-sticky, project-details</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/projects.png"
+                      alt="Portfolio pages under app/(projects)" />
+                    <figcaption class="text-center">
+                      Follow this screenshot to update portfolio content.
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="shortcode_title" id="contact">
+                  <h2 class="load-order-2" id="blog_archive_title">
+                    Contact
+                  </h2>
+                  <p>
+                    To update the contact form and address details, follow
+                    this screenshot.
+                  </p>
+                  <div class="steps-panel">
+                    <ol class="ordered-list">
+                      <li>
+                        In your project, go to:
+                        <span class="direction_steps">
+                          <span class="direction_step">app</span>
+                          <span class="direction_step">(other-pages) &gt; contact &gt; page.tsx</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/contact.png"
+                      alt="Contact page under app/(other-pages)/contact" />
+                    <figcaption class="text-center">
+                      Follow this screenshot to update contact content.
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="shortcode_title" id="copy-right">
+                  <h2 class="load-order-2" id="copy_right_title">Footer</h2>
+                  <p>To update footer content, follow this screenshot.</p>
+                  <div class="steps-panel">
+                    <ol class="ordered-list">
+                      <li>
+                        To change footer data and social links go to
+                        <span class="direction_steps">
+                          <span class="direction_step">components</span>
+                          <span class="direction_step">footers</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/footers.png"
+                      alt="Footer component in components/footers" />
+                    <figcaption class="text-center">
+                      Follow this screenshot to update footer content.
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="shortcode_title" id="all-data">
+                  <h2 class="load-order-2" id="copy_right_title">
+                    Site Data Files
+                  </h2>
+                  <p>To update global site data, follow this screenshot.</p>
+                  <div class="steps-panel">
+                    <ol class="ordered-list">
+                      <li>
+                        To change global data (menus, blogs, pricing, etc.) go
+                        to
+                        <span class="direction_steps">
+                          <span class="direction_step">data</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/alldata.png" alt="Data folder overview" />
+                    <figcaption class="text-center">
+                      Follow this screenshot to update site data content.
+                    </figcaption>
+                  </figure>
+                </div>
+
+                <div class="shortcode_title" id="error">
+                  <h2 class="load-order-2" id="copy_right_title">404 Page</h2>
+                  <p>
+                    To update the 404 page content, follow this screenshot.
+                  </p>
+                  <div class="steps-panel">
+                    <ol class="ordered-list">
+                      <li>
+                        To change 404 page content go to
+                        <span class="direction_steps">
+                          <span class="direction_step">app</span>
+                          <span class="direction_step">(other-pages) &gt; 404 &gt; page.tsx</span>
+                        </span>
+                      </li>
+                    </ol>
+                  </div>
+                  <figure>
+                    <img class="w-100 img-thumbnail" src="img/Gibsooon/not-found.png" alt="404 not-found page" />
+                    <figcaption class="text-center">
+                      Follow this screenshot to update 404 page content.
+                    </figcaption>
+                  </figure>
+                </div>
+              </article>
+
+              <article class="documentation_body doc-section" id="change-log">
+                <div class="shortcode_title">
+                  <h2 class="load-order-2" id="changelog_title">
+                    Change Log
+                  </h2>
+                  <p>
+                    <strong><a target="_blank" href="https://themeforest.net/user/ib-themes">Ib-Themes Team</a></strong>
+                    continuously delivers improvements and bug fixes. Check
+                    the "What's New" section, and review the changelog for
+                    each update.
+                  </p>
+                </div>
+                <div class="changelog_inner">
+                  <!-- End .row -->
+                  <div class="row changelog_info" id="v100">
+                    <div class="col-lg-3 changelog_date">
+                      <div class="c_date">
+                        <h6>12 May 2026</h6>
+                        <p>Initial release</p>
+                      </div>
+                    </div>
+                    <div class="col-lg-2">
+                      <div class="version_info">
+                        <div class="c_version">1.0.0</div>
+                      </div>
+                    </div>
+                    <div class="col-lg-7">
+                      <div class="changelog_content">
+                        <p>
+                          <span class="new">Release</span> 1) Initial release
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End .row -->
+                </div>
+                <div class="border_bottom"></div>
+                <div class="row feedback_link">
+                  <div class="col-lg-6">
+                    <h6>
+                      <i class="icon_mail_alt"></i>Support?
+                      <a href="mailto:hello@gibsooon.com">hello@gibsooon.com</a>
+                    </h6>
+                  </div>
+                  <div class="col-lg-6">
+                    <p>
+                      If you like our product,
+                      <a href="https://themeforest.net/downloads" target="_blank" class="h_btn">Please Rate Us</a>
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 doc_right_mobile_menu">
+            <div class="open_icon" id="right">
+              <i class="arrow_carrot-left"></i>
+              <i class="arrow_carrot-right"></i>
+            </div>
+            <div class="doc_rightsidebar">
+              <div class="d-flex justify-content-between align-items-center">
+                <div id="rvfs-controllers" class="fontsize-controllers group"></div>
+                <a href="javascript:window.print()" class="print"><i class="icon_printer"></i></a>
+              </div>
+              <div class="doc_switch">
+                <label for="something" class="tab-btn tab-btns"><i class="icon_lightbulb_alt"></i></label>
+                <input type="checkbox" name="something" id="something" class="tab_switcher" />
+                <label for="something" class="tab-btn"><i class="far fa-moon"></i></label>
+              </div>
+              <div class="hire-us">
+                <p class="explanation hire expn-left">
+                  If you need template customization or custom development
+                  services, please contact us. <br /><br /><a href="mailto:mail%20to:hello@gibsooon.com,com"
+                    title="hello@gibsooon.com" class="action_btn btn_small">Email Us<i class="arrow_right"></i></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="simple_footer">
+      <img class="leaf_right" src="img/home_one/leaf_footter.png" alt="Frisk" />
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <p>
+              &copy; 2021 - <span id="currentYear"></span> All Rights Reserved
+              by
+              <a target="_blank" href="https://themeforest.net/user/ib-themes">ib-themes</a>
+            </p>
+          </div>
+          <div class="text-right col-lg-6">
+            <ul class="list-unstyled f_social_icon">
+              <li>
+                <a target="_blank" href="https://www.youtube.com/@ib-themes1667"><i class="social_youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="assets/bootstrap/js/popper.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap-select.min.js"></script>
+  <script src="js/parallaxie.js"></script>
+  <script src="js/TweenMax.min.js"></script>
+  <script src="js/anchor.js"></script>
+  <script src="assets/wow/wow.min.js"></script>
+  <script src="assets/prism/prism.js"></script>
+  <script src="assets/niceselectpicker/jquery.nice-select.min.js"></script>
+  <script src="assets/mcustomscrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="assets/magnify-pop/jquery.magnific-popup.min.js"></script>
+  <script src="assets/tooltipster/js/tooltipster.bundle.min.js"></script>
+  <script src="assets/font-size/js/rv-jquery-fontsize-2.0.3.js"></script>
+  <script src="assets/video/video.min.js"></script>
+  <script src="assets/video/wistia.js"></script>
+  <script src="js/onpage-menu.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    $(function () {
+      $("#currentYear").text(new Date().getFullYear());
+    });
+  </script>
+</body>
+
+</html>
