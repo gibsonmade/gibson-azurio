@@ -11,7 +11,7 @@ export type Footer1NavColumn = {
 
 export const footer1NavColumns: Footer1NavColumn[] = [
   {
-    className: "col-12 col-md-4 mxd-grid-item",
+    className: "col-12 mxd-grid-item",
     blocks: [
       {
         title: "/ Pages",
@@ -24,45 +24,6 @@ export const footer1NavColumns: Footer1NavColumn[] = [
           { href: "/lab/images", label: "Images" },
           { href: "/lab/icons", label: "Icons" },
           { href: "/contact", label: "Contact" },
-        ],
-      },
-    ],
-  },
-  {
-    className: "col-12 col-md-4 mxd-grid-item",
-    blocks: [
-      {
-        title: "/ Case studies",
-        links: [
-          { href: "/work/the-home-depot", label: "The Home Depot" },
-          { href: "/work/carmax", label: "CarMax" },
-          { href: "/work/mini-murals", label: "Mini Murals" },
-          { href: "/work/staterra", label: "Straterra" },
-        ],
-      },
-      {
-        title: "/ Coming soon",
-        links: [
-          { href: "/work/academy-sports-outdoors", label: "Academy Sports + Outdoors" },
-          { href: "/work/chi-st-lukes", label: "CHI St. Luke's" },
-          { href: "/work/ritual", label: "Ritual" },
-          { href: "/work/wiab-ai", label: "Wiab AI" },
-          { href: "/work/cactus-club", label: "Cactus Club" },
-        ],
-      },
-    ],
-  },
-  {
-    className: "col-12 col-md-4 mxd-grid-item",
-    blocks: [
-      {
-        title: "/ Focus",
-        links: [
-          { href: "/work", label: "Product strategy" },
-          { href: "/work", label: "UX leadership" },
-          { href: "/work", label: "Brand systems" },
-          { href: "/work", label: "AI workflows" },
-          { href: "/contact", label: "Launch support" },
         ],
       },
     ],

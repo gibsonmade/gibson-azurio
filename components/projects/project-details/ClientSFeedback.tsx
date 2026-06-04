@@ -49,7 +49,7 @@ export default function ClientSFeedback() {
                           <div className="mxd-testimonials-project__photo round">
                             <Image
                               alt="Gibsooon Example Image"
-                              src="/img-temp/avatars/300x300_ava-01.webp"
+                              src="/img-temp/uploads/gibson-8-bit.png"
                               width={300}
                               height={300}
                             />

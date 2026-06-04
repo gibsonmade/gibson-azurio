@@ -28,7 +28,7 @@ const CARDS: Card[] = [
       ["Discovery", "User research", "Journey mapping", "Product strategy"],
       ["Offer design", "Roadmaps", "Workshops", "Positioning"],
     ],
-    image: "/img-temp/services/services-stack/s01.webp",
+    image: "/img-temp/uploads/case-study/staterra/Stationery1.jpg",
     descrClass: "t-large t-bold services-card__descr",
     descr: (
       <>
@@ -47,7 +47,7 @@ const CARDS: Card[] = [
       ["Brand systems", "Logo design", "Websites", "Product UX"],
       ["Figma", "Design systems", "Motion", "Visual identity"],
     ],
-    image: "/img-temp/services/services-stack/s02.webp",
+    image: "/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png",
     descrClass: "t-bold t-large services-card__descr",
     descr: (
       <>
@@ -65,7 +65,7 @@ const CARDS: Card[] = [
       ["Next.js", "React", "CMS", "WordPress"],
       ["AI workflows", "Automation", "iOS Apps", "Launch support"],
     ],
-    image: "/img-temp/services/services-stack/s03.webp",
+    image: "/img-temp/uploads/case-study/wiab/gibson-robot.jpg",
     descrClass: "t-bold t-large services-card__descr",
     descr: (
       <>

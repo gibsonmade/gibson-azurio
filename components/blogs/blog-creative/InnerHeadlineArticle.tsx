@@ -81,7 +81,7 @@ export default function InnerHeadlineArticle() {
                               className="post-featured-fullscreen__title permanent loading-split"
                               animation="splitLinesLoad"
                             >
-                              Field notes on product design, AI workflows, and launch systems
+                              Field notes &amp; musings
                             </CommonAnimatedText>
                             <CommonLoadItem index={0}>
                               <div className="post-featured-fullscreen__excerpt loading-item">

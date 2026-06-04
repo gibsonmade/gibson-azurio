@@ -76,7 +76,7 @@ export default function BlogPreview() {
                         <Image
                           className=""
                           alt="Blog Preview Image"
-                          src="/img-temp/blog/preview/grid-x3/pr-01.webp"
+                          src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
                           width={1170}
                           height={800}
                         />
@@ -106,7 +106,7 @@ export default function BlogPreview() {
                         <Image
                           className=""
                           alt="Blog Preview Image"
-                          src="/img-temp/blog/preview/grid-x3/pr-02.webp"
+                          src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
                           width={1200}
                           height={1200}
                         />
@@ -136,7 +136,7 @@ export default function BlogPreview() {
                         <Image
                           className=""
                           alt="Blog Preview Image"
-                          src="/img-temp/blog/preview/grid-x3/pr-04.webp"
+                          src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
                           width={853}
                           height={1280}
                         />
@@ -166,7 +166,7 @@ export default function BlogPreview() {
                         <Image
                           className=""
                           alt="Blog Preview Image"
-                          src="/img-temp/blog/preview/grid-x3/pr-03.webp"
+                          src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
                           width={1423}
                           height={800}
                         />

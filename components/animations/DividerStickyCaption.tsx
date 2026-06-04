@@ -93,7 +93,7 @@ export default function DividerStickyCaption({
                         >
                           <Image
                             alt=""
-                            src="/img-temp/dividers/1200x900_row01.webp"
+                            src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
                             width={1200}
                             height={900}
                           />
@@ -121,7 +121,7 @@ export default function DividerStickyCaption({
                         >
                           <Image
                             alt=""
-                            src="/img-temp/dividers/1200x900_row02.webp"
+                            src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
                             width={1200}
                             height={800}
                           />
@@ -143,7 +143,7 @@ export default function DividerStickyCaption({
                         >
                           <Image
                             alt=""
-                            src="/img-temp/dividers/737x1200_row02.webp"
+                            src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
                             width={737}
                             height={1200}
                           />
@@ -172,7 +172,7 @@ export default function DividerStickyCaption({
                         >
                           <Image
                             alt=""
-                            src="/img-temp/dividers/800x1200_row03.webp"
+                            src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
                             width={800}
                             height={1200}
                           />
@@ -194,7 +194,7 @@ export default function DividerStickyCaption({
                         >
                           <Image
                             alt=""
-                            src="/img-temp/dividers/1200x677_row03.webp"
+                            src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
                             width={1200}
                             height={677}
                           />
@@ -222,7 +222,7 @@ export default function DividerStickyCaption({
                         >
                           <Image
                             alt=""
-                            src="/img-temp/dividers/1200x1200_row04.webp"
+                            src="/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg"
                             width={1200}
                             height={1200}
                           />

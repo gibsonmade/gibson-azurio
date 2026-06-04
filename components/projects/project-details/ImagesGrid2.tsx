@@ -1,7 +1,31 @@
 import UkiyoParallax from "@/components/animations/UkiyoParallax";
 import BlurSection from "@/components/animations/BlurSection";
 import Image from "next/image";
-export default function ImagesGrid2() {
+import type { WorkProject } from "@/data/workProjects";
+
+type ImagesGrid2Props = {
+  project?: WorkProject;
+};
+
+const fallbackImages = [
+  "/img-temp/uploads/case-study/staterra/gibson-building.jpg",
+  "/img-temp/uploads/case-study/wiab/gibson-robot.jpg",
+  "/img-temp/uploads/case-study/cactus-club/gibson-cacti.jpg",
+];
+
+function projectGallery(project?: WorkProject) {
+  const gallery = project?.images.gallery ?? fallbackImages;
+  return [
+    gallery[3] ?? gallery[0] ?? project?.images.cover ?? fallbackImages[0],
+    gallery[4] ?? gallery[1] ?? project?.images.cover ?? fallbackImages[1],
+    gallery[5] ?? gallery[2] ?? gallery[0] ?? project?.images.cover ?? fallbackImages[2],
+  ];
+}
+
+export default function ImagesGrid2({ project }: ImagesGrid2Props) {
+  const [image1, image2, image3] = projectGallery(project);
+  const alt = project ? `${project.name} case study image` : "Gibson Hall project image";
+
   return (
     <>
       <BlurSection className="mxd-section">
@@ -20,10 +44,10 @@ export default function ImagesGrid2() {
                         externalRAF={false}
                       >
                         <Image
-                          alt="Gibsooon Sample Image"
-                          src="/img-temp/works/project-details/details04.webp"
-                          width={1280}
-                          height={1280}
+                          alt={alt}
+                          src={image1}
+                          width={2000}
+                          height={1333}
                         />
                       </UkiyoParallax>
                     </div>
@@ -31,11 +55,10 @@ export default function ImagesGrid2() {
                   <div className="col-12 col-xl-6 mxd-grid-item mxd-images-grid__item">
                     <div className="mxd-images-grid__inner">
                       <Image
-                        className="transparent"
-                        alt="Gibsooon Sample Image"
-                        src="/img-temp/works/project-details/details05.webp"
-                        width={985}
-                        height={1280}
+                        alt={alt}
+                        src={image2}
+                        width={1500}
+                        height={2000}
                       />
                     </div>
                   </div>
@@ -50,10 +73,10 @@ export default function ImagesGrid2() {
                         externalRAF={false}
                       >
                         <Image
-                          alt="Gibsooon Sample Image"
-                          src="/img-temp/works/project-details/details06.webp"
-                          width={1920}
-                          height={1440}
+                          alt={alt}
+                          src={image3}
+                          width={2000}
+                          height={1333}
                         />
                       </UkiyoParallax>
                     </div>

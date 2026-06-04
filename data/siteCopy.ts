@@ -197,7 +197,7 @@ export const siteCopy = {
     metadataDescription:
       "Contact Gibson Hall about founder-led digital transformation, product strategy, websites, AI systems, and launch projects.",
     eyebrow: "Contact",
-    headline: "Now booking for Q3",
+    headline: "Accepting new projects",
     lead:
       "I take on a small amount of clients to ensure I can bring dedication to each project.",
     accent: "",

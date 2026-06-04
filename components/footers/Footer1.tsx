@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import TextScramble from "@/components/animations/TextScramble";
 import FooterBackToTop from "@/components/footers/FooterBackToTop";
-import Logo8bit from "@/components/common/Logo8bit";
 import {
   CommonScrollAnimated,
   CommonScrollAnimatedLink,
@@ -15,12 +14,13 @@ import {
   footer1NavColumns,
   footer1PromoItems,
 } from "@/data/footer";
-import { siteCopy } from "@/data/siteCopy";
 import ContactCtaIcon from "@/components/common/ContactCtaIcon";
 
 const navLinkClass = "anim-uni-slide-down";
 
 export default function Footer1() {
+  const pagesBlock = footer1NavColumns[0]?.blocks[0];
+
   return (
     <BlurSection as="footer" className="mxd-demo-footer">
       {/* Footer Block - Background Start */}
@@ -42,33 +42,7 @@ export default function Footer1() {
         <div className="mxd-block">
           <div className="container-fluid p-0">
             <div className="row g-0">
-              <div className="col-12 col-xxl-3 mxd-demo-footer__item mxd-grid-item">
-                <CommonScrollAnimated
-                  className="mxd-demo-footer__logo anim-uni-in-up"
-                  as="div"
-                  animation="inUp"
-                >
-                  <Link className="mxd-logo" href={`/`}>
-                    <Logo8bit />
-                    <div className="mxd-logo__text footer-wordmark">
-                      <TextScramble className="mxd-scramble">
-                        Gibsooon
-                      </TextScramble>
-                    </div>
-                  </Link>
-                </CommonScrollAnimated>
-                <div className="mxd-demo-footer__slogan">
-                  <CommonAnimatedText
-                    as="p"
-                    className="t-bold t-large t-120 mxd-split-lines-reverse"
-                    animation="splitLinesReverse"
-                  >
-                    {siteCopy.brand.person} is here.
-                    <span>
-                      {siteCopy.seo.description}
-                    </span>
-                  </CommonAnimatedText>
-                </div>
+              <div className="col-12 col-md-4 col-xxl-6 mxd-demo-footer__item mxd-grid-item">
                 <CommonScrollAnimated
                   className="mxd-demo-footer__available anim-uni-in-up"
                   as="div"
@@ -76,13 +50,22 @@ export default function Footer1() {
                 >
                   <div className="mxd-hero__mark permanent">
                     <span className="mark-icon" />
-                    <span className="mark-text">Available for freelance</span>
+                    <span className="mark-text">Availble for hire</span>
                   </div>
-                  <p className="t-medium" style={{ marginTop: "0.8rem" }}>
-                    Gibson takes on select projects — brand systems, product
-                    strategy, AI workflows, and launch execution.
-                  </p>
                 </CommonScrollAnimated>
+                <div className="mxd-demo-footer__slogan">
+                  <CommonAnimatedText
+                    as="p"
+                    className="t-bold t-large t-120 mxd-split-lines-reverse"
+                    animation="splitLinesReverse"
+                  >
+                    Gibson Hall helps founder led teams and enterprise partners{" "}
+                    <span>
+                      turn complex ideas into launch-ready brands, websites,
+                      and digital products.
+                    </span>
+                  </CommonAnimatedText>
+                </div>
                 <CommonScrollAnimated
                   className="mxd-demo-footer__btn anim-uni-in-up"
                   as="div"
@@ -120,53 +103,39 @@ export default function Footer1() {
                   </Link>
                 </CommonScrollAnimated>
               </div>
-              <div className="col-12 col-xxl-6 mxd-demo-footer__item">
+              <div className="col-12 col-md-4 col-xxl-2 mxd-demo-footer__item mxd-grid-item">
                 <nav className="mxd-demo-footer__nav">
-                  <div className="container-fluid p-0">
-                    <div className="row g-0">
-                      {footer1NavColumns.map((column, columnIndex) => (
-                        <div
-                          key={`footer-nav-col-${columnIndex}`}
-                          className={column.className}
+                  {pagesBlock ? (
+                    <div className="mxd-demo-footer-nav__block">
+                      <div className="mxd-footer-nav02__title">
+                        <CommonScrollAnimated
+                          className="footer-data anim-uni-slide-down"
+                          as="p"
+                          animation="slideDownLine"
                         >
-                          {column.blocks.map((block) => (
-                            <div
-                              key={block.title}
-                              className="mxd-demo-footer-nav__block"
-                            >
-                              <div className="mxd-footer-nav02__title">
-                                <CommonScrollAnimated
-                                  className="footer-data anim-uni-slide-down"
-                                  as="p"
-                                  animation="slideDownLine"
-                                >
-                                  <span>{block.title}</span>
-                                </CommonScrollAnimated>
-                              </div>
-                              <div className="mxd-footer-nav02__list small">
-                                <ul>
-                                  {block.links.map((link) => (
-                                    <li key={`${block.title}-${link.href}-${link.label}`}>
-                                      <CommonScrollAnimatedLink
-                                        className={navLinkClass}
-                                        href={link.href}
-                                        animation="slideDownLine"
-                                      >
-                                        <span>{link.label}</span>
-                                      </CommonScrollAnimatedLink>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                            </div>
+                          <span>{pagesBlock.title}</span>
+                        </CommonScrollAnimated>
+                      </div>
+                      <div className="mxd-footer-nav02__list small">
+                        <ul>
+                          {pagesBlock.links.map((link) => (
+                            <li key={`${pagesBlock.title}-${link.href}-${link.label}`}>
+                              <CommonScrollAnimatedLink
+                                className={navLinkClass}
+                                href={link.href}
+                                animation="slideDownLine"
+                              >
+                                <span>{link.label}</span>
+                              </CommonScrollAnimatedLink>
+                            </li>
                           ))}
-                        </div>
-                      ))}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
+                  ) : null}
                 </nav>
               </div>
-              <div className="col-12 col-xxl-3 mxd-demo-footer__item mxd-grid-item">
+              <div className="col-12 col-md-4 col-xxl-4 mxd-demo-footer__item mxd-grid-item">
                 <div className="mxd-demo-footer__promo">
                   <div className="mxd-footer-nav02__block">
                     <div className="mxd-footer-nav02__title">

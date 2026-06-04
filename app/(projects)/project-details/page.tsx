@@ -7,7 +7,6 @@ import SplitList2 from "@/components/projects/project-details/SplitList2";
 import ImagesGrid2 from "@/components/projects/project-details/ImagesGrid2";
 import SplitList3 from "@/components/projects/project-details/SplitList3";
 import ParallaxDividerImage2 from "@/components/projects/project-details/ParallaxDividerImage2";
-import ClientSFeedback from "@/components/projects/project-details/ClientSFeedback";
 import NextProjectLink from "@/components/projects/project-details/NextProjectLink";
 import CTAWithMarquee from "@/components/projects/project-details/CTAWithMarquee";
 import { getNextWorkProject, workProjects, type WorkProject } from "@/data/workProjects";
@@ -27,14 +26,13 @@ export default function ProjectDetailsPage({ project = workProjects[0] }: Projec
     <>
       <div className="mxd-page-content inner-page-content">
         <InnerHeadline project={project} />
-        <ParallaxDividerImage />
+        <ParallaxDividerImage project={project} />
         <SplitList project={project} />
-        <ImagesGrid />
+        <ImagesGrid project={project} />
         <SplitList2 project={project} />
-        <ImagesGrid2 />
+        <ImagesGrid2 project={project} />
         <SplitList3 project={project} />
-        <ParallaxDividerImage2 />
-        <ClientSFeedback />
+        <ParallaxDividerImage2 project={project} />
         <NextProjectLink project={nextProject} />
         <CTAWithMarquee />
       </div>

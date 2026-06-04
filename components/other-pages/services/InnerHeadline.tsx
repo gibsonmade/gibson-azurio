@@ -44,7 +44,7 @@ export default function InnerHeadline() {
                         ]}
                       />
                     </div>
-                    {/* <Image   alt="Gibsooon Sample Image"    src="/img-temp/backgrounds/1920x1280_bg01.webp" width="1920" height="1280" /> */}
+                    {/* <Image   alt="Gibsooon Sample Image"    src="/img-temp/uploads/case-study/staterra/gibson-building.jpg" width="1920" height="1280" /> */}
                     <div className="inner-headline__cover" />
                   </div>
                   <div className="mxd-container grid-l-container">

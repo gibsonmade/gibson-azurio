@@ -60,7 +60,7 @@ export default function BlogPreview() {
               <div className="mxd-blog-list">
                 <Link
                   className="mxd-blog-list__item active-cursor-image active-cursor-permanent"
-                  data-cursor-image="/img-temp/blog/preview/500x500_pr01.webp"
+                  data-cursor-image="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
                   data-cursor-text="Read Post"
                   href={`/blog-article`}
                 >
@@ -100,7 +100,7 @@ export default function BlogPreview() {
                 </Link>
                 <Link
                   className="mxd-blog-list__item active-cursor-image active-cursor-permanent"
-                  data-cursor-image="/img-temp/blog/preview/500x500_pr02.webp"
+                  data-cursor-image="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
                   data-cursor-text="Read Post"
                   href={`/blog-article`}
                 >

@@ -25,74 +25,74 @@ export default function Hero() {
               <CommonCursorTrailImage
                 index={0}
                 className="mxd-trail-transparent-image"
-                alt="Gibsooon Cursor Trail Image"
-                src="/img-temp/cursor-trail-transparent/01_trail.webp"
-                width={400}
-                height={521}
+                alt="The Home Depot project image"
+                src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
+                width={1333}
+                height={2000}
               />
               <CommonCursorTrailImage
                 index={1}
                 className="mxd-trail-transparent-image"
-                alt="Gibsooon Cursor Trail Image"
-                src="/img-temp/cursor-trail-transparent/02_trail.webp"
-                width={412}
-                height={400}
+                alt="CarMax project image"
+                src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
+                width={1123}
+                height={2000}
               />
               <CommonCursorTrailImage
                 index={2}
                 className="mxd-trail-transparent-image"
-                alt="Gibsooon Cursor Trail Image"
-                src="/img-temp/cursor-trail-transparent/03_trail.webp"
-                width={485}
-                height={400}
+                alt="Mini Murals project image"
+                src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
+                width={1333}
+                height={2000}
               />
               <CommonCursorTrailImage
                 index={3}
                 className="mxd-trail-transparent-image"
-                alt="Gibsooon Cursor Trail Image"
-                src="/img-temp/cursor-trail-transparent/04_trail.webp"
-                width={530}
-                height={400}
+                alt="Straterra project image"
+                src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
+                width={2997}
+                height={2000}
               />
               <CommonCursorTrailImage
                 index={4}
                 className="mxd-trail-transparent-image"
-                alt="Gibsooon Cursor Trail Image"
-                src="/img-temp/cursor-trail-transparent/05_trail.webp"
-                width={400}
-                height={520}
+                alt="Wiab AI project image"
+                src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
+                width={3000}
+                height={2000}
               />
               <CommonCursorTrailImage
                 index={5}
                 className="mxd-trail-transparent-image"
-                alt="Gibsooon Cursor Trail Image"
-                src="/img-temp/cursor-trail-transparent/06_trail.webp"
-                width={407}
-                height={400}
+                alt="CHI St. Luke's project image"
+                src="/img-temp/uploads/case-study/chistlukes/CHI St Lukes Cover Image.png"
+                width={1127}
+                height={2000}
               />
               <CommonCursorTrailImage
                 index={6}
                 className="mxd-trail-transparent-image"
-                alt="Gibsooon Cursor Trail Image"
-                src="/img-temp/cursor-trail-transparent/07_trail.webp"
-                width={400}
-                height={480}
+                alt="Ritual project image"
+                src="/img-temp/uploads/case-study/ritual/gibson-tulum.jpg"
+                width={1500}
+                height={2000}
               />
               <CommonCursorTrailImage
                 index={7}
                 className="mxd-trail-transparent-image"
-                alt="Gibsooon Cursor Trail Image"
-                src="/img-temp/cursor-trail-transparent/08_trail.webp"
-                width={637}
-                height={400}
+                alt="Cactus Club project image"
+                src="/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg"
+                width={1500}
+                height={2000}
               />
               <CommonCursorTrailImage
                 index={8}
                 className="mxd-trail-transparent-image"
-                alt="Gibsooon Cursor Trail Image"
-                src="/img-temp/cursor-trail-transparent/09_trail.webp"
-                width={400}
-                height={992}
+                alt="Academy Sports project image"
+                src="/img-temp/uploads/case-study/academy/gibson-sports.jpg"
+                width={1333}
+                height={2000}
               />
             </CommonCursorTrailContent>
           </CommonCursorTrailWrapper>

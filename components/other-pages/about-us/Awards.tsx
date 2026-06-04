@@ -76,7 +76,7 @@ export default function Awards() {
                       <div className="mxd-awards__image">
                         <Image
                           alt="Gibsooon Image"
-                          src="/img-temp/illustrations/awards01.webp"
+                          src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
                           width={1000}
                           height={455}
                         />
@@ -138,7 +138,7 @@ export default function Awards() {
                       <div className="mxd-awards__image">
                         <Image
                           alt="Gibsooon Image"
-                          src="/img-temp/illustrations/awards02.webp"
+                          src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
                           width={1000}
                           height={455}
                         />
@@ -200,7 +200,7 @@ export default function Awards() {
                       <div className="mxd-awards__image">
                         <Image
                           alt="Gibsooon Image"
-                          src="/img-temp/illustrations/awards03.webp"
+                          src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
                           width={1000}
                           height={455}
                         />
@@ -262,7 +262,7 @@ export default function Awards() {
                       <div className="mxd-awards__image">
                         <Image
                           alt="Gibsooon Image"
-                          src="/img-temp/illustrations/awards04.webp"
+                          src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
                           width={1000}
                           height={455}
                         />
@@ -324,7 +324,7 @@ export default function Awards() {
                       <div className="mxd-awards__image">
                         <Image
                           alt="Gibsooon Image"
-                          src="/img-temp/illustrations/awards05.webp"
+                          src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
                           width={1000}
                           height={455}
                         />
@@ -386,7 +386,7 @@ export default function Awards() {
                       <div className="mxd-awards__image">
                         <Image
                           alt="Gibsooon Image"
-                          src="/img-temp/illustrations/awards06.webp"
+                          src="/img-temp/uploads/case-study/academy/gibson-sports.jpg"
                           width={1000}
                           height={455}
                         />

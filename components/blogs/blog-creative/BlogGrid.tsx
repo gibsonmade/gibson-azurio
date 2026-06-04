@@ -31,7 +31,7 @@ export default function BlogGrid() {
                           <Image
                             className=""
                             alt="Blog Preview Image"
-                            src="/img-temp/blog/pr-01.webp"
+                            src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
                             width={1170}
                             height={800}
                           />
@@ -81,7 +81,7 @@ export default function BlogGrid() {
                           <Image
                             className=""
                             alt="Blog Preview Image"
-                            src="/img-temp/blog/pr-02.webp"
+                            src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
                             width={1200}
                             height={1200}
                           />
@@ -131,7 +131,7 @@ export default function BlogGrid() {
                           <Image
                             className=""
                             alt="Blog Preview Image"
-                            src="/img-temp/blog/pr-03.webp"
+                            src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
                             width={1423}
                             height={800}
                           />
@@ -182,7 +182,7 @@ export default function BlogGrid() {
                           <Image
                             className=""
                             alt="Blog Preview Image"
-                            src="/img-temp/blog/pr-04.webp"
+                            src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
                             width={896}
                             height={1152}
                           />
@@ -232,7 +232,7 @@ export default function BlogGrid() {
                           <Image
                             className=""
                             alt="Blog Preview Image"
-                            src="/img-temp/blog/pr-05.webp"
+                            src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
                             width={1280}
                             height={853}
                           />
@@ -282,7 +282,7 @@ export default function BlogGrid() {
                           <Image
                             className=""
                             alt="Blog Preview Image"
-                            src="/img-temp/blog/pr-06.webp"
+                            src="/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg"
                             width={853}
                             height={1280}
                           />
@@ -320,70 +320,6 @@ export default function BlogGrid() {
                 </div>
               </div>
               {/* Regular Posts Alt Grid End */}
-              {/* Blog Pagination Start */}
-              <div className="mxd-blog-pagination pagination-fullwidth mxd-grid-item">
-                <div className="mxd-blog-pagination__inner">
-                  <nav className="mxd-blog-pagination__items">
-                    <a
-                      className="mxd-blog-pagination__item blog-pagination-control prev btn btn-line-icon btn-line-default slide-left"
-                      href="#0"
-                      aria-label="Previous Page"
-                    >
-                      {/* <i class="ph ph-arrow-left"></i> */}
-                      <i>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 18 18"
-                        >
-                          <path d="M7.2,18v-3.6h3.6v3.6h-3.6ZM3.6,7.2H0v3.6h3.6v3.6h3.6v-3.6h10.8v-3.6H7.2v-3.6h-3.6s0,3.6,0,3.6ZM7.2,3.6h3.6V0h-3.6v3.6Z" />
-                        </svg>
-                      </i>
-                      <TextScramble className="btn-caption mxd-scramble">
-                        Prev
-                      </TextScramble>
-                    </a>
-                    <a
-                      href="#0"
-                      className="mxd-blog-pagination__item blog-pagination-number btn mxd-scramble"
-                    >
-                      <span className="btn-caption">01</span>
-                    </a>
-                    <a
-                      href="#0"
-                      className="mxd-blog-pagination__item blog-pagination-number btn mxd-scramble active"
-                    >
-                      <span className="btn-caption">02</span>
-                    </a>
-                    <a
-                      href="#0"
-                      className="mxd-blog-pagination__item blog-pagination-number btn mxd-scramble"
-                    >
-                      <span className="btn-caption">03</span>
-                    </a>
-                    <a
-                      className="mxd-blog-pagination__item blog-pagination-control next btn btn-line-icon btn-line-default slide-right"
-                      href="#0"
-                      aria-label="Next Page"
-                    >
-                      <TextScramble className="btn-caption mxd-scramble">
-                        Next
-                      </TextScramble>
-                      {/* <i class="ph ph-arrow-right"></i> */}
-                      <i>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          viewBox="0 0 18 18"
-                        >
-                          <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                        </svg>
-                      </i>
-                    </a>
-                  </nav>
-                </div>
-              </div>
-              {/* Blog Pagination End */}
             </div>
           </div>
         </div>

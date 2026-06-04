@@ -81,7 +81,7 @@ export default function TeamGrid() {
                         <div className="mxd-team-grid__photo">
                           <Image
                             alt="Gibsooon Team Member Photo"
-                            src="/img-temp/avatars/800x800_ava-05.webp"
+                            src="/img-temp/uploads/gibson-8-bit.png"
                             width={800}
                             height={800}
                           />
@@ -130,7 +130,7 @@ export default function TeamGrid() {
                         <div className="mxd-team-grid__photo">
                           <Image
                             alt="Gibsooon Team Member Photo"
-                            src="/img-temp/avatars/800x800_ava-06.webp"
+                            src="/img-temp/uploads/watson-8-bit.png"
                             width={800}
                             height={800}
                           />
@@ -179,7 +179,7 @@ export default function TeamGrid() {
                         <div className="mxd-team-grid__photo">
                           <Image
                             alt="Gibsooon Team Member Photo"
-                            src="/img-temp/avatars/800x800_ava-07.webp"
+                            src="/img-temp/uploads/gibson-8-bit-white.png"
                             width={800}
                             height={800}
                           />

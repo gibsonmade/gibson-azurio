@@ -11,8 +11,8 @@ export type DigitalDesignerProjectShowcaseItem = {
 export const digitalDesignerProjectsShowcase: DigitalDesignerProjectShowcaseItem[] = [
   {
     titleLines: ["Editorial", "illustrations set"],
-    bgImageSrc: "/img-temp/works/1920x1280_pr01.webp",
-    cardImageSrc: "/img-temp/works/700x700_pr01.webp",
+    bgImageSrc: "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg",
+    cardImageSrc: "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg",
     cardImageAlt: "Editorial illustrations project preview",
     cursorText: "View Work",
     href: "/project-details",
@@ -20,8 +20,8 @@ export const digitalDesignerProjectsShowcase: DigitalDesignerProjectShowcaseItem
   },
   {
     titleLines: ["Interactive", "concept"],
-    bgImageSrc: "/img-temp/works/1920x1280_pr02.webp",
-    cardImageSrc: "/img-temp/works/700x700_pr02.webp",
+    bgImageSrc: "/img-temp/uploads/case-study/carmax/gibson-cars.jpg",
+    cardImageSrc: "/img-temp/uploads/case-study/carmax/gibson-cars.jpg",
     cardImageAlt: "Interactive concept project preview",
     cursorText: "Behance",
     href: "/project-details",
@@ -29,8 +29,8 @@ export const digitalDesignerProjectsShowcase: DigitalDesignerProjectShowcaseItem
   },
   {
     titleLines: ["Creative", "studio template"],
-    bgImageSrc: "/img-temp/works/1920x1280_pr03.webp",
-    cardImageSrc: "/img-temp/works/700x700_pr03.webp",
+    bgImageSrc: "/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png",
+    cardImageSrc: "/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png",
     cardImageAlt: "Creative studio template project preview",
     cursorText: "View Work",
     href: "/project-details",

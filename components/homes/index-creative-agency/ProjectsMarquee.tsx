@@ -35,7 +35,7 @@ export default function ProjectsMarquee() {
                 <span className="home-project-marquee__cover">
                   <Image
                     alt={`${project.name} case study cover`}
-                    src={project.cursorImage}
+                    src={project.images.cover}
                     width={900}
                     height={600}
                   />

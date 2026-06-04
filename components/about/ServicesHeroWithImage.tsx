@@ -30,7 +30,7 @@ export default function ServicesHeroWithImage() {
                     >
                       <Image
                         alt="Gibson Hall — capabilities background"
-                        src="/img-temp/backgrounds/1920x1280_bg01.webp"
+                        src="/img-temp/uploads/case-study/staterra/gibson-building.jpg"
                         fill
                         style={{ objectFit: "cover" }}
                         priority={false}

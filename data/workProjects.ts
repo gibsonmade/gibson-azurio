@@ -24,7 +24,24 @@ export type WorkProject = {
   outcome: string;
   reviewStatus: string;
   cursorImage: string;
+  images: {
+    cover: string;
+    hero: string;
+    gallery: string[];
+    nextProject: string;
+  };
 };
+
+const projectImages = (
+  cover: string,
+  gallery: string[] = [cover],
+  hero = gallery[0] ?? cover,
+) => ({
+  cover,
+  hero,
+  gallery: gallery.length > 0 ? gallery : [cover],
+  nextProject: cover,
+});
 
 const comingSoonDetail = (name: string, summary: string) => ({
   challenge:
@@ -83,7 +100,17 @@ export const workProjects: WorkProject[] = [
       "The work helped teams shift project experiences from product-by-product browsing toward guided material selection and more consistent reusable patterns across the Home Depot digital ecosystem.",
     reviewStatus:
       "Needs review for team size, publishable visuals, A/B testing details, and any measurable outcomes.",
-    cursorImage: "/img-temp/uploads/case-study/homedepot/gibson-decks.jpg",
+    cursorImage: "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg",
+    images: projectImages("/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg", [
+      "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg",
+      "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot (1).jpg",
+      "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot+2.jpg",
+      "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot+3.jpg",
+      "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot+4.jpg",
+      "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot+5.jpg",
+      "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot+6.jpg",
+      "/img-temp/uploads/case-study/homedepot/gibson-decks.jpg",
+    ]),
   },
   {
     slug: "carmax",
@@ -130,6 +157,7 @@ export const workProjects: WorkProject[] = [
     reviewStatus:
       "Needs review for exact title phrasing, top-three product experience claim, one-million-plus visitors phrasing, and specific A/B outcomes.",
     cursorImage: "/img-temp/uploads/case-study/carmax/gibson-cars.jpg",
+    images: projectImages("/img-temp/uploads/case-study/carmax/gibson-cars.jpg"),
   },
   {
     slug: "mini-murals",
@@ -175,7 +203,17 @@ export const workProjects: WorkProject[] = [
       "The project made 250+ murals by 40+ artists easier to discover and helped bring public art into Houston neighborhoods, art districts, and areas with limited public art access.",
     reviewStatus:
       "Needs review for exact award phrasing, official nomination wording, CTO title preference, and final visual assets.",
-    cursorImage: "/img-temp/uploads/case-study/minimurals/gibson-mural.jpg",
+    cursorImage: "/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png",
+    images: projectImages("/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png", [
+      "/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png",
+      "/img-temp/uploads/case-study/minimurals/minimurals responsive website.png",
+      "/img-temp/uploads/case-study/minimurals/miniMurals Houston Web Design -desktop.png",
+      "/img-temp/uploads/case-study/minimurals/miniMurals+Houston+Web+Design+-desktop.jpeg",
+      "/img-temp/uploads/case-study/minimurals/miniMurals+Houston+Web+Design+-+laptop.jpeg",
+      "/img-temp/uploads/case-study/minimurals/miniMurals+Houston+Web+Design+-laptop2.jpeg",
+      "/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - Mobile.png",
+      "/img-temp/uploads/case-study/minimurals/gibson-mural.jpg",
+    ]),
   },
   {
     slug: "chi-st-lukes",
@@ -198,7 +236,19 @@ export const workProjects: WorkProject[] = [
       "CHI St. Luke's",
       "A coming-soon story about simplifying a healthcare web experience for multiple audiences."
     ),
-    cursorImage: "/img-temp/uploads/case-study/chistlukes/gibson-healthcare.jpg",
+    cursorImage: "/img-temp/uploads/case-study/chistlukes/CHI St Lukes Cover Image.png",
+    images: projectImages("/img-temp/uploads/case-study/chistlukes/CHI St Lukes Cover Image.png", [
+      "/img-temp/uploads/case-study/chistlukes/CHI St Lukes Cover Image.png",
+      "/img-temp/uploads/case-study/chistlukes/CHI Responsive.png",
+      "/img-temp/uploads/case-study/chistlukes/CHI St Lukes Website Desktop Design.jpg",
+      "/img-temp/uploads/case-study/chistlukes/CHI St Lukes Website Laptop Design.jpg",
+      "/img-temp/uploads/case-study/chistlukes/CHI St Lukes Website Tablet Design.jpg",
+      "/img-temp/uploads/case-study/chistlukes/CHI St Lukes Website Mobile Design.jpg",
+      "/img-temp/uploads/case-study/chistlukes/CHI St Lukes Website Style Guide UI.png",
+      "/img-temp/uploads/case-study/chistlukes/CHI St Lukes Wireframes and Journey Map.png",
+      "/img-temp/uploads/case-study/chistlukes/CHI St Lukes Hospital Personas Doctor.png",
+      "/img-temp/uploads/case-study/chistlukes/chi cover photo.jpg",
+    ]),
   },
   {
     slug: "ritual",
@@ -222,6 +272,10 @@ export const workProjects: WorkProject[] = [
       "A coming-soon story about turning a boutique fitness concept into a polished digital presence."
     ),
     cursorImage: "/img-temp/uploads/case-study/ritual/gibson-tulum.jpg",
+    images: projectImages("/img-temp/uploads/case-study/ritual/gibson-tulum.jpg", [
+      "/img-temp/uploads/case-study/ritual/gibson-tulum.jpg",
+      "/img-temp/uploads/case-study/ritual/gibson-tulum2.jpg",
+    ]),
   },
   {
     slug: "staterra",
@@ -266,7 +320,15 @@ export const workProjects: WorkProject[] = [
       "The concept became a more launch-ready brand, public website, inquiry funnel, and private platform foundation, with confidential property data kept out of public-facing materials.",
     reviewStatus:
       "Needs review for exact spelling, category language, public-safe screenshots/mockups, and whether 100+ Houston listings can be published.",
-    cursorImage: "/img-temp/uploads/case-study/staterra/gibson-building.jpg",
+    cursorImage: "/img-temp/uploads/case-study/staterra/Stationery1.jpg",
+    images: projectImages("/img-temp/uploads/case-study/staterra/Stationery1.jpg", [
+      "/img-temp/uploads/case-study/staterra/Stationery1.jpg",
+      "/img-temp/uploads/case-study/staterra/gibson-building.jpg",
+      "/img-temp/uploads/case-study/staterra/gibson-buildings.jpg",
+      "/img-temp/uploads/case-study/staterra/logo Gold.png",
+      "/img-temp/uploads/case-study/staterra/logo.png",
+      "/img-temp/uploads/case-study/staterra/logo White.png",
+    ]),
   },
   {
     slug: "wiab-ai",
@@ -290,6 +352,7 @@ export const workProjects: WorkProject[] = [
       "A coming-soon story about practical AI workflows, operator control, and usable product experiences."
     ),
     cursorImage: "/img-temp/uploads/case-study/wiab/gibson-robot.jpg",
+    images: projectImages("/img-temp/uploads/case-study/wiab/gibson-robot.jpg"),
   },
   {
     slug: "cactus-club",
@@ -313,6 +376,10 @@ export const workProjects: WorkProject[] = [
       "A coming-soon hospitality concept shaped around quick discovery, confident planning, and a distinctive local voice."
     ),
     cursorImage: "/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg",
+    images: projectImages("/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg", [
+      "/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg",
+      "/img-temp/uploads/case-study/cactus-club/gibson-cacti.jpg",
+    ]),
   },
   {
     slug: "academy-sports-outdoors",
@@ -336,6 +403,7 @@ export const workProjects: WorkProject[] = [
       "A coming-soon story about mobile-first omnichannel strategy at retail scale."
     ),
     cursorImage: "/img-temp/uploads/case-study/academy/gibson-sports.jpg",
+    images: projectImages("/img-temp/uploads/case-study/academy/gibson-sports.jpg"),
   },
 ];
 

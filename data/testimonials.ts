@@ -7,7 +7,7 @@ export const aboutMeTestimonialSlides: TestimonialSliderSlide[] = [
     descriptionLead: "Alex took the time to understand our business needs",
     descriptionSpan:
       "and translated them into a beautifully designed, user-friendly website.",
-    photoSrc: "/img-temp/avatars/300x300_ava-02.webp",
+    photoSrc: "/img-temp/uploads/watson-8-bit.png",
     photoAlt: "Gibsooon Example Image",
     name: "Ashley Cherry",
     rolePrefix: "SEO in",
@@ -18,7 +18,7 @@ export const aboutMeTestimonialSlides: TestimonialSliderSlide[] = [
     descriptionLead: "Alex nailed it!",
     descriptionSpan:
       "He understood our vision and delivered a sleek, intuitive site that our clients love.",
-    photoSrc: "/img-temp/avatars/300x300_ava-05.webp",
+    photoSrc: "/img-temp/uploads/watson-8-bit.png",
     photoAlt: "Gibsooon Example Image",
     name: "Lea Tomato",
     rolePrefix: "Senior designer in",
@@ -30,7 +30,7 @@ export const aboutMeTestimonialSlides: TestimonialSliderSlide[] = [
       "Alex's creativity and technical expertise exceeded our expectations.",
     descriptionSpan:
       "We've received so much positive feedback from our customers already.",
-    photoSrc: "/img-temp/avatars/300x300_ava-04.webp",
+    photoSrc: "/img-temp/uploads/gibson-8-bit.png",
     photoAlt: "Gibsooon Example Image",
     name: "Patrick Pineapple",
     rolePrefix: "SEO in",
@@ -41,7 +41,7 @@ export const aboutMeTestimonialSlides: TestimonialSliderSlide[] = [
     descriptionLead: "Working with Alex was an absolute pleasure!",
     descriptionSpan:
       "He took the time to understand our business needs and translated them into a beautifully designed website.",
-    photoSrc: "/img-temp/avatars/300x300_ava-01.webp",
+    photoSrc: "/img-temp/uploads/gibson-8-bit.png",
     photoAlt: "Gibsooon Example Image",
     name: "John Lemon",
     rolePrefix: "Brand Manager in",
@@ -57,7 +57,7 @@ export const teamTestimonialSlides: TestimonialSliderSlide[] = [
       "Gibsooon team took the time to understand our business needs",
     descriptionSpan:
       "and translated them into a beautifully designed, user-friendly website.",
-    photoSrc: "/img-temp/avatars/300x300_ava-02.webp",
+    photoSrc: "/img-temp/uploads/watson-8-bit.png",
     photoAlt: "Gibsooon Example Image",
     name: "Ashley Cherry",
     rolePrefix: "SEO in",
@@ -68,7 +68,7 @@ export const teamTestimonialSlides: TestimonialSliderSlide[] = [
     descriptionLead: "Gibsooon team nailed it!",
     descriptionSpan:
       "They understood our vision and delivered a sleek, intuitive site that our clients love.",
-    photoSrc: "/img-temp/avatars/300x300_ava-05.webp",
+    photoSrc: "/img-temp/uploads/watson-8-bit.png",
     photoAlt: "Gibsooon Example Image",
     name: "Lea Tomato",
     rolePrefix: "Senior designer in",
@@ -80,7 +80,7 @@ export const teamTestimonialSlides: TestimonialSliderSlide[] = [
       "The team's attention to detail, creativity, and technical expertise exceeded our expectations.",
     descriptionSpan:
       "We've received so much positive feedback from our customers already.",
-    photoSrc: "/img-temp/avatars/300x300_ava-04.webp",
+    photoSrc: "/img-temp/uploads/gibson-8-bit.png",
     photoAlt: "Gibsooon Example Image",
     name: "Patrick Pineapple",
     rolePrefix: "SEO in",
@@ -91,7 +91,7 @@ export const teamTestimonialSlides: TestimonialSliderSlide[] = [
     descriptionLead: "Working with Gibsooon team was an absolute pleasure!",
     descriptionSpan:
       "They took the time to understand our business needs and translated them into a beautifully designed, user-friendly website.",
-    photoSrc: "/img-temp/avatars/300x300_ava-01.webp",
+    photoSrc: "/img-temp/uploads/gibson-8-bit.png",
     photoAlt: "Gibsooon Example Image",
     name: "John Lemon",
     rolePrefix: "Brand Manager in",

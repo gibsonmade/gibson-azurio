@@ -46,7 +46,7 @@ export default function InnerHeadline() {
                               <CommonLoadFade index={1}>
                                 <div className="mxd-hero__mark permanent loading-fade" style={{ marginBottom: "2rem" }}>
                                   <span className="mark-icon" />
-                                  <span className="mark-text">Available for freelance</span>
+                                  <span className="mark-text">Availble for hire</span>
                                 </div>
                               </CommonLoadFade>
                               <div className="inner-headline__title">
@@ -86,28 +86,6 @@ export default function InnerHeadline() {
               </div>
             </div>
             {/* Block - Inner Headline v05 End */}
-            {/* Block - Fullwidth Text Start */}
-            <div className="mxd-block">
-              <div className="fullwidth-text headline-email-text bottom-text-small mxd-grid-item">
-                <div className="fullwidth-text__wrap">
-                  <a
-                    className="fullwidth-text__content small accent active-cursor"
-                    data-cursor-text="Let's chat"
-                    href={`mailto:${contact.email}?subject=Message%20from%20your%20site`}
-                    aria-label={`Send email to ${contact.email}`}
-                  >
-                    <CommonAnimatedText
-                      as="span"
-                      className="anim-uni-chars"
-                      animation="animChars"
-                    >
-                      {contact.email}
-                    </CommonAnimatedText>
-                  </a>
-                </div>
-              </div>
-            </div>
-            {/* Block - Fullwidth Text End */}
           </div>
         </BlurSection>
       </>

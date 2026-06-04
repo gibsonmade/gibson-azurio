@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import BlogArticle from "@/components/blogs/blog-article/BlogArticle";
 import MoreOnTopic from "@/components/blogs/blog-article/MoreOnTopic";
-import CTAWithMarquee from "@/components/blogs/blog-article/CTAWithMarquee";
 
 const KNOWN_SLUGS = [
   "field-notes-on-product-design",
@@ -40,10 +39,9 @@ export default async function ArticlePage({
   if (!KNOWN_SLUGS.includes(slug)) notFound();
 
   return (
-    <div className="mxd-page-content inner-page-content">
+    <div className="mxd-page-content inner-page-content lab-article-page">
       <BlogArticle />
       <MoreOnTopic />
-      <CTAWithMarquee />
     </div>
   );
 }

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function WorksGridStickyPage() {
   return (
     <>
-      <div className="mxd-page-content inner-page-content">
+      <div className="mxd-page-content inner-page-content work-page">
         <InnerHeadline />
         <ProjectsGridStickyShowcase />
         <CTAWithMarquee />

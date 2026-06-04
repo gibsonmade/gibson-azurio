@@ -64,7 +64,7 @@ export default function PatternPreview({ pattern }: PatternPreviewProps) {
     case "project-card":
       return (
         <div className="pattern-demo pattern-demo--project">
-          <img src="/img-temp/works/700x700_pr01.webp" alt="Project card preview" />
+          <img src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg" alt="Project card preview" />
           <div>
             <span className="tag tag-s tag-medium">case study</span>
             <h3>The Home Depot</h3>
@@ -96,9 +96,9 @@ export default function PatternPreview({ pattern }: PatternPreviewProps) {
     case "image-grid":
       return (
         <div className="pattern-demo pattern-demo--image-grid">
-          <img src="/img-temp/works/project-details/details01.webp" alt="" />
-          <img src="/img-temp/works/project-details/details02.webp" alt="" />
-          <img src="/img-temp/works/project-details/details03.webp" alt="" />
+          <img src="/img-temp/uploads/case-study/staterra/Stationery1.jpg" alt="" />
+          <img src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png" alt="" />
+          <img src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg" alt="" />
         </div>
       );
     case "service-stack":
@@ -129,7 +129,7 @@ export default function PatternPreview({ pattern }: PatternPreviewProps) {
     case "blog-card":
       return (
         <div className="pattern-demo pattern-demo--blog">
-          <img src="/img-temp/blog/pr-01.webp" alt="Blog card preview" />
+          <img src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg" alt="Blog card preview" />
           <span className="meta-date">02 February, 2026</span>
           <h3>Frontend innovations and user journeys</h3>
           <div className="resource-card-tags">

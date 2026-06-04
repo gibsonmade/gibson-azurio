@@ -59,7 +59,7 @@ export default function DividerStickyImages({
                     <Image
                       className="images__img"
                       alt="Image"
-                      src="/img-temp/dividers/1920x1200_dv01.webp"
+                      src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
                       width={1920}
                       height={1200}
                       ref={(el) => {
@@ -81,7 +81,7 @@ export default function DividerStickyImages({
                     <Image
                       className="images__img"
                       alt="Image"
-                      src="/img-temp/dividers/1920x1200_dv02.webp"
+                      src="/img-temp/uploads/case-study/staterra/gibson-building.jpg"
                       width={1920}
                       height={1200}
                       ref={(el) => {
@@ -103,7 +103,7 @@ export default function DividerStickyImages({
                     <Image
                       className="images__img"
                       alt="Image"
-                      src="/img-temp/dividers/1920x1200_dv03.webp"
+                      src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
                       width={1920}
                       height={1200}
                       ref={(el) => {

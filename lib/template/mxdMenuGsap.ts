@@ -140,7 +140,7 @@ export function bindMxdMenuGsap(
     clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
   });
   gsap.set(menuBackdrop, {
-    background: "rgba(var(--base-rgb), 0)",
+    background: "rgba(var(--menu-shadow-rgb), 0)",
     backdropFilter: "blur(0px)",
   });
   gsap.set(menuOverlayContainer, { yPercent: -50 });
@@ -160,7 +160,7 @@ export function bindMxdMenuGsap(
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
     });
     gsap.set(menuBackdrop, {
-      background: "rgba(var(--base-rgb), 0)",
+      background: "rgba(var(--menu-shadow-rgb), 0)",
       backdropFilter: "blur(0px)",
     });
     gsap.set(menuOverlayContainer, { yPercent: -50 });
@@ -208,7 +208,7 @@ export function bindMxdMenuGsap(
       .to(
         menuBackdrop,
         {
-          background: "rgba(var(--base-rgb), 0)",
+          background: "rgba(var(--menu-shadow-rgb), 0)",
           backdropFilter: "blur(0px)",
           duration: 1,
           ease: "power2.in",
@@ -265,8 +265,8 @@ export function bindMxdMenuGsap(
 
       tl.to(menuBackdrop, {
         background: isMobile
-          ? "rgba(var(--base-rgb), 0.6)"
-          : "rgba(var(--base-rgb), 0.8)",
+          ? "rgba(var(--menu-shadow-rgb), 0.6)"
+          : "rgba(var(--menu-shadow-rgb), 0.8)",
         backdropFilter: isMobile ? "blur(6px)" : "blur(14px)",
         duration: 0.5,
         ease: "power2.out",

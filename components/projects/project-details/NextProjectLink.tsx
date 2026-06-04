@@ -12,6 +12,7 @@ type NextProjectLinkProps = {
 export default function NextProjectLink({ project }: NextProjectLinkProps) {
   const name = project?.name ?? "Solei";
   const href = project ? `/work/${project.slug}` : "#0";
+  const image = project?.images.nextProject ?? "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg";
 
   return (
     <>
@@ -80,10 +81,10 @@ export default function NextProjectLink({ project }: NextProjectLinkProps) {
                     externalRAF={false}
                   >
                     <Image
-                      alt="Gibsooon Sample Image"
-                      src="/img-temp/works/project-details/next01.webp"
-                      width={1920}
-                      height={1200}
+                      alt={`${name} case study preview`}
+                      src={image}
+                      width={2000}
+                      height={1333}
                     />
                   </UkiyoParallax>
                 </div>

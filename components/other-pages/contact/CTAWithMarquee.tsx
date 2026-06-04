@@ -71,7 +71,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_01.webp"
+                            src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
                             width={1200}
                             height={1200}
                           />
@@ -87,7 +87,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_02.webp"
+                            src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
                             width={1200}
                             height={685}
                           />
@@ -103,7 +103,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_03.webp"
+                            src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
                             width={700}
                             height={700}
                           />
@@ -119,7 +119,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_04.webp"
+                            src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
                             width={737}
                             height={1200}
                           />
@@ -135,7 +135,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_05.webp"
+                            src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
                             width={800}
                             height={1200}
                           />
@@ -151,7 +151,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_06.webp"
+                            src="/img-temp/uploads/case-study/chistlukes/CHI St Lukes Cover Image.png"
                             width={1200}
                             height={1200}
                           />
@@ -167,7 +167,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_07.webp"
+                            src="/img-temp/uploads/case-study/ritual/gibson-tulum.jpg"
                             width={1200}
                             height={900}
                           />
@@ -183,7 +183,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_08.webp"
+                            src="/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg"
                             width={737}
                             height={1200}
                           />
@@ -199,7 +199,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_09.webp"
+                            src="/img-temp/uploads/case-study/academy/gibson-sports.jpg"
                             width={800}
                             height={1200}
                           />
@@ -215,7 +215,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_10.webp"
+                            src="/img-temp/uploads/case-study/staterra/gibson-building.jpg"
                             width={1200}
                             height={873}
                           />
@@ -231,7 +231,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_01.webp"
+                            src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
                             width={1200}
                             height={1200}
                           />
@@ -247,7 +247,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_02.webp"
+                            src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
                             width={1200}
                             height={685}
                           />
@@ -263,7 +263,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_03.webp"
+                            src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
                             width={700}
                             height={700}
                           />
@@ -279,7 +279,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_04.webp"
+                            src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
                             width={737}
                             height={1200}
                           />
@@ -295,7 +295,7 @@ export default function CTAWithMarquee() {
                         <div className="marquee__image">
                           <Image
                             alt=""
-                            src="/img-temp/cta/mar_05.webp"
+                            src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
                             width={800}
                             height={1200}
                           />

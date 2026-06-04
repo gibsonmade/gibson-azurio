@@ -14,7 +14,7 @@ export default function CommonGravityPortfolioObjects() {
           <div className="object object-image">
             <Image
               alt="Gibsooon Gravity Image"
-              src="/img-temp/cta/01.webp"
+              src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
               width={469}
               height={600}
             />
@@ -29,7 +29,7 @@ export default function CommonGravityPortfolioObjects() {
           <div className="object object-image">
             <Image
               alt="Gibsooon Gravity Image"
-              src="/img-temp/cta/02.webp"
+              src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
               width={454}
               height={600}
             />
@@ -44,7 +44,7 @@ export default function CommonGravityPortfolioObjects() {
           <div className="object object-image">
             <Image
               alt="Gibsooon Gravity Image"
-              src="/img-temp/cta/03.webp"
+              src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
               width={442}
               height={570}
             />
@@ -59,7 +59,7 @@ export default function CommonGravityPortfolioObjects() {
           <div className="object object-image">
             <Image
               alt="Gibsooon Gravity Image"
-              src="/img-temp/cta/04.webp"
+              src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
               width={431}
               height={600}
             />
@@ -74,7 +74,7 @@ export default function CommonGravityPortfolioObjects() {
           <div className="object object-image">
             <Image
               alt="Gibsooon Gravity Image"
-              src="/img-temp/cta/05.webp"
+              src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
               width={400}
               height={521}
             />
@@ -89,7 +89,7 @@ export default function CommonGravityPortfolioObjects() {
           <div className="object object-image">
             <Image
               alt="Gibsooon Gravity Image"
-              src="/img-temp/cta/06.webp"
+              src="/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg"
               width={400}
               height={520}
             />

@@ -103,7 +103,7 @@ export default function BlogArticle() {
                     <div className="mxd-article__thumb loading-item">
                       <Image
                         alt="Article Thumbnail"
-                        src="/img-temp/blog/article/1920x1200_ar-01.webp"
+                        src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
                         width={1920}
                         height={1200}
                       />
@@ -243,7 +243,7 @@ export default function BlogArticle() {
                       <div className="block-image__container">
                         <Image
                           alt="Article Image"
-                          src="/img-temp/blog/article/1920x1280_img-01.webp"
+                          src="/img-temp/uploads/case-study/staterra/gibson-building.jpg"
                           width={1920}
                           height={1280}
                         />
@@ -286,7 +286,7 @@ export default function BlogArticle() {
                       <div className="block-image__container">
                         <Image
                           alt="Article Image"
-                          src="/img-temp/blog/article/1200x1200_img-01.webp"
+                          src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
                           width={1200}
                           height={1200}
                         />
@@ -299,7 +299,7 @@ export default function BlogArticle() {
                       <div className="block-image__container">
                         <Image
                           alt="Article Image"
-                          src="/img-temp/blog/article/1200x1200_img-02.webp"
+                          src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
                           width={1200}
                           height={1200}
                         />
@@ -387,55 +387,6 @@ export default function BlogArticle() {
                   {/* Article Content End */}
                 </div>
                 {/* Article End */}
-                {/* Article Author Start */}
-                <div className="mxd-article-author">
-                  <div className="mxd-article-author__data">
-                    <a className="mxd-article-author__avatar" href="#0">
-                      <Image
-                        alt="Avatar"
-                        src="/img-temp/avatars/300x300_ava-06.webp"
-                        width={300}
-                        height={300}
-                      />
-                    </a>
-                    <div className="mxd-article-author__info">
-                      <h4 className="mxd-article-author__name">
-                        <a href="#0">Johanna Cherry</a>
-                        <small className="mxd-article-author__position">
-                          Brand Identity Expert
-                        </small>
-                      </h4>
-                      <div className="mxd-article-author__socials">
-                        <a
-                          href="https://www.linkedin.com/"
-                          className="tag tag-m tag-bg default"
-                        >
-                          <TextScramble className="mxd-scramble">
-                            LinkedIn
-                          </TextScramble>
-                        </a>
-                        <a
-                          href="https://www.behance.net/"
-                          className="tag tag-m tag-bg default"
-                        >
-                          <TextScramble className="mxd-scramble">
-                            Behance
-                          </TextScramble>
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mxd-article-author__quote">
-                    <p className="mxd-article__normal">
-                      With years of experience blending creativity and strategy,
-                      she helps businesses stand out and connect with their
-                      audiences on a deeper level. When not designing, Johanna
-                      explores emerging trends in branding and shares her
-                      insights with the creative community.
-                    </p>
-                  </div>
-                </div>
-                {/* Article Author End */}
                 {/* Article Navigation Start */}
                 <div className="mxd-article-navigation">
                   <div className="container-fluid p-0">
@@ -498,226 +449,6 @@ export default function BlogArticle() {
                   </div>
                 </div>
                 {/* Article Navigation End */}
-                {/* Article Comments Start */}
-                <div className="mxd-article-comments">
-                  <div className="mxd-article-comments__container">
-                    <h3>3 Comments</h3>
-                    <div className="mxd-article-comments__list">
-                      <ul className="mxd-comment__main">
-                        <li className="mxd-comment">
-                          <div className="mxd-comment__container">
-                            <div className="mxd-comment__avatar">
-                              <Image
-                                alt="Comment Avatar"
-                                src="/img-temp/avatars/300x300_ava-03.webp"
-                                width={300}
-                                height={300}
-                              />
-                            </div>
-                            <div className="mxd-comment__content">
-                              <div className="mxd-comment__info">
-                                <p className="mxd-comment__date">
-                                  28 January, 2026
-                                </p>
-                                <p className="mxd-comment__name">
-                                  <a href="#0">Lea Tomato</a>
-                                </p>
-                              </div>
-                              <p className="t-medium t-160">
-                                AI-generated art is impressive, but I feel like
-                                it takes away the human touch. Illustration is
-                                about personal expression, and no algorithm can
-                                truly replace that.
-                              </p>
-                              <div className="mxd-comment__reply">
-                                <a
-                                  className="btn btn-default-icon-small btn-default-outline slide-right"
-                                  href="#0"
-                                >
-                                  <TextScramble className="btn-caption mxd-scramble">
-                                    Reply
-                                  </TextScramble>
-                                  {/* <i class="btn-icon ph-bold ph-arrow-right"></i> */}
-                                  <i className="btn-icon">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      version="1.1"
-                                      viewBox="0 0 18 18"
-                                    >
-                                      <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                    </svg>
-                                  </i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                          <ul className="mxd-comment__children">
-                            <li className="mxd-comment">
-                              <div className="mxd-comment__container">
-                                <div className="mxd-comment__avatar">
-                                  <Image
-                                    alt="Comment Avatar"
-                                    src="/img-temp/avatars/300x300_ava-04.webp"
-                                    width={300}
-                                    height={300}
-                                  />
-                                </div>
-                                <div className="mxd-comment__content">
-                                  <div className="mxd-comment__info">
-                                    <p className="mxd-comment__date">
-                                      28 January, 2026
-                                    </p>
-                                    <p className="mxd-comment__name">
-                                      <a href="#0">Patrick Pineapple</a>
-                                    </p>
-                                  </div>
-                                  <p className="t-medium t-160">
-                                    I get your point, Lea, but I think AI is
-                                    more of a tool than a replacement. It speeds
-                                    up workflows and helps artists experiment
-                                    with new ideas they might not have
-                                    considered before.
-                                  </p>
-                                  <div className="mxd-comment__reply">
-                                    <a
-                                      className="btn btn-default-icon-small btn-default-outline slide-right"
-                                      href="#0"
-                                    >
-                                      <TextScramble className="btn-caption mxd-scramble">
-                                        Reply
-                                      </TextScramble>
-                                      {/* <i class="btn-icon ph-bold ph-arrow-right"></i> */}
-                                      <i className="btn-icon">
-                                        <svg
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          version="1.1"
-                                          viewBox="0 0 18 18"
-                                        >
-                                          <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                        </svg>
-                                      </i>
-                                    </a>
-                                  </div>
-                                </div>
-                              </div>
-                            </li>
-                          </ul>
-                        </li>
-                        <li className="mxd-comment">
-                          <div className="mxd-comment__container">
-                            <div className="mxd-comment__avatar">
-                              <Image
-                                alt="Comment Avatar"
-                                src="/img-temp/avatars/300x300_ava-02.webp"
-                                width={300}
-                                height={300}
-                              />
-                            </div>
-                            <div className="mxd-comment__content">
-                              <div className="mxd-comment__info">
-                                <p className="mxd-comment__date">
-                                  01 February, 2026
-                                </p>
-                                <p className="mxd-comment__name">
-                                  <a href="#0">Mary Cucumber</a>
-                                </p>
-                              </div>
-                              <p className="t-medium t-160">
-                                As a designer, I&apos;ve started using AI in my
-                                work, and it&apos;s actually helped me focus
-                                more on creativity. It handles the repetitive
-                                tasks, so I can put more time into refining
-                                concepts and storytelling.
-                              </p>
-                              <div className="mxd-comment__reply">
-                                <a
-                                  className="btn btn-default-icon-small btn-default-outline slide-right"
-                                  href="#0"
-                                >
-                                  <TextScramble className="btn-caption mxd-scramble">
-                                    Reply
-                                  </TextScramble>
-                                  {/* <i class="btn-icon ph-bold ph-arrow-right"></i> */}
-                                  <i className="btn-icon">
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      version="1.1"
-                                      viewBox="0 0 18 18"
-                                    >
-                                      <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                    </svg>
-                                  </i>
-                                </a>
-                              </div>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="mxd-article-comments__respond">
-                    <h3>What do you think?</h3>
-                    <p className="mxd-article__normal">
-                      Please leave a reply. Your email address will not be
-                      published. Required fields are marked *
-                    </p>
-                    <div className="comments-respond__form">
-                      <form
-                        className="form"
-                        onSubmit={(e) => e.preventDefault()}
-                      >
-                        <div className="container-fluid p-0">
-                          <div className="row gx-5 comments-respond__row">
-                            <div className="col-12 col-md-6 mxd-grid-item no-margin">
-                              <input
-                                type="text"
-                                name="Name"
-                                placeholder="Your name*"
-                                required
-                              />
-                            </div>
-                            <div className="col-12 col-md-6 mxd-grid-item no-margin">
-                              <input
-                                type="text"
-                                name="Company"
-                                placeholder="Your Email*"
-                              />
-                            </div>
-                            <div className="col-12 mxd-grid-item">
-                              <textarea
-                                name="Message"
-                                placeholder="Message*"
-                                required
-                                defaultValue={""}
-                              />
-                            </div>
-                            <div className="col-12 mxd-grid-item">
-                              <button
-                                className="btn btn-default-icon btn-default-accent slide-right"
-                                type="submit"
-                              >
-                                <TextScramble className="btn-caption mxd-scramble">
-                                  Post Comment
-                                </TextScramble>
-                                {/* <i class="btn-icon ph-bold ph-arrow-right"></i> */}
-                                <i className="btn-icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    version="1.1"
-                                    viewBox="0 0 18 18"
-                                  >
-                                    <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                                  </svg>
-                                </i>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-                {/* Article Comments End */}
               </div>
               {/* Article Container End */}
             </div>

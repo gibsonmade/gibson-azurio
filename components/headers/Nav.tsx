@@ -69,8 +69,17 @@ export default function Nav({
   const insightsSectionActive = sectionHasActiveRoute(pathname, insightLinks);
   const contactSectionActive = pathMatches(pathname, "/contact");
 
-  const renderSubmenuLinks = (links: MenuLinkItem[]) =>
-    links.map((link) => (
+  const renderSubmenuLinks = (
+    links: MenuLinkItem[],
+    parentHref: string,
+    parentLabel: string,
+  ) => {
+    const children = links
+      .filter((link) => !pathMatches(link.href, parentHref))
+      .slice(0, 5);
+    const parentLink = { href: parentHref, label: parentLabel };
+
+    return [...children, parentLink].map((link) => (
       <li
         key={link.href}
         className={`submenu__item ${pathMatches(pathname, link.href) ? "active" : ""}`}
@@ -78,15 +87,16 @@ export default function Nav({
         <Link href={link.href}>{link.label}</Link>
       </li>
     ));
+  };
 
   const parentItemClass = (current: boolean) =>
     `main-menu__item${current ? " main-menu__item--current" : ""}`;
 
   const headerSlots = useMemo(() => makeSlotters(g.headerSplitTargets, 2), [g]);
   const mainSlots = useMemo(() => makeSlotters(g.mainMenuLinkSpans, 10), [g]);
-  const contactSlots = useMemo(() => makeSlotters(g.contactAnchors, 8), [g]);
+  const contactSlots = useMemo(() => makeSlotters(g.contactAnchors, 7), [g]);
   const contactRevealSlots = useMemo(
-    () => makeSlotters(g.contactRevealTargets, 8),
+    () => makeSlotters(g.contactRevealTargets, 7),
     [g],
   );
   const footerSlots = useMemo(() => makeSlotters(g.footerSplitTargets, 2), [g]);
@@ -141,31 +151,26 @@ export default function Nav({
                   <span style={{ display: "inline-flex", alignItems: "center", gap: "0.55rem" }}>
                     <svg
                       width="16"
-                      height="14"
-                      viewBox="0 0 18 14"
+                      height="16"
+                      viewBox="0 0 16 16"
                       fill="currentColor"
                       xmlns="http://www.w3.org/2000/svg"
                       aria-hidden="true"
                     >
-                      <rect x="5" y="0" width="2" height="1" />
-                      <rect x="4" y="1" width="3" height="1" />
-                      <rect x="3" y="2" width="5" height="1" />
-                      <rect x="2" y="3" width="14" height="1" />
-                      <rect x="1" y="4" width="16" height="1" />
-                      <rect x="0" y="5" width="18" height="1" />
-                      <rect x="0" y="6" width="18" height="1" />
-                      <rect x="1" y="7" width="16" height="1" />
-                      <rect x="2" y="8" width="13" height="1" />
-                      <rect x="3" y="9" width="11" height="1" />
-                      <rect x="4" y="10" width="9" height="1" />
-                      <rect x="5" y="11" width="7" height="1" />
-                      <rect x="6" y="12" width="5" height="1" />
-                      <rect x="7" y="13" width="3" height="1" />
+                      <rect x="2" y="1" width="4" height="2" />
+                      <rect x="10" y="1" width="4" height="2" />
+                      <rect x="1" y="3" width="6" height="2" />
+                      <rect x="9" y="3" width="6" height="2" />
+                      <rect x="1" y="5" width="14" height="2" />
+                      <rect x="2" y="7" width="12" height="2" />
+                      <rect x="3" y="9" width="10" height="2" />
+                      <rect x="5" y="11" width="6" height="2" />
+                      <rect x="7" y="13" width="2" height="2" />
                     </svg>
-                    Get started today
+                    Now booking
                   </span>
                   <br />
-                  From ideas to launch.
+                  SUMMER/FALL 2026
                 </p>
               </div>
               {/* left side */}
@@ -257,7 +262,11 @@ export default function Nav({
                           </div>
                         </div>
                         <ul ref={submenuSlots[2]} className="submenu">
-                          {renderSubmenuLinks(worksLinks)}
+                          {renderSubmenuLinks(
+                            worksLinks,
+                            "/work",
+                            "View all work",
+                          )}
                         </ul>
                         <div
                           ref={dividerSlots[3]}
@@ -294,7 +303,11 @@ export default function Nav({
                           </div>
                         </div>
                         <ul ref={submenuSlots[3]} className="submenu">
-                          {renderSubmenuLinks(insightLinks)}
+                          {renderSubmenuLinks(
+                            insightLinks,
+                            "/lab",
+                            "View all articles",
+                          )}
                         </ul>
                         <div
                           ref={dividerSlots[4]}
@@ -350,20 +363,6 @@ export default function Nav({
                           </TextScramble>
                         </a>
                       </li>
-                      <li>
-                        <a
-                          ref={contactSlots[1]}
-                          className="tag tag-m"
-                          href="/contact"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[1]}
-                            className="mxd-scramble"
-                          >
-                            Say hi!
-                          </TextScramble>
-                        </a>
-                      </li>
                     </ul>
                   </div>
                   <div className="menu-contact__item">
@@ -371,11 +370,11 @@ export default function Nav({
                     <ul className="menu-contact__list">
                       <li>
                         <a
-                          ref={contactSlots[2]}
+                          ref={contactSlots[1]}
                           className="tag tag-m"
                           href="/work"
                         >
-                          <span ref={contactRevealSlots[2]}>
+                          <span ref={contactRevealSlots[1]}>
                             Startups,
                             <br />
                             Scaleups,
@@ -391,13 +390,13 @@ export default function Nav({
                     <ul className="menu-contact__list">
                       <li>
                         <a
-                          ref={contactSlots[3]}
+                          ref={contactSlots[2]}
                           className="tag tag-m"
                           href="https://dribbble.com/"
                           target="_blank"
                         >
                           <TextScramble
-                            ref={contactRevealSlots[3]}
+                            ref={contactRevealSlots[2]}
                             className="mxd-scramble"
                           >
                             Strategy
@@ -406,13 +405,13 @@ export default function Nav({
                       </li>
                       <li>
                         <a
-                          ref={contactSlots[4]}
+                          ref={contactSlots[3]}
                           className="tag tag-m"
                           href="https://www.behance.net/"
                           target="_blank"
                         >
                           <TextScramble
-                            ref={contactRevealSlots[4]}
+                            ref={contactRevealSlots[3]}
                             className="mxd-scramble"
                           >
                             Design
@@ -421,13 +420,13 @@ export default function Nav({
                       </li>
                       <li>
                         <a
-                          ref={contactSlots[5]}
+                          ref={contactSlots[4]}
                           className="tag tag-m"
                           href="https://github.com/"
                           target="_blank"
                         >
                           <TextScramble
-                            ref={contactRevealSlots[5]}
+                            ref={contactRevealSlots[4]}
                             className="mxd-scramble"
                           >
                             Development
@@ -436,13 +435,13 @@ export default function Nav({
                       </li>
                       <li>
                         <a
-                          ref={contactSlots[6]}
+                          ref={contactSlots[5]}
                           className="tag tag-m"
                           href="https://www.figma.com/community"
                           target="_blank"
                         >
                           <TextScramble
-                            ref={contactRevealSlots[6]}
+                            ref={contactRevealSlots[5]}
                             className="mxd-scramble"
                           >
                             Growth
@@ -451,13 +450,13 @@ export default function Nav({
                       </li>
                       <li>
                         <a
-                          ref={contactSlots[7]}
+                          ref={contactSlots[6]}
                           className="tag tag-m"
                           href="https://codepen.io/"
                           target="_blank"
                         >
                           <TextScramble
-                            ref={contactRevealSlots[7]}
+                            ref={contactRevealSlots[6]}
                             className="mxd-scramble"
                           >
                             Automation

@@ -8,13 +8,13 @@ import TextScramble from "@/components/animations/TextScramble";
 export default function CTA() {
   return (
     <>
-      <div className="mxd-section bg-color-accent">
+      <div className="mxd-section lab-cta-section">
         {/* background image */}
         <div className="mxd-background">
           <div className="mxd-background__video">
             <Image
               alt=""
-              src="/video/1920x660_cta.webp"
+              src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
               fill
               style={{ objectFit: "cover" }}
               aria-hidden

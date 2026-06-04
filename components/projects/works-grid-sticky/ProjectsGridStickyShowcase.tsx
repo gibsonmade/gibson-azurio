@@ -36,7 +36,7 @@ export default function ProjectsGridStickyShowcase() {
                         >
                           <Image
                             alt={`${project.name} case study preview`}
-                            src={project.cursorImage}
+                            src={project.images.cover}
                             width={1500}
                             height={1000}
                           />
