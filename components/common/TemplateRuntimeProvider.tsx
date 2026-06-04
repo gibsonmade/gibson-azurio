@@ -19,6 +19,10 @@ import { LenisContext } from "@/components/common/LenisContext";
 import BlurScrollRoot from "@/components/animations/BlurScrollRoot";
 import { CursorProvider } from "@/components/cursor/CursorContext";
 import CustomCursor from "@/components/cursor/CustomCursor";
+import {
+  MotionPreferenceProvider,
+  useReducedMotionMode,
+} from "@/components/common/MotionPreferenceContext";
 
 gsap.registerPlugin(ScrollTrigger, CustomEase);
 CustomEase.create("hop", ".87, 0, .13, 1");
@@ -32,8 +36,17 @@ export default function TemplateRuntimeProvider({
 }: {
   children: ReactNode;
 }) {
+  return (
+    <MotionPreferenceProvider>
+      <TemplateRuntimeProviderInner>{children}</TemplateRuntimeProviderInner>
+    </MotionPreferenceProvider>
+  );
+}
+
+function TemplateRuntimeProviderInner({ children }: { children: ReactNode }) {
   useViewportHeight();
   const pathname = usePathname();
+  const reducedMotion = useReducedMotionMode();
 
   const pageTransitionRef = useRef<HTMLDivElement>(null);
   const lenisRef = useRef<Lenis | null>(null);
@@ -43,6 +56,17 @@ export default function TemplateRuntimeProvider({
   useEffect(() => {
     const transitionEl = pageTransitionRef.current;
     let transitionTween: gsap.core.Tween | null = null;
+
+    if (reducedMotion) {
+      setLenis(null);
+      lenisRef.current = null;
+      if (transitionEl) {
+        gsap.set(transitionEl, { y: "-100%", pointerEvents: "none" });
+      }
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+      return;
+    }
+
     if (transitionEl) {
       if (pageTransitionRevealCompleted) {
         gsap.set(transitionEl, { y: "-100%", pointerEvents: "none" });
@@ -139,10 +163,11 @@ export default function TemplateRuntimeProvider({
       ScrollTrigger.getAll().forEach((st) => st.kill());
       ScrollTrigger.defaults(prevScrollTriggerDefaults);
       lenisRef.current = null;
+      setLenis(null);
       gsap.ticker.remove(tickerFn);
       instance.destroy();
     };
-  }, []);
+  }, [reducedMotion]);
 
   useLayoutEffect(() => {
     if (isFirstPathRef.current) {
@@ -160,10 +185,10 @@ export default function TemplateRuntimeProvider({
     requestAnimationFrame(() => {
       ScrollTrigger.refresh();
     });
-  }, [pathname]);
+  }, [pathname, reducedMotion]);
 
   return (
-    <LenisContext.Provider value={lenis}>
+    <LenisContext.Provider value={reducedMotion ? null : lenis}>
       <CursorProvider>
         <BlurScrollRoot>
           <div
@@ -171,7 +196,7 @@ export default function TemplateRuntimeProvider({
             className="mxd-page-transition"
             aria-hidden
           />
-          <CustomCursor />
+          {!reducedMotion ? <CustomCursor /> : null}
           {children}
         </BlurScrollRoot>
       </CursorProvider>

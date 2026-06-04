@@ -17,6 +17,7 @@ import {
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText.js";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -89,6 +90,7 @@ export default function CommonServicesStack({
   const descrRefs = useRef<Array<HTMLElement | null>>([]);
   const tagsRefs = useRef<Array<HTMLElement | null>>([]);
   const imageRefs = useRef<Array<HTMLElement | null>>([]);
+  const reducedMotion = useReducedMotionMode();
 
   const ctxValue = useMemo<ServicesStackContextValue>(
     () => ({
@@ -132,6 +134,26 @@ export default function CommonServicesStack({
       descrSplits.forEach((s) => s.revert());
       descrSplits.length = 0;
     };
+
+    if (reducedMotion) {
+      gsap.set(
+        [
+          ...cardRefs.current,
+          ...wrapperRefs.current,
+          ...titleRefs.current,
+          ...descrRefs.current,
+          ...tagsRefs.current,
+          ...imageRefs.current,
+        ].filter(Boolean),
+        {
+          opacity: 1,
+          scale: 1,
+          y: 0,
+          clearProps: "transform,clipPath,visibility",
+        },
+      );
+      return;
+    }
 
     function animateContentIn(lines: HTMLElement[]) {
       gsap.to(lines, {
@@ -405,7 +427,7 @@ export default function CommonServicesStack({
       revertDescrSplits();
       revertTitleSplits();
     };
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <ServicesStackContext.Provider value={ctxValue}>

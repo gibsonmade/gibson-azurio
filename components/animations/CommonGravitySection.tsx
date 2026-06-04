@@ -15,6 +15,7 @@ import {
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Matter from "matter-js";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -57,6 +58,7 @@ export default function CommonGravitySection({
   const cleanupRef = useRef<(() => void) | null>(null);
   const retryTimerRef = useRef<number | null>(null);
   const initializedRef = useRef(false);
+  const reducedMotion = useReducedMotionMode();
 
   const registerContainer = useMemo(
     () => (el: HTMLElement | null) => {
@@ -76,6 +78,19 @@ export default function CommonGravitySection({
     const section = sectionRef.current;
     const container = containerRef.current;
     if (!section || !container) return;
+    if (reducedMotion) {
+      cleanupRef.current?.();
+      cleanupRef.current = null;
+      initializedRef.current = false;
+      objectRefs.current
+        .filter((obj): obj is HTMLElement => Boolean(obj))
+        .forEach((obj) => {
+          obj.style.removeProperty("left");
+          obj.style.removeProperty("top");
+          obj.style.removeProperty("transform");
+        });
+      return;
+    }
 
     const config = {
       gravity: { x: 0, y: 1 },
@@ -367,7 +382,7 @@ export default function CommonGravitySection({
       cleanupRef.current = null;
       initializedRef.current = false;
     };
-  }, [animateOnScroll]);
+  }, [animateOnScroll, reducedMotion]);
 
   return (
     <GravityContext.Provider value={{ registerContainer, registerObject }}>

@@ -9,6 +9,7 @@ import {
   type ReactNode,
 } from "react";
 import type { CursorStackEntry } from "@/components/cursor/cursorTypes";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 type CursorCtxValue = {
   push: (entry: CursorStackEntry) => void;
@@ -19,19 +20,24 @@ type CursorCtxValue = {
 const CursorCtx = createContext<CursorCtxValue | null>(null);
 
 export function CursorProvider({ children }: { children: ReactNode }) {
+  const reducedMotion = useReducedMotionMode();
   const [stack, setStack] = useState<CursorStackEntry[]>([]);
 
   const push = useCallback((entry: CursorStackEntry) => {
+    if (reducedMotion) return;
     setStack((s) => [...s, entry]);
-  }, []);
+  }, [reducedMotion]);
 
   const pop = useCallback(() => {
+    if (reducedMotion) return;
     setStack((s) => s.slice(0, -1));
-  }, []);
+  }, [reducedMotion]);
+
+  const visibleStack = reducedMotion ? [] : stack;
 
   const value = useMemo(
-    () => ({ push, pop, stack }),
-    [push, pop, stack],
+    () => ({ push, pop, stack: visibleStack }),
+    [pop, push, visibleStack],
   );
 
   return <CursorCtx.Provider value={value}>{children}</CursorCtx.Provider>;

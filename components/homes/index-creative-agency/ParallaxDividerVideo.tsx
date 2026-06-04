@@ -11,6 +11,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText.js";
 import { initVelocityMarqueeRows } from "@/lib/template/stackCardsEffects";
 import { siteCopy } from "@/data/siteCopy";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -29,6 +30,7 @@ function getRevealBaseSize(): number {
 }
 
 export default function ParallaxDividerVideo() {
+  const reducedMotion = useReducedMotionMode();
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const imageWrapperRef = useRef<HTMLDivElement | null>(null);
   const imageRef = useRef<HTMLImageElement | null>(null);
@@ -40,8 +42,9 @@ export default function ParallaxDividerVideo() {
   const bottomRefs = useRef<HTMLDivElement[]>([]);
 
   useLayoutEffect(() => {
+    if (reducedMotion) return;
     return initVelocityMarqueeRows(topRefs.current, bottomRefs.current);
-  }, []);
+  }, [reducedMotion]);
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
@@ -52,6 +55,18 @@ export default function ParallaxDividerVideo() {
     const description = descriptionRef.current;
     const introMarquee = introMarqueeRef.current;
     if (!section || !imageWrapper || !image || !cover || !title || !introMarquee) {
+      return;
+    }
+
+    if (reducedMotion) {
+      gsap.set([section, imageWrapper, image, cover, title, description, introMarquee].filter(Boolean), {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        clearProps: "clipPath,filter,visibility",
+      });
+      gsap.set(cover, { opacity: 0.3 });
+      gsap.set(introMarquee, { opacity: 0 });
       return;
     }
 
@@ -155,7 +170,7 @@ export default function ParallaxDividerVideo() {
       trigger.kill();
       split.revert();
     };
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <CommonLoadAnimation>

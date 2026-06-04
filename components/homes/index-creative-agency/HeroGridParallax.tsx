@@ -1,12 +1,20 @@
 "use client";
 
 import { useEffect } from "react";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 const MAX_OFFSET = 6;
 
 export default function HeroGridParallax() {
+  const reducedMotion = useReducedMotionMode();
+
   useEffect(() => {
     const hero = document.querySelector<HTMLElement>(".mxd-hero-special");
+    if (reducedMotion) {
+      hero?.style.removeProperty("--gibson-hero-grid-x");
+      hero?.style.removeProperty("--gibson-hero-grid-y");
+      return;
+    }
     const canAnimate = window.matchMedia(
       "(min-width: 1200px) and (pointer: fine)",
     );
@@ -47,7 +55,7 @@ export default function HeroGridParallax() {
       hero.style.removeProperty("--gibson-hero-grid-x");
       hero.style.removeProperty("--gibson-hero-grid-y");
     };
-  }, []);
+  }, [reducedMotion]);
 
   return null;
 }

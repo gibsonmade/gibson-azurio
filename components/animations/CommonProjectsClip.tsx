@@ -13,6 +13,7 @@ import {
 } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -48,6 +49,7 @@ export default function CommonProjectsClip({
   const triggerRefs = useRef<Array<HTMLElement | null>>([]);
   const itemRefs = useRef<Array<HTMLElement | null>>([]);
   const backgroundRefs = useRef<Array<HTMLElement | null>>([]);
+  const reducedMotion = useReducedMotionMode();
 
   const registerTrigger = useMemo(
     () => (index: number) => (el: HTMLElement | null) => {
@@ -76,6 +78,13 @@ export default function CommonProjectsClip({
       (el): el is HTMLElement => Boolean(el && el.isConnected),
     );
     if (!triggers.length || !items.length) return;
+    if (reducedMotion) {
+      gsap.set([...items, ...backgroundRefs.current.filter(Boolean)], {
+        yPercent: 0,
+        clearProps: "transform,clipPath,opacity,visibility",
+      });
+      return;
+    }
 
     const cleanups: Array<() => void> = [];
 
@@ -165,7 +174,7 @@ export default function CommonProjectsClip({
     return () => {
       cleanups.forEach((fn) => fn());
     };
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <ClipContext.Provider value={{ registerTrigger, registerItem, registerBackground }}>

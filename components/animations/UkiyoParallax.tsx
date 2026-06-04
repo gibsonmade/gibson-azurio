@@ -6,6 +6,7 @@ import {
   type ReactNode,
 } from "react";
 import { usePathname } from "next/navigation";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 type UkiyoParallaxProps = {
   children?: ReactNode;
   scale?: number;
@@ -23,10 +24,15 @@ export default function UkiyoParallax({
 }: UkiyoParallaxProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const pathname = usePathname();
+  const reducedMotion = useReducedMotionMode();
 
   useLayoutEffect(() => {
     const target = ref.current;
     if (!target) return;
+    if (reducedMotion) {
+      target.style.removeProperty("transform");
+      return;
+    }
 
     let disposed = false;
     let instance: { destroy?: () => void } | null = null;
@@ -122,7 +128,7 @@ export default function UkiyoParallax({
       instance?.destroy?.();
       instance = null;
     };
-  }, [pathname, scale, speed, externalRAF]);
+  }, [pathname, reducedMotion, scale, speed, externalRAF]);
 
   return (
     <div ref={ref} className={className} {...rest}>

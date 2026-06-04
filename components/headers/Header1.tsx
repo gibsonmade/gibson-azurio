@@ -4,8 +4,10 @@ import Link from "next/link";
 import { useRef } from "react";
 import Logo8bit from "@/components/common/Logo8bit";
 import ThemeSwitcher from "@/components/headers/ThemeSwitcher";
+import MotionSwitcher from "@/components/headers/MotionSwitcher";
 import TextScramble from "@/components/animations/TextScramble";
 import { useLenis } from "@/components/common/LenisContext";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 import { useHeaderScrollHidden } from "@/hooks/useHeaderScrollHidden";
 import CommonLoadAnimation, {
   CommonLoadFade,
@@ -20,7 +22,8 @@ type Header1Props = {
 export default function Header1({ initialTheme }: Header1Props) {
   const headerRef = useRef<HTMLElement>(null);
   const lenis = useLenis();
-  useHeaderScrollHidden(headerRef, lenis);
+  const reducedMotion = useReducedMotionMode();
+  useHeaderScrollHidden(headerRef, lenis, reducedMotion);
   const pathname = usePathname();
   const isPermanent =
     pathname === "/index-branding-studio" ||
@@ -72,6 +75,7 @@ export default function Header1({ initialTheme }: Header1Props) {
               isPermanent={isPermanent}
               initialTheme={initialTheme}
             />
+            <MotionSwitcher isPermanent={isPermanent} />
           </div>
         </CommonLoadFade>
       </header>

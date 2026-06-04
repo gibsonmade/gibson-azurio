@@ -9,10 +9,15 @@ const THRESHOLD = 10;
 export function useHeaderScrollHidden(
   headerRef: RefObject<HTMLElement | null>,
   lenis: Lenis | null,
+  disabled = false,
 ): void {
   useEffect(() => {
     const el = headerRef.current;
-    if (!el || !lenis) return;
+    if (!el) return;
+    if (disabled || !lenis) {
+      el.classList.remove("is-hidden");
+      return;
+    }
 
     const sync = () => {
       if (lenis.animatedScroll > THRESHOLD) {
@@ -27,5 +32,5 @@ export function useHeaderScrollHidden(
     return () => {
       unsub();
     };
-  }, [headerRef, lenis]);
+  }, [disabled, headerRef, lenis]);
 }

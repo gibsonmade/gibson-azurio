@@ -13,6 +13,7 @@ import {
   type ReactNode,
   type Ref,
 } from "react";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 const MAX_SIZE = 220;
 const MOBILE_MAX_SIZE = 150;
@@ -80,6 +81,7 @@ export default function CommonCursorTrailTransparent<
   const wrapperRef = useRef<HTMLElement | null>(null);
   const contentRef = useRef<HTMLElement | null>(null);
   const imageRefs = useRef<HTMLImageElement[]>([]);
+  const reducedMotion = useReducedMotionMode();
 
   const registerWrapper = useMemo(
     () => (el: HTMLElement | null) => {
@@ -108,6 +110,10 @@ export default function CommonCursorTrailTransparent<
     const wrapper = wrapperRef.current;
     const images = imageRefs.current.filter(Boolean);
     if (!section || !wrapper || !images.length) return;
+    if (reducedMotion || !active) {
+      gsap.set(images, { opacity: 0, scale: 1, clearProps: "transform" });
+      return;
+    }
 
     let rafId = 0;
     let zIndex = 1;
@@ -207,7 +213,7 @@ export default function CommonCursorTrailTransparent<
     };
 
     const handleTap = (ev: PointerEvent) => {
-      if (!active || isInteractiveTarget(ev.target)) return;
+      if (isInteractiveTarget(ev.target)) return;
       const rect = wrapper.getBoundingClientRect();
       const x = ev.clientX - rect.left;
       const y = ev.clientY - rect.top;
@@ -263,7 +269,7 @@ export default function CommonCursorTrailTransparent<
       cachedPos.x = lerp(cachedPos.x, mousePos.x, 0.14);
       cachedPos.y = lerp(cachedPos.y, mousePos.y, 0.14);
 
-      if (active && dist > threshold) {
+      if (dist > threshold) {
         showNextFromMove(dx, dy);
         prevPos = { ...mousePos };
       }
@@ -289,7 +295,7 @@ export default function CommonCursorTrailTransparent<
       if (rafId) window.cancelAnimationFrame(rafId);
       images.forEach((img) => gsap.killTweensOf(img));
     };
-  }, [active, threshold]);
+  }, [active, reducedMotion, threshold]);
 
   return (
     <TrailContext.Provider

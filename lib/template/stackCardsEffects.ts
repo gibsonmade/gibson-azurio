@@ -3,6 +3,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText.js";
+import { isReducedMotionMode } from "@/lib/template/motionPreference";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -86,6 +87,7 @@ export function initVelocityMarqueeRows(
   const tops = topRows.filter(Boolean);
   const bottoms = bottomRows.filter(Boolean);
   if (!tops.length || !bottoms.length) return () => {};
+  if (isReducedMotionMode()) return () => {};
 
   const master = gsap
     .timeline()
@@ -116,6 +118,28 @@ export function initVelocityMarqueeRows(
 }
 
 export function initStackCardsEffects(refs: StackCardsRefs): () => void {
+  if (isReducedMotionMode()) {
+    gsap.set(
+      [
+        ...refs.cards,
+        ...refs.cardWrappers,
+        ...refs.cardDescriptions,
+        ...refs.cardTitleParagraphs,
+        ...refs.cardCovers,
+        ...refs.cardImageWrappers,
+        ...refs.cardMedias,
+        refs.introMarquee,
+      ].filter(Boolean),
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        clearProps: "transform,clipPath,visibility",
+      },
+    );
+    return () => {};
+  }
+
   let disposed = false;
   let cleanup: (() => void) | null = null;
 

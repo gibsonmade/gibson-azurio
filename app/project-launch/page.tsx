@@ -13,10 +13,10 @@ function statusLabel(s: TaskStatus) {
 
 function StatusPill({ status }: { status: TaskStatus }) {
   const styles: Record<TaskStatus, React.CSSProperties> = {
-    done: { background: "rgba(34,197,94,0.15)", color: "#22c55e", border: "1px solid rgba(34,197,94,0.3)" },
-    "in-progress": { background: "rgba(59,130,246,0.15)", color: "#60a5fa", border: "1px solid rgba(59,130,246,0.3)" },
-    todo: { background: "rgba(148,163,184,0.1)", color: "#94a3b8", border: "1px solid rgba(148,163,184,0.2)" },
-    blocked: { background: "rgba(239,68,68,0.15)", color: "#f87171", border: "1px solid rgba(239,68,68,0.3)" },
+    done: { background: "var(--surface)", color: "var(--solar)", border: "1px solid var(--solar)" },
+    "in-progress": { background: "var(--surface)", color: "var(--cosmic)", border: "1px solid var(--cosmic)" },
+    todo: { background: "var(--surface)", color: "var(--muted)", border: "1px solid var(--muted)" },
+    blocked: { background: "var(--surface)", color: "var(--coral)", border: "1px solid var(--coral)" },
   };
   return (
     <span style={{
@@ -37,9 +37,9 @@ function StatusPill({ status }: { status: TaskStatus }) {
 
 function OwnerBadge({ owner }: { owner: TaskOwner }) {
   const styles: Record<TaskOwner, React.CSSProperties> = {
-    AI: { background: "rgba(139,92,246,0.15)", color: "#c4b5fd", border: "1px solid rgba(139,92,246,0.3)" },
-    Human: { background: "rgba(251,191,36,0.1)", color: "#fbbf24", border: "1px solid rgba(251,191,36,0.25)" },
-    Both: { background: "rgba(20,184,166,0.12)", color: "#2dd4bf", border: "1px solid rgba(20,184,166,0.25)" },
+    AI: { background: "var(--surface)", color: "var(--violet)", border: "1px solid var(--violet)" },
+    Human: { background: "var(--surface)", color: "var(--solar)", border: "1px solid var(--solar)" },
+    Both: { background: "var(--surface)", color: "var(--pink)", border: "1px solid var(--pink)" },
   };
   return (
     <span style={{
@@ -65,19 +65,19 @@ function ProgressBar({ done, total }: { done: number; total: number }) {
       <div style={{
         flex: 1,
         height: "4px",
-        background: "rgba(255,255,255,0.08)",
+        background: "var(--surface-subtle)",
         borderRadius: "2px",
         overflow: "hidden",
       }}>
         <div style={{
           width: `${pct}%`,
           height: "100%",
-          background: "linear-gradient(90deg, #3b82f6, #8b5cf6)",
+          background: "linear-gradient(90deg, var(--solar), var(--violet))",
           borderRadius: "2px",
           transition: "width 0.3s ease",
         }} />
       </div>
-      <span style={{ fontSize: "12px", color: "#94a3b8", whiteSpace: "nowrap" }}>{pct}% done</span>
+      <span style={{ fontSize: "12px", color: "var(--muted)", whiteSpace: "nowrap" }}>{pct}% done</span>
     </div>
   );
 }
@@ -91,7 +91,7 @@ export default function ProjectLaunchPage() {
         <div className="mxd-container grid-l-container">
 
           {/* Header */}
-          <div className="mxd-block" style={{ paddingBottom: "3rem", borderBottom: "1px solid rgba(255,255,255,0.08)" }}>
+          <div className="mxd-block" style={{ paddingBottom: "3rem", borderBottom: "1px solid var(--surface-subtle)" }}>
             <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", flexWrap: "wrap", gap: "2rem" }}>
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
@@ -101,13 +101,13 @@ export default function ProjectLaunchPage() {
                   </div>
                 </div>
                 <h1 className="large" style={{ margin: 0, lineHeight: 1 }}>Project Launch</h1>
-                <p className="t-large" style={{ marginTop: "0.75rem", color: "#94a3b8", maxWidth: "520px" }}>
+                <p className="t-large" style={{ marginTop: "0.75rem", color: "var(--muted)", maxWidth: "520px" }}>
                   Living build checklist for Gibson-azurio MVP. Stages, owners, tools, and status — all in one place.
                 </p>
               </div>
               <div style={{
-                background: "rgba(255,255,255,0.03)",
-                border: "1px solid rgba(255,255,255,0.08)",
+                background: "var(--surface)",
+                border: "1px solid var(--surface-subtle)",
                 borderRadius: "12px",
                 padding: "1.5rem 2rem",
                 minWidth: "260px",
@@ -117,18 +117,18 @@ export default function ProjectLaunchPage() {
                 </div>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.75rem" }}>
                   {[
-                    { label: "Done", value: stats.done, color: "#22c55e" },
-                    { label: "In Progress", value: stats.inProgress, color: "#60a5fa" },
-                    { label: "Blocked", value: stats.blocked, color: "#f87171" },
-                    { label: "Todo", value: stats.todo, color: "#94a3b8" },
+                    { label: "Done", value: stats.done, color: "var(--solar)" },
+                    { label: "In Progress", value: stats.inProgress, color: "var(--cosmic)" },
+                    { label: "Blocked", value: stats.blocked, color: "var(--coral)" },
+                    { label: "Todo", value: stats.todo, color: "var(--muted)" },
                   ].map((s) => (
                     <div key={s.label}>
                       <div style={{ fontSize: "22px", fontWeight: 700, color: s.color, lineHeight: 1 }}>{s.value}</div>
-                      <div style={{ fontSize: "11px", color: "#64748b", marginTop: "2px", letterSpacing: "0.04em" }}>{s.label.toUpperCase()}</div>
+                      <div style={{ fontSize: "11px", color: "var(--text-secondary)", marginTop: "2px", letterSpacing: "0.04em" }}>{s.label.toUpperCase()}</div>
                     </div>
                   ))}
                 </div>
-                <div style={{ marginTop: "1rem", paddingTop: "1rem", borderTop: "1px solid rgba(255,255,255,0.06)", fontSize: "11px", color: "#475569" }}>
+                <div style={{ marginTop: "1rem", paddingTop: "1rem", borderTop: "1px solid var(--surface-subtle)", fontSize: "11px", color: "var(--text-secondary)" }}>
                   {stats.total} tasks across 10 sections
                 </div>
               </div>
@@ -136,10 +136,10 @@ export default function ProjectLaunchPage() {
           </div>
 
           {/* Owner legend */}
-          <div className="mxd-block" style={{ paddingBlock: "1.5rem", borderBottom: "1px solid rgba(255,255,255,0.05)", display: "flex", gap: "1.5rem", flexWrap: "wrap", alignItems: "center" }}>
-            <span style={{ fontSize: "11px", color: "#475569", letterSpacing: "0.06em" }}>OWNER</span>
+          <div className="mxd-block" style={{ paddingBlock: "1.5rem", borderBottom: "1px solid var(--surface-subtle)", display: "flex", gap: "1.5rem", flexWrap: "wrap", alignItems: "center" }}>
+            <span style={{ fontSize: "11px", color: "var(--text-secondary)", letterSpacing: "0.06em" }}>OWNER</span>
             {(["AI", "Human", "Both"] as const).map((o) => (
-              <span key={o} style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "12px", color: "#64748b" }}>
+              <span key={o} style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "12px", color: "var(--text-secondary)" }}>
                 <OwnerBadge owner={o} /> {o === "AI" ? "Claude handles it" : o === "Human" ? "Gibson provides input or asset" : "Collaboration needed"}
               </span>
             ))}
@@ -147,15 +147,15 @@ export default function ProjectLaunchPage() {
 
           {/* Sections */}
           {projectSections.map((section) => (
-            <div key={section.number} className="mxd-block" style={{ paddingBlock: "2.5rem", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+            <div key={section.number} className="mxd-block" style={{ paddingBlock: "2.5rem", borderBottom: "1px solid var(--surface-subtle)" }}>
               <div style={{ marginBottom: "1.25rem", display: "flex", alignItems: "baseline", gap: "0.75rem" }}>
-                <span style={{ fontSize: "11px", color: "#3b82f6", fontWeight: 700, letterSpacing: "0.08em" }}>
+                <span style={{ fontSize: "11px", color: "var(--solar)", fontWeight: 700, letterSpacing: "0.08em" }}>
                   SECTION {String(section.number).padStart(2, "0")}
                 </span>
-                <h2 style={{ margin: 0, fontSize: "1rem", fontWeight: 600, color: "#e2e8f0" }}>
+                <h2 style={{ margin: 0, fontSize: "1rem", fontWeight: 600, color: "var(--t-bright)" }}>
                   {section.title}
                 </h2>
-                <span style={{ fontSize: "11px", color: "#475569", marginLeft: "auto" }}>
+                <span style={{ fontSize: "11px", color: "var(--text-secondary)", marginLeft: "auto" }}>
                   {section.tasks.filter(t => t.status === "done").length}/{section.tasks.length} done
                 </span>
               </div>
@@ -168,10 +168,10 @@ export default function ProjectLaunchPage() {
                   gap: "0.5rem",
                   padding: "0.4rem 0.75rem",
                   fontSize: "10px",
-                  color: "#475569",
+                  color: "var(--text-secondary)",
                   letterSpacing: "0.06em",
                   fontWeight: 600,
-                  borderBottom: "1px solid rgba(255,255,255,0.05)",
+                  borderBottom: "1px solid var(--surface-subtle)",
                 }}>
                   <span>#</span>
                   <span>TASK</span>
@@ -188,23 +188,23 @@ export default function ProjectLaunchPage() {
                     gap: "0.5rem",
                     padding: "0.65rem 0.75rem",
                     alignItems: "start",
-                    background: idx % 2 === 0 ? "transparent" : "rgba(255,255,255,0.015)",
+                    background: idx % 2 === 0 ? "transparent" : "var(--surface)",
                     borderRadius: "4px",
                     fontSize: "13px",
                   }}>
-                    <span style={{ color: "#475569", fontSize: "11px", paddingTop: "2px" }}>{String(task.id).padStart(2, "0")}</span>
+                    <span style={{ color: "var(--text-secondary)", fontSize: "11px", paddingTop: "2px" }}>{String(task.id).padStart(2, "0")}</span>
                     <span style={{
-                      color: task.status === "done" ? "#64748b" : "#cbd5e1",
+                      color: task.status === "done" ? "var(--text-secondary)" : "var(--t-bright)",
                       textDecoration: task.status === "done" ? "line-through" : "none",
-                      textDecorationColor: "#475569",
+                      textDecorationColor: "var(--text-secondary)",
                       lineHeight: 1.4,
                     }}>
                       {task.title}
                     </span>
                     <span><OwnerBadge owner={task.owner} /></span>
                     <span><StatusPill status={task.status} /></span>
-                    <span style={{ color: "#64748b", fontSize: "12px", lineHeight: 1.35 }}>{task.tool}</span>
-                    <span style={{ color: "#64748b", fontSize: "11px", lineHeight: 1.4 }}>{task.notes}</span>
+                    <span style={{ color: "var(--text-secondary)", fontSize: "12px", lineHeight: 1.35 }}>{task.tool}</span>
+                    <span style={{ color: "var(--text-secondary)", fontSize: "11px", lineHeight: 1.4 }}>{task.notes}</span>
                   </div>
                 ))}
               </div>
@@ -213,8 +213,8 @@ export default function ProjectLaunchPage() {
 
           {/* Footer note */}
           <div className="mxd-block" style={{ paddingBlock: "2rem" }}>
-            <p style={{ fontSize: "12px", color: "#334155", textAlign: "center" }}>
-              Update statuses in <code style={{ background: "rgba(255,255,255,0.06)", padding: "1px 5px", borderRadius: "3px", fontFamily: "monospace" }}>data/projectLaunch.ts</code> — changes rebuild automatically.
+            <p style={{ fontSize: "12px", color: "var(--text-secondary)", textAlign: "center" }}>
+              Update statuses in <code style={{ background: "var(--surface-subtle)", padding: "1px 5px", borderRadius: "3px", fontFamily: "monospace" }}>data/projectLaunch.ts</code> — changes rebuild automatically.
             </p>
           </div>
 

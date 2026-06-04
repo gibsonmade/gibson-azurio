@@ -13,6 +13,7 @@ import {
   type Ref,
 } from "react";
 import { gsap } from "gsap";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 type AnimationTargetType = "item" | "fade";
 
@@ -49,6 +50,7 @@ export default function CommonLoadAnimation({
 }: CommonLoadAnimationProps) {
   const loadingItemRefs = useRef<HTMLElement[]>([]);
   const fadeItemRefs = useRef<HTMLElement[]>([]);
+  const reducedMotion = useReducedMotionMode();
 
   const registerTarget = useMemo(
     () =>
@@ -68,6 +70,14 @@ export default function CommonLoadAnimation({
     const loadingItems = loadingItemRefs.current.filter(Boolean);
     const fadeInItems = fadeItemRefs.current.filter(Boolean);
     const animations: gsap.core.Tween[] = [];
+
+    if (reducedMotion) {
+      gsap.set([...loadingItems, ...fadeInItems], {
+        opacity: 1,
+        clearProps: "visibility",
+      });
+      return;
+    }
 
     if (loadingItems.length) {
       gsap.set(loadingItems, { opacity: 0 });
@@ -99,7 +109,7 @@ export default function CommonLoadAnimation({
     return () => {
       animations.forEach((animation) => animation.kill());
     };
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <LoadAnimationContext.Provider value={{ registerTarget }}>

@@ -1,14 +1,15 @@
 import "@/styles/template.css";
-import { JetBrains_Mono, Manrope } from "next/font/google";
+import { Geist, JetBrains_Mono } from "next/font/google";
 import Header1 from "@/components/headers/Header1";
 import TemplateRuntimeProvider from "@/components/common/TemplateRuntimeProvider";
 import MenuRuntimeShell from "@/components/headers/MenuRuntimeShell";
 import { Metadata } from "next";
+import Script from "next/script";
 import { siteCopy } from "@/data/siteCopy";
 
-const manrope = Manrope({
+const geist = Geist({
   subsets: ["latin"],
-  variable: "--font-manrope",
+  variable: "--font-geist",
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -20,6 +21,20 @@ export const metadata: Metadata = {
   title: siteCopy.seo.title,
   description: siteCopy.seo.description,
 };
+
+const motionInitScript = `
+(function() {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var forced = params.get('motion');
+    var stored = localStorage.getItem('template.motion');
+    var reduced = forced === 'reduced' || forced === 'still' || (forced !== 'full' && (stored === 'reduced' || (!stored && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)));
+    document.documentElement.setAttribute('data-motion', reduced ? 'reduced' : 'full');
+  } catch (error) {
+    document.documentElement.setAttribute('data-motion', 'full');
+  }
+})();
+`;
 
 export default function RootLayout({
   children,
@@ -33,11 +48,19 @@ export default function RootLayout({
       lang="en"
       className="no-touch"
       color-scheme={initialTheme}
+      data-motion="full"
       suppressHydrationWarning
     >
       <body
-        className={`${manrope.variable} ${jetbrainsMono.variable} app-font-vars`}
+        className={`${geist.variable} ${jetbrainsMono.variable} app-font-vars`}
       >
+        <Script
+          id="motion-preference-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: motionInitScript,
+          }}
+        />
         <TemplateRuntimeProvider>
           <Header1 initialTheme={initialTheme} />
           <MenuRuntimeShell />

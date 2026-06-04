@@ -15,6 +15,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Flip } from "gsap/dist/Flip.js";
 import { usePathname } from "next/navigation";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 gsap.registerPlugin(ScrollTrigger, Flip);
 
@@ -48,6 +49,7 @@ export default function CommonHeroVideoScale({
   const wrapperRefs = useRef<HTMLElement[]>([]);
   const targetRef = useRef<HTMLElement | null>(null);
   const pathname = usePathname();
+  const reducedMotion = useReducedMotionMode();
 
   const registerWrapper = useMemo(
     () => (index: number) => (el: HTMLElement | null) => {
@@ -65,6 +67,10 @@ export default function CommonHeroVideoScale({
     const wrappers = wrapperRefs.current.filter(Boolean);
     const target = targetRef.current;
     if (wrappers.length < 2 || !target) return;
+    if (reducedMotion) {
+      gsap.set(target, { clearProps: "all" });
+      return;
+    }
 
     let timeline: gsap.core.Timeline | null = null;
     let resizeTimer: ReturnType<typeof setTimeout> | null = null;
@@ -154,7 +160,7 @@ export default function CommonHeroVideoScale({
       }
       resizeObserver?.disconnect();
     };
-  }, [pathname]);
+  }, [pathname, reducedMotion]);
 
   return (
     <HeroVideoScaleContext.Provider

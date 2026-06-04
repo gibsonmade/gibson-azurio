@@ -2,6 +2,7 @@
 
 import type { AnchorHTMLAttributes, ReactNode } from "react";
 import { useLenis } from "@/components/common/LenisContext";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 type SmoothAnchorLinkProps = Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> & {
   targetId: string;
@@ -15,6 +16,7 @@ export default function SmoothAnchorLink({
   ...rest
 }: SmoothAnchorLinkProps) {
   const lenis = useLenis();
+  const reducedMotion = useReducedMotionMode();
   const hash = targetId.startsWith("#") ? targetId : `#${targetId}`;
   const { onClick, ...anchorProps } = rest;
 
@@ -26,10 +28,13 @@ export default function SmoothAnchorLink({
     const target = document.querySelector(hash);
     if (!(target instanceof HTMLElement)) return;
 
-    if (lenis) {
+    if (lenis && !reducedMotion) {
       lenis.scrollTo(target);
     } else {
-      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      target.scrollIntoView({
+        behavior: reducedMotion ? "auto" : "smooth",
+        block: "start",
+      });
     }
 
     window.history.replaceState(null, "", hash);

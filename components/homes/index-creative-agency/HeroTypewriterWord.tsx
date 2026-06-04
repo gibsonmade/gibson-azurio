@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 const heroTypewriterWords = [
   "ideas",
@@ -14,6 +15,7 @@ const heroTypewriterWords = [
 ];
 
 export default function HeroTypewriterWord() {
+  const reducedMotion = useReducedMotionMode();
   const [wordIndex, setWordIndex] = useState(0);
   const [visibleChars, setVisibleChars] = useState(
     heroTypewriterWords[0].length,
@@ -27,6 +29,13 @@ export default function HeroTypewriterWord() {
   );
 
   useEffect(() => {
+    if (reducedMotion) {
+      setWordIndex(0);
+      setVisibleChars(heroTypewriterWords[0].length);
+      setIsDeleting(false);
+      return;
+    }
+
     const isTyped = visibleChars === word.length;
     const isDeleted = visibleChars === 0;
     const delay = isTyped && !isDeleting ? 950 : isDeleting ? 48 : 72;
@@ -47,7 +56,7 @@ export default function HeroTypewriterWord() {
     }, delay);
 
     return () => window.clearTimeout(timeout);
-  }, [isDeleting, visibleChars, word.length]);
+  }, [isDeleting, reducedMotion, visibleChars, word.length]);
 
   return (
     <span className="hero-typewriter" aria-label={accessibleWords}>

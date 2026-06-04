@@ -89,7 +89,7 @@ export default function Nav({
     () => makeSlotters(g.contactRevealTargets, 8),
     [g],
   );
-  const footerSlots = useMemo(() => makeSlotters(g.footerSplitTargets, 4), [g]);
+  const footerSlots = useMemo(() => makeSlotters(g.footerSplitTargets, 2), [g]);
   const dividerSlots = useMemo(() => makeSlotters(g.dividers, 6), [g]);
   const arrowSlots = useMemo(() => makeSlotters(g.arrows, 2), [g]);
   const liSlots = useMemo(() => makeSlotters(g.menuItemLis, 5), [g]);
@@ -138,9 +138,34 @@ export default function Nav({
               <div className="mxd-menu__shadow shadow-top" />
               <div className="mxd-menu__caption">
                 <p ref={headerSlots[1]}>
-                  Design systems
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: "0.55rem" }}>
+                    <svg
+                      width="16"
+                      height="14"
+                      viewBox="0 0 18 14"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                      aria-hidden="true"
+                    >
+                      <rect x="5" y="0" width="2" height="1" />
+                      <rect x="4" y="1" width="3" height="1" />
+                      <rect x="3" y="2" width="5" height="1" />
+                      <rect x="2" y="3" width="14" height="1" />
+                      <rect x="1" y="4" width="16" height="1" />
+                      <rect x="0" y="5" width="18" height="1" />
+                      <rect x="0" y="6" width="18" height="1" />
+                      <rect x="1" y="7" width="16" height="1" />
+                      <rect x="2" y="8" width="13" height="1" />
+                      <rect x="3" y="9" width="11" height="1" />
+                      <rect x="4" y="10" width="9" height="1" />
+                      <rect x="5" y="11" width="7" height="1" />
+                      <rect x="6" y="12" width="5" height="1" />
+                      <rect x="7" y="13" width="3" height="1" />
+                    </svg>
+                    Get started today
+                  </span>
                   <br />
-                  and useful digital tools
+                  From ideas to launch.
                 </p>
               </div>
               {/* left side */}
@@ -179,10 +204,10 @@ export default function Nav({
                       </li>
                       <li
                         ref={liSlots[1]}
-                        className={parentItemClass(worksSectionActive)}
+                        className={parentItemClass(pagesSectionActive)}
                       >
                         <div ref={toggleSlots[1]} className="main-menu__toggle">
-                          <p className="main-menu__link">
+                          <Link className="main-menu__link" href={`/about`}>
                             <span
                               ref={mainSlots[2]}
                               className="main-menu__number"
@@ -191,6 +216,31 @@ export default function Nav({
                             </span>
                             <span
                               ref={mainSlots[3]}
+                              className="main-menu__caption"
+                            >
+                              About
+                            </span>
+                          </Link>
+                        </div>
+                        <div
+                          ref={dividerSlots[2]}
+                          className="main-menu__divider divider-bottom"
+                        />
+                      </li>
+                      <li
+                        ref={liSlots[2]}
+                        className={parentItemClass(worksSectionActive)}
+                      >
+                        <div ref={toggleSlots[2]} className="main-menu__toggle">
+                          <p className="main-menu__link">
+                            <span
+                              ref={mainSlots[4]}
+                              className="main-menu__number"
+                            >
+                              / 03
+                            </span>
+                            <span
+                              ref={mainSlots[5]}
                               className="main-menu__caption"
                             >
                               Work
@@ -206,34 +256,9 @@ export default function Nav({
                             </svg>
                           </div>
                         </div>
-                        <ul ref={submenuSlots[1]} className="submenu">
+                        <ul ref={submenuSlots[2]} className="submenu">
                           {renderSubmenuLinks(worksLinks)}
                         </ul>
-                        <div
-                          ref={dividerSlots[2]}
-                          className="main-menu__divider divider-bottom"
-                        />
-                      </li>
-                      <li
-                        ref={liSlots[2]}
-                        className={parentItemClass(pagesSectionActive)}
-                      >
-                        <div ref={toggleSlots[2]} className="main-menu__toggle">
-                          <Link className="main-menu__link" href={`/about`}>
-                            <span
-                              ref={mainSlots[4]}
-                              className="main-menu__number"
-                            >
-                              / 03
-                            </span>
-                            <span
-                              ref={mainSlots[5]}
-                              className="main-menu__caption"
-                            >
-                              About
-                            </span>
-                          </Link>
-                        </div>
                         <div
                           ref={dividerSlots[3]}
                           className="main-menu__divider divider-bottom"
@@ -315,13 +340,13 @@ export default function Nav({
                         <a
                           ref={contactSlots[0]}
                           className="tag tag-m"
-                          href="mailto:hello@gibsooon.com?subject=Message%20from%20your%20site"
+                          href="mailto:gibhall@gmail.com?subject=Message%20from%20your%20site"
                         >
                           <TextScramble
                             ref={contactRevealSlots[0]}
                             className="mxd-scramble"
                           >
-                            hello@gibsooon.com
+                            gibhall@gmail.com
                           </TextScramble>
                         </a>
                       </li>
@@ -342,7 +367,7 @@ export default function Nav({
                     </ul>
                   </div>
                   <div className="menu-contact__item">
-                    <span className="menu-contact__label">Focus</span>
+                    <span className="menu-contact__label">FOCUS</span>
                     <ul className="menu-contact__list">
                       <li>
                         <a
@@ -351,11 +376,11 @@ export default function Nav({
                           href="/work"
                         >
                           <span ref={contactRevealSlots[2]}>
-                            Product strategy,
+                            Startups,
                             <br />
-                            UX leadership,
+                            Scaleups,
                             <br />
-                            AI workflows
+                            Enterprise
                           </span>
                         </a>
                       </li>
@@ -375,7 +400,7 @@ export default function Nav({
                             ref={contactRevealSlots[3]}
                             className="mxd-scramble"
                           >
-                            Product strategy
+                            Strategy
                           </TextScramble>
                         </a>
                       </li>
@@ -390,7 +415,7 @@ export default function Nav({
                             ref={contactRevealSlots[4]}
                             className="mxd-scramble"
                           >
-                            Brand systems
+                            Design
                           </TextScramble>
                         </a>
                       </li>
@@ -405,7 +430,7 @@ export default function Nav({
                             ref={contactRevealSlots[5]}
                             className="mxd-scramble"
                           >
-                            Product UX
+                            Development
                           </TextScramble>
                         </a>
                       </li>
@@ -420,7 +445,7 @@ export default function Nav({
                             ref={contactRevealSlots[6]}
                             className="mxd-scramble"
                           >
-                            AI workflows
+                            Growth
                           </TextScramble>
                         </a>
                       </li>
@@ -435,7 +460,7 @@ export default function Nav({
                             ref={contactRevealSlots[7]}
                             className="mxd-scramble"
                           >
-                            Launch support
+                            Automation
                           </TextScramble>
                         </a>
                       </li>
@@ -454,40 +479,12 @@ export default function Nav({
                   >
                     Project Launch
                   </Link>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "0.3rem" }}>
-                    <p ref={footerSlots[0]} className="menu-data__text" style={{ display: "flex", alignItems: "center", gap: "0.7rem" }}>
-                      {/* 8-bit unicorn icon */}
-                      <svg width="16" height="14" viewBox="0 0 18 14" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <rect x="5" y="0" width="2" height="1"/>
-                        <rect x="4" y="1" width="3" height="1"/>
-                        <rect x="3" y="2" width="5" height="1"/>
-                        <rect x="2" y="3" width="14" height="1"/>
-                        <rect x="1" y="4" width="16" height="1"/>
-                        <rect x="0" y="5" width="18" height="1"/>
-                        <rect x="0" y="6" width="18" height="1"/>
-                        <rect x="1" y="7" width="16" height="1"/>
-                        <rect x="2" y="8" width="13" height="1"/>
-                        <rect x="3" y="9" width="11" height="1"/>
-                        <rect x="4" y="10" width="9" height="1"/>
-                        <rect x="5" y="11" width="7" height="1"/>
-                        <rect x="6" y="12" width="5" height="1"/>
-                        <rect x="7" y="13" width="3" height="1"/>
-                      </svg>
-                      Design Systems &amp; Useful Digital Tools
-                    </p>
-                    <p className="menu-data__text" style={{ opacity: 0.45, fontSize: "0.82em" }}>
-                      Strategy, craft, and code — rare in one place.{" "}
-                      <a ref={footerSlots[1]} href="/">
-                        <TextScramble className="mxd-scramble">Gibsooon</TextScramble>
-                      </a>
-                    </p>
-                  </div>
                 </div>
                 <div className="menu-data__right">
-                  <p ref={footerSlots[2]} className="menu-data__text">
+                  <p ref={footerSlots[0]} className="menu-data__text">
                     Copyright Gibsooon
                   </p>
-                  <p ref={footerSlots[3]} className="menu-data__text">
+                  <p ref={footerSlots[1]} className="menu-data__text">
                     ©{new Date().getFullYear()}
                   </p>
                 </div>

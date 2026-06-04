@@ -17,6 +17,7 @@ import {
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText.js";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -78,6 +79,7 @@ export default function CommonHero3DImages({
   const coverRef = useRef<HTMLElement | null>(null);
   const introRef = useRef<HTMLElement | null>(null);
   const outroRef = useRef<HTMLElement | null>(null);
+  const reducedMotion = useReducedMotionMode();
 
   const registerImage = useMemo(
     () => (index: number) => (el: HTMLElement | null) => {
@@ -113,6 +115,17 @@ export default function CommonHero3DImages({
       (node): node is HTMLElement => Boolean(node && node.isConnected),
     );
     if (!container || !coverImg || !introHeader || !outroHeader || !images.length) return;
+    if (reducedMotion) {
+      gsap.set([coverImg, introHeader, outroHeader, ...images], {
+        opacity: 1,
+        scale: 1,
+        x: 0,
+        y: 0,
+        z: 0,
+        clearProps: "transform,visibility",
+      });
+      return;
+    }
 
     const introHeaderSplit = SplitText.create(introHeader, { type: "words, chars" });
     const outroHeaderSplit = SplitText.create(outroHeader, { type: "words, chars" });
@@ -245,7 +258,7 @@ export default function CommonHero3DImages({
       introHeaderSplit.revert();
       outroHeaderSplit.revert();
     };
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <Hero3DContext.Provider

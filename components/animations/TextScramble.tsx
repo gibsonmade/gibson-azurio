@@ -1,6 +1,7 @@
 "use client";
 
 import { forwardRef, useCallback, useEffect, useRef, useState } from "react";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 const SPEED_MS = 40;
@@ -23,6 +24,7 @@ const TextScramble = forwardRef<HTMLElement, TextScrambleProps>(function TextScr
   ref,
 ) {
   const baseText = children.trim();
+  const reducedMotion = useReducedMotionMode();
   const [scrambledText, setScrambledText] = useState<ScrambleState | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -34,6 +36,7 @@ const TextScramble = forwardRef<HTMLElement, TextScrambleProps>(function TextScr
   }, []);
 
   const onEnter = useCallback(() => {
+    if (reducedMotion) return;
     if (intervalRef.current) return;
     const source = baseText;
     let iterations = 0;
@@ -57,7 +60,7 @@ const TextScramble = forwardRef<HTMLElement, TextScrambleProps>(function TextScr
       }
       iterations += STEP;
     }, SPEED_MS);
-  }, [baseText, clearIntervalSafe]);
+  }, [baseText, clearIntervalSafe, reducedMotion]);
 
   const onLeave = useCallback(() => {
     clearIntervalSafe();

@@ -2,6 +2,7 @@
 
 import { gsap } from "gsap";
 import { useLayoutEffect, useRef, type ReactNode } from "react";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 type MxdStatsLineItemProps = {
   /** Divider row (scroll trigger), e.g. `mxd-stats-lines__divider divider-top` */
@@ -21,11 +22,16 @@ export default function MxdStatsLineItem({
 }: MxdStatsLineItemProps) {
   const innerRef = useRef<HTMLDivElement>(null);
   const dividerRef = useRef<HTMLDivElement>(null);
+  const reducedMotion = useReducedMotionMode();
 
   useLayoutEffect(() => {
     const inner = innerRef.current;
     const divider = dividerRef.current;
     if (!inner || !divider) return;
+    if (reducedMotion) {
+      gsap.set(inner, { yPercent: 0, clearProps: "transform" });
+      return;
+    }
 
     const tween = gsap.fromTo(
       inner,
@@ -46,7 +52,7 @@ export default function MxdStatsLineItem({
       tween.scrollTrigger?.kill();
       tween.kill();
     };
-  }, []);
+  }, [reducedMotion]);
 
   return (
     <div

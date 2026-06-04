@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 
 import { useLayoutEffect, useRef, type ReactNode, type RefObject } from "react";
 import { useBlurContainerRef } from "@/components/animations/BlurScrollRoot";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 type BlurSectionProps = {
   as?: "div" | "footer" | "section";
@@ -21,11 +22,16 @@ export default function BlurSection({
 }: BlurSectionProps) {
   const sectionRef = useRef<HTMLElement | null>(null);
   const containerRef = useBlurContainerRef();
+  const reducedMotion = useReducedMotionMode();
 
   useLayoutEffect(() => {
     const section = sectionRef.current;
     const container = containerRef.current;
     if (!section || !container) return;
+    if (reducedMotion) {
+      gsap.set(container, { display: "none" });
+      return;
+    }
 
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -51,7 +57,7 @@ export default function BlurSection({
       tl.scrollTrigger?.kill();
       tl.kill();
     };
-  }, [containerRef]);
+  }, [containerRef, reducedMotion]);
 
   const cn = className ? `blur-section ${className}` : "blur-section";
 

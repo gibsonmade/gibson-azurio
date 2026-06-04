@@ -19,7 +19,9 @@ export default function IndexCreativeAgencyPage() {
         <ParallaxDividerVideo />
         <About />
         <ProjectsMarquee />
-        <ServicesDescriptionStack />
+        <div className="home-services-section">
+          <ServicesDescriptionStack />
+        </div>
         <CTAWithMarquee />
       </>
       <Footer2 />

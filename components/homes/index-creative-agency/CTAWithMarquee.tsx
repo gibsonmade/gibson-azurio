@@ -11,7 +11,7 @@ export default function CTAWithMarquee() {
 
   return (
     <>
-      <BlurSection className="mxd-section bg-color-opposite">
+      <BlurSection className="mxd-section home-cta-section">
         <div className="mxd-container fullwidth-container">
           <div className="mxd-block">
             <div className="mxd-promo transparent home-simple-cta">

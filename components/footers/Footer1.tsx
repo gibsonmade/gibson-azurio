@@ -50,7 +50,7 @@ export default function Footer1() {
                 >
                   <Link className="mxd-logo" href={`/`}>
                     <Logo8bit />
-                    <div className="mxd-logo__text">
+                    <div className="mxd-logo__text footer-wordmark">
                       <TextScramble className="mxd-scramble">
                         Gibsooon
                       </TextScramble>
@@ -256,7 +256,7 @@ export default function Footer1() {
               >
                 <CommonAnimatedText
                   as="span"
-                  className="anim-uni-chars"
+                  className="anim-uni-chars footer-wordmark"
                   animation="animChars"
                 >
                   Gibsooon

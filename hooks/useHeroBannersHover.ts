@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { useEffect, type RefObject } from "react";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 export type HeroBannerGroupRefs = {
   triggerRef: RefObject<HTMLElement | null>;
@@ -30,9 +31,22 @@ export function useHeroBannersHover(
   hoverContainerRef: RefObject<HTMLElement | null>,
   groups: readonly HeroBannerGroupRefs[],
 ) {
+  const reducedMotion = useReducedMotionMode();
+
   useEffect(() => {
     const container = hoverContainerRef.current;
     if (!container) return;
+
+    if (reducedMotion) {
+      const banners = groups.flatMap((group) => resolveBanners(group.bannerRefs));
+      gsap.set(banners, {
+        opacity: 0,
+        clipPath: "inset(0% 0% 100% 0%)",
+        y: 0,
+        pointerEvents: "none",
+      });
+      return;
+    }
 
     let activeGroup: BannerGroupState | null = null;
     let isTransitioning = false;
@@ -113,5 +127,5 @@ export function useHeroBannersHover(
         gsap.killTweensOf(g.banners);
       }
     };
-  }, [hoverContainerRef, groups]);
+  }, [groups, hoverContainerRef, reducedMotion]);
 }

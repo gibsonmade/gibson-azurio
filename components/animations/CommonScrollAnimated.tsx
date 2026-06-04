@@ -10,6 +10,7 @@ import {
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link, { type LinkProps } from "next/link";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,10 +40,23 @@ export function CommonScrollAnimated<T extends ElementType = "div">({
 }: CommonScrollAnimatedProps<T>) {
   const Tag = (as ?? "div") as ElementType;
   const elRef = useRef<HTMLElement | null>(null);
+  const reducedMotion = useReducedMotionMode();
 
   useLayoutEffect(() => {
     const el = elRef.current;
     if (!el || animation === "none") return;
+
+    if (reducedMotion) {
+      gsap.set(el, {
+        clearProps: "transform,opacity,visibility,clipPath,filter",
+      });
+      if (el.firstElementChild) {
+        gsap.set(el.firstElementChild, {
+          clearProps: "transform,opacity,visibility,clipPath,filter",
+        });
+      }
+      return;
+    }
 
     const targetForLine =
       animation === "slideDownLine" || animation === "slideUpLine"
@@ -218,7 +232,7 @@ export function CommonScrollAnimated<T extends ElementType = "div">({
       tween.scrollTrigger?.kill();
       tween.kill();
     };
-  }, [animation]);
+  }, [animation, reducedMotion]);
 
   return (
     <Tag ref={elRef} {...rest}>
@@ -345,8 +359,20 @@ export function CommonCardBatchAnimated<T extends ElementType = "div">({
   ...rest
 }: CommonCardBatchAnimatedProps<T>) {
   const Tag = (as ?? "div") as ElementType;
+  const reducedMotion = useReducedMotionMode();
 
   useLayoutEffect(() => {
+    if (reducedMotion) {
+      const cards = gsap.utils.toArray<HTMLElement>(`.animate-card-${columns}`);
+      if (!cards.length) return;
+      gsap.set(cards, {
+        opacity: 1,
+        y: 0,
+        clearProps: "transform,visibility",
+      });
+      return;
+    }
+
     let runtime = cardBatchRuntimeByColumns.get(columns);
     if (!runtime) {
       runtime = setupCardBatch(columns);
@@ -361,7 +387,7 @@ export function CommonCardBatchAnimated<T extends ElementType = "div">({
       current.refsCount -= 1;
       scheduleBatchRebuild(columns);
     };
-  }, [columns]);
+  }, [columns, reducedMotion]);
 
   return <Tag {...rest}>{children}</Tag>;
 }

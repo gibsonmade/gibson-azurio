@@ -2,6 +2,7 @@
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { isReducedMotionMode } from "@/lib/template/motionPreference";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,6 +52,7 @@ function bindVelocityToTimeline(master: gsap.core.Timeline): () => void {
  */
 export function initCtaMarqueeToLeft(track: HTMLElement | null): () => void {
   if (!track) return () => {};
+  if (isReducedMotionMode()) return () => {};
 
   const originalHTML = track.innerHTML;
   track.innerHTML += originalHTML;
@@ -69,6 +71,7 @@ export function initCtaMarqueeToLeft(track: HTMLElement | null): () => void {
  */
 export function initCtaMarqueeToRight(track: HTMLElement | null): () => void {
   if (!track) return () => {};
+  if (isReducedMotionMode()) return () => {};
 
   const originalHTML = track.innerHTML;
   track.innerHTML += originalHTML;
@@ -91,6 +94,7 @@ export function initCtaMarqueeTwoLines(
   bottomTrack: HTMLElement | null,
 ): () => void {
   if (!topTrack || !bottomTrack) return () => {};
+  if (isReducedMotionMode()) return () => {};
 
   const originalTop = topTrack.innerHTML;
   const originalBottom = bottomTrack.innerHTML;

@@ -12,6 +12,7 @@ import { SplitText } from "gsap/SplitText.js";
 import Link, { type LinkProps } from "next/link";
 import { usePathname } from "next/navigation";
 import SplitType from "split-type";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -41,10 +42,19 @@ export default function CommonAnimatedText<T extends ElementType = "p">({
   const Tag = (as ?? "p") as ElementType;
   const elRef = useRef<HTMLElement | null>(null);
   const pathname = usePathname();
+  const reducedMotion = useReducedMotionMode();
 
   useLayoutEffect(() => {
     const el = elRef.current;
     if (!el || animation === "none") return;
+    if (reducedMotion) {
+      gsap.set(el, {
+        opacity: 1,
+        visibility: "inherit",
+        clearProps: "transform,clipPath,filter",
+      });
+      return;
+    }
     let cancelled = false;
     let cleanup: (() => void) | undefined;
 
@@ -194,7 +204,7 @@ export default function CommonAnimatedText<T extends ElementType = "p">({
       window.clearTimeout(delayedRefreshId);
       cleanup?.();
     };
-  }, [animation, pathname]);
+  }, [animation, pathname, reducedMotion]);
 
   return (
     <Tag

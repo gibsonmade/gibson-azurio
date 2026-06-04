@@ -16,8 +16,8 @@ export default function LogoLiquidMetal() {
       shape="diamond"
       angle={70}
       image="/img-temp/uploads/gibsooon-text.svg"
-      colorBack="#00000000"
-      colorTint="#FFFFFF"
+      colorBack="#111619"
+      colorTint="#EEF5F8"
       style={{ height: "44px", width: "180px" }}
     />
   );

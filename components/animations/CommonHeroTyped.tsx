@@ -7,6 +7,7 @@ import {
   type ComponentPropsWithoutRef,
   type ReactNode,
 } from "react";
+import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 
 /** Mirrors template `mxdHeroTyped()` (Typed.js + stringsElement). */
 const DEFAULT_TYPED_OPTIONS = {
@@ -57,8 +58,21 @@ export default function CommonHeroTyped({
 }: CommonHeroTypedProps) {
   const typedRef = useRef<HTMLSpanElement>(null);
   const stringsRef = useRef<HTMLSpanElement>(null);
+  const reducedMotion = useReducedMotionMode();
 
   useLayoutEffect(() => {
+    if (reducedMotion) {
+      const el = typedRef.current;
+      const stringsEl = stringsRef.current;
+      if (!el) return;
+      const firstString = stringsEl?.querySelector("p, span, div, b, strong");
+      el.textContent =
+        firstString?.textContent?.trim() ||
+        stringsEl?.textContent?.trim() ||
+        "";
+      return;
+    }
+
     let cancelled = false;
     let rafId = 0;
     let attempts = 0;
@@ -118,11 +132,17 @@ export default function CommonHeroTyped({
     loopCount,
     fadeOut,
     autoInsertCss,
+    reducedMotion,
   ]);
 
   return (
     <h1 className={className} {...h1Props}>
-      <span ref={stringsRef} className="typed-strings" aria-hidden>
+      <span
+        ref={stringsRef}
+        className="typed-strings"
+        aria-hidden
+        style={{ display: "none" }}
+      >
         {children}
       </span>
       <span ref={typedRef} />
