@@ -15,7 +15,7 @@ export default function LogoLiquidMetal() {
       rotation={0}
       shape="diamond"
       angle={70}
-      image="/img-temp/uploads/gibsooon-text.svg"
+      image="/img-temp/uploads/gibson-logo-1.svg"
       colorBack="#111619"
       colorTint="#DDEAF0"
       style={{ height: "44px", width: "180px" }}

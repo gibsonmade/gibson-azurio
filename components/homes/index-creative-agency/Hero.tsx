@@ -143,7 +143,15 @@ export default function Hero() {
                   </CommonLoadItem>
                   <CommonLoadItem index={1}>
                     <p className="hero-05-dataline__caption loading-item">
-                      {hero.caption}
+                      <span className="magic-phrase">
+                        <span className="magic-sparkle magic-sparkle--1" aria-hidden="true">✦</span>
+                        <span className="magic-sparkle magic-sparkle--2" aria-hidden="true">✦</span>
+                        <span className="magic-sparkle magic-sparkle--3" aria-hidden="true">✦</span>
+                        <span className="magic-sparkle magic-sparkle--4" aria-hidden="true">✦</span>
+                        <span className="magic-sparkle magic-sparkle--5" aria-hidden="true">✧</span>
+                        <span className="magic-sparkle magic-sparkle--6" aria-hidden="true">✧</span>
+                        Design, tech &amp; some magic.
+                      </span>
                     </p>
                   </CommonLoadItem>
                   <CommonLoadItem index={2}>

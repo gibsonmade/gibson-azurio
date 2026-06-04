@@ -11,6 +11,9 @@ import { insightLinks, worksLinks } from "@/data/menu";
 import { useMxdMenuGsap, useMxdMenuGsapRefs } from "@/hooks/useMxdMenuGsap";
 import TextScramble from "@/components/animations/TextScramble";
 import Logo8bit from "@/components/common/Logo8bit";
+import LiquidMetalBlob from "@/components/common/LiquidMetalBlob";
+import ThemeSwitcher from "@/components/headers/ThemeSwitcher";
+import MotionSwitcher from "@/components/headers/MotionSwitcher";
 
 function normalizePath(p: string): string {
   if (!p) return "/";
@@ -94,9 +97,9 @@ export default function Nav({
 
   const headerSlots = useMemo(() => makeSlotters(g.headerSplitTargets, 2), [g]);
   const mainSlots = useMemo(() => makeSlotters(g.mainMenuLinkSpans, 10), [g]);
-  const contactSlots = useMemo(() => makeSlotters(g.contactAnchors, 7), [g]);
+  const contactSlots = useMemo(() => makeSlotters(g.contactAnchors, 2), [g]);
   const contactRevealSlots = useMemo(
-    () => makeSlotters(g.contactRevealTargets, 7),
+    () => makeSlotters(g.contactRevealTargets, 2),
     [g],
   );
   const footerSlots = useMemo(() => makeSlotters(g.footerSplitTargets, 2), [g]);
@@ -124,7 +127,7 @@ export default function Nav({
               <Logo8bit className="menu-logo__image" />
               {/* logo text */}
               <div className="menu-logo__text">
-                <span ref={headerSlots[0]}>Gibsooon</span>
+                <TextScramble ref={headerSlots[0]} className="mxd-scramble">Gibsooon</TextScramble>
               </div>
             </Link>
           </div>
@@ -140,6 +143,9 @@ export default function Nav({
                 priority
               />
             </div>
+            <div className="menu-media__blob" aria-hidden="true">
+              <LiquidMetalBlob />
+            </div>
           </div>
           {/* Menu Media End */}
           {/* Main Navigation Start */}
@@ -148,29 +154,10 @@ export default function Nav({
               <div className="mxd-menu__shadow shadow-top" />
               <div className="mxd-menu__caption">
                 <p ref={headerSlots[1]}>
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: "0.55rem" }}>
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 16 16"
-                      fill="currentColor"
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                    >
-                      <rect x="2" y="1" width="4" height="2" />
-                      <rect x="10" y="1" width="4" height="2" />
-                      <rect x="1" y="3" width="6" height="2" />
-                      <rect x="9" y="3" width="6" height="2" />
-                      <rect x="1" y="5" width="14" height="2" />
-                      <rect x="2" y="7" width="12" height="2" />
-                      <rect x="3" y="9" width="10" height="2" />
-                      <rect x="5" y="11" width="6" height="2" />
-                      <rect x="7" y="13" width="2" height="2" />
-                    </svg>
-                    Now booking
+                  <span className="mxd-hero__mark">
+                    <span className="mark-icon" aria-hidden="true" />
+                    <span className="mark-text">Available for hire</span>
                   </span>
-                  <br />
-                  SUMMER/FALL 2026
                 </p>
               </div>
               {/* left side */}
@@ -366,100 +353,27 @@ export default function Nav({
                     </ul>
                   </div>
                   <div className="menu-contact__item">
-                    <span className="menu-contact__label">FOCUS</span>
+                    <span className="menu-contact__label">Modes</span>
+                    <div className="menu-contact__list menu-modes">
+                      <ThemeSwitcher initialTheme="dark" />
+                      <MotionSwitcher />
+                    </div>
+                  </div>
+                  <div className="menu-contact__item">
+                    <span className="menu-contact__label">Follow</span>
                     <ul className="menu-contact__list">
                       <li>
                         <a
                           ref={contactSlots[1]}
                           className="tag tag-m"
-                          href="/work"
-                        >
-                          <span ref={contactRevealSlots[1]}>
-                            Startups,
-                            <br />
-                            Scaleups,
-                            <br />
-                            Enterprise
-                          </span>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div className="menu-contact__item">
-                    <span className="menu-contact__label">Capabilities</span>
-                    <ul className="menu-contact__list">
-                      <li>
-                        <a
-                          ref={contactSlots[2]}
-                          className="tag tag-m"
-                          href="https://dribbble.com/"
+                          href="https://www.instagram.com/gibsooon"
                           target="_blank"
                         >
                           <TextScramble
-                            ref={contactRevealSlots[2]}
+                            ref={contactRevealSlots[1]}
                             className="mxd-scramble"
                           >
-                            Strategy
-                          </TextScramble>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          ref={contactSlots[3]}
-                          className="tag tag-m"
-                          href="https://www.behance.net/"
-                          target="_blank"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[3]}
-                            className="mxd-scramble"
-                          >
-                            Design
-                          </TextScramble>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          ref={contactSlots[4]}
-                          className="tag tag-m"
-                          href="https://github.com/"
-                          target="_blank"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[4]}
-                            className="mxd-scramble"
-                          >
-                            Development
-                          </TextScramble>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          ref={contactSlots[5]}
-                          className="tag tag-m"
-                          href="https://www.figma.com/community"
-                          target="_blank"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[5]}
-                            className="mxd-scramble"
-                          >
-                            Growth
-                          </TextScramble>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          ref={contactSlots[6]}
-                          className="tag tag-m"
-                          href="https://codepen.io/"
-                          target="_blank"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[6]}
-                            className="mxd-scramble"
-                          >
-                            Automation
+                            @gibsooon
                           </TextScramble>
                         </a>
                       </li>
@@ -471,20 +385,20 @@ export default function Nav({
               <div className="mxd-menu__shadow" />
               <div className="mxd-menu__data">
                 <div className="menu-data__left">
-                  <Link
-                    href="/project-launch"
-                    style={{ opacity: 0.4, fontSize: "0.7em", marginRight: "1.25rem", letterSpacing: "0.06em" }}
-                    className="menu-data__text"
-                  >
-                    Project Launch
-                  </Link>
-                </div>
-                <div className="menu-data__right">
                   <p ref={footerSlots[0]} className="menu-data__text">
-                    Copyright Gibsooon
+                    <a href="/credits" className="menu-data__link">
+                      ©{new Date().getFullYear()} Copyright Gibsooon
+                    </a>
                   </p>
                   <p ref={footerSlots[1]} className="menu-data__text">
-                    ©{new Date().getFullYear()}
+                    <a href="/credits" className="menu-data__link">
+                      Site credits
+                    </a>
+                  </p>
+                  <p className="menu-data__text">
+                    <a href="/project-launch" className="menu-data__link">
+                      Project launch
+                    </a>
                   </p>
                 </div>
               </div>

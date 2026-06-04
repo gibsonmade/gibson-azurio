@@ -32,11 +32,10 @@ export function MotionPreferenceProvider({
 }: {
   children: ReactNode;
 }) {
-  const initial = getInitialMotionPreference();
-  const [reducedMotion, setReducedMotionState] = useState(
-    initial.preference === "reduced",
-  );
-  const [source, setSource] = useState<MotionPreferenceSource>(initial.source);
+  // Always start with the server-safe default so SSR and client first render match.
+  // The real preference (localStorage / matchMedia) is applied in useEffect below.
+  const [reducedMotion, setReducedMotionState] = useState(false);
+  const [source, setSource] = useState<MotionPreferenceSource>("default");
 
   useEffect(() => {
     const current = getInitialMotionPreference();

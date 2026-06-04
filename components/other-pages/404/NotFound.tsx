@@ -262,37 +262,17 @@ export default function NotFound() {
                     <div className="mxd-error__dataitem">
                       <span className="tag tag-m">
                         Copyright
-                        <a href="#0" target="_blank">
+                        <Link href="/">
                           <TextScramble className="mxd-scramble">
                             Gibsooon
                           </TextScramble>
-                        </a>
+                        </Link>
                         . All rights reserved
                       </span>
                     </div>
                     <div className="mxd-error__dataitem">
                       <span className="tag tag-m">
-                        React Nextjs Template crafted with
-                        <i>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width={18}
-                            height={18}
-                            version="1.1"
-                            viewBox="0 0 18 18"
-                          >
-                            <path d="M2.6,6.4v2.6H0V3.9h2.6v2.6ZM15.4,3.9v5.1h2.6V3.9h-2.6ZM12.9,11.6h2.6v-2.6h-2.6v2.6ZM2.6,9v2.6h2.6v-2.6h-2.6ZM10.3,14.1h2.6v-2.6h-2.6v2.6ZM5.1,11.6v2.6h2.6v-2.6h-2.6ZM7.7,3.9V1.3H2.6v2.6h5.1ZM15.4,3.9V1.3h-5.1v2.6h5.1ZM10.3,6.4v-2.6h-2.6v2.6h2.6ZM7.7,16.7h2.6v-2.6h-2.6v2.6Z" />
-                          </svg>
-                        </i>
-                        by
-                        <a
-                          href="https://themeforest.net/user/ib-themes"
-                          target="_blank"
-                        >
-                          <TextScramble className="mxd-scramble">
-                            Gibsooon
-                          </TextScramble>
-                        </a>
+                        Built by Gibson Hall
                       </span>
                     </div>
                     <div className="mxd-error__dataitem">

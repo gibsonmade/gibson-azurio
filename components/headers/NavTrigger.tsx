@@ -3,6 +3,8 @@
 import CommonLoadAnimation, {
   CommonLoadFade,
 } from "@/components/animations/CommonLoadAnimation";
+import { Menu, Close } from "pixelarticons/react";
+import TextScramble from "@/components/animations/TextScramble";
 
 type NavTriggerProps = {
   setToggleNode: (el: HTMLDivElement | null) => void;
@@ -18,15 +20,16 @@ export default function NavTrigger({
       <CommonLoadFade index={0}>
         <div className="mxd-menu__contain loading-fade">
           <div className="mxd-menu__toggle" ref={setToggleNode}>
-            <a
-              href="#0"
+            <button
+              type="button"
               className="mxd-menu__hamburger"
               aria-label="Menu"
               ref={setHamburgerNode}
             >
-              <div className="hamburger__line" />
-              <div className="hamburger__line" />
-            </a>
+              <TextScramble className="hamburger-label hamburger-menu-label">Menu</TextScramble>
+              <Menu className="hamburger-icon hamburger-menu-icon" aria-hidden="true" />
+              <Close className="hamburger-icon hamburger-close-icon" aria-hidden="true" />
+            </button>
           </div>
         </div>
       </CommonLoadFade>

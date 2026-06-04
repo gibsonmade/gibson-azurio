@@ -9,6 +9,7 @@ type SplitList3Props = {
 
 export default function SplitList3({ project }: SplitList3Props) {
   const constraints = project?.constraints.slice(0, 3) ?? [];
+  const constraintDetails = project?.constraintDetails ?? [];
 
   return (
     <>
@@ -37,7 +38,7 @@ export default function SplitList3({ project }: SplitList3Props) {
                           animation="splitLines"
                         >
                           {project?.approach ??
-                            "The case study approach will be expanded after review."}
+                            "Gibson shaped the work around a clearer path from strategy to usable execution."}
                           {project?.outcome ? <span>{project.outcome}</span> : null}
                         </CommonAnimatedText>
                       </div>
@@ -56,7 +57,7 @@ export default function SplitList3({ project }: SplitList3Props) {
                       </div>
                       {/* split data list */}
                       <div className="mxd-block-split__data">
-                        {constraints.map((constraint) => (
+                        {constraints.map((constraint, index) => (
                           <div className="split-data__item" key={constraint}>
                             <div className="split-data__divider divider-top" />
                             <div className="split-data__name">
@@ -74,7 +75,8 @@ export default function SplitList3({ project }: SplitList3Props) {
                                 as="p"
                                 animation="inUp"
                               >
-                                {project?.reviewStatus}
+                                {constraintDetails[index] ??
+                                  "This constraint shaped the project strategy, interface decisions, and launch path."}
                               </CommonScrollAnimated>
                             </div>
                             <div className="split-data__divider divider-bottom" />

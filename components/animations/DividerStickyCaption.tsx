@@ -128,7 +128,7 @@ export default function DividerStickyCaption({
                         </CommonScrollAnimated>
                         <div className="scroll-images-row__tags">
                           <TextScramble className="tag tag-m tag-medium mxd-scramble">
-                            Illustrations
+                            Brand systems
                           </TextScramble>
                         </div>
                       </div>
@@ -150,7 +150,7 @@ export default function DividerStickyCaption({
                         </CommonScrollAnimated>
                         <div className="scroll-images-row__tags">
                           <TextScramble className="tag tag-m tag-medium mxd-scramble">
-                            Photography
+                            Product UX
                           </TextScramble>
                         </div>
                       </div>
@@ -179,7 +179,7 @@ export default function DividerStickyCaption({
                         </CommonScrollAnimated>
                         <div className="scroll-images-row__tags">
                           <TextScramble className="tag tag-m tag-medium mxd-scramble">
-                            Fashion
+                            AI workflows
                           </TextScramble>
                         </div>
                       </div>
@@ -201,7 +201,7 @@ export default function DividerStickyCaption({
                         </CommonScrollAnimated>
                         <div className="scroll-images-row__tags">
                           <TextScramble className="tag tag-m tag-medium mxd-scramble">
-                            Packaging
+                            Launch systems
                           </TextScramble>
                         </div>
                       </div>
@@ -229,7 +229,7 @@ export default function DividerStickyCaption({
                         </CommonScrollAnimated>
                         <div className="scroll-images-row__tags">
                           <TextScramble className="tag tag-m tag-medium mxd-scramble">
-                            Illustrations
+                            Brand systems
                           </TextScramble>
                         </div>
                       </div>

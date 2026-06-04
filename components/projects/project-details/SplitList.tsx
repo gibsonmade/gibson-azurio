@@ -1,7 +1,6 @@
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
-import TextScramble from "@/components/animations/TextScramble";
 import type { WorkProject } from "@/data/workProjects";
 
 type SplitListProps = {
@@ -16,7 +15,6 @@ export default function SplitList({ project }: SplitListProps) {
   const industry = project?.industry ?? "Digital product and brand systems";
   const date = project?.date ?? "October 2025 - January 2026";
   const urlLabel = project?.urlLabel ?? "Gibsooon.dev";
-  const outcome = project?.outcome ?? "";
 
   return (
     <>
@@ -45,28 +43,7 @@ export default function SplitList({ project }: SplitListProps) {
                           animation="splitLines"
                         >
                           {summary}
-                          {outcome ? <span>{outcome}</span> : null}
                         </CommonAnimatedText>
-                        <CommonScrollAnimated
-                          className="btn btn-default-icon btn-default-accent slide-right anim-uni-in-up"
-                          href="#0"
-                          as="a"
-                          animation="inUp"
-                        >
-                          <TextScramble className="btn-caption mxd-scramble">
-                            See it live
-                          </TextScramble>
-                          {/* <i class="btn-icon ph-bold ph-arrow-right"></i> */}
-                          <i className="btn-icon">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              version="1.1"
-                              viewBox="0 0 18 18"
-                            >
-                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                            </svg>
-                          </i>
-                        </CommonScrollAnimated>
                       </div>
                     </div>
                   </div>

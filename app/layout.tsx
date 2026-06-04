@@ -4,7 +4,6 @@ import Header1 from "@/components/headers/Header1";
 import TemplateRuntimeProvider from "@/components/common/TemplateRuntimeProvider";
 import MenuRuntimeShell from "@/components/headers/MenuRuntimeShell";
 import { Metadata } from "next";
-import Script from "next/script";
 import { siteCopy } from "@/data/siteCopy";
 
 const geist = Geist({
@@ -20,6 +19,18 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: siteCopy.seo.title,
   description: siteCopy.seo.description,
+  metadataBase: new URL("https://gibsooon.com"),
+  openGraph: {
+    title: siteCopy.seo.title,
+    description: siteCopy.seo.description,
+    images: [{ url: "/img-temp/uploads/gibson-logo-1.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteCopy.seo.title,
+    description: siteCopy.seo.description,
+    images: ["/img-temp/uploads/gibson-logo-1.png"],
+  },
 };
 
 const motionInitScript = `
@@ -54,13 +65,8 @@ export default function RootLayout({
       <body
         className={`${geist.variable} ${jetbrainsMono.variable} app-font-vars`}
       >
-        <Script
-          id="motion-preference-init"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: motionInitScript,
-          }}
-        />
+        {/* Plain script in a Server Component: React 19 hoists it correctly without the "script tag" warning */}
+        <script dangerouslySetInnerHTML={{ __html: motionInitScript }} />
         <TemplateRuntimeProvider>
           <Header1 initialTheme={initialTheme} />
           <MenuRuntimeShell />

@@ -45,7 +45,7 @@ export type Footer1PromoItem = {
 export const footer1PromoItems: Footer1PromoItem[] = [
   {
     href: "/work/the-home-depot",
-    iconSrc: "/img-temp/demo/logo-rayo.svg",
+    iconSrc: "/img-temp/uploads/gibson-8-bit.png",
     iconAlt: "The Home Depot case study icon",
     iconWidth: 56,
     iconHeight: 56,
@@ -54,7 +54,7 @@ export const footer1PromoItems: Footer1PromoItem[] = [
   },
   {
     href: "/work/carmax",
-    iconSrc: "/img-temp/demo/logo-blayden.svg",
+    iconSrc: "/img-temp/uploads/watson-8-bit.png",
     iconAlt: "CarMax case study icon",
     iconWidth: 56,
     iconHeight: 56,
@@ -63,7 +63,7 @@ export const footer1PromoItems: Footer1PromoItem[] = [
   },
   {
     href: "/work/mini-murals",
-    iconSrc: "/img-temp/demo/logo-braxton.svg",
+    iconSrc: "/img-temp/uploads/gibson-8-bit-white.png",
     iconAlt: "Mini Murals case study icon",
     iconWidth: 56,
     iconHeight: 56,

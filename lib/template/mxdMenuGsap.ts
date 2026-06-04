@@ -143,7 +143,9 @@ export function bindMxdMenuGsap(
     background: "rgba(var(--menu-shadow-rgb), 0)",
     backdropFilter: "blur(0px)",
   });
-  gsap.set(menuOverlayContainer, { yPercent: -50 });
+  gsap.set(menuOverlayContainer, { yPercent: -50, y: 0 });
+
+  const menuInner = nav.querySelector<HTMLElement>(".mxd-menu__inner");
 
   let isMenuOpen = false;
   let isAnimating = false;
@@ -163,7 +165,7 @@ export function bindMxdMenuGsap(
       background: "rgba(var(--menu-shadow-rgb), 0)",
       backdropFilter: "blur(0px)",
     });
-    gsap.set(menuOverlayContainer, { yPercent: -50 });
+    gsap.set(menuOverlayContainer, { yPercent: -50, y: 0 });
     if (menuMediaWrapper) {
       gsap.set(menuMediaWrapper, { scale: 1.4 });
     }
@@ -219,6 +221,7 @@ export function bindMxdMenuGsap(
         menuOverlayContainer,
         {
           yPercent: -50,
+          y: 0,
           duration: 1,
           ease: "hop",
         },
@@ -260,6 +263,7 @@ export function bindMxdMenuGsap(
 
     if (!isMenuOpen) {
       lenis?.stop();
+      if (menuInner) menuInner.scrollTop = 0;
       hamburgerIcon?.classList.add("active");
       const isMobile = window.matchMedia("(max-width: 1024px)").matches;
 
@@ -284,6 +288,7 @@ export function bindMxdMenuGsap(
           menuOverlayContainer,
           {
             yPercent: 0,
+            y: 0,
             duration: 1,
             ease: "hop",
           },
@@ -420,6 +425,9 @@ export function bindMxdMenuGsap(
       ...mainMenuSplits,
       ...footerSplits,
     ].forEach((s) => s.revert());
+    // Clear inline GSAP transforms so a re-bind doesn't read stale pixel values
+    // and produce a double-translation (y: -464px + yPercent: -50 = off-screen).
+    gsap.set(menuOverlayContainer, { clearProps: "transform,y,yPercent" });
     lenis?.start();
   };
 

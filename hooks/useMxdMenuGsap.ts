@@ -13,7 +13,7 @@ import {
 
 const N_HEADER = 2;
 const N_MAIN_SPANS = 10;
-const N_CONTACT = 7;
+const N_CONTACT = 2;
 const N_FOOTER = 2;
 const N_DIVIDERS = 6;
 const N_ARROWS = 2;

@@ -7,7 +7,10 @@ import CommonLoadAnimation, {
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
 import SmoothAnchorLink from "@/components/common/SmoothAnchorLink";
+import { featuredLabArticle } from "@/data/labArticles";
 export default function InnerHeadlineArticle() {
+  const featuredArticle = featuredLabArticle;
+
   return (
     <CommonLoadAnimation>
       <>
@@ -60,7 +63,7 @@ export default function InnerHeadlineArticle() {
                             <div className="post-featured-fullscreen__link loading-fade">
                               <Link
                                 className="btn btn-line btn-line-permanent"
-                                href={`/lab/article/field-notes-on-product-design`}
+                                href={`/lab/article/${featuredArticle.slug}`}
                               >
                                 <TextScramble className="btn-caption mxd-scramble">
                                   Featured
@@ -74,7 +77,7 @@ export default function InnerHeadlineArticle() {
                           <Link
                             className="post-featured-fullscreen__info active-cursor-permanent"
                             data-cursor-text="Read Post"
-                            href={`/lab/article/field-notes-on-product-design`}
+                            href={`/lab/article/${featuredArticle.slug}`}
                           >
                             <CommonAnimatedText
                               as="h2"
@@ -86,10 +89,10 @@ export default function InnerHeadlineArticle() {
                             <CommonLoadItem index={0}>
                               <div className="post-featured-fullscreen__excerpt loading-item">
                                 <p className="t-large t-permanent">
-                                  Gibson's lab collects working notes on design
-                                  craft, agentic workflows, digital strategy,
-                                  and the systems that help serious ideas become
-                                  real.
+                                  Gibson&apos;s lab collects working notes on
+                                  design craft, agentic workflows, digital
+                                  strategy, and the systems that help serious
+                                  ideas become real.
                                 </p>
                               </div>
                             </CommonLoadItem>
@@ -103,36 +106,36 @@ export default function InnerHeadlineArticle() {
                               <div className="post-featured-fullscreen__data">
                                 <CommonLoadItem index={1}>
                                   <span className="tag tag-s-mobile tag-permanent loading-item">
-                                    Updated 2026
+                                    {featuredArticle.date}
                                   </span>
                                 </CommonLoadItem>
                                 <CommonLoadItem index={2}>
                                   <span className="tag tag-s-mobile tag-permanent loading-item">
-                                    Lab notes
+                                    {featuredArticle.readTime}
                                   </span>
                                 </CommonLoadItem>
                               </div>
                               <div className="post-featured-fullscreen__categories">
                                 <CommonLoadItem index={3}>
-                                  <a className="loading-item" href="#0">
+                                  <span className="loading-item">
                                     <TextScramble className="tag tag-s-mobile tag-permanent mxd-scramble">
-                                      AI workflows
+                                      {featuredArticle.tags[0]}
                                     </TextScramble>
-                                  </a>
+                                  </span>
                                 </CommonLoadItem>
                                 <CommonLoadItem index={4}>
-                                  <a className="loading-item" href="#0">
+                                  <span className="loading-item">
                                     <TextScramble className="tag tag-s-mobile tag-permanent mxd-scramble">
-                                      Product design
+                                      {featuredArticle.tags[1]}
                                     </TextScramble>
-                                  </a>
+                                  </span>
                                 </CommonLoadItem>
                                 <CommonLoadItem index={5}>
-                                  <a className="loading-item" href="#0">
+                                  <span className="loading-item">
                                     <TextScramble className="tag tag-s-mobile tag-permanent mxd-scramble">
-                                      Launch systems
+                                      {featuredArticle.tags[2]}
                                     </TextScramble>
-                                  </a>
+                                  </span>
                                 </CommonLoadItem>
                               </div>
                             </div>

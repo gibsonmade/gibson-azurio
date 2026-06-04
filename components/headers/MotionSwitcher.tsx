@@ -2,6 +2,8 @@
 
 import { useCallback } from "react";
 import { useMotionPreference } from "@/components/common/MotionPreferenceContext";
+import TextScramble from "../animations/TextScramble";
+import { HumanArmsUp, HumanArmsDown } from "pixelarticons/react";
 
 type MotionSwitcherProps = {
   isPermanent?: boolean;
@@ -28,18 +30,11 @@ export default function MotionSwitcher({
       onClick={toggle}
       suppressHydrationWarning
     >
-      <span className="switcher-text" suppressHydrationWarning>
-        {reducedMotion ? "Still" : "Move"}
-      </span>
-      <span className="switcher-icon" aria-hidden="true">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="18"
-          viewBox="0 0 18 18"
-        >
-          <path d="M2 2h14v14H2V2Zm3 3v8h8V5H5Z" />
-        </svg>
+      <TextScramble className="switcher-text">
+        {reducedMotion ? "Dance" : "Still"}
+      </TextScramble>
+      <span className="switcher-icon" aria-hidden="true" suppressHydrationWarning>
+        {reducedMotion ? <HumanArmsDown /> : <HumanArmsUp />}
       </span>
     </button>
   );

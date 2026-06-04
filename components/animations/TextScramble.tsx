@@ -74,6 +74,7 @@ const TextScramble = forwardRef<HTMLElement, TextScrambleProps>(function TextScr
       className={className}
       onPointerEnter={onEnter}
       onPointerLeave={onLeave}
+      suppressHydrationWarning
     >
       {scrambledText?.source === baseText ? scrambledText.value : baseText}
     </Tag>

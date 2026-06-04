@@ -9,189 +9,112 @@ import {
 } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
-export default function MoreOnTopic() {
+import type { LabArticle } from "@/data/labArticles";
+
+type MoreOnTopicProps = {
+  articles: LabArticle[];
+};
+
+export default function MoreOnTopic({ articles }: MoreOnTopicProps) {
+  if (articles.length === 0) return null;
+
   return (
-    <>
-      <PinnedSection
-        blurSection
-        className="mxd-section padding-top-subtitle-mobile padding-bottom-preview"
-      >
-        <PinnedSection.Inner>
-          <div className="mxd-container grid-l-container">
-            {/* Block - Section Title v03 Start */}
-            <div className="mxd-block">
-              <div className="mxd-section-title pre-subtitle-s">
-                <div className="container-fluid p-0">
-                  <div className="row g-0 d-flex flex-column-reverse flex-xl-row">
-                    <div className="col-12 col-xl-8 mxd-grid-item">
-                      <div className="mxd-section-title__title">
-                        <CommonAnimatedText
-                          as="h2"
-                          className="reveal-type"
-                          animation="revealType"
-                        >
-                          More articles
-                        </CommonAnimatedText>
-                      </div>
+    <PinnedSection
+      blurSection
+      className="mxd-section padding-top-subtitle-mobile padding-bottom-preview"
+    >
+      <PinnedSection.Inner>
+        <div className="mxd-container grid-l-container">
+          <div className="mxd-block">
+            <div className="mxd-section-title pre-subtitle-s">
+              <div className="container-fluid p-0">
+                <div className="row g-0 d-flex flex-column-reverse flex-xl-row">
+                  <div className="col-12 col-xl-8 mxd-grid-item">
+                    <div className="mxd-section-title__title">
+                      <CommonAnimatedText
+                        as="h2"
+                        className="reveal-type"
+                        animation="revealType"
+                      >
+                        More articles
+                      </CommonAnimatedText>
                     </div>
-                    <div className="col-12 col-xl-4 mxd-grid-item">
-                      <div className="mxd-section-title__data top-controls">
-                        <CommonScrollAnimated
-                          className="mxd-section-title__controls pre-title justify-end anim-uni-in-up"
-                          as="div"
-                          animation="inUp"
-                        >
-                          <Link
-                            className="btn btn-line btn-line-default"
-                            href={`/blog-standard`}
-                          >
-                            <TextScramble className="btn-caption mxd-scramble">
-                              All Articles
-                            </TextScramble>
-                          </Link>
-                        </CommonScrollAnimated>
-                      </div>
+                  </div>
+                  <div className="col-12 col-xl-4 mxd-grid-item">
+                    <div className="mxd-section-title__data top-controls">
+                      <CommonScrollAnimated
+                        className="mxd-section-title__controls pre-title justify-end anim-uni-in-up"
+                        as="div"
+                        animation="inUp"
+                      >
+                        <Link className="btn btn-line btn-line-default" href="/lab">
+                          <TextScramble className="btn-caption mxd-scramble">
+                            All Articles
+                          </TextScramble>
+                        </Link>
+                      </CommonScrollAnimated>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Block - Section Title v03 End */}
-            {/* Block - Blog Preview Grid x3 Start */}
-            <div className="mxd-block">
-              <div className="mxd-blog-grid">
-                <div className="container-fluid p-0">
-                  <div className="row g-0 mxd-blog-grid__gallery">
-                    <CommonCardBatchAnimated
-                      className="col-12 col-lg-4 mxd-blog-item animate-card-3"
-                      as="div"
-                      columns={3}
-                    >
-                      <div className="mxd-blog-item__date">
-                        <span className="meta-date">15 January, 2026</span>
-                      </div>
-                      <Link
-                        className="mxd-blog-item__media active-cursor-permanent"
-                        data-cursor-text="Read Post"
-                        href={`/lab/article/frontend-innovations-and-user-journeys`}
-                      >
-                        <Image
-                          className=""
-                          alt="Blog Preview Image"
-                          src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
-                          width={1170}
-                          height={800}
-                        />
-                      </Link>
-                      <div className="mxd-blog-item__caption">
-                        <div className="mxd-blog-item__title">
-                          <Link className="blog-name-m" href={`/lab/article/frontend-innovations-and-user-journeys`}>
-                            Frontend innovations and user journeys
-                          </Link>
-                        </div>
-                        <div className="mxd-blog-item__tags">
-                          <TextScramble className="tag tag-s tag-medium mxd-scramble">
-                            UI/UX
-                          </TextScramble>
-                          <TextScramble className="tag tag-s tag-medium mxd-scramble">
-                            Development
-                          </TextScramble>
-                          <TextScramble className="tag tag-s tag-medium mxd-scramble">
-                            Insights
-                          </TextScramble>
-                        </div>
-                      </div>
-                    </CommonCardBatchAnimated>
-                    <CommonCardBatchAnimated
-                      className="col-12 col-lg-4 mxd-blog-item animate-card-3"
-                      as="div"
-                      columns={3}
-                    >
-                      <div className="mxd-blog-item__date">
-                        <span className="meta-date">28 January, 2026</span>
-                      </div>
-                      <Link
-                        className="mxd-blog-item__media active-cursor-permanent"
-                        data-cursor-text="Read Post"
-                        href={`/lab/article/branding-in-creating-digital-experiences`}
-                      >
-                        <Image
-                          className=""
-                          alt="Blog Preview Image"
-                          src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
-                          width={1200}
-                          height={1200}
-                        />
-                      </Link>
-                      <div className="mxd-blog-item__caption">
-                        <div className="mxd-blog-item__title">
-                          <Link className="blog-name-m" href={`/lab/article/branding-in-creating-digital-experiences`}>
-                            Branding in creating digital experiences
-                          </Link>
-                        </div>
-                        <div className="mxd-blog-item__tags">
-                          <TextScramble className="tag tag-s tag-medium mxd-scramble">
-                            Concept
-                          </TextScramble>
-                          <TextScramble className="tag tag-s tag-medium mxd-scramble">
-                            Editorial
-                          </TextScramble>
-                          <TextScramble className="tag tag-s tag-medium mxd-scramble">
-                            Event
-                          </TextScramble>
-                        </div>
-                      </div>
-                    </CommonCardBatchAnimated>
-                    <CommonCardBatchAnimated
-                      className="col-12 col-lg-4 mxd-blog-item animate-card-3"
-                      as="div"
-                      columns={3}
-                    >
-                      <div className="mxd-blog-item__date">
-                        <span className="meta-date">02 February, 2026</span>
-                      </div>
-                      <Link
-                        className="mxd-blog-item__media active-cursor-permanent"
-                        data-cursor-text="Read Post"
-                        href={`/lab/article/designing-for-the-future-of-interactive-digital-spaces`}
-                      >
-                        <Image
-                          className=""
-                          alt="Blog Preview Image"
-                          src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
-                          width={1423}
-                          height={800}
-                        />
-                      </Link>
-                      <div className="mxd-blog-item__caption">
-                        <div className="mxd-blog-item__title">
-                          <Link className="blog-name-m" href={`/lab/article/designing-for-the-future-of-interactive-digital-spaces`}>
-                            Designing for the future of interactive digital
-                            spaces
-                          </Link>
-                        </div>
-                        <div className="mxd-blog-item__tags">
-                          <TextScramble className="tag tag-s tag-medium mxd-scramble">
-                            Midjourney
-                          </TextScramble>
-                          <TextScramble className="tag tag-s tag-medium mxd-scramble">
-                            News
-                          </TextScramble>
-                          <TextScramble className="tag tag-s tag-medium mxd-scramble">
-                            Editorial
-                          </TextScramble>
-                        </div>
-                      </div>
-                    </CommonCardBatchAnimated>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Block - Blog Preview Grid x3 End */}
           </div>
-          <PinnedSection.Trigger />
-        </PinnedSection.Inner>
-      </PinnedSection>
-    </>
+
+          <div className="mxd-block">
+            <div className="mxd-blog-grid">
+              <div className="container-fluid p-0">
+                <div className="row g-0 mxd-blog-grid__gallery">
+                  {articles.map((article) => (
+                    <CommonCardBatchAnimated
+                      key={article.slug}
+                      className="col-12 col-lg-4 mxd-blog-item animate-card-3"
+                      as="div"
+                      columns={3}
+                    >
+                      <div className="mxd-blog-item__date">
+                        <span className="meta-date">{article.date}</span>
+                      </div>
+                      <Link
+                        className="mxd-blog-item__media active-cursor-permanent"
+                        data-cursor-text="Read Post"
+                        href={`/lab/article/${article.slug}`}
+                      >
+                        <Image
+                          alt={article.imageAlt}
+                          src={article.image}
+                          width={article.imageWidth}
+                          height={article.imageHeight}
+                        />
+                      </Link>
+                      <div className="mxd-blog-item__caption">
+                        <div className="mxd-blog-item__title">
+                          <Link
+                            className="blog-name-m"
+                            href={`/lab/article/${article.slug}`}
+                          >
+                            {article.title}
+                          </Link>
+                        </div>
+                        <div className="mxd-blog-item__tags">
+                          {article.tags.slice(0, 3).map((tag) => (
+                            <TextScramble
+                              key={tag}
+                              className="tag tag-s tag-medium mxd-scramble"
+                            >
+                              {tag}
+                            </TextScramble>
+                          ))}
+                        </div>
+                      </div>
+                    </CommonCardBatchAnimated>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <PinnedSection.Trigger />
+      </PinnedSection.Inner>
+    </PinnedSection>
   );
 }

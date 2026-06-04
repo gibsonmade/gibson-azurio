@@ -276,7 +276,10 @@ export default function Footer1() {
                     animation="fadeIn"
                   >
                     <p className="footer-data bright">
-                      <span>Copyright Gibsooon. All rights reserved</span>
+                      <span>
+                        Copyright Gibsooon. All rights reserved.{" "}
+                        <Link href="/credits">Credits</Link>
+                      </span>
                     </p>
                   </CommonScrollAnimated>
                 </div>

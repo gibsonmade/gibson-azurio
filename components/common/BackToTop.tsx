@@ -42,7 +42,7 @@ export default function BackToTop({
   }, []);
 
   return (
-    <a id="to-top" href="#0" className={className} onClick={onClick}>
+    <a id="to-top" href="#" className={className} onClick={onClick}>
       {children}
     </a>
   );

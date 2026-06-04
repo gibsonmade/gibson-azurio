@@ -9,7 +9,7 @@ type ParallaxDividerImage2Props = {
 
 export default function ParallaxDividerImage2({ project }: ParallaxDividerImage2Props) {
   const gallery = project?.images.gallery ?? ["/img-temp/uploads/case-study/staterra/Stationery1.jpg"];
-  const src = gallery[1] ?? gallery[0];
+  const src = gallery[gallery.length - 1] ?? gallery[0];
   const alt = project ? `${project.name} case study detail image` : "Gibson Hall project image";
 
   return (

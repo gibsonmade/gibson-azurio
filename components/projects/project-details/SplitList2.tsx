@@ -9,6 +9,7 @@ type SplitList2Props = {
 
 export default function SplitList2({ project }: SplitList2Props) {
   const services = project?.services.slice(0, 3) ?? [];
+  const serviceDetails = project?.serviceDetails ?? [];
 
   return (
     <>
@@ -37,7 +38,7 @@ export default function SplitList2({ project }: SplitList2Props) {
                           animation="splitLines"
                         >
                           {project?.challenge ??
-                            "This case study is being prepared for publication."}
+                            "Gibson helped shape a clearer digital path from early strategy to usable execution."}
                           {project?.collaborationContext ? (
                             <span>{project.collaborationContext}</span>
                           ) : null}
@@ -58,7 +59,7 @@ export default function SplitList2({ project }: SplitList2Props) {
                       </div>
                       {/* split data list */}
                       <div className="mxd-block-split__data">
-                        {services.map((service) => (
+                        {services.map((service, index) => (
                           <div className="split-data__item" key={service}>
                             <div className="split-data__divider divider-top" />
                             <div className="split-data__name">
@@ -76,7 +77,8 @@ export default function SplitList2({ project }: SplitList2Props) {
                                 as="p"
                                 animation="inUp"
                               >
-                                {project?.storyAngle}
+                                {serviceDetails[index] ??
+                                  "This work helped connect strategy, execution, and a clearer launch path."}
                               </CommonScrollAnimated>
                             </div>
                             <div className="split-data__divider divider-bottom" />

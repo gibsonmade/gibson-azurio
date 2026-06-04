@@ -2,16 +2,15 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import BlogArticle from "@/components/blogs/blog-article/BlogArticle";
 import MoreOnTopic from "@/components/blogs/blog-article/MoreOnTopic";
-
-const KNOWN_SLUGS = [
-  "field-notes-on-product-design",
-  "frontend-innovations-and-user-journeys",
-  "branding-in-creating-digital-experiences",
-  "designing-for-the-future-of-interactive-digital-spaces",
-];
+import {
+  getAdjacentLabArticles,
+  getLabArticle,
+  getRelatedLabArticles,
+  labArticles,
+} from "@/data/labArticles";
 
 export function generateStaticParams() {
-  return KNOWN_SLUGS.map((slug) => ({ slug }));
+  return labArticles.map((article) => ({ slug: article.slug }));
 }
 
 export async function generateMetadata({
@@ -20,13 +19,12 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const title = slug
-    .split("-")
-    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(" ");
+  const article = getLabArticle(slug);
+  if (!article) return {};
+
   return {
-    title: `${title} | Lab — Gibson Hall`,
-    description: "Field notes on product design, AI workflows, and launch systems from Gibson Hall.",
+    title: `${article.title} | Lab - Gibson Hall`,
+    description: `${article.excerptLead} ${article.excerptAccent}`,
   };
 }
 
@@ -36,12 +34,16 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  if (!KNOWN_SLUGS.includes(slug)) notFound();
+  const article = getLabArticle(slug);
+  if (!article) notFound();
+
+  const { previous, next } = getAdjacentLabArticles(slug);
+  const relatedArticles = getRelatedLabArticles(slug);
 
   return (
     <div className="mxd-page-content inner-page-content lab-article-page">
-      <BlogArticle />
-      <MoreOnTopic />
+      <BlogArticle article={article} previous={previous} next={next} />
+      <MoreOnTopic articles={relatedArticles} />
     </div>
   );
 }

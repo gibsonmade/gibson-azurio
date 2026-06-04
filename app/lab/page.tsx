@@ -1,10 +1,20 @@
-export { metadata } from "../(blogs)/blog-creative/page";
-import BlogCreativePage from "../(blogs)/blog-creative/page";
+import { Metadata } from "next";
+import InnerHeadlineArticle from "@/components/blogs/blog-creative/InnerHeadlineArticle";
+import BlogGrid from "@/components/blogs/blog-creative/BlogGrid";
+import CTA from "@/components/blogs/blog-creative/CTA";
+import { siteCopy } from "@/data/siteCopy";
+
+export const metadata: Metadata = {
+  title: siteCopy.lab.title,
+  description: siteCopy.lab.description,
+};
 
 export default function LabPage() {
   return (
     <>
-      <BlogCreativePage />
+      <InnerHeadlineArticle />
+      <BlogGrid />
+      <CTA />
     </>
   );
 }

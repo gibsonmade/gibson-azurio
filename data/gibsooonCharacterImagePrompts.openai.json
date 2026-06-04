@@ -1,0 +1,291 @@
+{
+  "schemaVersion": "1.0",
+  "intendedModel": "OpenAI image generation via Codex",
+  "createdFor": "Gibson/Gibsooon pixel character logo and icon direction",
+  "sourceDirectory": "/Users/cows/local-apps-active/gibson-azurio",
+  "sourceReferences": {
+    "artDirection": [
+      "/Users/cows/Desktop/Screenshot 2026-06-04 at 10.26.13 AM.png",
+      "/Users/cows/Desktop/Screenshot 2026-06-04 at 10.25.14 AM.png",
+      "/Users/cows/Desktop/Screenshot 2026-06-04 at 10.27.15 AM.png"
+    ],
+    "identityReferences": [
+      "Attached portrait of Gibson smiling in black hat with mountain background.",
+      "Attached desk photo of Gibson smiling while working with laptop and stylus.",
+      "Attached Watson photo: dark coat, one ear up and one ear flopped, white chest mark, red collar/leash."
+    ]
+  },
+  "globalArtDirection": {
+    "style": "Retro video-game pixel character, chunky 8-bit/16-bit sprite language, square pixel grid, bold simple silhouette, thick clean outline, minimal facial geometry, friendly expression, readable at tiny sizes.",
+    "noTextRule": "No words, no letters, no labels, no signature, no watermark.",
+    "gibsonTraits": [
+      "adult man",
+      "friendly smiling face",
+      "black baseball cap",
+      "simple t-shirt",
+      "short light brown hair visible under cap when useful",
+      "clean approachable personal-studio character"
+    ],
+    "watsonTraits": [
+      "dark coat dog",
+      "white heart-shaped mark on chest",
+      "one ear standing up and one ear flopped down",
+      "friendly alert expression",
+      "250px color version may include a bandana"
+    ],
+    "sizeRules": {
+      "16": "True tiny icon. Extreme simplification, black pixel outline only, transparent background, no fill, no interior detail except the minimum needed to identify the subject.",
+      "128": "Transparent black-outline icon. Simplified but more recognizable than 16px, no fill, clean pixel outline, minimal interior contour lines.",
+      "250": "Full color pixel character. Transparent background, thick black outline, flat pixel colors, simple shading, no text."
+    },
+    "recommendedPlacements": {
+      "header": "Use the 128px outline icon or 250px color character scaled down when personality is desired.",
+      "nav": "Use 128px outline icons for menu accents or hover states.",
+      "loader": "Use 16px or 128px outline icon for a minimal loading sprite; use 250px color only for playful loading moments.",
+      "footer": "Use 250px color character or duo as a personality anchor.",
+      "social": "Use 250px color portrait for avatar; use 128px outline for monochrome profile systems."
+    },
+    "negativePrompt": "No text, no letters, no watermark, no signature, no background scene, no gradients, no realistic rendering, no anti-aliased vector look, no soft painterly edges, no 3D render, no complex texture, no extra characters, no incorrect dog ear symmetry, no filled color on 16px or 128px outline variants."
+  },
+  "outputRoot": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts",
+  "sets": [
+    {
+      "subjectId": "gibson-portrait-hat-smiling",
+      "subject": "Gibson",
+      "pose": "portrait smiling with hat",
+      "description": "Face and bust portrait of Gibson smiling, wearing black baseball cap and simple t-shirt.",
+      "prompts": [
+        {
+          "id": "gibson-portrait-hat-smiling-16-outline",
+          "size": 16,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-portrait-hat-smiling-16-outline.png",
+          "prompt": "Create a 16x16 true pixel icon on transparent background: black pixel outline only, no fill, no color. Subject is Gibson as a tiny smiling bust portrait wearing a baseball cap. Use the simplest possible readable silhouette: cap brim, round face, tiny smile, shoulders. Retro 8-bit game sprite style, square grid, crisp hard pixels, no anti-aliasing, no text.",
+          "negativePrompt": "No fill color, no gray fill, no background, no words, no letters, no watermark, no realistic rendering, no soft edges, no complex facial detail."
+        },
+        {
+          "id": "gibson-portrait-hat-smiling-128-outline",
+          "size": 128,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-portrait-hat-smiling-128-outline.png",
+          "prompt": "Create a 128x128 transparent pixel icon: black pixel outline only, no fill, no color. Friendly bust portrait of Gibson smiling in a black baseball cap and t-shirt, simplified into a chunky retro video-game sprite. Include cap brim, face outline, ears, neck, shoulders, and a simple smile line. Use clean square pixel geometry and thick readable outline. No text.",
+          "negativePrompt": "No fill color, no background, no grayscale fill, no letters, no watermark, no realistic shading, no soft vector edges."
+        },
+        {
+          "id": "gibson-portrait-hat-smiling-250-color",
+          "size": 250,
+          "variant": "transparent-full-color",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-portrait-hat-smiling-250-color.png",
+          "prompt": "Create a 250x250 transparent-background full-color pixel character portrait of Gibson smiling, wearing a black baseball cap and simple t-shirt. Chunky retro 8-bit/16-bit game sprite style with thick black outline, square pixels, flat colors, simple skin tones, light brown hair hints under the cap, bright friendly eyes, simple smile. Keep it clean and iconic for a social avatar. No words or letters.",
+          "negativePrompt": "No background, no text, no watermark, no photorealism, no smooth vector art, no painterly shading, no complex clothing pattern."
+        }
+      ]
+    },
+    {
+      "subjectId": "gibson-standing-peace-sign",
+      "subject": "Gibson",
+      "pose": "standing with peace sign",
+      "description": "Full-body Gibson standing, wearing hat and t-shirt, giving a peace sign.",
+      "prompts": [
+        {
+          "id": "gibson-standing-peace-sign-16-outline",
+          "size": 16,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-standing-peace-sign-16-outline.png",
+          "prompt": "Create a 16x16 true pixel icon on transparent background: black outline only, no fill. Tiny full-body Gibson standing with baseball cap and one arm raised in a simple peace-sign gesture. Use only the minimum readable pixels: cap, head, torso, legs, raised hand with two-pixel peace shape. Retro 8-bit sprite, crisp hard pixels, no text.",
+          "negativePrompt": "No fill color, no background, no words, no watermark, no complex fingers, no realistic rendering, no soft edges."
+        },
+        {
+          "id": "gibson-standing-peace-sign-128-outline",
+          "size": 128,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-standing-peace-sign-128-outline.png",
+          "prompt": "Create a 128x128 transparent pixel icon: black pixel outline only, no fill. Full-body Gibson standing, baseball cap, t-shirt, simple pants and shoes, smiling, one hand giving a peace sign. Keep proportions cute and game-like with a large head and compact body. Thick readable outline, square pixels, no color, no words.",
+          "negativePrompt": "No fill color, no gray fill, no background, no text, no watermark, no soft vector line, no realistic body proportions."
+        },
+        {
+          "id": "gibson-standing-peace-sign-250-color",
+          "size": 250,
+          "variant": "transparent-full-color",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-standing-peace-sign-250-color.png",
+          "prompt": "Create a 250x250 transparent-background full-color pixel character of Gibson standing and smiling, wearing a black baseball cap, simple t-shirt, casual pants, and sneakers, holding up a peace sign. Chunky retro video-game sprite style, thick black outline, square pixels, flat colors, simple highlights. Friendly, playful, and readable as a mascot/icon. No words or letters.",
+          "negativePrompt": "No background, no text, no watermark, no photorealism, no smooth vector art, no extra characters, no complex hand anatomy."
+        }
+      ]
+    },
+    {
+      "subjectId": "gibson-working-desk-laptop",
+      "subject": "Gibson",
+      "pose": "working at desk with laptop",
+      "description": "Gibson seated or standing at a desk with laptop, simplified for icon use.",
+      "prompts": [
+        {
+          "id": "gibson-working-desk-laptop-16-outline",
+          "size": 16,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-working-desk-laptop-16-outline.png",
+          "prompt": "Create a 16x16 transparent true pixel icon: black outline only, no fill. Tiny Gibson at a desk with an open laptop. Use a simple cap/head shape behind a small laptop rectangle, minimal desk line, and tiny smile. Must read as working at laptop at favicon size. Retro 8-bit sprite, crisp hard pixels, no text.",
+          "negativePrompt": "No fill, no color, no background, no words, no watermark, no detailed desk objects, no soft edges."
+        },
+        {
+          "id": "gibson-working-desk-laptop-128-outline",
+          "size": 128,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-working-desk-laptop-128-outline.png",
+          "prompt": "Create a 128x128 transparent pixel icon: black pixel outline only, no fill. Gibson wearing baseball cap and t-shirt, smiling while working at a simple desk with an open laptop. Include laptop silhouette, arms, small desk surface, and compact bust/head. Retro chunky game sprite, clean square pixels, thick outline. No words.",
+          "negativePrompt": "No fill color, no background, no readable stickers, no letters, no watermark, no realistic shading, no soft vector line."
+        },
+        {
+          "id": "gibson-working-desk-laptop-250-color",
+          "size": 250,
+          "variant": "transparent-full-color",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-working-desk-laptop-250-color.png",
+          "prompt": "Create a 250x250 transparent-background full-color pixel character scene of Gibson working at a desk with an open laptop. Gibson wears a black baseball cap and simple t-shirt, smiling, hands near laptop or stylus, compact desk shape. Chunky retro 8-bit/16-bit sprite style with thick black outline, square pixels, flat colors, simple shading. No words, no readable stickers, no letters.",
+          "negativePrompt": "No background scene, no text, no watermark, no realistic rendering, no smooth vector art, no complex desk clutter."
+        }
+      ]
+    },
+    {
+      "subjectId": "watson-standing-full-body",
+      "subject": "Watson",
+      "pose": "standing full body",
+      "description": "Watson standing full-body with one ear up and one ear down.",
+      "prompts": [
+        {
+          "id": "watson-standing-full-body-16-outline",
+          "size": 16,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/watson-standing-full-body-16-outline.png",
+          "prompt": "Create a 16x16 transparent true pixel icon: black outline only, no fill. Tiny full-body dog standing, one ear up and one ear flopped down, simple tail and legs, small white-heart chest area indicated only by outline shape if possible. Must read as Watson at very small size. Retro 8-bit sprite, hard square pixels, no text.",
+          "negativePrompt": "No fill, no color, no background, no words, no watermark, no symmetric ears, no complex fur detail, no soft edges."
+        },
+        {
+          "id": "watson-standing-full-body-128-outline",
+          "size": 128,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/watson-standing-full-body-128-outline.png",
+          "prompt": "Create a 128x128 transparent pixel icon: black pixel outline only, no fill. Watson as a full-body standing dog, one ear straight up and one ear flopped down, slim dark-coat dog silhouette, white heart-shaped chest mark represented as an inner outline, friendly alert face. Chunky retro game sprite, thick clean outline, square pixels. No words.",
+          "negativePrompt": "No fill color, no background, no text, no watermark, no symmetric ears, no realistic fur texture, no soft vector edges."
+        },
+        {
+          "id": "watson-standing-full-body-250-color",
+          "size": 250,
+          "variant": "transparent-full-color",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/watson-standing-full-body-250-color.png",
+          "prompt": "Create a 250x250 transparent-background full-color pixel character of Watson standing full-body. Watson is a slim dark-coat dog with one ear up and one ear flopped down, friendly eyes, white heart-shaped mark on chest, and a small colorful bandana. Chunky retro video-game sprite style, thick black outline, square pixels, flat dark coat colors, simple highlights. No words or letters.",
+          "negativePrompt": "No background, no text, no watermark, no photorealism, no smooth vector art, no symmetric ears, no complex fur."
+        }
+      ]
+    },
+    {
+      "subjectId": "watson-sitting-full-body",
+      "subject": "Watson",
+      "pose": "sitting full body",
+      "description": "Watson sitting full-body with one ear up and one ear down.",
+      "prompts": [
+        {
+          "id": "watson-sitting-full-body-16-outline",
+          "size": 16,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/watson-sitting-full-body-16-outline.png",
+          "prompt": "Create a 16x16 transparent true pixel icon: black outline only, no fill. Tiny sitting dog icon, one ear up and one ear flopped down, simple seated body shape, small front paws, tiny chest-heart outline if possible. Must be readable as Watson sitting at favicon size. Retro 8-bit sprite, crisp hard pixels, no text.",
+          "negativePrompt": "No fill color, no background, no words, no watermark, no symmetric ears, no detailed fur, no soft edges."
+        },
+        {
+          "id": "watson-sitting-full-body-128-outline",
+          "size": 128,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/watson-sitting-full-body-128-outline.png",
+          "prompt": "Create a 128x128 transparent pixel icon: black pixel outline only, no fill. Watson sitting full-body, one ear standing up and one ear flopped down, front paws visible, slim dog silhouette, white heart-shaped chest mark represented as inner outline, friendly face. Chunky retro game sprite, thick readable outline, square pixels. No text.",
+          "negativePrompt": "No fill, no color, no background, no watermark, no letters, no symmetric ears, no realistic fur texture."
+        },
+        {
+          "id": "watson-sitting-full-body-250-color",
+          "size": 250,
+          "variant": "transparent-full-color",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/watson-sitting-full-body-250-color.png",
+          "prompt": "Create a 250x250 transparent-background full-color pixel character of Watson sitting full-body. Watson has a dark coat, one ear up and one ear flopped down, friendly alert eyes, a white heart-shaped chest mark, front paws visible, and a small colorful bandana. Chunky 8-bit/16-bit retro sprite style, thick black outline, square pixels, flat colors, simple shading. No words.",
+          "negativePrompt": "No background, no text, no watermark, no photorealism, no smooth vector art, no symmetric ears, no complex fur."
+        }
+      ]
+    },
+    {
+      "subjectId": "watson-portrait-tongue-out",
+      "subject": "Watson",
+      "pose": "portrait smiling with tongue out",
+      "description": "Watson face/bust portrait smiling with tongue out.",
+      "prompts": [
+        {
+          "id": "watson-portrait-tongue-out-16-outline",
+          "size": 16,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/watson-portrait-tongue-out-16-outline.png",
+          "prompt": "Create a 16x16 transparent true pixel icon: black outline only, no fill. Tiny Watson dog face portrait with one ear up and one ear flopped down, smiling with a tongue-out shape indicated by a tiny outline. Keep only the most readable head silhouette and expression. Retro 8-bit sprite, crisp hard pixels, no text.",
+          "negativePrompt": "No fill color, no background, no words, no watermark, no symmetric ears, no complex details, no soft edges."
+        },
+        {
+          "id": "watson-portrait-tongue-out-128-outline",
+          "size": 128,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/watson-portrait-tongue-out-128-outline.png",
+          "prompt": "Create a 128x128 transparent pixel icon: black pixel outline only, no fill. Watson dog portrait, one ear up and one ear flopped down, smiling with tongue out, friendly eyes, simple muzzle shape, small neck/chest line with heart-shaped chest mark suggested as outline. Chunky retro video-game sprite, thick clean outline, square pixels. No words.",
+          "negativePrompt": "No fill, no color, no background, no watermark, no text, no symmetric ears, no realistic fur texture."
+        },
+        {
+          "id": "watson-portrait-tongue-out-250-color",
+          "size": 250,
+          "variant": "transparent-full-color",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/watson-portrait-tongue-out-250-color.png",
+          "prompt": "Create a 250x250 transparent-background full-color pixel portrait of Watson smiling with tongue out. Watson has a dark coat, one ear up and one ear flopped down, friendly bright eyes, simple muzzle, white heart-shaped chest mark visible at bottom of bust, and a small colorful bandana. Chunky retro game sprite, thick black outline, square pixels, flat colors, simple highlights. No words.",
+          "negativePrompt": "No background, no text, no watermark, no photorealism, no smooth vector art, no symmetric ears, no complex fur."
+        }
+      ]
+    },
+    {
+      "subjectId": "gibson-standing-watson-sitting",
+      "subject": "Gibson and Watson",
+      "pose": "Gibson standing with Watson sitting next to him",
+      "description": "Duo character mark: Gibson standing in hat and t-shirt, Watson sitting next to him.",
+      "prompts": [
+        {
+          "id": "gibson-standing-watson-sitting-16-outline",
+          "size": 16,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-standing-watson-sitting-16-outline.png",
+          "prompt": "Create a 16x16 transparent true pixel icon: black outline only, no fill. Tiny duo silhouette: Gibson standing in baseball cap and t-shirt, Watson sitting beside him with one ear up and one ear flopped down. Extreme simplification, two readable shapes only, no interior detail except minimal face marks if possible. Retro 8-bit sprite, crisp hard pixels, no text.",
+          "negativePrompt": "No fill color, no background, no words, no watermark, no complex faces, no symmetric dog ears, no soft edges."
+        },
+        {
+          "id": "gibson-standing-watson-sitting-128-outline",
+          "size": 128,
+          "variant": "transparent-black-outline",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-standing-watson-sitting-128-outline.png",
+          "prompt": "Create a 128x128 transparent pixel icon: black pixel outline only, no fill. Gibson stands smiling in baseball cap and t-shirt; Watson sits next to him, dark-coat dog silhouette with one ear up and one ear flopped down, chest heart mark suggested as inner outline. Compact duo mascot composition, thick readable outline, square pixels, retro game style. No words.",
+          "negativePrompt": "No fill, no color, no background, no watermark, no letters, no symmetric ears, no soft vector line, no realistic rendering."
+        },
+        {
+          "id": "gibson-standing-watson-sitting-250-color",
+          "size": 250,
+          "variant": "transparent-full-color",
+          "outputPath": "/Users/cows/local-apps-active/gibson-azurio/public/img-temp/uploads/gibsooon-character-prompts/gibson-standing-watson-sitting-250-color.png",
+          "prompt": "Create a 250x250 transparent-background full-color pixel duo mascot: Gibson standing in a black baseball cap and simple t-shirt, smiling, next to Watson sitting. Watson is a dark-coat dog with one ear up and one ear flopped down, white heart-shaped chest mark, and a small colorful bandana. Chunky retro 8-bit/16-bit game sprite style, thick black outline, square pixels, flat colors, simple shading, friendly and iconic. No words or letters.",
+          "negativePrompt": "No background, no text, no watermark, no photorealism, no smooth vector art, no extra characters, no symmetric dog ears, no clutter."
+        }
+      ]
+    }
+  ],
+  "generationNotes": {
+    "transparentHandling": "If the active image model cannot generate true transparency directly, generate on a flat chroma-key background and remove the background locally. Keep final PNGs transparent.",
+    "sizeHandling": "Each requested size has its own prompt. Do not generate one master image and resize for all sizes; the 16px and 128px prompts are intentionally simplified true-icon prompts.",
+    "colorHandling": "Only 250px outputs should be full color. The 16px and 128px outputs should be transparent with black outline only and no fill.",
+    "reviewCriteria": [
+      "Readable at target size.",
+      "No words or letterforms.",
+      "Pixel grid remains crisp.",
+      "Watson has one ear up and one ear down.",
+      "Watson's chest heart is present in 128px and 250px when feasible.",
+      "Gibson consistently wears a baseball cap and t-shirt.",
+      "250px color versions feel like the same character family."
+    ]
+  }
+}
