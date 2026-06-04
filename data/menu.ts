@@ -12,7 +12,7 @@ export const worksLinks: MenuLinkItem[] = [
   { href: "/work/chi-st-lukes", label: "CHI St. Luke's" },
   { href: "/work/ritual", label: "Ritual" },
   { href: "/work/staterra", label: "Straterra" },
-  { href: "/work/wiab-ai", label: "Wiab AI" },
+  { href: "/work/wiab-ai", label: "WIAB AI" },
   { href: "/work/cactus-club", label: "Cactus Club" },
   { href: "/work/academy-sports-outdoors", label: "Academy Sports + Outdoors" },
 ];
@@ -23,7 +23,4 @@ export const pageLinks: MenuLinkItem[] = [
 
 export const insightLinks: MenuLinkItem[] = [
   { href: "/lab", label: "Lab" },
-  { href: "/lab/patterns", label: "Patterns" },
-  { href: "/lab/images", label: "Images" },
-  { href: "/lab/icons", label: "Icons" },
 ];

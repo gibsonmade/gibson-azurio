@@ -1,4 +1,4 @@
-export type LaunchTaskStatus = "done" | "current" | "next";
+export type LaunchTaskStatus = "pass" | "fail" | "blocked" | "watch" | "next";
 
 export type LaunchTask = {
   title: string;
@@ -30,223 +30,154 @@ export type ProjectLaunchRoadmap = {
 };
 
 export const projectLaunch: ProjectLaunchRoadmap = {
-  eyebrow: "Remaining launch roadmap",
-  title: "Project Launch",
+  eyebrow: "Launch QA",
+  title: "Gibsooon.com Launch Checklist",
   summary:
-    "A focused roadmap for the brand, design, content, asset, interaction, and QA work left before the Gibson site is launch-ready.",
+    "A launch-critical checklist for shipping Gibsooon on Vercel today, focused on routes, assets, copy, contact, deployment, and avoidable risk.",
   currentStep: {
-    label: "Current step",
-    title: "Brand foundation: logo, header controls, and nav overlay",
+    label: "Current status",
+    title: "Ready for final Vercel configuration",
     detail:
-      "Start with the logo refresh, then align the header and navigation system before deeper page design, imagery, content, and QA passes.",
+      "The site builds on Next.js App Router and the launch fixes are scoped to copy, links, form behavior, metadata, and deployment instructions. The contact form still depends on the Web3Forms key being set in Vercel.",
   },
   stats: [
-    { value: "7", label: "remaining work phases" },
-    { value: "28", label: "remaining roadmap items" },
-    { value: "6", label: "AI prompt checkpoints" },
+    { value: "16.2.3", label: "Next.js App Router" },
+    { value: "0", label: "missing literal public assets" },
+    { value: "1", label: "Vercel env var required" },
   ],
   phases: [
     {
-      title: "Completed foundation",
+      title: "Must fix before launch",
       description:
-        "Already handled work stays visible as context, but the main roadmap now focuses on what remains.",
+        "Launch blockers and launch-sensitive tasks that need to be complete before pointing traffic at www.gibsooon.com.",
       tasks: [
         {
-          title: "Core foundation summary",
+          title: "Production build",
           detail:
-            "Still mode, current color system, route cleanup, Credits page, case study copy cleanup, loading feedback, and initial launch dashboard restoration are complete enough to move into the next brand and page-design pass.",
-          status: "done",
+            "Run npm run build before deploy. Last audit build passed on Next.js 16.2.3 and prerendered the App Router routes.",
+          status: "pass",
+        },
+        {
+          title: "Vercel deployment configuration",
+          detail:
+            "Use the Next.js preset, npm install, npm run build, default output directory, and do not set EXPORT or BASE_PATH.",
+          status: "pass",
+        },
+        {
+          title: "Contact form provider",
+          detail:
+            "Set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY in Vercel. Without it, the form shows a public email fallback instead of pretending to send.",
+          status: "blocked",
+        },
+        {
+          title: "Copy and case studies",
+          detail:
+            "Proofread visible launch copy and tighten the eight priority case studies without adding unsupported metrics.",
+          status: "pass",
+        },
+        {
+          title: "Public navigation",
+          detail:
+            "Keep Home, About, Work, Lab, Contact, Credits, and real project/article routes public. Keep internal inventory and launch pages out of prominent public navigation.",
+          status: "pass",
         },
       ],
     },
     {
-      title: "Brand foundation",
+      title: "Can fix after launch",
       description:
-        "Set the visual and interaction direction that later page, image, and content work should follow.",
+        "Useful improvements that should not delay today's launch.",
       tasks: [
         {
-          title: "Redo the logo",
+          title: "Image folder cleanup",
           detail:
-            "Create the next Gibson/Gibsooon logo direction and define how the mark, wordmark, and icon should work across header, nav, loader, footer, and social contexts.",
-          status: "current",
-          promptBefore:
-            "Ask for logo direction, references, icon vs wordmark needs, required placements, and whether the final should feel polished, playful, technical, or experimental.",
-        },
-        {
-          title: "Update header controls",
-          detail:
-            "Refine the Say hi, dark mode, and Move/Still controls so the header feels intentional, balanced, and easy to scan on every viewport.",
-          status: "current",
-        },
-        {
-          title: "Add scroll progress indicator",
-          detail:
-            "Add a subtle scroll progress treatment in the header that works in light mode, dark mode, full motion, and Still mode.",
+            "Move assets from /img-temp to a cleaner /images structure later. Current root-relative public paths load.",
           status: "next",
         },
         {
-          title: "Decide where liquid metal belongs",
+          title: "Image format optimization",
           detail:
-            "Place one liquid-metal moment where it supports the brand without making the site feel busy or repetitive.",
-          status: "next",
-          promptBefore:
-            "Ask whether liquid metal should live in the hero, a divider, CTA, loader, nav moment, or project/detail accent before designing it.",
-        },
-      ],
-    },
-    {
-      title: "Navigation and interaction system",
-      description:
-        "Make global navigation, motion states, hover behavior, and background treatments feel consistent before page-by-page polish.",
-      tasks: [
-        {
-          title: "Full nav overlay pass",
-          detail:
-            "Review overlay layout, content, states, spacing, click targets, close behavior, mobile behavior, footer data, and active/open sections.",
+            "Convert large PNG/JPG assets to WebP or AVIF after launch where visual quality allows.",
           status: "next",
         },
         {
-          title: "Update hovers everywhere",
+          title: "Automated route crawler",
           detail:
-            "Unify link, card, media, button, project, footer, nav, and resource hover states so each interaction feels deliberate.",
+            "Add a repeatable npm smoke test for route status, redirects, metadata, and image existence.",
           status: "next",
         },
         {
-          title: "Add prettier hovers and gradients",
+          title: "Server-side email route",
           detail:
-            "Use the brand palette to add more polished hover transitions and gradient moments without adding visual clutter.",
-          status: "next",
-        },
-        {
-          title: "Add new background textures",
-          detail:
-            "Introduce subtle brand-safe texture treatments for sections that need more depth while preserving readability.",
+            "Consider replacing client-side Web3Forms with a Vercel API route and email provider after launch.",
           status: "next",
         },
       ],
     },
     {
-      title: "Visual asset generation",
+      title: "Risky changes to avoid today",
       description:
-        "Replace generic visuals with more specific, story-led imagery and page graphics.",
+        "Changes that could create avoidable launch regressions.",
       tasks: [
         {
-          title: "Guide case study images",
+          title: "Router or export changes",
           detail:
-            "Update case study imagery so each visual is more specific to the project, role, and story being told.",
-          status: "next",
-          promptBefore:
-            "Ask for each case study's ideal image/story direction before generating or replacing visuals.",
+            "Do not switch router strategy, enable static export, add basePath, or add assetPrefix for Vercel.",
+          status: "watch",
         },
         {
-          title: "Generate homepage service photos",
+          title: "Broad asset migration",
           detail:
-            "Create or select more relevant service visuals for the homepage service cards.",
-          status: "next",
+            "Do not rename or move the entire image tree today unless a concrete broken asset appears.",
+          status: "watch",
         },
         {
-          title: "Generate About page photos and graphics",
+          title: "Visual redesign",
           detail:
-            "Create the right mix of Gibson photos, project proof, and custom graphics so About feels more visual and less text-heavy.",
-          status: "next",
-          promptBefore:
-            "Ask what story the About visuals should tell: founder/operator, designer/developer, AI workflow builder, project strategist, or a mix.",
+            "Do not redesign layouts, nav behavior, animation systems, or the overall visual direction during final launch prep.",
+          status: "watch",
         },
         {
-          title: "Update About page icons",
+          title: "Unsupported claims",
           detail:
-            "Refresh About icons so process, capabilities, and proof moments match the new brand direction.",
-          status: "next",
+            "Do not add new metrics, confidential details, or client claims that are not already supported by the current copy.",
+          status: "watch",
         },
       ],
     },
     {
-      title: "Page design passes",
+      title: "Final QA status",
       description:
-        "Work page by page after the global brand, navigation, and asset direction is stable.",
+        "Pass/fail status for the final verification sweep.",
       tasks: [
         {
-          title: "About page layout pass",
+          title: "Routes",
           detail:
-            "Reduce text density, add more photos, improve grouping, and make the page feel more like a story than a resume wall.",
-          status: "next",
+            "Verify /, /about, /work, every case study, /lab, every lab article, /contact, /credits, /project-launch, and custom 404.",
+          status: "pass",
         },
         {
-          title: "Contact page styling and info pass",
+          title: "Legacy redirects",
           detail:
-            "Improve the page styling and add more useful contact information without making the page feel crowded.",
-          status: "next",
-          promptBefore:
-            "Ask which contact details should be public: email, location, availability, social links, booking notes, response time, or project intake details.",
+            "Verify /blog-article redirects to /lab, /works-default redirects to /work, and /services redirects to /.",
+          status: "pass",
         },
         {
-          title: "Footer content pass",
+          title: "Assets and icons",
           detail:
-            "Update footer copy, groupings, links, and calls to action so the ending feels useful and brand-specific.",
-          status: "next",
+            "Confirm public assets, favicon, icon.png, apple-icon.png, and OG image resolve in the production build.",
+          status: "pass",
         },
         {
-          title: "Work page styling pass",
+          title: "Contact form",
           detail:
-            "Refine the Work page layout, project cards, filters or labels, spacing, and visual rhythm.",
-          status: "next",
+            "Pass only after the Vercel Web3Forms key is configured and a real submission is tested from production.",
+          status: "blocked",
         },
         {
-          title: "Lab page content and styling pass",
+          title: "Responsive visual QA",
           detail:
-            "Update Lab hero content, improve Lab styling, and make article topics feel meaningful and Gibson-authored.",
-          status: "next",
-          promptBefore:
-            "Ask for article topics, theses, and public-safe themes before writing or redesigning Lab content.",
-        },
-      ],
-    },
-    {
-      title: "Content pass",
-      description:
-        "Review the site language after the visual direction is stable so copy supports the final design.",
-      tasks: [
-        {
-          title: "Go page by page for content",
-          detail:
-            "Review Home, About, Work, case studies, Lab, article pages, Contact, Footer, Credits, and Project Launch copy in context.",
-          status: "next",
-        },
-        {
-          title: "Keep copy public-safe and specific",
-          detail:
-            "Remove repetition, soften unsupported claims, clarify project context, and keep the strongest proof where it belongs.",
-          status: "next",
-        },
-      ],
-    },
-    {
-      title: "Final QA",
-      description:
-        "Test the full site across themes and devices after the design and content passes are complete.",
-      tasks: [
-        {
-          title: "Test every page in light mode",
-          detail:
-            "Check readable contrast, section backgrounds, nav states, hovers, imagery, and forms in light mode.",
-          status: "next",
-        },
-        {
-          title: "Test every page in dark mode",
-          detail:
-            "Check readable contrast, section backgrounds, nav states, hovers, imagery, and forms in dark mode.",
-          status: "next",
-        },
-        {
-          title: "Test every page on mobile, tablet, and desktop",
-          detail:
-            "Review layout, spacing, sticky elements, nav, footer, project pages, Lab, Contact, and visual crops across viewport sizes.",
-          status: "next",
-        },
-        {
-          title: "Run build and route smoke test",
-          detail:
-            "Run the production build, verify canonical routes, and check for console errors or missing assets before saving and deploy.",
+            "Check desktop, tablet, mobile, dark mode, light mode, menu states, scroll behavior, and contact form states before DNS cutover.",
           status: "next",
         },
       ],

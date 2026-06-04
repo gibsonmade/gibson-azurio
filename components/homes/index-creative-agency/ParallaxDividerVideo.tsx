@@ -274,7 +274,7 @@ export default function ParallaxDividerVideo() {
                         ref={imageRef}
                         className="card__media"
                         src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
-                        alt="Wiab AI project visual for messy ideas and useful systems"
+                        alt="WIAB AI project visual for messy ideas and useful systems"
                       />
                       <div className="card__cover" ref={coverRef} />
                     </div>

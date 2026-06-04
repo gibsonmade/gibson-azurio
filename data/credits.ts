@@ -34,6 +34,10 @@ export const openSourceCreditLinks: CreditLink[] = [
     label: "Paper Design shaders",
     href: "https://www.npmjs.com/package/@paper-design/shaders-react",
   },
+  {
+    label: "SVG Backgrounds",
+    href: "https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/",
+  },
   { label: "Geist", href: "https://vercel.com/font" },
   { label: "JetBrains Mono", href: "https://www.jetbrains.com/lp/mono/" },
 ];
@@ -80,11 +84,11 @@ export const creditsSections: CreditSection[] = [
   {
     title: "Corrections and removal requests",
     body:
-      "If you believe an asset, trademark, image, or reference is incorrectly credited, should be updated, or should be removed, email gibhall@gmail.com with the page URL and the item in question.",
+      "If you believe an asset, trademark, image, or reference is incorrectly credited, should be updated, or should be removed, email hello@gibsooon.com with the page URL and the item in question.",
     links: [
       {
         label: "Email Gibson",
-        href: "mailto:gibhall@gmail.com",
+        href: "mailto:hello@gibsooon.com",
       },
     ],
   },

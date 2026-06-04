@@ -46,7 +46,7 @@ export default function InnerHeadline() {
                               <CommonLoadFade index={1}>
                                 <div className="mxd-hero__mark permanent loading-fade" style={{ marginBottom: "2rem" }}>
                                   <span className="mark-icon" />
-                                  <span className="mark-text">Availble for hire</span>
+                                  <span className="mark-text">Available for hire</span>
                                 </div>
                               </CommonLoadFade>
                               <div className="inner-headline__title">

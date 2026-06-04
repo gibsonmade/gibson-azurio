@@ -3,6 +3,7 @@ import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import TextScramble from "@/components/animations/TextScramble";
 import { siteCopy } from "@/data/siteCopy";
+import Link from "next/link";
 export default function SectionTitle() {
   const { contact } = siteCopy;
 
@@ -61,13 +62,13 @@ export default function SectionTitle() {
                               as="li"
                               animation="inUp"
                             >
-                              <a
+                              <Link
                                 className="tag tag-s-mobile"
                                 href="/work"
                               >
                                 Review the kind of work Gibson takes on before
                                 sending the details.
-                              </a>
+                              </Link>
                             </CommonScrollAnimated>
                           </ul>
                           <ul>

@@ -33,6 +33,18 @@ export const metadata: Metadata = {
   },
 };
 
+// Runs synchronously before React hydrates so the loader never shows the wrong theme.
+const themeInitScript = `
+(function() {
+  try {
+    var t = localStorage.getItem('template.theme');
+    if (t === 'light' || t === 'dark') {
+      document.documentElement.setAttribute('color-scheme', t);
+    }
+  } catch (e) {}
+})();
+`;
+
 const motionInitScript = `
 (function() {
   try {
@@ -66,6 +78,7 @@ export default function RootLayout({
         className={`${geist.variable} ${jetbrainsMono.variable} app-font-vars`}
       >
         {/* Plain script in a Server Component: React 19 hoists it correctly without the "script tag" warning */}
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <script dangerouslySetInnerHTML={{ __html: motionInitScript }} />
         <TemplateRuntimeProvider>
           <Header1 initialTheme={initialTheme} />

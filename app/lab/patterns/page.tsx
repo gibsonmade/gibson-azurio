@@ -7,6 +7,10 @@ import { resourcePatternCategories, resourcePatterns } from "@/data/resourcePatt
 export const metadata: Metadata = {
   title: "UI Patterns | Gibson Lab",
   description: "Internal reference for the reusable UI patterns in Gibson Azurio.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function PatternsPage() {

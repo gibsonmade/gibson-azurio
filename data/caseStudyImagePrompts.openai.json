@@ -308,7 +308,7 @@
     },
     {
       "slug": "wiab-ai",
-      "name": "Wiab AI",
+      "name": "WIAB AI",
       "context": "Practical AI workflows, operator control, agentic systems, usable product experiences, workflow design, product UX, and systems strategy.",
       "existingUploadContext": [
         "/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
@@ -337,7 +337,7 @@
         {
           "id": "wiab-ai-05-product-interface",
           "slot": "galleryPortrait02",
-          "prompt": "Vertical realistic product shot of a laptop showing an abstract Wiab AI dashboard with workflow cards, queue status, and review controls, with a phone showing a compact operator view. No dense readable UI text. Premium case-study artifact photography, high contrast, dark ink base, pale blue paper highlights, solar and pink status accents."
+          "prompt": "Vertical realistic product shot of a laptop showing an abstract WIAB AI dashboard with workflow cards, queue status, and review controls, with a phone showing a compact operator view. No dense readable UI text. Premium case-study artifact photography, high contrast, dark ink base, pale blue paper highlights, solar and pink status accents."
         },
         {
           "id": "wiab-ai-06-outcome",

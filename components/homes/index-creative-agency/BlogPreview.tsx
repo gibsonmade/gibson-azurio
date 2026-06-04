@@ -5,7 +5,10 @@ import Link from "next/link";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
+import { labArticles } from "@/data/labArticles";
 export default function BlogPreview() {
+  const [firstArticle, secondArticle] = labArticles.slice(1, 3);
+
   return (
     <>
       <PinnedSection
@@ -44,7 +47,7 @@ export default function BlogPreview() {
                             href={`/lab`}
                           >
                             <TextScramble className="btn-caption mxd-scramble">
-                              News Overview
+                              Lab overview
                             </TextScramble>
                           </Link>
                         </CommonScrollAnimated>
@@ -60,37 +63,35 @@ export default function BlogPreview() {
               <div className="mxd-blog-list">
                 <Link
                   className="mxd-blog-list__item active-cursor-image active-cursor-permanent"
-                  data-cursor-image="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
-                  data-cursor-text="Read Post"
-                  href={`/blog-article`}
+                  data-cursor-image={firstArticle.image}
+                  data-cursor-text="Read Article"
+                  href={`/lab/article/${firstArticle.slug}`}
                 >
                   <div className="mxd-blog-list__divider top" />
                   <div className="container-fluid px-0 mxd-blog-list__inner">
                     <div className="row gx-0">
                       <div className="col-12 mxd-grid-padding">
                         <div className="mxd-blog-list__meta">
-                          <span className="meta-tag comma-tag">Press</span>
-                          <span className="meta-tag comma-tag">Insights</span>
-                          <span className="meta-time">5 mins</span>
+                          <span className="meta-tag comma-tag">{firstArticle.tags[0]}</span>
+                          <span className="meta-tag comma-tag">{firstArticle.tags[1]}</span>
+                          <span className="meta-time">{firstArticle.readTime}</span>
                         </div>
                       </div>
                       <div className="col-12 col-xl-7 mxd-grid-padding">
                         <div className="mxd-blog-list__title">
-                          <p>Frontend innovations and user journeys</p>
+                          <p>{firstArticle.title}</p>
                           <div className="mxd-blog-list__data">
                             <span className="meta-author comma-tag">
-                              John Lemon
+                              Gibson Hall
                             </span>
-                            <span className="meta-date">02 February, 2026</span>
+                            <span className="meta-date">{firstArticle.date}</span>
                           </div>
                         </div>
                       </div>
                       <div className="col-12 col-xl-5 mxd-grid-padding">
                         <div className="mxd-blog-list__excerpt">
                           <p className="t-medium">
-                            Discover how artificial intelligence is transforming
-                            artistic processes, pushing boundaries, and
-                            inspiring new possibilities in digital design.
+                            {firstArticle.excerptLead} {firstArticle.excerptAccent}
                           </p>
                         </div>
                       </div>
@@ -100,39 +101,35 @@ export default function BlogPreview() {
                 </Link>
                 <Link
                   className="mxd-blog-list__item active-cursor-image active-cursor-permanent"
-                  data-cursor-image="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
-                  data-cursor-text="Read Post"
-                  href={`/blog-article`}
+                  data-cursor-image={secondArticle.image}
+                  data-cursor-text="Read Article"
+                  href={`/lab/article/${secondArticle.slug}`}
                 >
                   <div className="mxd-blog-list__divider top" />
                   <div className="container-fluid px-0 mxd-blog-list__inner">
                     <div className="row gx-0">
                       <div className="col-12 mxd-grid-padding">
                         <div className="mxd-blog-list__meta">
-                          <span className="meta-tag comma-tag">News</span>
-                          <span className="meta-tag comma-tag">Insights</span>
-                          <span className="meta-time">3 mins</span>
+                          <span className="meta-tag comma-tag">{secondArticle.tags[0]}</span>
+                          <span className="meta-tag comma-tag">{secondArticle.tags[1]}</span>
+                          <span className="meta-time">{secondArticle.readTime}</span>
                         </div>
                       </div>
                       <div className="col-12 col-xl-7 mxd-grid-padding">
                         <div className="mxd-blog-list__title">
-                          <p>
-                            Elevating digital workshops with engaging design
-                          </p>
+                          <p>{secondArticle.title}</p>
                           <div className="mxd-blog-list__data">
                             <span className="meta-author comma-tag">
-                              Jenny Pineapple
+                              Gibson Hall
                             </span>
-                            <span className="meta-date">28 January, 2026</span>
+                            <span className="meta-date">{secondArticle.date}</span>
                           </div>
                         </div>
                       </div>
                       <div className="col-12 col-xl-5 mxd-grid-padding">
                         <div className="mxd-blog-list__excerpt">
                           <p className="t-medium">
-                            Discover how artificial intelligence is transforming
-                            artistic processes, pushing boundaries, and
-                            inspiring new possibilities in digital design.
+                            {secondArticle.excerptLead} {secondArticle.excerptAccent}
                           </p>
                         </div>
                       </div>

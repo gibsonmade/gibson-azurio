@@ -50,7 +50,7 @@ export default function Footer1() {
                 >
                   <div className="mxd-hero__mark permanent">
                     <span className="mark-icon" />
-                    <span className="mark-text">Availble for hire</span>
+                    <span className="mark-text">Available for hire</span>
                   </div>
                 </CommonScrollAnimated>
                 <div className="mxd-demo-footer__slogan">
@@ -59,7 +59,7 @@ export default function Footer1() {
                     className="t-bold t-large t-120 mxd-split-lines-reverse"
                     animation="splitLinesReverse"
                   >
-                    Gibson Hall helps founder led teams and enterprise partners{" "}
+                    Gibson Hall helps founder-led teams and enterprise partners{" "}
                     <span>
                       turn complex ideas into launch-ready brands, websites,
                       and digital products.
@@ -218,7 +218,7 @@ export default function Footer1() {
               />
             </CommonScrollAnimated>
             <div className="fw-mark__wrap">
-              <a
+              <Link
                 className="fw-mark__content small justify-content-center"
                 href="/"
                 aria-label="Gibsooon Portfolio"
@@ -230,7 +230,7 @@ export default function Footer1() {
                 >
                   Gibsooon
                 </CommonAnimatedText>
-              </a>
+              </Link>
             </div>
             <CommonScrollAnimated
               className="mxd-footer__planet02 anim-uni-in-up"
@@ -295,13 +295,13 @@ export default function Footer1() {
                           <p className="footer-data bright">
                             <span>
                               Digital systems by&nbsp;
-                              <a
+                              <Link
                                 href="/"
                               >
                                 <TextScramble className="mxd-scramble">
                                   Gibsooon
                                 </TextScramble>
-                              </a>
+                              </Link>
                             </span>
                           </p>
                         </CommonScrollAnimated>

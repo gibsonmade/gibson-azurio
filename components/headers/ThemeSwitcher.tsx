@@ -23,20 +23,22 @@ export default function ThemeSwitcher({
 }: ThemeSwitcherProps) {
   const [theme, setTheme] = useState<Theme>(initialTheme);
 
+  // Sync state once from the value already set by the inline theme script (or localStorage).
+  // Intentionally does NOT call applyTheme — the inline script already applied the correct
+  // color-scheme before React hydrated, so calling applyTheme("dark") here would undo it.
   useEffect(() => {
     const saved = safeLocalGet(STORAGE_KEY) as Theme | null;
-    if (saved && saved !== theme) setTheme(saved);
+    const resolved = saved === "light" || saved === "dark" ? saved : initialTheme;
+    setTheme(resolved);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  useEffect(() => {
-    applyTheme(theme);
-  }, [theme]);
-
+  // applyTheme is only called when the user explicitly toggles — not on initial mount.
   const toggle = useCallback(() => {
     setTheme((t) => {
       const next = t === "dark" ? "light" : "dark";
       safeLocalSet(STORAGE_KEY, next);
+      applyTheme(next);
       return next;
     });
   }, []);

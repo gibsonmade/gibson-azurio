@@ -57,7 +57,7 @@ export default function Hero() {
               <CommonCursorTrailImage
                 index={4}
                 className="mxd-trail-transparent-image"
-                alt="Wiab AI project image"
+                alt="WIAB AI project image"
                 src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
                 width={3000}
                 height={2000}

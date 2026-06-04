@@ -5,6 +5,10 @@ import { getGroupedImageInventory } from "@/lib/resourceInventory";
 export const metadata: Metadata = {
   title: "Images | Gibson Lab",
   description: "Internal image inventory for Gibson Azurio public assets.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default async function ImagesPage() {

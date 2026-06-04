@@ -12,6 +12,10 @@ const PHOSPHOR_ICON_LIMIT = TOTAL_ICON_LIMIT - SVG_ICON_LIMIT;
 export const metadata: Metadata = {
   title: "Icons | Gibson Lab",
   description: "Internal icon inventory for Gibson Azurio public assets and theme icon fonts.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default async function IconsPage() {

@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gibsooon
+
+Next.js App Router site for `www.gibsooon.com`.
 
 ## Getting Started
 
@@ -16,21 +18,28 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the home page in `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Launch Deployment
 
-To learn more about Next.js, take a look at the following resources:
+Use [DEPLOYMENT.md](./DEPLOYMENT.md) for the launch runbook.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Key Vercel settings:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Framework preset: `Next.js`
+- Install command: `npm install`
+- Build command: `npm run build`
+- Output directory: leave blank/default
+- Required env var: `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`
 
-## Deploy on Vercel
+Do not set `EXPORT=true` or `BASE_PATH` for the Vercel production site.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Useful Commands
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm run dev
+npm run lint
+```

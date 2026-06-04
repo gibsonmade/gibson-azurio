@@ -26,7 +26,7 @@ export default function ContactForm() {
     if (!key) {
       setStatus("error");
       setFeedback(
-        "Set NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY in .env.local (get a key at web3forms.com), then restart the dev server.",
+        "The form is not available right now. Email hello@gibsooon.com and Gibson will get back to you.",
       );
       return;
     }
@@ -36,6 +36,12 @@ export default function ContactForm() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
+    if (String(formData.get("botcheck") ?? "").trim().length > 0) {
+      setStatus("success");
+      setFeedback("Thanks for your message. Gibson will get back as soon as possible.");
+      form.reset();
+      return;
+    }
     formData.append("access_key", key);
 
     try {
@@ -44,7 +50,7 @@ export default function ContactForm() {
       if (data.success) {
         setStatus("success");
         setFeedback(
-          "Thanks for your message. We'll get back as soon as possible.",
+          "Thanks for your message. Gibson will get back as soon as possible.",
         );
         form.reset();
         return;
@@ -53,12 +59,12 @@ export default function ContactForm() {
       setFeedback(
         data.message && data.message.length > 0
           ? data.message
-          : "Something went wrong. Please try again in a moment.",
+          : "Something went wrong. Try again in a moment or email hello@gibsooon.com.",
       );
     } catch {
       setStatus("error");
       setFeedback(
-        "Request failed. Check your connection, ad-blockers, and try again.",
+        "The message did not send. Try again in a moment or email hello@gibsooon.com.",
       );
     }
   }
@@ -89,6 +95,14 @@ export default function ContactForm() {
             type="hidden"
             name="subject"
             defaultValue="New message from contact page"
+            aria-hidden
+          />
+          <input
+            type="checkbox"
+            name="botcheck"
+            tabIndex={-1}
+            autoComplete="off"
+            style={{ display: "none" }}
             aria-hidden
           />
           <div className="container-fluid p-0">

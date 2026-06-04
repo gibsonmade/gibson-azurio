@@ -132,15 +132,15 @@ export const workProjects: WorkProject[] = [
     name: "The Home Depot",
     status: "flagship",
     eyebrow: "Enterprise retail",
-    title: "Selling projects",
-    titleAccent: "not just products",
+    title: "Project shopping",
+    titleAccent: "with more confidence",
     summary:
-      "Gibson helped lead UX work around reusable, validated project-shopping patterns for HomeDepot.com.",
+      "Gibson helped lead UX work for guided project-shopping patterns across HomeDepot.com, turning complex home-improvement decisions into clearer digital paths.",
     client: "The Home Depot",
     industry: "Enterprise retail / home improvement",
     date: "2017-2021",
     projectType: "Enterprise UX systems and omnichannel e-commerce",
-    role: "Senior Manager of UX Design",
+    role: "Senior Manager, UX Design",
     urlLabel: "homedepot.com",
     tags: ["UX strategy", "Product leadership", "Design systems"],
     services: [
@@ -153,9 +153,9 @@ export const workProjects: WorkProject[] = [
       "Team management",
     ],
     serviceDetails: [
-      "Structured the project-shopping experience around customer planning behavior, not only catalog browsing.",
-      "Led designers through reusable patterns that could scale across calculators, configurators, and product flows.",
-      "Used research and testing to clarify what customers needed before moving toward cart, pickup, or delivery.",
+      "Reframed project shopping around planning behavior, confidence, and next-step clarity.",
+      "Led designers through reusable patterns for calculators, configurators, mobile flows, and product journeys.",
+      "Used research and testing to make complex inputs easier to understand before cart, pickup, or delivery.",
     ],
     constraints: [
       "Massive product catalog",
@@ -165,22 +165,22 @@ export const workProjects: WorkProject[] = [
       "Omnichannel pickup and delivery behavior",
     ],
     constraintDetails: [
-      "Project-shopping patterns had to work across a retail catalog with many categories, product types, and fulfillment paths.",
-      "Home improvement projects vary by home, budget, material choice, measurement, and customer confidence, so flows needed to guide without overfitting.",
-      "Mobile experiences had to keep complex project inputs understandable for customers researching, measuring, and shopping across contexts.",
-      "Reusable layouts and interaction patterns needed to stay aligned with the broader Home Depot design system.",
-      "Pickup, delivery, and store behavior had to stay clear as customers moved from planning to purchase.",
+      "Project patterns had to work across a massive catalog with many categories, product types, and fulfillment paths.",
+      "Home projects vary by home, budget, material, measurement, and confidence level, so flows needed to guide without pretending every customer was the same.",
+      "Mobile experiences had to keep dense project inputs understandable while customers researched, measured, and shopped in different contexts.",
+      "Layouts and interaction patterns needed to stay aligned with the broader Home Depot design system.",
+      "Pickup, delivery, and store behavior had to stay clear as customers moved from planning into purchase.",
     ],
     collaborationContext:
       "Internal Home Depot role leading product designers and UX researchers in partnership with developers, business owners, analysts, and product teams.",
     storyAngle:
-      "Helping a massive retailer sell complete projects, not just isolated products.",
+      "Helping a massive retailer support complete projects, not just isolated product searches.",
     challenge:
-      "HomeDepot.com had to support highly customizable home improvement projects inside a massive retail catalog. Customers needed more than individual products; they needed guided inputs, material lists, and omnichannel paths to pickup or delivery.",
+      "HomeDepot.com had to support highly customizable home-improvement projects inside a massive retail catalog. Customers needed more than a product grid; they needed guided inputs, material decisions, and clear paths to pickup or delivery.",
     approach:
-      "Gibson helped lead UX designers and researchers creating reusable, validated project-shopping patterns for calculators, configurators, mobile flows, input types, and design-system-aligned layouts.",
+      "Gibson helped lead designers and researchers creating reusable, validated project-shopping patterns for calculators, configurators, mobile flows, input types, and design-system-aligned layouts.",
     outcome:
-      "The work helped teams shift project experiences from product-by-product browsing toward guided material selection and more consistent reusable patterns across the Home Depot digital ecosystem.",
+      "The work helped teams move project experiences from product-by-product browsing toward guided material selection and more consistent reusable patterns across the Home Depot digital ecosystem.",
     cursorImage: generatedProjectAssetSets.theHomeDepot.cover,
     images: generatedProjectAssetSets.theHomeDepot,
   },
@@ -189,10 +189,10 @@ export const workProjects: WorkProject[] = [
     name: "CarMax",
     status: "flagship",
     eyebrow: "Automotive retail",
-    title: "Simplifying",
-    titleAccent: "sell-your-car",
+    title: "A clearer way",
+    titleAccent: "to sell your car",
     summary:
-      "Gibson helps lead product design for CarMax's sell-your-car journey, a high-traffic funnel receiving over one million visitors each month.",
+      "Gibson helps lead product design for CarMax's sell-your-car journey, a high-traffic funnel that receives over one million visitors each month.",
     client: "CarMax",
     industry: "Automotive retail / digital commerce",
     date: "2021-2026",
@@ -211,8 +211,8 @@ export const workProjects: WorkProject[] = [
     ],
     serviceDetails: [
       "Designed clearer moments across a high-traffic sell-your-car journey.",
-      "Aligned the funnel around customer confidence, offer comprehension, and next-step clarity.",
-      "Used testing to shape decisions in a journey with meaningful customer and business stakes.",
+      "Aligned the funnel around customer confidence, offer comprehension, and a more obvious next step.",
+      "Used testing to shape decisions in a journey with real customer and business stakes.",
     ],
     constraints: [
       "20+ question form funnel",
@@ -225,19 +225,19 @@ export const workProjects: WorkProject[] = [
       "The funnel needed to collect enough vehicle information without making the experience feel exhausting or unclear.",
       "Customers needed confidence because selling a car involves money, timing, transportation, and trust.",
       "Offer comprehension depended on making complex logic feel simple once customers reached a result.",
-      "The next step had to make sense whether a customer continued online or finished the process in store.",
+      "The next step had to make sense whether a customer continued online or finished in store.",
       "The experience supported an important supply path, so changes needed to balance customer clarity with business needs.",
     ],
     collaborationContext:
       "Direct CarMax role working cross-functionally with developers, financial analysts, product managers, and business partners.",
     storyAngle:
-      "Simplifying a high-traffic, high-stakes customer decision through product design, testing, and empathy.",
+      "Simplifying a high-traffic, high-stakes customer decision through product design, testing, and practical empathy.",
     challenge:
-      "Selling a car online is a high-stakes decision with a long form flow, complex offer comprehension, and online or in-store next steps. The journey needs to feel simple enough for customers to finish.",
+      "Selling a car online is a high-stakes decision with a long form flow, complex offer comprehension, and online or in-store next steps. The journey has to feel calm enough for customers to finish.",
     approach:
-      "Gibson helps lead design for the sell-your-car journey, including landing page testing, a 20+ question funnel, offer delivery, next-step clarity, and AI-driven design and research practices.",
+      "Gibson helps lead design for the sell-your-car journey, including landing page testing, a 20+ question funnel, offer delivery, next-step clarity, and AI-assisted design and research practices.",
     outcome:
-      "The work supports a high-traffic funnel receiving over one million monthly visitors and helps customers move from sell intent to an understandable offer and clearer next step.",
+      "The work supports a high-traffic funnel receiving over one million monthly visitors and helps customers move from sell intent to an understandable offer and a clearer next step.",
     cursorImage: generatedProjectAssetSets.carmax.cover,
     images: generatedProjectAssetSets.carmax,
   },
@@ -246,8 +246,8 @@ export const workProjects: WorkProject[] = [
     name: "Mini Murals",
     status: "flagship",
     eyebrow: "Civic art",
-    title: "Bringing civic",
-    titleAccent: "creativity online",
+    title: "Public art",
+    titleAccent: "made discoverable",
     summary:
       "Gibson helped turn 250+ Houston public artworks by 40+ artists into a browsable brand, website, and interactive map experience.",
     client: "Mini Murals",
@@ -267,7 +267,7 @@ export const workProjects: WorkProject[] = [
       "Operations",
     ],
     serviceDetails: [
-      "Created a recognizable identity for a public art initiative spread across Houston.",
+      "Created a recognizable identity for a public-art initiative spread across Houston.",
       "Built a digital home where murals, artists, themes, and neighborhoods could be explored together.",
       "Made location-based discovery a core part of the experience through interactive mapping.",
     ],
@@ -279,7 +279,7 @@ export const workProjects: WorkProject[] = [
       "Early-stage operational needs",
     ],
     constraintDetails: [
-      "The artwork lived across Houston, so the digital layer needed to help people understand what existed and where to find it.",
+      "The artwork lived across Houston, so the digital layer needed to show what existed and where to find it.",
       "Discovery had to work by neighborhood, not only by artwork title or artist name.",
       "The experience needed to support multiple ways into the collection, including artists, themes, locations, and public context.",
       "City, district, artist, and community relationships shaped how information needed to be organized and represented.",
@@ -288,13 +288,13 @@ export const workProjects: WorkProject[] = [
     collaborationContext:
       "Worked with the CEO, COO, City of Houston, artists, districts, and community partners.",
     storyAngle:
-      "Bringing civic creativity online by making hundreds of public artworks discoverable.",
+      "Bringing civic creativity online by making hundreds of public artworks easier to find.",
     challenge:
       "Mini Murals created public art across Houston, but the distributed nature of the work made discovery, storytelling, and organization difficult without a strong digital layer.",
     approach:
-      "Gibson helped as CTO with the logo, website, WordPress updates, interactive mural maps, neighborhood/artist/theme browsing, campaigns, marketing materials, and operational systems.",
+      "Gibson helped as CTO across the logo, website, WordPress updates, interactive mural maps, neighborhood/artist/theme browsing, campaigns, marketing materials, and operational systems.",
     outcome:
-      "The project made 250+ murals by 40+ artists easier to discover and helped bring public art into Houston neighborhoods, art districts, and areas with limited public art access.",
+      "The project made 250+ murals by 40+ artists easier to discover and helped bring public art into Houston neighborhoods, art districts, and areas with limited public-art access.",
     cursorImage: generatedProjectAssetSets.miniMurals.cover,
     images: generatedProjectAssetSets.miniMurals,
   },
@@ -303,8 +303,8 @@ export const workProjects: WorkProject[] = [
     name: "CHI St. Luke's",
     status: "flagship",
     eyebrow: "Healthcare",
-    title: "Healthcare",
-    titleAccent: "clarity",
+    title: "Healthcare access",
+    titleAccent: "with less friction",
     summary:
       "Gibson led creative direction for a community-centered hospital platform that brought scattered microsites into one easier-to-use digital experience.",
     client: "CHI St. Luke's",
@@ -326,7 +326,7 @@ export const workProjects: WorkProject[] = [
     serviceDetails: [
       "Kept the project moving across creative, technical, stakeholder, and launch needs.",
       "Led interface decisions around community access, service discovery, and maintainable content.",
-      "Guided the build direction so the site could support a large healthcare organization responsively.",
+      "Guided the build direction so the site could support a large healthcare organization across devices.",
     ],
     constraints: [
       "Outdated website ecosystem",
@@ -338,7 +338,7 @@ export const workProjects: WorkProject[] = [
     ],
     constraintDetails: [
       "The existing web presence needed a clearer structure that could support a large hospital group.",
-      "Separate microsites made it harder for visitors to understand where to go for care, services, and organizational information.",
+      "Separate microsites made it harder for visitors to know where to go for care, services, and organizational information.",
       "The experience had to serve real community needs, not just internal department structures.",
       "Physician and staff input mattered because the site needed to reflect care delivery accurately.",
       "The project needed careful healthcare delivery practices while keeping the interface approachable.",
@@ -349,11 +349,11 @@ export const workProjects: WorkProject[] = [
     storyAngle:
       "Turning a fragmented hospital web presence into one community-centered place for care information.",
     challenge:
-      "The hospital group had an outdated web ecosystem made up of many disconnected microsites. Community members had a hard time finding locations, services, care information, physician details, articles, and organizational information in one reliable place.",
+      "The hospital group had an outdated web ecosystem made up of disconnected microsites. Community members needed one reliable place to find locations, services, care information, physician details, articles, and organizational information.",
     approach:
-      "Gibson led the UI design, technology development direction, timeline, budget alignment, and launch strategy. The team interviewed dozens of community members and staff to clarify what the experience needed to support, then shaped a responsive, SEO-minded, HIPAA-conscious platform the organization could maintain over time.",
+      "Gibson led UI design, technology direction, timeline, budget alignment, and launch strategy. The team interviewed community members and staff to clarify what the experience needed to support, then shaped a responsive, SEO-minded, HIPAA-conscious platform the organization could maintain over time.",
     outcome:
-      "The work consolidated a fragmented digital presence into a responsive hospital website designed around community needs, physician approval, easier information discovery, and maintainable updates for locations, physicians, services, and articles.",
+      "The work consolidated a fragmented digital presence into a responsive hospital website designed around community needs, physician review, easier information discovery, and maintainable updates for locations, physicians, services, and articles.",
     cursorImage: generatedProjectAssetSets.chiStLukes.cover,
     images: generatedProjectAssetSets.chiStLukes,
   },
@@ -362,10 +362,10 @@ export const workProjects: WorkProject[] = [
     name: "Ritual",
     status: "flagship",
     eyebrow: "Fitness",
-    title: "Boutique",
-    titleAccent: "fitness launch",
+    title: "A boutique studio",
+    titleAccent: "with a real ritual",
     summary:
-      "Gibson helped a Houston pilates and sauna studio translate a name, location, and founder vision into a brand identity, signage direction, and responsive website.",
+      "Gibson helped a Houston Pilates and sauna studio translate a name, location, and founder vision into a brand identity, signage direction, and responsive website.",
     client: "Ritual",
     industry: "Boutique fitness / wellness",
     date: "Studio launch",
@@ -385,7 +385,7 @@ export const workProjects: WorkProject[] = [
     serviceDetails: [
       "Translated the owners' desired studio feeling into concrete brand directions.",
       "Explored and refined logo options that could work across signage, marketing, and digital touchpoints.",
-      "Built the visual system that connected the physical studio presence with the website experience.",
+      "Connected the physical studio presence with a responsive website and booking path.",
     ],
     constraints: [
       "Brick-and-mortar build in progress",
@@ -402,11 +402,11 @@ export const workProjects: WorkProject[] = [
     collaborationContext:
       "Worked directly with the studio owners to translate their name, location, and vision into tangible brand options and a launch-ready website.",
     storyAngle:
-      "Helping a wellness studio move from an idea in the owners' heads to a brand people could recognize, visit, and book.",
+      "Helping a wellness studio move from a feeling in the owners' heads to a brand people could recognize, visit, and book.",
     challenge:
-      "The owners had a name, location, and strong sense of what Ritual should feel like, but needed help turning that idea into a visual identity that could guide signage, color decisions, marketing materials, and a website.",
+      "The owners had a name, location, and strong sense of what Ritual should feel like, but needed help turning that idea into a visual identity that could guide signage, color decisions, marketing materials, and the website.",
     approach:
-      "Gibson worked with the owners to understand the desired feeling, sketched identity directions, refined logo options, and presented choices they could react to and iterate from. Once the selected logo direction became the core mark, Gibson designed and completed the responsive website and connected it to the studio's booking and payment platform.",
+      "Gibson worked with the owners to understand the desired feeling, sketched identity directions, refined logo options, and presented choices they could react to and iterate from. Once the selected direction became the core mark, Gibson designed the responsive website and connected it to the studio's booking and payment platform.",
     outcome:
       "The selected identity shaped Ritual's main sign, marketing materials, and website presence, giving the studio a cohesive brand foundation and a clear digital path for the community to learn about the practice and book.",
     cursorImage: generatedProjectAssetSets.ritual.cover,
@@ -469,14 +469,14 @@ export const workProjects: WorkProject[] = [
   },
   {
     slug: "wiab-ai",
-    name: "Wiab AI",
+    name: "WIAB AI",
     status: "flagship",
     eyebrow: "AI systems",
     title: "AI workflow",
-    titleAccent: "operations",
+    titleAccent: "that stays human",
     summary:
       "Gibson created a private internal marketing-in-a-box platform that turns early website ideas into responsive, brand-aware starting points in minutes.",
-    client: "Wiab AI",
+    client: "WIAB AI",
     industry: "Artificial intelligence",
     date: "Internal platform",
     projectType: "Private AI workflow platform and website generation system",
@@ -495,7 +495,7 @@ export const workProjects: WorkProject[] = [
     serviceDetails: [
       "Designed the internal workflow that moves from early prompt to usable website starting point.",
       "Built skill guidance around UX checks, content structure, layout quality, and launch readiness.",
-      "Added design-system guardrails so generated outputs feel more intentional and brand-aware.",
+      "Added design-system guardrails so generated outputs feel more intentional, brand-aware, and reviewable.",
     ],
     constraints: [
       "Private internal tool",
@@ -507,7 +507,7 @@ export const workProjects: WorkProject[] = [
     ],
     constraintDetails: [
       "The platform is an internal Gibson workflow, so the public story needs to focus on capability without exposing private tooling details.",
-      "The system had to create a more useful first version than a typical loose concept or generic first pass.",
+      "The system had to create a more useful first version than a loose concept or generic first pass.",
       "Generated outputs needed guardrails around color, typography, spacing, brand fit, and design-system consistency.",
       "The code needed to stay organized enough for real project work, not just visual demos.",
       "AI output still needed Gibson's judgment before anything moved toward a client-ready launch.",
@@ -516,11 +516,11 @@ export const workProjects: WorkProject[] = [
     collaborationContext:
       "Self-directed internal product built from Gibson's UX, design, development, and AI workflow experience and used at the start of website projects.",
     storyAngle:
-      "Compressing the slow first phase of a website project into a stronger, faster starting point without scaling down the client's ambition.",
+      "Compressing the slow first phase of a website project into a stronger starting point without shrinking the client's ambition.",
     challenge:
-      "Website projects often spent days or weeks gathering direction, exploring copy, testing imagery, selecting colors, choosing fonts, and shaping early layouts before a useful first version existed.",
+      "Website projects often spend days or weeks gathering direction, exploring copy, testing imagery, selecting colors, choosing fonts, and shaping early layouts before a useful first version exists.",
     approach:
-      "Gibson built Wiab AI as a private marketing-in-a-box platform with AI skills, starter frameworks, parameters, and checks that guide UX best practices, brand cohesion, responsive design, readable code, and fast-loading frontend structure.",
+      "Gibson built WIAB AI as a private marketing-in-a-box platform with AI skills, starter frameworks, parameters, and checks that guide UX quality, brand cohesion, responsive design, readable code, and fast-loading frontend structure.",
     outcome:
       "The internal workflow gives Gibson and clients a stronger V1 preview in minutes, creating a better foundation for focused V2 launch work instead of spending the early project window on a thin MVP.",
     cursorImage: generatedProjectAssetSets.wiabAi.cover,
@@ -531,8 +531,8 @@ export const workProjects: WorkProject[] = [
     name: "Cactus Club",
     status: "flagship",
     eyebrow: "Hospitality",
-    title: "Hospitality",
-    titleAccent: "with a point of view",
+    title: "Local discovery",
+    titleAccent: "with a social pulse",
     summary:
       "Gibson was hired as CPO to help shape an Austin community platform from founder vision into a brand, responsive website, and iOS product direction.",
     client: "Cactus Club",
@@ -579,7 +579,7 @@ export const workProjects: WorkProject[] = [
     approach:
       "Gibson worked with the founder on product vision, interviewed community members, drafted brand plans, created logo and branding options, designed a responsive website, and shaped the iOS app experience now in development.",
     outcome:
-      "The web experience is live and the iOS app is in development, giving the community a clearer way to discover and experience the best of Austin with other people.",
+      "The web experience is live and the iOS app is in development, giving the community a clearer way to discover and experience Austin with other people.",
     cursorImage: generatedProjectAssetSets.cactusClub.cover,
     images: generatedProjectAssetSets.cactusClub,
   },
@@ -588,10 +588,10 @@ export const workProjects: WorkProject[] = [
     name: "Academy Sports + Outdoors",
     status: "flagship",
     eyebrow: "Retail",
-    title: "Mobile-first",
-    titleAccent: "omnichannel",
+    title: "Retail research",
+    titleAccent: "for real-world shopping",
     summary:
-      "As Senior UX Researcher, Gibson helped product and design teams improve Academy's website, store experience, and omnichannel retail journeys.",
+      "As Senior UX Researcher, Gibson helped product and design teams understand Academy's website, store experience, and omnichannel retail journeys.",
     client: "Academy Sports + Outdoors",
     industry: "Sporting goods retail",
     date: "2015-2017",
@@ -612,7 +612,7 @@ export const workProjects: WorkProject[] = [
     serviceDetails: [
       "Ran research that helped teams understand digital and store-connected customer needs.",
       "Translated findings into strategic direction for product, merchandising, and experience teams.",
-      "Supported discovery work around opportunities that could improve key retail journeys.",
+      "Supported discovery around opportunities that could improve key retail journeys.",
     ],
     constraints: [
       "Large retail product catalog",
@@ -633,11 +633,11 @@ export const workProjects: WorkProject[] = [
     storyAngle:
       "Learning how large-scale retail experiences connect website, store, merchandising, checkout, account, and pickup journeys.",
     challenge:
-      "Academy's customers moved between digital and store experiences, but the product, navigation, checkout, account, and BOPIS journeys all needed research-backed clarity to support retail-scale decision making.",
+      "Academy's customers moved between digital and store experiences, while product, navigation, checkout, account, and BOPIS journeys all needed research-backed clarity to support retail-scale decision making.",
     approach:
       "As Senior UX Researcher, Gibson provided strategic research and analysis for the website, store experience, and omnichannel connection layers. He worked with product teams to identify customer opportunities and with UI designers to shape concepts validated through UX research.",
     outcome:
-      "The work supported Academy's digital sales efforts and helped improve key learning areas including BOPIS, navigation for 10k+ products, checkout forms and layouts, account experience, OAuth, and social sign-on.",
+      "The work supported Academy's digital sales efforts and improved the team's understanding of BOPIS, navigation for 10k+ products, checkout forms and layouts, account experience, OAuth, and social sign-on.",
     cursorImage: generatedProjectAssetSets.academy.cover,
     images: generatedProjectAssetSets.academy,
   },

@@ -204,7 +204,7 @@ export const siteCopy = {
     nextStepTitle: "What happens next",
     nextStep:
       "The answers should make the business moment, scope, budget, and timeline clear enough to decide whether a discovery call makes sense. Short answers are fine. Specific answers are better.",
-    email: "gibhall@gmail.com",
+    email: "hello@gibsooon.com",
   },
   lab: {
     title: "Lab | Gibsooon",

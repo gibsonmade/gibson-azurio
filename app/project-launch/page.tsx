@@ -6,11 +6,17 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: `Project Launch | ${siteCopy.brand.site}`,
   description: "Internal Gibson launch checklist and current project status.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const statusLabels: Record<LaunchTaskStatus, string> = {
-  done: "Done",
-  current: "Now",
+  pass: "Pass",
+  fail: "Fail",
+  blocked: "Blocked",
+  watch: "Avoid",
   next: "Next",
 };
 

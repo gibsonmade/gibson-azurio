@@ -340,13 +340,13 @@ export default function Nav({
                         <a
                           ref={contactSlots[0]}
                           className="tag tag-m"
-                          href="mailto:gibhall@gmail.com?subject=Message%20from%20your%20site"
+                          href="mailto:hello@gibsooon.com?subject=Message%20from%20your%20site"
                         >
                           <TextScramble
                             ref={contactRevealSlots[0]}
                             className="mxd-scramble"
                           >
-                            gibhall@gmail.com
+                            hello@gibsooon.com
                           </TextScramble>
                         </a>
                       </li>
@@ -393,11 +393,6 @@ export default function Nav({
                   <p ref={footerSlots[1]} className="menu-data__text">
                     <a href="/credits" className="menu-data__link">
                       Site credits
-                    </a>
-                  </p>
-                  <p className="menu-data__text">
-                    <a href="/project-launch" className="menu-data__link">
-                      Project launch
                     </a>
                   </p>
                 </div>
