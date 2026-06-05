@@ -14,6 +14,7 @@ import {
   type Ref,
 } from "react";
 import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
+import { CURSOR_TRAIL_TRANSPARENT_DIR } from "@/data/cursorTrailTransparentImages";
 
 const MAX_SIZE = 220;
 const MOBILE_MAX_SIZE = 150;
@@ -372,6 +373,11 @@ export function CommonCursorTrailImage({
   ...rest
 }: CommonCursorTrailImageProps) {
   const context = useContext(TrailContext);
+
+  if (typeof src !== "string" || !src.startsWith(CURSOR_TRAIL_TRANSPARENT_DIR)) {
+    return null;
+  }
+
   const ref = context ? context.registerImage(index) : undefined;
   return (
     <Image className={className} alt={alt} src={src} {...rest} ref={ref} />

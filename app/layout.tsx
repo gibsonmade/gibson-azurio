@@ -4,6 +4,7 @@ import Header1 from "@/components/headers/Header1";
 import TemplateRuntimeProvider from "@/components/common/TemplateRuntimeProvider";
 import MenuRuntimeShell from "@/components/headers/MenuRuntimeShell";
 import { Metadata } from "next";
+import Script from "next/script";
 import { siteCopy } from "@/data/siteCopy";
 
 const geist = Geist({
@@ -86,9 +87,16 @@ export default function RootLayout({
       <body
         className={`${geist.variable} ${jetbrainsMono.variable} app-font-vars`}
       >
-        {/* Plain script in a Server Component: React 19 hoists it correctly without the "script tag" warning */}
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-        <script dangerouslySetInnerHTML={{ __html: motionInitScript }} />
+        <Script
+          id="theme-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: themeInitScript }}
+        />
+        <Script
+          id="motion-init"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: motionInitScript }}
+        />
         <TemplateRuntimeProvider>
           <Header1 initialTheme={initialTheme} />
           <MenuRuntimeShell />

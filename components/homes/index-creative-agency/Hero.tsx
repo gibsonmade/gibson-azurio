@@ -9,6 +9,7 @@ import CommonCursorTrailTransparent, {
 import HeroGridParallax from "./HeroGridParallax";
 import HeroTypewriterWord from "./HeroTypewriterWord";
 import { siteCopy } from "@/data/siteCopy";
+import { cursorTrailTransparentImages } from "@/data/cursorTrailTransparentImages";
 export default function Hero() {
   const { hero } = siteCopy.home;
 
@@ -22,78 +23,14 @@ export default function Hero() {
           {/* Effect - Cursor Trail Transparent Start */}
           <CommonCursorTrailWrapper className="mxd-trail-transparent-wrapper">
             <CommonCursorTrailContent className="mxd-trail-transparent-content">
-              <CommonCursorTrailImage
-                index={0}
-                className="mxd-trail-transparent-image"
-                alt="The Home Depot project image"
-                src="/cursor-trail-transparent/01-trail.jpg"
-                width={1333}
-                height={2000}
-              />
-              <CommonCursorTrailImage
-                index={1}
-                className="mxd-trail-transparent-image"
-                alt="CarMax project image"
-                src="/cursor-trail-transparent/02-trail.jpg"
-                width={1123}
-                height={2000}
-              />
-              <CommonCursorTrailImage
-                index={2}
-                className="mxd-trail-transparent-image"
-                alt="Mini Murals project image"
-                src="/cursor-trail-transparent/03-trail.jpg"
-                width={1333}
-                height={2000}
-              />
-              <CommonCursorTrailImage
-                index={3}
-                className="mxd-trail-transparent-image"
-                alt="Straterra project image"
-                src="/cursor-trail-transparent/04-trail.jpg"
-                width={2997}
-                height={2000}
-              />
-              <CommonCursorTrailImage
-                index={4}
-                className="mxd-trail-transparent-image"
-                alt="WIAB AI project image"
-                src="/cursor-trail-transparent/05-trail.jpg"
-                width={3000}
-                height={2000}
-              />
-              <CommonCursorTrailImage
-                index={5}
-                className="mxd-trail-transparent-image"
-                alt="CHI St. Luke's project image"
-                src="/cursor-trail-transparent/06-trail.jpg"
-                width={1127}
-                height={2000}
-              />
-              <CommonCursorTrailImage
-                index={6}
-                className="mxd-trail-transparent-image"
-                alt="Ritual project image"
-                src="/cursor-trail-transparent/07-trail.jpg"
-                width={1500}
-                height={2000}
-              />
-              <CommonCursorTrailImage
-                index={7}
-                className="mxd-trail-transparent-image"
-                alt="Cactus Club project image"
-                src="/cursor-trail-transparent/08-trail.jpg"
-                width={1500}
-                height={2000}
-              />
-              <CommonCursorTrailImage
-                index={8}
-                className="mxd-trail-transparent-image"
-                alt="Academy Sports project image"
-                src="/cursor-trail-transparent/09-trail.jpg"
-                width={1333}
-                height={2000}
-              />
+              {cursorTrailTransparentImages.map((image, index) => (
+                <CommonCursorTrailImage
+                  key={image.src}
+                  index={index}
+                  className="mxd-trail-transparent-image"
+                  {...image}
+                />
+              ))}
             </CommonCursorTrailContent>
           </CommonCursorTrailWrapper>
           {/* Effect - Cursor Trail Transparent End */}
