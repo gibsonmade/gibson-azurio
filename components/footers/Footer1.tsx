@@ -12,11 +12,12 @@ import {
   footer1BackgroundImages,
   footer1ForegroundImages,
   footer1NavColumns,
-  footer1PromoItems,
 } from "@/data/footer";
 import ContactCtaIcon from "@/components/common/ContactCtaIcon";
+import { workProjects } from "@/data/workProjects";
 
 const navLinkClass = "anim-uni-slide-down";
+const recentCaseStudies = workProjects.slice(0, 3);
 
 export default function Footer1() {
   const pagesBlock = footer1NavColumns[0]?.blocks[0];
@@ -144,33 +145,33 @@ export default function Footer1() {
                         as="p"
                         animation="slideDownLine"
                       >
-                        <span>/ More by Gibsooon</span>
+                        <span>/ Made by Gibson</span>
                       </CommonScrollAnimated>
                     </div>
                     <div className="mxd-footer-nav02__list">
                       <div className="mxd-footer-promo__list">
-                        {footer1PromoItems.map((item) => (
-                          <a
-                            key={item.iconSrc}
+                        {recentCaseStudies.map((project) => (
+                          <Link
+                            key={project.slug}
                             className="mxd-footer-promo__item"
-                            href={item.href}
+                            href={`/work/${project.slug}`}
                           >
                             <Image
-                              className="mxd-footer-promo__icon"
-                              alt={item.iconAlt}
-                              src={item.iconSrc}
-                              width={item.iconWidth}
-                              height={item.iconHeight}
+                              className="mxd-footer-promo__icon mxd-footer-promo__thumb"
+                              alt={`${project.name} case study thumbnail`}
+                              src={project.images.cover}
+                              width={160}
+                              height={120}
                             />
                             <CommonAnimatedText
                               as="p"
                               className="t-medium t-bold mxd-footer-promo__link mxd-split-lines-reverse"
                               animation="splitLinesReverse"
                             >
-                              {item.textLead}
-                              <span>{item.textSpan}</span>
+                              {project.name}
+                              <span>{project.summary}</span>
                             </CommonAnimatedText>
-                          </a>
+                          </Link>
                         ))}
                       </div>
                     </div>

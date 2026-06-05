@@ -16,13 +16,13 @@ export const siteCopy = {
       headline: "Gibson",
       small: "brings ideas to life",
       caption: "Design, tech & some magic.",
-      socialHref: "https://www.instagram.com/",
+      socialHref: "https://instagram.com/gibsooon",
       scrollLabel: "Scroll to explore",
     },
     introDivider: {
       leftTags: ["Strategy", "UX/UI", "AI workflows", "Launch systems"],
       rightTags: ["Brands", "Websites", "Products", "Working prototypes"],
-      titleLines: ["Messy ideas", "working systems"],
+      titleLines: ["I turn ideas", "into beautiful websites."],
       href: "/about",
     },
     about: {

@@ -60,10 +60,10 @@ const motionInitScript = `
     var params = new URLSearchParams(window.location.search);
     var forced = params.get('motion');
     var stored = localStorage.getItem('template.motion');
-    var reduced = forced === 'reduced' || forced === 'still' || (forced !== 'full' && (stored === 'reduced' || (!stored && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)));
+    var reduced = forced === 'reduced' || forced === 'still' || (forced !== 'full' && stored !== 'full');
     document.documentElement.setAttribute('data-motion', reduced ? 'reduced' : 'full');
   } catch (error) {
-    document.documentElement.setAttribute('data-motion', 'full');
+    document.documentElement.setAttribute('data-motion', 'reduced');
   }
 })();
 `;
@@ -80,7 +80,7 @@ export default function RootLayout({
       lang="en"
       className="no-touch"
       color-scheme={initialTheme}
-      data-motion="full"
+      data-motion="reduced"
       suppressHydrationWarning
     >
       <body

@@ -36,7 +36,7 @@ export function getInitialMotionPreference(): {
   if (getSystemReducedMotion()) {
     return { preference: "reduced", source: "system" };
   }
-  return { preference: "full", source: "default" };
+  return { preference: "reduced", source: "default" };
 }
 
 export function applyMotionPreference(preference: MotionPreference): void {
@@ -57,5 +57,5 @@ export function isReducedMotionMode(): boolean {
   }
   const saved = getSavedMotionPreference();
   if (saved) return saved === "reduced";
-  return getSystemReducedMotion();
+  return true;
 }

@@ -65,7 +65,7 @@ export default function ParallaxDividerVideo() {
         y: 0,
         clearProps: "clipPath,filter,visibility",
       });
-      gsap.set(cover, { opacity: 0.3 });
+      gsap.set(cover, { opacity: 0.72 });
       gsap.set(introMarquee, { opacity: 0 });
       return;
     }
@@ -90,7 +90,7 @@ export default function ParallaxDividerVideo() {
 
     updateClip(0);
     gsap.set(image, { scale: 0.9 });
-    gsap.set(cover, { opacity: 0 });
+    gsap.set(cover, { opacity: 0.68 });
     gsap.set(introMarquee, { opacity: 0.05 });
     // Title starts visible — no initial hide
     gsap.set(titleLines, { y: "0%" });
@@ -134,14 +134,14 @@ export default function ParallaxDividerVideo() {
       onUpdate: (self) => {
         lastProgress = self.progress;
         updateClip(lastProgress);
-        const coverOpacity = self.progress;
+        const coverOpacity = 0.68 + self.progress * 0.22;
         gsap.set(image, { scale: 0.9 + self.progress * 0.1 });
         gsap.set(cover, { opacity: coverOpacity });
 
-        if (coverOpacity >= 0.4 && coverOpacity <= 0.75) {
-          const fadeProgress = (coverOpacity - 0.4) / (0.75 - 0.4);
+        if (self.progress >= 0.4 && self.progress <= 0.75) {
+          const fadeProgress = (self.progress - 0.4) / (0.75 - 0.4);
           gsap.set(introMarquee, { opacity: 0.05 * (1 - fadeProgress) });
-        } else if (coverOpacity < 0.4) {
+        } else if (self.progress < 0.4) {
           gsap.set(introMarquee, { opacity: 0.05 });
         } else {
           gsap.set(introMarquee, { opacity: 0 });
@@ -273,8 +273,8 @@ export default function ParallaxDividerVideo() {
                       <img
                         ref={imageRef}
                         className="card__media"
-                        src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
-                        alt="WIAB AI project visual for messy ideas and useful systems"
+                        src="/img-temp/uploads/pexels-mintworkspace-18293807.jpg"
+                        alt="Warm desk workspace visual for ideas becoming beautiful websites"
                       />
                       <div className="card__cover" ref={coverRef} />
                     </div>

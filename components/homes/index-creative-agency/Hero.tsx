@@ -26,7 +26,7 @@ export default function Hero() {
                 index={0}
                 className="mxd-trail-transparent-image"
                 alt="The Home Depot project image"
-                src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
+                src="/cursor-trail-transparent/01-trail.jpg"
                 width={1333}
                 height={2000}
               />
@@ -34,7 +34,7 @@ export default function Hero() {
                 index={1}
                 className="mxd-trail-transparent-image"
                 alt="CarMax project image"
-                src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
+                src="/cursor-trail-transparent/02-trail.jpg"
                 width={1123}
                 height={2000}
               />
@@ -42,7 +42,7 @@ export default function Hero() {
                 index={2}
                 className="mxd-trail-transparent-image"
                 alt="Mini Murals project image"
-                src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
+                src="/cursor-trail-transparent/03-trail.jpg"
                 width={1333}
                 height={2000}
               />
@@ -50,7 +50,7 @@ export default function Hero() {
                 index={3}
                 className="mxd-trail-transparent-image"
                 alt="Straterra project image"
-                src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
+                src="/cursor-trail-transparent/04-trail.jpg"
                 width={2997}
                 height={2000}
               />
@@ -58,7 +58,7 @@ export default function Hero() {
                 index={4}
                 className="mxd-trail-transparent-image"
                 alt="WIAB AI project image"
-                src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
+                src="/cursor-trail-transparent/05-trail.jpg"
                 width={3000}
                 height={2000}
               />
@@ -66,7 +66,7 @@ export default function Hero() {
                 index={5}
                 className="mxd-trail-transparent-image"
                 alt="CHI St. Luke's project image"
-                src="/img-temp/uploads/case-study/chistlukes/CHI St Lukes Cover Image.png"
+                src="/cursor-trail-transparent/06-trail.jpg"
                 width={1127}
                 height={2000}
               />
@@ -74,7 +74,7 @@ export default function Hero() {
                 index={6}
                 className="mxd-trail-transparent-image"
                 alt="Ritual project image"
-                src="/img-temp/uploads/case-study/ritual/gibson-tulum.jpg"
+                src="/cursor-trail-transparent/07-trail.jpg"
                 width={1500}
                 height={2000}
               />
@@ -82,7 +82,7 @@ export default function Hero() {
                 index={7}
                 className="mxd-trail-transparent-image"
                 alt="Cactus Club project image"
-                src="/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg"
+                src="/cursor-trail-transparent/08-trail.jpg"
                 width={1500}
                 height={2000}
               />
@@ -90,7 +90,7 @@ export default function Hero() {
                 index={8}
                 className="mxd-trail-transparent-image"
                 alt="Academy Sports project image"
-                src="/img-temp/uploads/case-study/academy/gibson-sports.jpg"
+                src="/cursor-trail-transparent/09-trail.jpg"
                 width={1333}
                 height={2000}
               />
