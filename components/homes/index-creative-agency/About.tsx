@@ -4,7 +4,7 @@ import BlurSection from "@/components/animations/BlurSection";
 import Link from "next/link";
 import Image from "next/image";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
-import TextScramble from "@/components/animations/TextScramble";
+import LiquidMetalBlob from "@/components/common/LiquidMetalBlob";
 import { siteCopy } from "@/data/siteCopy";
 import { useMemo, useRef } from "react";
 import {
@@ -60,12 +60,31 @@ export default function About() {
                         animation="inUp"
                       >
                         <Link
-                          className="btn btn-line btn-line-default"
+                          className="home-about-blob active-cursor-accent"
                           href={about.href}
+                          aria-label={about.button}
                         >
-                          <TextScramble className="btn-caption mxd-scramble">
-                            {about.button}
-                          </TextScramble>
+                          <span className="home-about-blob__motion" aria-hidden="true">
+                            <LiquidMetalBlob />
+                          </span>
+                          <span className="home-about-blob__still" aria-hidden="true">
+                            <Image
+                              className="home-about-character home-about-character--dark"
+                              alt=""
+                              src="/img-temp/uploads/gibson-logo-2.png"
+                              width={900}
+                              height={900}
+                              priority={false}
+                            />
+                            <Image
+                              className="home-about-character home-about-character--light"
+                              alt=""
+                              src="/img-temp/uploads/gibson-logo-1.png"
+                              width={900}
+                              height={900}
+                              priority={false}
+                            />
+                          </span>
                         </Link>
                       </CommonScrollAnimated>
                       <div className="mxd-section-manifest__text manifest-text-m">

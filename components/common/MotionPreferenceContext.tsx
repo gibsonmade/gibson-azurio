@@ -34,7 +34,7 @@ export function MotionPreferenceProvider({
 }) {
   // Always start with the server-safe default so SSR and client first render match.
   // The real preference (localStorage / matchMedia) is applied in useEffect below.
-  const [reducedMotion, setReducedMotionState] = useState(false);
+  const [reducedMotion, setReducedMotionState] = useState(true);
   const [source, setSource] = useState<MotionPreferenceSource>("default");
 
   useEffect(() => {
@@ -48,10 +48,10 @@ export function MotionPreferenceProvider({
     const media = window.matchMedia("(prefers-reduced-motion: reduce)");
     const onSystemChange = () => {
       if (getSavedMotionPreference()) return;
-      const next = getSystemReducedMotion();
+      const next = true;
       setReducedMotionState(next);
-      setSource(next ? "system" : "default");
-      applyMotionPreference(next ? "reduced" : "full");
+      setSource(getSystemReducedMotion() ? "system" : "default");
+      applyMotionPreference("reduced");
     };
 
     media.addEventListener("change", onSystemChange);
@@ -84,7 +84,7 @@ export function useMotionPreference(): MotionPreferenceContextValue {
   const context = useContext(MotionPreferenceContext);
   if (!context) {
     return {
-      reducedMotion: false,
+      reducedMotion: true,
       setReducedMotion: () => undefined,
       source: "default",
     };

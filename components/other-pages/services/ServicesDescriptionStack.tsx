@@ -22,56 +22,58 @@ type Card = {
 
 const CARDS: Card[] = [
   {
-    subtitle: "01 / Services",
-    title: "UX Strategy",
+    subtitle: "01 / How I help",
+    title: "Enterprise Teams",
     tagCols: [
-      ["Discovery", "User research", "Journey mapping", "Product strategy"],
-      ["Offer design", "Roadmaps", "Workshops", "Positioning"],
+      ["UX strategy", "Product design", "Customer journeys", "Service design"],
+      ["AI workflows", "Digital experiences", "Stakeholder alignment", "Complex products"],
     ],
-    image: "/img-temp/uploads/case-study/staterra/Stationery1.jpg",
+    image: "/img-temp/uploads/case-study-generated/carmax/carmax-05-ai-assisted-design.jpg",
     descrClass: "t-large t-bold services-card__descr",
     descr: (
       <>
-        Clarity before craft.
+        Complex products, multiple stakeholders, and ambitious business goals.
         <span>
-          I help teams get aligned on what to build and why — through research,
-          facilitation, and systems thinking.
+          UX strategy, product design, customer journeys, service design, AI
+          workflows, and digital experiences.
         </span>
       </>
     ),
   },
   {
-    subtitle: "02 / Services",
-    title: "Digital Design",
+    subtitle: "02 / How I help",
+    title: "Founders & Startups",
     tagCols: [
-      ["Brand systems", "Logo design", "Websites", "Product UX"],
-      ["Figma", "Design systems", "Motion", "Visual identity"],
+      ["Brand strategy", "Websites", "MVPs", "AI products"],
+      ["Launch support", "Product direction", "Offer design", "Figma"],
     ],
-    image: "/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png",
+    image: "/img-temp/uploads/case-study-generated/staterra/staterra-03-lead-generation.jpg",
     descrClass: "t-bold t-large services-card__descr",
     descr: (
       <>
-        Design that earns trust and guides action.
+        From idea to launch.
         <span>
-          From brand identity to product interfaces, every pixel has a purpose.
+          Brand strategy, websites, MVPs, AI products, and launch support
+          designed to help you move faster with confidence.
         </span>
       </>
     ),
   },
   {
-    subtitle: "03 / Services",
-    title: "Technical Expertise",
+    subtitle: "03 / How I help",
+    title: "Business Owners",
     tagCols: [
-      ["Next.js", "React", "CMS", "WordPress"],
-      ["AI workflows", "Automation", "iOS Apps", "Launch support"],
+      ["Modern websites", "Digital systems", "Automation", "Practical design"],
+      ["Local discovery", "Operations", "Content systems", "Growth support"],
     ],
-    image: "/img-temp/uploads/case-study/wiab/gibson-robot.jpg",
+    image: "/img-temp/uploads/case-study-generated/cactus-club/cactus-club-03-mobile-planning.jpg",
     descrClass: "t-bold t-large services-card__descr",
     descr: (
       <>
-        Full-stack execution — from concept to deployed product.
+        Technology should help your business grow, not slow it down.
         <span>
-          Building responsive sites, AI-powered systems, and everything in between.
+          Modern websites, digital systems, automation, and practical design
+          support.
         </span>
       </>
     ),
