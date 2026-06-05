@@ -80,6 +80,9 @@ const splitTextVars = {
   aria: "none",
 } as const;
 
+const titleRevealStart = "top 68%";
+const titleRevealViewportRatio = 0.68;
+
 export default function CommonServicesStack({
   children,
   ...rest
@@ -191,7 +194,7 @@ export default function CommonServicesStack({
     }
 
     /**
-     * When the stack is in the title reveal band (`start: "top 40%"` on each card) but `onEnter` never
+     * When the stack is in the title reveal band but `onEnter` never
      * ran (common for `#services` / first paint), lines stay at 100% — this plays `animateContentIn` so
      * the entrance matches the other cards. When a tween is already running or lines are at rest at 0%,
      * it only fixes state on refresh (resize) without re-triggering.
@@ -202,7 +205,7 @@ export default function CommonServicesStack({
     ) {
       if (!cardList.length) return;
       const vh = window.innerHeight;
-      const revealY = vh * 0.4;
+      const revealY = vh * titleRevealViewportRatio;
       cardList.forEach((card, i) => {
         const lines = splits[i]?.lines;
         if (!lines?.length) return;
@@ -356,7 +359,7 @@ export default function CommonServicesStack({
 
         const inTitle = ScrollTrigger.create({
           trigger: card,
-          start: "top 40%",
+          start: titleRevealStart,
           onEnter: () => animateContentIn(lines),
           onEnterBack: () => {
             if (index === 0) {

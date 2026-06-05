@@ -42,8 +42,9 @@ export default function ParallaxDividerVideo() {
   const bottomRefs = useRef<HTMLDivElement[]>([]);
 
   useLayoutEffect(() => {
-    if (reducedMotion) return;
-    return initVelocityMarqueeRows(topRefs.current, bottomRefs.current);
+    return initVelocityMarqueeRows(topRefs.current, bottomRefs.current, {
+      allowReducedMotion: true,
+    });
   }, [reducedMotion]);
 
   useLayoutEffect(() => {
@@ -66,7 +67,7 @@ export default function ParallaxDividerVideo() {
         clearProps: "clipPath,filter,visibility",
       });
       gsap.set(cover, { opacity: 0.72 });
-      gsap.set(introMarquee, { opacity: 0 });
+      gsap.set(introMarquee, { opacity: 0.05 });
       return;
     }
 
@@ -191,7 +192,7 @@ export default function ParallaxDividerVideo() {
                       {[0, 1].map((row) => (
                         <Fragment key={`intro-marquee-${row}`}>
                           <div
-                            className="marquee__top"
+                            className="marquee__top home-intro-marquee__row"
                             ref={(el) => {
                               if (!el) return;
                               topRefs.current[row] = el;
@@ -209,7 +210,7 @@ export default function ParallaxDividerVideo() {
                             ))}
                           </div>
                           <div
-                            className="marquee__bottom"
+                            className="marquee__bottom home-intro-marquee__row"
                             ref={(el) => {
                               if (!el) return;
                               bottomRefs.current[row] = el;

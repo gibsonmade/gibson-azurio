@@ -3,34 +3,44 @@
 import type Lenis from "lenis";
 import { useEffect, type RefObject } from "react";
 
-const THRESHOLD = 10;
-
-/** Hides header past scroll offset (Lenis-aware, replaces jQuery scroll on `.mxd-header`). */
+/** Keeps the fixed header visible and marks it once the page has scrolled. */
 export function useHeaderScrollHidden(
   headerRef: RefObject<HTMLElement | null>,
   lenis: Lenis | null,
-  disabled = false,
+  _disabled = false,
 ): void {
   useEffect(() => {
     const el = headerRef.current;
     if (!el) return;
-    if (disabled || !lenis) {
-      el.classList.remove("is-hidden");
-      return;
-    }
 
-    const sync = () => {
-      if (lenis.animatedScroll > THRESHOLD) {
-        el.classList.add("is-hidden");
-      } else {
-        el.classList.remove("is-hidden");
+    let frame = 0;
+
+    const syncScrollState = () => {
+      frame = 0;
+      const currentScroll = lenis?.animatedScroll ?? window.scrollY;
+      el.classList.remove("is-hidden");
+      el.classList.toggle("is-scrolled", currentScroll > 12);
+    };
+
+    const requestSync = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(syncScrollState);
+    };
+
+    const onLenisScroll = () => requestSync();
+
+    el.classList.remove("is-hidden");
+    syncScrollState();
+
+    window.addEventListener("scroll", requestSync, { passive: true });
+    lenis?.on("scroll", onLenisScroll);
+
+    return () => {
+      window.removeEventListener("scroll", requestSync);
+      lenis?.off("scroll", onLenisScroll);
+      if (frame) {
+        window.cancelAnimationFrame(frame);
       }
     };
-
-    sync();
-    const unsub = lenis.on("scroll", sync);
-    return () => {
-      unsub();
-    };
-  }, [disabled, headerRef, lenis]);
+  }, [headerRef, lenis]);
 }

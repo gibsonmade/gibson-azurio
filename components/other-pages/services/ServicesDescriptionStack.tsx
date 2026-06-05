@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import type { ReactNode } from "react";
 import TextScramble from "@/components/animations/TextScramble";
 import CommonServicesStack, {
   ServicesStackSlot,
@@ -17,7 +16,7 @@ type Card = {
   tagCols: [string[], string[]];
   image: string;
   descrClass: string;
-  descr: ReactNode;
+  descr: string;
 };
 
 const CARDS: Card[] = [
@@ -30,15 +29,8 @@ const CARDS: Card[] = [
     ],
     image: "/img-temp/uploads/case-study-generated/carmax/carmax-05-ai-assisted-design.jpg",
     descrClass: "t-large t-bold services-card__descr",
-    descr: (
-      <>
-        Complex products, multiple stakeholders, and ambitious business goals.
-        <span>
-          UX strategy, product design, customer journeys, service design, AI
-          workflows, and digital experiences.
-        </span>
-      </>
-    ),
+    descr:
+      "Complex products, multiple stakeholders, and ambitious business goals. UX strategy, product design, customer journeys, service design, AI workflows, and digital experiences.",
   },
   {
     subtitle: "02 / How I help",
@@ -49,15 +41,8 @@ const CARDS: Card[] = [
     ],
     image: "/img-temp/uploads/case-study-generated/staterra/staterra-03-lead-generation.jpg",
     descrClass: "t-bold t-large services-card__descr",
-    descr: (
-      <>
-        From idea to launch.
-        <span>
-          Brand strategy, websites, MVPs, AI products, and launch support
-          designed to help you move faster with confidence.
-        </span>
-      </>
-    ),
+    descr:
+      "From idea to launch. Brand strategy, websites, MVPs, AI products, and launch support designed to help you move faster with confidence.",
   },
   {
     subtitle: "03 / How I help",
@@ -68,15 +53,8 @@ const CARDS: Card[] = [
     ],
     image: "/img-temp/uploads/case-study-generated/cactus-club/cactus-club-03-mobile-planning.jpg",
     descrClass: "t-bold t-large services-card__descr",
-    descr: (
-      <>
-        Technology should help your business grow, not slow it down.
-        <span>
-          Modern websites, digital systems, automation, and practical design
-          support.
-        </span>
-      </>
-    ),
+    descr:
+      "Technology should help your business grow, not slow it down. Modern websites, digital systems, automation, and practical design support.",
   },
 ];
 

@@ -151,6 +151,13 @@ export function bindMxdMenuGsap(
   let isAnimating = false;
   let activeTimeline: gsap.core.Timeline | null = null;
 
+  const setHamburgerState = (open: boolean) => {
+    if (!hamburgerIcon) return;
+    hamburgerIcon.classList.toggle("active", open);
+    hamburgerIcon.setAttribute("aria-expanded", String(open));
+    hamburgerIcon.setAttribute("aria-label", open ? "Close" : "Menu");
+  };
+
   const killTimeline = () => {
     activeTimeline?.kill();
     activeTimeline = null;
@@ -179,7 +186,7 @@ export function bindMxdMenuGsap(
     gsap.set(menuDividers, { clipPath: "inset(0% 100% 0% 0%)" });
     gsap.set(menuArrows, { opacity: 0 });
 
-    hamburgerIcon?.classList.remove("active");
+    setHamburgerState(false);
     resetSubmenus(menuRows);
 
     isMenuOpen = false;
@@ -201,7 +208,7 @@ export function bindMxdMenuGsap(
     });
     activeTimeline = tl;
 
-    hamburgerIcon?.classList.remove("active");
+    setHamburgerState(false);
     tl.to(menuOverlay, {
       clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
       duration: 1,
@@ -264,7 +271,7 @@ export function bindMxdMenuGsap(
     if (!isMenuOpen) {
       lenis?.stop();
       if (menuInner) menuInner.scrollTop = 0;
-      hamburgerIcon?.classList.add("active");
+      setHamburgerState(true);
       const isMobile = window.matchMedia("(max-width: 1024px)").matches;
 
       tl.to(menuBackdrop, {

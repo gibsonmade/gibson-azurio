@@ -83,11 +83,12 @@ function animateContentOut(
 export function initVelocityMarqueeRows(
   topRows: HTMLDivElement[],
   bottomRows: HTMLDivElement[],
+  options: { allowReducedMotion?: boolean } = {},
 ): () => void {
   const tops = topRows.filter(Boolean);
   const bottoms = bottomRows.filter(Boolean);
   if (!tops.length || !bottoms.length) return () => {};
-  if (isReducedMotionMode()) return () => {};
+  if (!options.allowReducedMotion && isReducedMotionMode()) return () => {};
 
   const master = gsap
     .timeline()

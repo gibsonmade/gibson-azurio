@@ -72,24 +72,12 @@ export default function Footer1() {
                   as="div"
                   animation="inUp"
                 >
-                  <a
-                    className="btn btn-default-icon-small btn-default-fullwidth-mobile btn-default-accent slide-right"
-                    href="/contact"
-                    aria-label="Say hi!"
-                  >
-                    <TextScramble className="btn-caption mxd-scramble">
-                      Say hi!
-                    </TextScramble>
-                    <i className="btn-icon">
-                      <ContactCtaIcon />
-                    </i>
-                  </a>
                   <Link
                     className="btn btn-default-icon-small btn-default-fullwidth-mobile btn-default-outline slide-right-up"
                     href="/work"
                   >
                     <TextScramble className="btn-caption mxd-scramble">
-                      Work
+                      View work
                     </TextScramble>
                     {/* <i class="btn-icon ph-bold ph-arrow-right"></i> */}
                     <i className="btn-icon">
@@ -102,9 +90,21 @@ export default function Footer1() {
                       </svg>
                     </i>
                   </Link>
+                  <a
+                    className="btn btn-default-icon-small btn-default-fullwidth-mobile btn-default-accent slide-right"
+                    href="/contact"
+                    aria-label="Say hi!"
+                  >
+                    <TextScramble className="btn-caption mxd-scramble">
+                      Say hi!
+                    </TextScramble>
+                    <i className="btn-icon">
+                      <ContactCtaIcon />
+                    </i>
+                  </a>
                 </CommonScrollAnimated>
               </div>
-              <div className="col-12 col-md-4 col-xxl-2 mxd-demo-footer__item mxd-grid-item">
+              <div className="col-12 col-md-2 col-xxl-2 mxd-demo-footer__item mxd-grid-item">
                 <nav className="mxd-demo-footer__nav">
                   {pagesBlock ? (
                     <div className="mxd-demo-footer-nav__block">
@@ -136,7 +136,7 @@ export default function Footer1() {
                   ) : null}
                 </nav>
               </div>
-              <div className="col-12 col-md-4 col-xxl-4 mxd-demo-footer__item mxd-grid-item">
+              <div className="col-12 col-md-6 col-xxl-4 mxd-demo-footer__item mxd-grid-item">
                 <div className="mxd-demo-footer__promo">
                   <div className="mxd-footer-nav02__block">
                     <div className="mxd-footer-nav02__title">
@@ -163,14 +163,14 @@ export default function Footer1() {
                               width={160}
                               height={120}
                             />
-                            <CommonAnimatedText
-                              as="p"
-                              className="t-medium t-bold mxd-footer-promo__link mxd-split-lines-reverse"
-                              animation="splitLinesReverse"
-                            >
-                              {project.name}
-                              <span>{project.summary}</span>
-                            </CommonAnimatedText>
+                            <p className="t-medium t-bold mxd-footer-promo__link mxd-footer-promo__link--compact mxd-split-lines-reverse">
+                              <span className="mxd-footer-promo__link-title">
+                                {project.name}
+                              </span>
+                              <span className="mxd-footer-promo__link-summary">
+                                {project.summary}
+                              </span>
+                            </p>
                           </Link>
                         ))}
                       </div>

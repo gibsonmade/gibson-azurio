@@ -2,7 +2,6 @@ import "@/styles/template.css";
 import { Geist, JetBrains_Mono } from "next/font/google";
 import Header1 from "@/components/headers/Header1";
 import TemplateRuntimeProvider from "@/components/common/TemplateRuntimeProvider";
-import MenuRuntimeShell from "@/components/headers/MenuRuntimeShell";
 import { Metadata } from "next";
 import Script from "next/script";
 import { siteCopy } from "@/data/siteCopy";
@@ -99,7 +98,6 @@ export default function RootLayout({
         />
         <TemplateRuntimeProvider>
           <Header1 initialTheme={initialTheme} />
-          <MenuRuntimeShell />
           {children}
         </TemplateRuntimeProvider>
       </body>

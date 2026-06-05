@@ -24,10 +24,12 @@ export default function NavTrigger({
               type="button"
               className="mxd-menu__hamburger"
               aria-label="Menu"
+              aria-expanded="false"
               ref={setHamburgerNode}
             >
               <TextScramble className="hamburger-label hamburger-menu-label">Menu</TextScramble>
               <Menu className="hamburger-icon hamburger-menu-icon" aria-hidden="true" />
+              <TextScramble className="hamburger-label hamburger-close-label">Close</TextScramble>
               <Close className="hamburger-icon hamburger-close-icon" aria-hidden="true" />
             </button>
           </div>
