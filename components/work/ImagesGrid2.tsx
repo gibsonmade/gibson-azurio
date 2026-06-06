@@ -8,9 +8,9 @@ type ImagesGrid2Props = {
 };
 
 const fallbackImages = [
-  "/img-temp/uploads/case-study/staterra/gibson-building.jpg",
-  "/img-temp/uploads/case-study/wiab/gibson-robot.jpg",
-  "/img-temp/uploads/case-study/cactus-club/gibson-cacti.jpg",
+  "/images/projects/staterra/staterra-building.jpg",
+  "/images/projects/wiab-ai/wiab-robot.jpg",
+  "/images/projects/cactus-club/cactus-club-city.jpg",
 ];
 
 function projectGallery(project?: WorkProject) {

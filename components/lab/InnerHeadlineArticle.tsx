@@ -47,7 +47,7 @@ export default function InnerHeadlineArticle() {
                 <div className="post-featured-fullscreen__thumb">
                   <Image
                     alt="Featured Post Thumb"
-                    src="/img-temp/blog/1920x1200_pf-01.webp"
+                    src="/images/articles/lab-feature.webp"
                     width={1920}
                     height={1200}
                   />

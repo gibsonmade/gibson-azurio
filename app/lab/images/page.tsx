@@ -19,7 +19,7 @@ export default async function ImagesPage() {
     <>
       <ResourcePageHeader
         title="Images"
-        description="A visual index of public image assets available to this app, including img-temp and the original theme image folders."
+        description="A visual index of public image assets available to this app."
         countLabel={`${totalAssets} assets`}
       />
       <section className="mxd-section bg-color-base padding-bottom resource-section">

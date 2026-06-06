@@ -8,9 +8,9 @@ type ImagesGridProps = {
 };
 
 const fallbackImages = [
-  "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg",
-  "/img-temp/uploads/case-study/carmax/gibson-cars.jpg",
-  "/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png",
+  "/images/projects/the-home-depot/home-depot-ux.jpg",
+  "/images/projects/carmax/carmax-cars.jpg",
+  "/images/projects/mini-murals/mini-murals-website.png",
 ];
 
 function projectGallery(project?: WorkProject) {

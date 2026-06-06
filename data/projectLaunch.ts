@@ -91,7 +91,7 @@ export const projectLaunch: ProjectLaunchRoadmap = {
         {
           title: "Image folder cleanup",
           detail:
-            "Move assets from /img-temp to a cleaner /images structure later. Current root-relative public paths load.",
+            "Move assets from /images to a cleaner /images structure later. Current root-relative public paths load.",
           status: "next",
         },
         {

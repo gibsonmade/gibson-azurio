@@ -71,7 +71,7 @@ export default function About() {
                             <Image
                               className="home-about-character home-about-character--dark"
                               alt=""
-                              src="/img-temp/uploads/gibson-logo-2.png"
+                              src="/logos/gibson-logo-secondary.png"
                               width={900}
                               height={900}
                               priority={false}
@@ -79,7 +79,7 @@ export default function About() {
                             <Image
                               className="home-about-character home-about-character--light"
                               alt=""
-                              src="/img-temp/uploads/gibson-logo-1.png"
+                              src="/logos/gibson-logo-primary.png"
                               width={900}
                               height={900}
                               priority={false}
@@ -114,28 +114,28 @@ export default function About() {
                               people love using.
                             </span>
                             <div ref={heroBanner1_0} className="headline-banner-01 landscape image-01">
-                              <Image alt="The Home Depot project work" src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg" width={640} height={960} />
+                              <Image alt="The Home Depot project work" src="/images/projects/the-home-depot/home-depot-ux.jpg" width={640} height={960} />
                             </div>
                             <div ref={heroBanner1_1} className="headline-banner-01 portrait image-02">
-                              <Image alt="CarMax product design work" src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg" width={560} height={997} />
+                              <Image alt="CarMax product design work" src="/images/projects/carmax/carmax-cars.jpg" width={560} height={997} />
                             </div>
                             <div ref={heroBanner1_2} className="headline-banner-01 landscape image-03">
-                              <Image alt="Straterra product and brand work" src="/img-temp/uploads/case-study/staterra/Stationery1.jpg" width={960} height={640} />
+                              <Image alt="Straterra product and brand work" src="/images/projects/staterra/staterra-stationery.jpg" width={960} height={640} />
                             </div>
                             <div ref={heroBanner1_3} className="headline-banner-01 portrait image-04">
-                              <Image alt="Straterra commercial property project" src="/img-temp/uploads/case-study/staterra/gibson-building.jpg" width={960} height={640} />
+                              <Image alt="Straterra commercial property project" src="/images/projects/staterra/staterra-building.jpg" width={960} height={640} />
                             </div>
                             <div ref={heroBanner2_0} className="headline-banner-02 portrait image-05">
-                              <Image alt="Mini Murals civic art experience" src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png" width={560} height={840} />
+                              <Image alt="Mini Murals civic art experience" src="/images/projects/mini-murals/mini-murals-website.png" width={560} height={840} />
                             </div>
                             <div ref={heroBanner2_1} className="headline-banner-02 landscape image-06">
-                              <Image alt="Ritual launch experience" src="/img-temp/uploads/case-study/ritual/gibson-tulum.jpg" width={640} height={853} />
+                              <Image alt="Ritual launch experience" src="/images/projects/ritual/ritual-tulum.jpg" width={640} height={853} />
                             </div>
                             <div ref={heroBanner2_2} className="headline-banner-02 portrait image-07">
-                              <Image alt="Cactus Club hospitality experience" src="/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg" width={560} height={747} />
+                              <Image alt="Cactus Club hospitality experience" src="/images/projects/cactus-club/cactus-club-food.jpg" width={560} height={747} />
                             </div>
                             <div ref={heroBanner2_3} className="headline-banner-02 landscape image-08">
-                              <Image alt="Academy Sports retail experience" src="/img-temp/uploads/case-study/academy/gibson-sports.jpg" width={640} height={960} />
+                              <Image alt="Academy Sports retail experience" src="/images/projects/academy-sports-outdoors/academy-sports-hero.jpg" width={640} height={960} />
                             </div>
                           </div>
                         </CommonScrollAnimated>

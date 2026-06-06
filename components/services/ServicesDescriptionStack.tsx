@@ -27,7 +27,7 @@ const CARDS: Card[] = [
       ["UX strategy", "Product design", "Customer journeys", "Service design"],
       ["AI workflows", "Digital experiences", "Stakeholder alignment", "Complex products"],
     ],
-    image: "/img-temp/uploads/case-study-generated/carmax/carmax-05-ai-assisted-design.jpg",
+    image: "/images/projects/carmax/carmax-05-ai-assisted-design.jpg",
     descrClass: "t-large t-bold services-card__descr",
     descr:
       "Complex products, multiple stakeholders, and ambitious business goals. UX strategy, product design, customer journeys, service design, AI workflows, and digital experiences.",
@@ -39,7 +39,7 @@ const CARDS: Card[] = [
       ["Brand strategy", "Websites", "MVPs", "AI products"],
       ["Launch support", "Product direction", "Offer design", "Figma"],
     ],
-    image: "/img-temp/uploads/case-study-generated/staterra/staterra-03-lead-generation.jpg",
+    image: "/images/projects/staterra/staterra-03-lead-generation.jpg",
     descrClass: "t-bold t-large services-card__descr",
     descr:
       "From idea to launch. Brand strategy, websites, MVPs, AI products, and launch support designed to help you move faster with confidence.",
@@ -51,7 +51,7 @@ const CARDS: Card[] = [
       ["Modern websites", "Digital systems", "Automation", "Practical design"],
       ["Local discovery", "Operations", "Content systems", "Growth support"],
     ],
-    image: "/img-temp/uploads/case-study-generated/cactus-club/cactus-club-03-mobile-planning.jpg",
+    image: "/images/projects/cactus-club/cactus-club-03-mobile-planning.jpg",
     descrClass: "t-bold t-large services-card__descr",
     descr:
       "Technology should help your business grow, not slow it down. Modern websites, digital systems, automation, and practical design support.",

@@ -137,7 +137,7 @@ export default function Nav({
             <div ref={g.mediaWrapper} className="menu-media__wrapper">
               <Image
                 alt="Gibsooon menu visual showing a strategic conversation"
-                src="/img-temp/uploads/gibson-nav.jpeg"
+                src="/logos/gibson-logo-nav.jpg"
                 width={1920}
                 height={1280}
                 priority

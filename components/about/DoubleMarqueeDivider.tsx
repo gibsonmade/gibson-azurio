@@ -42,7 +42,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
+                          src="/images/projects/the-home-depot/home-depot-ux.jpg"
                           width={1200}
                           height={1200}
                         />
@@ -53,7 +53,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
+                          src="/images/projects/carmax/carmax-cars.jpg"
                           width={1200}
                           height={685}
                         />
@@ -64,7 +64,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
+                          src="/images/projects/mini-murals/mini-murals-website.png"
                           width={700}
                           height={700}
                         />
@@ -75,7 +75,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
+                          src="/images/projects/staterra/staterra-stationery.jpg"
                           width={737}
                           height={1200}
                         />
@@ -86,7 +86,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
+                          src="/images/projects/wiab-ai/wiab-robot.jpg"
                           width={800}
                           height={1200}
                         />
@@ -97,7 +97,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/chistlukes/CHI St Lukes Cover Image.png"
+                          src="/images/projects/chi-st-lukes/chi-st-lukes-cover.png"
                           width={1200}
                           height={1200}
                         />
@@ -108,7 +108,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/ritual/gibson-tulum.jpg"
+                          src="/images/projects/ritual/ritual-tulum.jpg"
                           width={1200}
                           height={900}
                         />
@@ -119,7 +119,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg"
+                          src="/images/projects/cactus-club/cactus-club-food.jpg"
                           width={737}
                           height={1200}
                         />
@@ -130,7 +130,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/academy/gibson-sports.jpg"
+                          src="/images/projects/academy-sports-outdoors/academy-sports-hero.jpg"
                           width={800}
                           height={1200}
                         />
@@ -141,7 +141,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/staterra/gibson-building.jpg"
+                          src="/images/projects/staterra/staterra-building.jpg"
                           width={1200}
                           height={873}
                         />
@@ -152,7 +152,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/chistlukes/CHI St Lukes Website Desktop Design.jpg"
+                          src="/images/projects/chi-st-lukes/chi-st-lukes-desktop.jpg"
                           width={1200}
                           height={1200}
                         />
@@ -163,7 +163,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/ritual/gibson-tulum2.jpg"
+                          src="/images/projects/ritual/ritual-tulum-2.jpg"
                           width={1200}
                           height={685}
                         />
@@ -174,7 +174,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/cactus-club/gibson-cacti.jpg"
+                          src="/images/projects/cactus-club/cactus-club-city.jpg"
                           width={700}
                           height={700}
                         />
@@ -185,7 +185,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
+                          src="/images/projects/the-home-depot/home-depot-ux.jpg"
                           width={737}
                           height={1200}
                         />
@@ -196,7 +196,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
+                          src="/images/projects/carmax/carmax-cars.jpg"
                           width={800}
                           height={1200}
                         />
@@ -214,7 +214,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
+                          src="/images/projects/carmax/carmax-cars.jpg"
                           width={800}
                           height={1200}
                         />
@@ -225,7 +225,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
+                          src="/images/projects/the-home-depot/home-depot-ux.jpg"
                           width={737}
                           height={1200}
                         />
@@ -236,7 +236,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/cactus-club/gibson-cacti.jpg"
+                          src="/images/projects/cactus-club/cactus-club-city.jpg"
                           width={700}
                           height={700}
                         />
@@ -247,7 +247,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/ritual/gibson-tulum2.jpg"
+                          src="/images/projects/ritual/ritual-tulum-2.jpg"
                           width={1200}
                           height={685}
                         />
@@ -258,7 +258,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/chistlukes/CHI St Lukes Website Desktop Design.jpg"
+                          src="/images/projects/chi-st-lukes/chi-st-lukes-desktop.jpg"
                           width={1200}
                           height={1200}
                         />
@@ -269,7 +269,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/staterra/gibson-building.jpg"
+                          src="/images/projects/staterra/staterra-building.jpg"
                           width={1200}
                           height={873}
                         />
@@ -280,7 +280,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/academy/gibson-sports.jpg"
+                          src="/images/projects/academy-sports-outdoors/academy-sports-hero.jpg"
                           width={800}
                           height={1200}
                         />
@@ -291,7 +291,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/cactus-club/gibson-cactus.jpg"
+                          src="/images/projects/cactus-club/cactus-club-food.jpg"
                           width={737}
                           height={1200}
                         />
@@ -302,7 +302,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/ritual/gibson-tulum.jpg"
+                          src="/images/projects/ritual/ritual-tulum.jpg"
                           width={1200}
                           height={900}
                         />
@@ -313,7 +313,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/chistlukes/CHI St Lukes Cover Image.png"
+                          src="/images/projects/chi-st-lukes/chi-st-lukes-cover.png"
                           width={1200}
                           height={1200}
                         />
@@ -324,7 +324,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
+                          src="/images/projects/wiab-ai/wiab-robot.jpg"
                           width={800}
                           height={1200}
                         />
@@ -335,7 +335,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/staterra/Stationery1.jpg"
+                          src="/images/projects/staterra/staterra-stationery.jpg"
                           width={737}
                           height={1200}
                         />
@@ -346,7 +346,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/minimurals/MiniMural Houston Website - HD.png"
+                          src="/images/projects/mini-murals/mini-murals-website.png"
                           width={700}
                           height={700}
                         />
@@ -357,7 +357,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/carmax/gibson-cars.jpg"
+                          src="/images/projects/carmax/carmax-cars.jpg"
                           width={1200}
                           height={685}
                         />
@@ -368,7 +368,7 @@ export default function DoubleMarqueeDivider() {
                       <div className="marquee__image">
                         <Image
                           alt="Gibsooon Image Example"
-                          src="/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg"
+                          src="/images/projects/the-home-depot/home-depot-ux.jpg"
                           width={1200}
                           height={1200}
                         />

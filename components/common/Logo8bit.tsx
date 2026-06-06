@@ -6,13 +6,13 @@ export default function Logo8bit({ className = "mxd-logo__image" }: Logo8bitProp
   return (
     <>
       <img
-        src="/img-temp/uploads/gibson-logo-2.svg"
+        src="/logos/gibson-logo-secondary.svg"
         className={`${className} logo-dark`}
         alt=""
         aria-hidden="true"
       />
       <img
-        src="/img-temp/uploads/gibson-logo-1.svg"
+        src="/logos/gibson-logo-primary.svg"
         className={`${className} logo-light`}
         alt=""
         aria-hidden="true"

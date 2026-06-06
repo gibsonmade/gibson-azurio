@@ -193,7 +193,7 @@ export default function NotFound() {
                       <div className="mxd-error__image image-1 mxd-move-slow loading-fade">
                         <Image
                           alt="Gibsooon Sample Image"
-                          src="/img-temp/uploads/gibson-8-bit-white.png"
+                          src="/logos/gibson-logo-8bit-white.png"
                           width={600}
                           height={251}
                         />
@@ -202,7 +202,7 @@ export default function NotFound() {
                     <div className="mxd-error__image image-2">
                       <Image
                         alt="Gibsooon Sample Image"
-                        src="/img-temp/uploads/gibson-8-bit.png"
+                        src="/logos/gibson-logo-8bit.png"
                         width={400}
                         height={480}
                       />
@@ -210,7 +210,7 @@ export default function NotFound() {
                     <div className="mxd-error__image image-3">
                       <Image
                         alt="Gibsooon Sample Image"
-                        src="/img-temp/uploads/watson-8-bit.png"
+                        src="/logos/watson-logo-8bit.png"
                         width={485}
                         height={400}
                       />
@@ -219,7 +219,7 @@ export default function NotFound() {
                       <div className="mxd-error__image image-4 mxd-move-slow loading-fade">
                         <Image
                           alt="Gibsooon Sample Image"
-                          src="/img-temp/uploads/watson-8-bit-white.png"
+                          src="/logos/watson-logo-8bit-white.png"
                           width={485}
                           height={203}
                         />

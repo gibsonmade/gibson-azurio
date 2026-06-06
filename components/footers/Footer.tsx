@@ -210,7 +210,7 @@ export default function Footer() {
               <Image
                 className="mxd-move-slow"
                 alt="Gibsooon Footer Decoration Image"
-                src="/img-temp/demo/planet-01.webp"
+                src="/images/ui/planet-01.webp"
                 width={400}
                 height={404}
               />
@@ -238,7 +238,7 @@ export default function Footer() {
               <Image
                 className="mxd-move"
                 alt="Gibsooon Footer Decoration Image"
-                src="/img-temp/demo/planet-02.webp"
+                src="/images/ui/planet-02.webp"
                 width={250}
                 height={255}
               />

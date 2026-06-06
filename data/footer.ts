@@ -42,7 +42,7 @@ export type Footer1PromoItem = {
 export const footer1PromoItems: Footer1PromoItem[] = [
   {
     href: "/work/the-home-depot",
-    iconSrc: "/img-temp/uploads/gibson-8-bit.png",
+    iconSrc: "/logos/gibson-logo-8bit.png",
     iconAlt: "The Home Depot case study icon",
     iconWidth: 56,
     iconHeight: 56,
@@ -51,7 +51,7 @@ export const footer1PromoItems: Footer1PromoItem[] = [
   },
   {
     href: "/work/carmax",
-    iconSrc: "/img-temp/uploads/watson-8-bit.png",
+    iconSrc: "/logos/watson-logo-8bit.png",
     iconAlt: "CarMax case study icon",
     iconWidth: 56,
     iconHeight: 56,
@@ -60,7 +60,7 @@ export const footer1PromoItems: Footer1PromoItem[] = [
   },
   {
     href: "/work/mini-murals",
-    iconSrc: "/img-temp/uploads/gibson-8-bit-white.png",
+    iconSrc: "/logos/gibson-logo-8bit-white.png",
     iconAlt: "Mini Murals case study icon",
     iconWidth: 56,
     iconHeight: 56,
@@ -80,14 +80,14 @@ export type Footer1BackgroundImage = {
 export const footer1BackgroundImages: Footer1BackgroundImage[] = [
   {
     wrapperClass: "footer-background__img1",
-    src: "/img-temp/demo/clouds-01.webp",
+    src: "/images/ui/clouds-01.webp",
     width: 1400,
     height: 469,
     alt: "Gibsooon Footer Background Image",
   },
   {
     wrapperClass: "footer-background__img2",
-    src: "/img-temp/demo/clouds-02.webp",
+    src: "/images/ui/clouds-02.webp",
     width: 1200,
     height: 401,
     alt: "Gibsooon Footer Background Image",
@@ -97,7 +97,7 @@ export const footer1BackgroundImages: Footer1BackgroundImage[] = [
 export const footer1ForegroundImages: Footer1BackgroundImage[] = [
   {
     wrapperClass: "footer-foreground__img1",
-    src: "/img-temp/demo/clouds-03.webp",
+    src: "/images/ui/clouds-03.webp",
     width: 1200,
     height: 374,
     alt: "Gibsooon Footer Foreground Image",

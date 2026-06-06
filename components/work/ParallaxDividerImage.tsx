@@ -11,7 +11,7 @@ type ParallaxDividerImageProps = {
 };
 
 export default function ParallaxDividerImage({ project }: ParallaxDividerImageProps) {
-  const src = project?.images.hero ?? "/img-temp/uploads/case-study/wiab/gibson-robot.jpg";
+  const src = project?.images.hero ?? "/images/projects/wiab-ai/wiab-robot.jpg";
   const alt = project ? `${project.name} case study hero image` : "Gibson Hall project image";
 
   return (

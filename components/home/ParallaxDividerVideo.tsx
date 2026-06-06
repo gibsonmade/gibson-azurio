@@ -274,7 +274,7 @@ export default function ParallaxDividerVideo() {
                       <img
                         ref={imageRef}
                         className="card__media"
-                        src="/img-temp/uploads/pexels-mintworkspace-18293807.jpg"
+                        src="/images/about/home-desk-workspace.jpg"
                         alt="Warm desk workspace visual for ideas becoming beautiful websites"
                       />
                       <div className="card__cover" ref={coverRef} />

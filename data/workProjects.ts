@@ -46,7 +46,7 @@ const projectImages = (
 });
 
 const generatedProjectImages = (folder: string, files: string[]) => {
-  const paths = files.map((file) => `/img-temp/uploads/case-study-generated/${folder}/${file}`);
+  const paths = files.map((file) => `/images/projects/${folder}/${file}`);
   const [hero, ...gallery] = paths;
   return projectImages(hero, gallery, hero, gallery[gallery.length - 1] ?? hero);
 };

@@ -35,7 +35,7 @@ export const labArticles: LabArticle[] = [
       "The useful version of a product usually appears after the team stops arguing about screens and starts naming the decisions.",
     excerptAccent:
       "These notes are about turning ambiguous ideas into a path a team can actually build, test, and maintain.",
-    image: "/img-temp/uploads/case-study-generated/carmax/carmax-01-hero-divider.jpg",
+    image: "/images/projects/carmax/carmax-01-hero-divider.jpg",
     imageWidth: 1800,
     imageHeight: 1200,
     imageAlt: "Product design planning workspace for a Gibson Hall lab article",
@@ -81,7 +81,7 @@ export const labArticles: LabArticle[] = [
       "Frontend work carries the customer's trust in small details: loading, hierarchy, forms, motion, and the way a page responds under pressure.",
     excerptAccent:
       "The best interface code protects the journey instead of becoming another thing users have to work around.",
-    image: "/img-temp/uploads/case-study-generated/the-home-depot/the-home-depot-02-guided-inputs.jpg",
+    image: "/images/projects/the-home-depot/the-home-depot-02-guided-inputs.jpg",
     imageWidth: 1800,
     imageHeight: 1200,
     imageAlt: "Guided interface components arranged as a frontend systems article image",
@@ -127,7 +127,7 @@ export const labArticles: LabArticle[] = [
       "A useful brand is not just a logo package. It is a set of decisions that helps a product, website, and team behave consistently.",
     excerptAccent:
       "The strongest brand work gives the digital experience a point of view before the interface starts asking for attention.",
-    image: "/img-temp/uploads/case-study-generated/staterra/staterra-02-brand-guidelines.jpg",
+    image: "/images/projects/staterra/staterra-02-brand-guidelines.jpg",
     imageWidth: 1800,
     imageHeight: 1200,
     imageAlt: "Brand system materials for a Gibson Hall lab article",
@@ -173,7 +173,7 @@ export const labArticles: LabArticle[] = [
       "Interactive experiences work best when they help people orient themselves before asking them to explore.",
     excerptAccent:
       "Maps, directories, galleries, and AI workflows all need the same basic care: context first, discovery second, action third.",
-    image: "/img-temp/uploads/case-study-generated/mini-murals/mini-murals-02-interactive-map.jpg",
+    image: "/images/projects/mini-murals/mini-murals-02-interactive-map.jpg",
     imageWidth: 1800,
     imageHeight: 1200,
     imageAlt: "Interactive map interface for a Gibson Hall lab article",

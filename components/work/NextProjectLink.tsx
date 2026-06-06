@@ -12,7 +12,7 @@ type NextProjectLinkProps = {
 export default function NextProjectLink({ project }: NextProjectLinkProps) {
   const name = project?.name ?? "Featured work";
   const href = project ? `/work/${project.slug}` : "/work";
-  const image = project?.images.nextProject ?? "/img-temp/uploads/case-study/homedepot/ux+portfolio+-+home+depot.jpg";
+  const image = project?.images.nextProject ?? "/images/projects/the-home-depot/home-depot-ux.jpg";
 
   return (
     <>

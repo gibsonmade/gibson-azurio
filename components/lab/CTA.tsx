@@ -14,7 +14,7 @@ export default function CTA() {
           <div className="mxd-background__video">
             <Image
               alt=""
-              src="/img-temp/uploads/case-study/wiab/gibson-robot.jpg"
+              src="/images/projects/wiab-ai/wiab-robot.jpg"
               fill
               style={{ objectFit: "cover" }}
               aria-hidden

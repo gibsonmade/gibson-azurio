@@ -321,12 +321,12 @@ function TemplateRuntimeProviderInner({ children }: { children: ReactNode }) {
               <span className="mxd-page-transition__eyebrow">Gibsooon</span>
               <img
                 className="mxd-page-transition__logo logo-dark"
-                src="/img-temp/uploads/gibson-logo-2.svg"
+                src="/logos/gibson-logo-secondary.svg"
                 alt=""
               />
               <img
                 className="mxd-page-transition__logo logo-light"
-                src="/img-temp/uploads/gibson-logo-1.svg"
+                src="/logos/gibson-logo-primary.svg"
                 alt=""
               />
               <span className="mxd-page-transition__bar" />

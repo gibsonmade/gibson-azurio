@@ -23,7 +23,7 @@ export type PhosphorIcon = {
 const PUBLIC_DIR = path.join(process.cwd(), "public");
 const IMAGE_EXTENSIONS = new Set([".avif", ".gif", ".jpeg", ".jpg", ".png", ".webp"]);
 const SVG_EXTENSION = new Set([".svg"]);
-const ASSET_ROOTS = ["img-temp", "img"];
+const ASSET_ROOTS = ["images", "logos"];
 
 async function pathExists(targetPath: string) {
   try {
@@ -66,53 +66,33 @@ function toPublicAsset(filePath: string): PublicAsset {
 
 function getAssetGroup(folder: string) {
   const normalized = folder.toLowerCase();
-  if (normalized.includes("/works") || normalized.endsWith("works")) return "works";
-  if (normalized.includes("/demo") || normalized.endsWith("demo")) return "demo";
-  if (normalized.includes("/illustrations") || normalized.endsWith("illustrations")) {
-    return "illustrations";
-  }
-  if (normalized.includes("/hero") || normalized.endsWith("hero")) return "hero";
-  if (normalized.includes("/blog") || normalized.endsWith("blog")) return "blog";
-  if (normalized.includes("/cta") || normalized.endsWith("cta")) return "cta";
-  if (normalized.includes("/dividers") || normalized.endsWith("dividers")) return "dividers";
-  if (normalized.includes("/services") || normalized.endsWith("services")) return "services";
-  if (normalized.includes("/avatars") || normalized.endsWith("avatars")) return "avatars";
-  if (normalized.includes("/backgrounds") || normalized.endsWith("backgrounds")) return "backgrounds";
-  if (normalized.includes("/gifs") || normalized.endsWith("gifs")) return "gifs";
-  if (normalized.includes("/cursor-trail")) return "motion";
+  if (normalized.includes("projects")) return "projects";
+  if (normalized.includes("articles")) return "articles";
+  if (normalized.includes("about")) return "about";
+  if (normalized.includes("cursor-trail")) return "motion";
+  if (normalized.includes("images/ui")) return "ui";
+  if (normalized.startsWith("logos")) return "logos";
   if (normalized.includes("/favicon") || normalized.endsWith("favicon")) return "favicons";
   return "other";
 }
 
 const imageGroupLabels: Record<string, string> = {
-  works: "Works",
-  demo: "Demo",
-  illustrations: "Illustrations",
-  hero: "Hero",
-  blog: "Blog",
-  cta: "CTA",
-  dividers: "Dividers",
-  services: "Services",
-  avatars: "Avatars",
-  backgrounds: "Backgrounds",
-  gifs: "GIFs",
+  projects: "Projects",
+  articles: "Articles",
+  about: "About",
+  ui: "UI",
+  logos: "Logos",
   motion: "Motion",
   favicons: "Favicons",
   other: "Other",
 };
 
 const imageGroupOrder = [
-  "works",
-  "hero",
-  "demo",
-  "illustrations",
-  "blog",
-  "cta",
-  "dividers",
-  "services",
-  "avatars",
-  "backgrounds",
-  "gifs",
+  "projects",
+  "articles",
+  "about",
+  "logos",
+  "ui",
   "motion",
   "favicons",
   "other",

@@ -32,13 +32,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: siteCopy.seo.title,
     description: siteCopy.seo.description,
-    images: [{ url: "/img-temp/uploads/gibson-logo-1.png", width: 1200, height: 630 }],
+    images: [{ url: "/logos/gibson-logo-primary.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: siteCopy.seo.title,
     description: siteCopy.seo.description,
-    images: ["/img-temp/uploads/gibson-logo-1.png"],
+    images: ["/logos/gibson-logo-primary.png"],
   },
 };
 
