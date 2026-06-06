@@ -27,47 +27,6 @@ export const footer1NavColumns: Footer1NavColumn[] = [
   },
 ];
 
-export type Footer1PromoItem = {
-  href: string;
-  iconSrc: string;
-  iconAlt: string;
-  iconWidth: number;
-  iconHeight: number;
-  /** Text before the highlighted span */
-  textLead: string;
-  /** Second line inside `<span>` */
-  textSpan: string;
-};
-
-export const footer1PromoItems: Footer1PromoItem[] = [
-  {
-    href: "/work/the-home-depot",
-    iconSrc: "/logos/gibson-logo-8bit.png",
-    iconAlt: "The Home Depot case study icon",
-    iconWidth: 56,
-    iconHeight: 56,
-    textLead: "Enterprise retail and project-shopping ",
-    textSpan: "UX systems",
-  },
-  {
-    href: "/work/carmax",
-    iconSrc: "/logos/watson-logo-8bit.png",
-    iconAlt: "CarMax case study icon",
-    iconWidth: 56,
-    iconHeight: 56,
-    textLead: "High-traffic automotive retail ",
-    textSpan: "product design",
-  },
-  {
-    href: "/work/mini-murals",
-    iconSrc: "/logos/gibson-logo-8bit-white.png",
-    iconAlt: "Mini Murals case study icon",
-    iconWidth: 56,
-    iconHeight: 56,
-    textLead: "Civic art discovery and maps ",
-    textSpan: "digital platform",
-  },
-];
 
 export type Footer1BackgroundImage = {
   wrapperClass: string;

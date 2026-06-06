@@ -192,25 +192,25 @@ export default function NotFound() {
                     <CommonLoadFade index={0}>
                       <div className="mxd-error__image image-1 mxd-move-slow loading-fade">
                         <Image
-                          alt="Gibsooon Sample Image"
-                          src="/logos/gibson-logo-8bit-white.png"
-                          width={600}
-                          height={251}
+                          alt=""
+                          src="/images/ui/cursor-trail/01_trail.webp"
+                          width={400}
+                          height={521}
                         />
                       </div>
                     </CommonLoadFade>
                     <div className="mxd-error__image image-2">
                       <Image
-                        alt="Gibsooon Sample Image"
-                        src="/logos/gibson-logo-8bit.png"
+                        alt=""
+                        src="/images/ui/cursor-trail/07_trail.webp"
                         width={400}
                         height={480}
                       />
                     </div>
                     <div className="mxd-error__image image-3">
                       <Image
-                        alt="Gibsooon Sample Image"
-                        src="/logos/watson-logo-8bit.png"
+                        alt=""
+                        src="/images/ui/cursor-trail/03_trail.webp"
                         width={485}
                         height={400}
                       />
@@ -218,10 +218,10 @@ export default function NotFound() {
                     <CommonLoadFade index={1}>
                       <div className="mxd-error__image image-4 mxd-move-slow loading-fade">
                         <Image
-                          alt="Gibsooon Sample Image"
-                          src="/logos/watson-logo-8bit-white.png"
-                          width={485}
-                          height={203}
+                          alt=""
+                          src="/images/ui/cursor-trail/08_trail.webp"
+                          width={637}
+                          height={400}
                         />
                       </div>
                     </CommonLoadFade>
