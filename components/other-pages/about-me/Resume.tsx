@@ -1,14 +1,15 @@
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
-import TextScramble from "@/components/animations/TextScramble";
+import Image from "next/image";
+import Link from "next/link";
 import { siteCopy } from "@/data/siteCopy";
 
 export default function Resume() {
   const { about } = siteCopy;
 
   return (
-    <BlurSection className="mxd-section padding-top-subtitle padding-bottom-default">
+    <BlurSection className="mxd-section padding-bottom-default about-resume-section">
       <div className="mxd-container grid-l-container">
         <div className="mxd-block">
           <div className="mxd-block-split">
@@ -49,75 +50,44 @@ export default function Resume() {
                     </div>
                     <div className="mxd-block-split__data">
                       {about.workHistory.map((item) => (
-                        <div className="split-data__item" key={item.company}>
+                        <Link
+                          className="split-data__item split-data__item--link"
+                          href={`/work/${item.slug}`}
+                          key={item.company}
+                        >
                           <div className="split-data__divider divider-top" />
-                          <div className="split-data__name">
-                            <CommonScrollAnimated
-                              className="anim-uni-in-up"
-                              as="p"
-                              animation="inUp"
-                            >
-                              {item.years}
-                              <span>{item.company}</span>
-                            </CommonScrollAnimated>
-                          </div>
-                          <div className="split-data__descr">
-                            <CommonScrollAnimated
-                              className="t-medium anim-uni-in-up"
-                              as="p"
-                              animation="inUp"
-                            >
-                              {item.role}
-                            </CommonScrollAnimated>
+                          <div className="split-data__row">
+                            {item.cover && (
+                              <div className="split-data__thumb">
+                                <Image
+                                  alt={`${item.company} case study`}
+                                  src={item.cover}
+                                  width={120}
+                                  height={80}
+                                />
+                              </div>
+                            )}
+                            <div className="split-data__body">
+                              <CommonScrollAnimated
+                                className="anim-uni-in-up"
+                                as="div"
+                                animation="inUp"
+                              >
+                                <span className="split-data__company">{item.company}</span>
+                              </CommonScrollAnimated>
+                              <CommonScrollAnimated
+                                className="t-medium anim-uni-in-up"
+                                as="p"
+                                animation="inUp"
+                              >
+                                {item.role}
+                              </CommonScrollAnimated>
+                            </div>
                           </div>
                           <div className="split-data__divider divider-bottom" />
-                        </div>
+                        </Link>
                       ))}
                     </div>
-                  </div>
-                </div>
-              </div>
-              <div className="row g-0 margin-top">
-                <div className="col-12 col-xl-6 mxd-grid-item">
-                  <div className="mxd-block-split__subtitle pre-grid">
-                    <CommonScrollAnimated
-                      className="anim-uni-in-up"
-                      as="p"
-                      animation="inUp"
-                    >
-                      <span>/ Tool stack</span>
-                    </CommonScrollAnimated>
-                  </div>
-                  <div className="tags-column">
-                    {about.toolStack.map((tool) => (
-                      <TextScramble
-                        key={tool}
-                        className="tag tag-m meta-tag mxd-scramble"
-                      >
-                        {tool}
-                      </TextScramble>
-                    ))}
-                  </div>
-                </div>
-                <div className="col-12 col-xl-6 mxd-grid-item">
-                  <div className="mxd-block-split__subtitle pre-grid">
-                    <CommonScrollAnimated
-                      className="anim-uni-in-up"
-                      as="p"
-                      animation="inUp"
-                    >
-                      <span>/ Personal artifacts</span>
-                    </CommonScrollAnimated>
-                  </div>
-                  <div className="tags-column">
-                    {about.personalArtifacts.map((artifact) => (
-                      <TextScramble
-                        key={artifact}
-                        className="tag tag-m meta-tag mxd-scramble"
-                      >
-                        {artifact}
-                      </TextScramble>
-                    ))}
                   </div>
                 </div>
               </div>

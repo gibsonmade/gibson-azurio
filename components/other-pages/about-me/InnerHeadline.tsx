@@ -5,7 +5,6 @@ import CommonLoadAnimation, {
   CommonLoadFade,
   CommonLoadItem,
 } from "@/components/animations/CommonLoadAnimation";
-import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import CommonHeroTyped from "@/components/animations/CommonHeroTyped";
 import TextScramble from "@/components/animations/TextScramble";
 import { siteCopy } from "@/data/siteCopy";
@@ -15,7 +14,7 @@ export default function InnerHeadline() {
   return (
     <CommonLoadAnimation>
       <>
-        <BlurSection className="mxd-section loading-wrap">
+        <BlurSection className="mxd-section loading-wrap about-hero-section">
           <div className="mxd-container grid-l-container">
             {/* Block - Inner Headline v01 Start */}
             <div className="mxd-block">
@@ -44,9 +43,9 @@ export default function InnerHeadline() {
                       <div className="inner-headline__content has-large-title">
                         <div className="container-fluid p-0">
                           <div className="row g-0">
-                            <div className="col-12 col-xl-9 mxd-grid-item">
+                            <div className="col-12 mxd-grid-item">
                               <CommonLoadItem index={0}>
-                                <div className="inner-headline__title no-sup pre-subtitle-large loading-item">
+                                <div className="inner-headline__title no-sup loading-item">
                                   <CommonHeroTyped className="large animated-type">
                                     {about.typedRoles.map((role) => (
                                       <b key={role}>{role}</b>
@@ -54,65 +53,6 @@ export default function InnerHeadline() {
                                   </CommonHeroTyped>
                                 </div>
                               </CommonLoadItem>
-                              <div className="inner-headline__subtitle">
-                                <CommonAnimatedText
-                                  as="a"
-                                  className="active-cursor-accent loading-split"
-                                  animation="splitLinesLoad"
-                                  data-cursor-text="Contact Gibson"
-                                  href="/contact"
-                                >
-                                  {about.introLead} <span>{about.introAccent}</span>
-                                </CommonAnimatedText>
-                              </div>
-                              <CommonLoadItem index={1}>
-                                <div className="about-intro-stats loading-item">
-                                  {about.stats.map((stat) => (
-                                    <div className="about-intro-stats__item" key={stat.value}>
-                                      <span className="about-intro-stats__value">
-                                        {stat.value}
-                                      </span>
-                                      <span className="about-intro-stats__label">
-                                        {stat.label}
-                                      </span>
-                                    </div>
-                                  ))}
-                                </div>
-                              </CommonLoadItem>
-                            </div>
-                            <div className="col-12 col-xl-3 mxd-grid-item">
-                              <div className="inner-headline__tags align-end-desktop tags-large-subtitle">
-                                <CommonLoadItem index={1}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {about.tags[0]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                                <CommonLoadItem index={2}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {about.tags[1]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                                <CommonLoadItem index={3}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {about.tags[2]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                                <CommonLoadItem index={4}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {about.tags[3]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                                <CommonLoadItem index={5}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {about.tags[4]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                                <CommonLoadItem index={6}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {about.tags[5]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                              </div>
                             </div>
                           </div>
                         </div>

@@ -164,9 +164,6 @@ export default function Footer1() {
                               height={120}
                             />
                             <p className="t-medium t-bold mxd-footer-promo__link mxd-footer-promo__link--compact mxd-split-lines-reverse">
-                              <span className="mxd-footer-promo__link-title">
-                                {project.name}
-                              </span>
                               <span className="mxd-footer-promo__link-summary">
                                 {project.summary}
                               </span>

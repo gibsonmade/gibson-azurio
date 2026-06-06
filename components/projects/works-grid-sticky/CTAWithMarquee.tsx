@@ -40,7 +40,7 @@ export default function CTAWithMarquee() {
                   <div className="mxd-promo__caption">
                     <Link
                       className="active-cursor-accent"
-                      data-cursor-text="Contact Us"
+                      data-cursor-text="Contact Gibson"
                       href={`/contact`}
                     >
                       <CommonAnimatedText
@@ -53,9 +53,9 @@ export default function CTAWithMarquee() {
                     </Link>
                   </div>
                 </div>
-                {/* marquee */}
+                {/* marquee removed */}
+                {false && (
                 <div className="mxd-promo__marquee">
-                  {/* Marquee Divider Start */}
                   <div className="marquee marquee-left--gsap">
                     <div
                       className="marquee__toleft marquee__images"
@@ -305,6 +305,7 @@ export default function CTAWithMarquee() {
                   </div>
                   {/* Marquee Divider End */}
                 </div>
+                )}
               </div>
             </div>
           </div>

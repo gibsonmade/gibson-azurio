@@ -40,7 +40,7 @@ export default function CTAWithMarquee() {
                   <div className="mxd-promo__caption">
                     <Link
                       className="active-cursor-accent"
-                      data-cursor-text="Contact Us"
+                      data-cursor-text="Contact Gibson"
                       href={`/contact`}
                     >
                       <CommonAnimatedText

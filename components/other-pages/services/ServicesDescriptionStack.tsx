@@ -75,9 +75,11 @@ function ServiceCard({ card, index }: { card: Card; index: number }) {
           <div className="services-card__wrapper">
             <div className="services-card__content">
               <div className="services-card__info">
-                <div className="services-card__subtitle">
-                  <Tag>{card.subtitle}</Tag>
-                </div>
+                <ServicesStackSlot part="subtitle" index={index}>
+                  <div className="services-card__subtitle">
+                    <Tag>{card.subtitle}</Tag>
+                  </div>
+                </ServicesStackSlot>
                 <div className="services-card__title">
                   <ServicesStackSlot part="title" index={index}>
                     <div className="services-card__title-text">
@@ -85,23 +87,23 @@ function ServiceCard({ card, index }: { card: Card; index: number }) {
                     </div>
                   </ServicesStackSlot>
                 </div>
-                <ServicesStackSlot part="tags" index={index}>
-                  <div className="services-card__tags">
-                    <div className="tags-column">
-                      {colA.map((t) => (
-                        <Tag key={t}>{t}</Tag>
-                      ))}
-                    </div>
-                    <div className="tags-column">
-                      {colB.map((t) => (
-                        <Tag key={t}>{t}</Tag>
-                      ))}
-                    </div>
-                  </div>
+                <ServicesStackSlot part="descr" index={index}>
+                  <div className={card.descrClass}>{card.descr}</div>
                 </ServicesStackSlot>
               </div>
-              <ServicesStackSlot part="descr" index={index}>
-                <div className={card.descrClass}>{card.descr}</div>
+              <ServicesStackSlot part="tags" index={index}>
+                <div className="services-card__tags">
+                  <div className="tags-column">
+                    {colA.map((t) => (
+                      <Tag key={t}>{t}</Tag>
+                    ))}
+                  </div>
+                  <div className="tags-column">
+                    {colB.map((t) => (
+                      <Tag key={t}>{t}</Tag>
+                    ))}
+                  </div>
+                </div>
               </ServicesStackSlot>
             </div>
             <ServicesStackSlot part="image" index={index}>

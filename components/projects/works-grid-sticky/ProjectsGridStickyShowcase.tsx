@@ -30,9 +30,15 @@ export default function ProjectsGridStickyShowcase() {
                         columns={3}
                       >
                         <Link
+                          className="mxd-project-item__cover-link"
+                          href={`/work/${project.slug}`}
+                          aria-label={`View ${project.name} case study`}
+                          tabIndex={-1}
+                          aria-hidden
+                        />
+                        <div
                           className="mxd-project-item__media active-cursor-permanent"
                           data-cursor-text="View Work"
-                          href={`/work/${project.slug}`}
                         >
                           <Image
                             alt={`${project.name} case study preview`}
@@ -41,7 +47,7 @@ export default function ProjectsGridStickyShowcase() {
                             height={1000}
                           />
                           <div className="mxd-cover mxd-cover-06" />
-                        </Link>
+                        </div>
                         <div className="mxd-project-item__caption">
                           <div className="mxd-project-item__name">
                             <Link

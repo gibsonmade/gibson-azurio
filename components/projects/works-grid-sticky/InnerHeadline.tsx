@@ -3,13 +3,10 @@ import BlurSection from "@/components/animations/BlurSection";
 import Link from "next/link";
 import CommonLoadAnimation, {
   CommonLoadFade,
-  CommonLoadItem,
 } from "@/components/animations/CommonLoadAnimation";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import TextScramble from "@/components/animations/TextScramble";
-import { siteCopy } from "@/data/siteCopy";
 export default function InnerHeadline() {
-  const tags = siteCopy.about.tags;
 
   return (
     <CommonLoadAnimation>
@@ -56,40 +53,6 @@ export default function InnerHeadline() {
                               {/* <div class="inner-headline__subtitle">
                               <p>Creative solutions <span>made simple</span></p>
                             </div> */}
-                            </div>
-                            <div className="col-12 col-xl-3 mxd-grid-item">
-                              <div className="inner-headline__tags align-end-desktop tags-medium-title">
-                                <CommonLoadItem index={0}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {tags[0]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                                <CommonLoadItem index={1}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {tags[1]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                                <CommonLoadItem index={2}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {tags[2]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                                <CommonLoadItem index={3}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {tags[3]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                                <CommonLoadItem index={4}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {tags[4]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                                <CommonLoadItem index={5}>
-                                  <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
-                                    {tags[5]}
-                                  </TextScramble>
-                                </CommonLoadItem>
-                              </div>
                             </div>
                           </div>
                         </div>

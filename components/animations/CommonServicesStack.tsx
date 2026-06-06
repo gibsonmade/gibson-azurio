@@ -26,6 +26,7 @@ type SplitTextInstance = InstanceType<typeof SplitText>;
 export type ServicesStackPart =
   | "card"
   | "wrapper"
+  | "subtitle"
   | "title"
   | "descr"
   | "tags"
@@ -80,8 +81,8 @@ const splitTextVars = {
   aria: "none",
 } as const;
 
-const titleRevealStart = "top 68%";
-const titleRevealViewportRatio = 0.68;
+const titleRevealStart = "top 85%";
+const titleRevealViewportRatio = 0.85;
 
 export default function CommonServicesStack({
   children,
@@ -89,6 +90,7 @@ export default function CommonServicesStack({
 }: { children: ReactNode } & ComponentPropsWithoutRef<"div">) {
   const cardRefs = useRef<Array<HTMLElement | null>>([]);
   const wrapperRefs = useRef<Array<HTMLElement | null>>([]);
+  const subtitleRefs = useRef<Array<HTMLElement | null>>([]);
   const titleRefs = useRef<Array<HTMLElement | null>>([]);
   const descrRefs = useRef<Array<HTMLElement | null>>([]);
   const tagsRefs = useRef<Array<HTMLElement | null>>([]);
@@ -104,6 +106,9 @@ export default function CommonServicesStack({
             break;
           case "wrapper":
             wrapperRefs.current[index] = el;
+            break;
+          case "subtitle":
+            subtitleRefs.current[index] = el;
             break;
           case "title":
             titleRefs.current[index] = el;
@@ -143,6 +148,7 @@ export default function CommonServicesStack({
         [
           ...cardRefs.current,
           ...wrapperRefs.current,
+          ...subtitleRefs.current,
           ...titleRefs.current,
           ...descrRefs.current,
           ...tagsRefs.current,
@@ -334,6 +340,7 @@ export default function CommonServicesStack({
         const img = imageHost?.querySelector("img");
         if (!img) return;
         gsap.set(img, { scale: 1.4 });
+        if (imageHost) gsap.set(imageHost, { opacity: 0 });
         const st = ScrollTrigger.create({
           trigger: card,
           start: "top bottom",
@@ -348,45 +355,83 @@ export default function CommonServicesStack({
 
       cards.forEach((card, index) => {
         const slot = indices[index];
-        const description = tagsRefs.current[slot];
+        const subtitleEl = subtitleRefs.current[slot];
         const titleSplit = titleSplits[index];
         const descrSplit = descrSplits[index];
-        if (!description || !titleSplit || !descrSplit) return;
+        const tagsEl = tagsRefs.current[slot];
+        const imageHost = imageRefs.current[slot];
 
-        const lines = titleSplit.lines;
-        const linesDescr = descrSplit.lines;
-        if (!lines.length) return;
+        if (!titleSplit || !descrSplit) return;
+        const titleLines = titleSplit.lines;
+        const descrLines = descrSplit.lines;
+        if (!titleLines.length) return;
 
+        // Initial states
+        if (subtitleEl) gsap.set(subtitleEl, { opacity: 0, y: 6 });
+
+        // 1. Subtitle — loads first
+        if (subtitleEl) {
+          const inSubtitle = ScrollTrigger.create({
+            trigger: card,
+            start: "top 90%",
+            onEnter: () => gsap.to(subtitleEl, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }),
+            onLeaveBack: () => {
+              if (index === 0) return;
+              gsap.set(subtitleEl, { opacity: 0, y: 6 });
+            },
+          });
+          cleanups.push(() => inSubtitle.kill());
+        }
+
+        // 2. Title — loads second
         const inTitle = ScrollTrigger.create({
           trigger: card,
           start: titleRevealStart,
-          onEnter: () => animateContentIn(lines),
+          onEnter: () => animateContentIn(titleLines),
           onEnterBack: () => {
-            if (index === 0) {
-              gsap.set(lines, { y: "0%" });
-            } else {
-              animateContentIn(lines);
-            }
+            if (index === 0) gsap.set(titleLines, { y: "0%" });
+            else animateContentIn(titleLines);
           },
           onLeaveBack: () => {
-            // Keep first card title fixed/visible on reload and top-of-page state.
-            if (index === 0) {
-              gsap.set(lines, { y: "0%" });
-              return;
-            }
-            animateContentOut(lines);
+            if (index === 0) { gsap.set(titleLines, { y: "0%" }); return; }
+            animateContentOut(titleLines);
           },
         });
+        cleanups.push(() => inTitle.kill());
+
+        // 3. Description — loads third
         const inDescr = ScrollTrigger.create({
           trigger: card,
-          start: "top top",
-          onEnter: () => animateContentInSecond(linesDescr, description),
-          onLeaveBack: () => animateContentOutSecond(linesDescr, description),
+          start: "top 76%",
+          onEnter: () => animateContentIn(descrLines),
+          onLeaveBack: () => animateContentOut(descrLines),
         });
-        cleanups.push(() => {
-          inTitle.kill();
-          inDescr.kill();
-        });
+        cleanups.push(() => inDescr.kill());
+
+        // 4. Tags/list — loads fourth
+        if (tagsEl) {
+          const inTags = ScrollTrigger.create({
+            trigger: card,
+            start: "top 70%",
+            onEnter: () => gsap.to(tagsEl, { opacity: 1, duration: 0.6, ease: "power2.out" }),
+            onLeaveBack: () => gsap.set(tagsEl, { opacity: 0 }),
+          });
+          cleanups.push(() => inTags.kill());
+        }
+
+        // 5. Image — loads last
+        if (imageHost) {
+          const inImage = ScrollTrigger.create({
+            trigger: card,
+            start: "top 60%",
+            onEnter: () => gsap.to(imageHost, { opacity: 1, duration: 0.75, ease: "power2.out" }),
+            onLeaveBack: () => {
+              if (index === 0) return;
+              gsap.set(imageHost, { opacity: 0 });
+            },
+          });
+          cleanups.push(() => inImage.kill());
+        }
       });
 
       const onStRefresh = () => {

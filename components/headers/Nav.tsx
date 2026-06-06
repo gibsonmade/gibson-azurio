@@ -104,7 +104,7 @@ export default function Nav({
   );
   const footerSlots = useMemo(() => makeSlotters(g.footerSplitTargets, 2), [g]);
   const dividerSlots = useMemo(() => makeSlotters(g.dividers, 6), [g]);
-  const arrowSlots = useMemo(() => makeSlotters(g.arrows, 2), [g]);
+  const arrowSlots = useMemo(() => makeSlotters(g.arrows, 1), [g]);
   const liSlots = useMemo(() => makeSlotters(g.menuItemLis, 5), [g]);
   const toggleSlots = useMemo(() => makeSlotters(g.menuToggles, 5), [g]);
   const submenuSlots = useMemo(() => makeSlotters(g.menuSubmenus, 5), [g]);
@@ -265,7 +265,7 @@ export default function Nav({
                         className={parentItemClass(insightsSectionActive)}
                       >
                         <div ref={toggleSlots[3]} className="main-menu__toggle">
-                          <p className="main-menu__link">
+                          <Link className="main-menu__link" href={`/lab`}>
                             <span
                               ref={mainSlots[6]}
                               className="main-menu__number"
@@ -278,24 +278,8 @@ export default function Nav({
                             >
                               Lab
                             </span>
-                          </p>
-                          <div ref={arrowSlots[1]} className="main-menu__arrow">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              version="1.1"
-                              viewBox="0 0 18 18"
-                            >
-                              <path d="M10.8,0v3.6h-3.6V0h3.6ZM14.4,10.8h3.6v-3.6h-3.6v-3.6h-3.6v3.6H0v3.6h10.8v3.6h3.6v-3.6ZM10.8,14.4h-3.6v3.6h3.6v-3.6Z" />
-                            </svg>
-                          </div>
+                          </Link>
                         </div>
-                        <ul ref={submenuSlots[3]} className="submenu">
-                          {renderSubmenuLinks(
-                            insightLinks,
-                            "/lab",
-                            "View all articles",
-                          )}
-                        </ul>
                         <div
                           ref={dividerSlots[4]}
                           className="main-menu__divider divider-bottom"

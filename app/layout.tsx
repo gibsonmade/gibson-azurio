@@ -79,7 +79,6 @@ export default function RootLayout({
     <html
       lang="en"
       className="no-touch"
-      color-scheme={initialTheme}
       data-motion="reduced"
       suppressHydrationWarning
     >

@@ -92,9 +92,8 @@ export const siteCopy = {
       "About Gibson Hall, a systems-minded creative working across product strategy, UX leadership, brand systems, AI workflows, and launch execution.",
     typedRoles: ["Product strategist", "UX leader", "AI systems designer"],
     introLead:
-      "Hey, I am Gibson Hall. I work between product strategy, UX leadership, brand systems, digital product design, AI workflows, and launch execution.",
-    introAccent:
-      "The through-line is turning complex ideas into usable systems: civic art into interactive maps, retail catalogs into guided project tools, car-selling flows into clearer decisions, and founder concepts into launch-ready brands and products.",
+      "Hi there! I'm Gibson Hall and have been working in the User Experience space ever since I can remember. Early in my career, I made logos and websites for local bands from Austin and Houston. As my career took off, I got to work at and lead top creative agencies and multiple best-in-class-UX Fortune 500s. I have founded and worked alongside founders and executives, scaled a company from 0 to Exit, and currently lead UX for a billion dollar sales funnel. My passion is helping bring complicated ideas to simple workflows.",
+    introAccent: "",
     tags: [
       "Product strategy",
       "UX leadership",
@@ -122,27 +121,35 @@ export const siteCopy = {
       },
     ],
     resumeIntro:
-      "The through-line is helping teams move from ambiguity to something usable: a clearer customer journey, a sharper brand, a better product flow, or a launch system that can keep improving.",
+      "Gibson helps companies move from ideas to user-approved solutions that work at scale.",
     workHistory: [
       {
-        years: "2012-2016",
-        company: "Mini Murals",
-        role: "CTO for a Houston public-art project with 250+ murals by 40+ artists.",
-      },
-      {
-        years: "2017-2021",
-        company: "The Home Depot",
-        role: "Senior Manager of UX Design leading product designers and UX researchers.",
-      },
-      {
-        years: "2021-2026",
-        company: "CarMax",
-        role: "Manager of Product Design for the sell-your-car supply journey.",
-      },
-      {
-        years: "2025-2026",
+        years: "2025–2026",
         company: "Straterra",
         role: "Freelance strategy, brand, UX/UI, and digital product partner.",
+        slug: "staterra",
+        cover: "/img-temp/uploads/case-study-generated/staterra/staterra-01-hero-divider.jpg",
+      },
+      {
+        years: "2021–2026",
+        company: "CarMax",
+        role: "Manager of Product Design for the sell-your-car supply journey.",
+        slug: "carmax",
+        cover: "/img-temp/uploads/case-study-generated/carmax/carmax-01-hero-divider.jpg",
+      },
+      {
+        years: "2017–2021",
+        company: "The Home Depot",
+        role: "Senior Manager of UX Design leading product designers and UX researchers.",
+        slug: "the-home-depot",
+        cover: "/img-temp/uploads/case-study-generated/the-home-depot/the-home-depot-01-hero-divider.jpg",
+      },
+      {
+        years: "2012–2016",
+        company: "Mini Murals",
+        role: "CTO for a Houston public-art project with 250+ murals by 40+ artists.",
+        slug: "mini-murals",
+        cover: "/img-temp/uploads/case-study-generated/mini-murals/mini-murals-01-hero-divider.jpg",
       },
     ],
     toolStack: [

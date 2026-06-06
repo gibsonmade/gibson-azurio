@@ -16,7 +16,7 @@ const N_MAIN_SPANS = 10;
 const N_CONTACT = 2;
 const N_FOOTER = 2;
 const N_DIVIDERS = 6;
-const N_ARROWS = 2;
+const N_ARROWS = 1;
 const N_ROWS = 5;
 
 function compact<T>(arr: (T | null | undefined)[]): T[] {

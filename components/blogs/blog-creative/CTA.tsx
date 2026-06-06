@@ -47,7 +47,7 @@ export default function CTA() {
                     <div className="mxd-promo__caption">
                       <Link
                         className="active-cursor-permanent"
-                        data-cursor-text="Contact Us"
+                        data-cursor-text="Contact Gibson"
                         href={`/contact`}
                       >
                         <CommonAnimatedText
