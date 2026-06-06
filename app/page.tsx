@@ -1,4 +1,4 @@
-import Footer2 from "@/components/footers/Footer2";
+import Footer from "@/components/footers/Footer";
 import { Metadata } from "next";
 import Hero from "@/components/homes/index-creative-agency/Hero";
 import ParallaxDividerVideo from "@/components/homes/index-creative-agency/ParallaxDividerVideo";
@@ -24,7 +24,7 @@ export default function Home() {
         <ServicesDescriptionStack />
       </div>
       <CTAWithMarquee />
-      <Footer2 />
+      <Footer />
     </>
   );
 }

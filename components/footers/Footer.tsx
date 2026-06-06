@@ -19,7 +19,7 @@ import { workProjects } from "@/data/workProjects";
 const navLinkClass = "anim-uni-slide-down";
 const recentCaseStudies = workProjects.slice(0, 3);
 
-export default function Footer1() {
+export default function Footer() {
   const pagesBlock = footer1NavColumns[0]?.blocks[0];
 
   return (

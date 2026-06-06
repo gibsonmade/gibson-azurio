@@ -1,4 +1,4 @@
-import Footer2 from "@/components/footers/Footer2";
+import Footer from "@/components/footers/Footer";
 
 export default function layout({ children }: { children: React.ReactNode }) {
   return (
@@ -6,7 +6,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
       {/* <div className="mxd-page-content inner-page-content"> */}
       {children}
       {/* </div> */}
-      <Footer2 />
+      <Footer />
     </>
   );
 }

@@ -5,7 +5,7 @@ import {
 } from "@/data/workProjects";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import Footer2 from "@/components/footers/Footer2";
+import Footer from "@/components/footers/Footer";
 import InnerHeadline from "@/components/projects/project-details/InnerHeadline";
 import ParallaxDividerImage from "@/components/projects/project-details/ParallaxDividerImage";
 import SplitList from "@/components/projects/project-details/SplitList";
@@ -58,7 +58,7 @@ export default async function WorkProjectPage({ params }: WorkProjectRouteProps)
         <NextProjectLink project={nextProject} />
         <CTAWithMarquee />
       </div>
-      <Footer2 />
+      <Footer />
     </>
   );
 }

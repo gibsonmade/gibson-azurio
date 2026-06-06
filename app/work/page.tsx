@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import InnerHeadline from "@/components/projects/works-grid-sticky/InnerHeadline";
 import ProjectsGridStickyShowcase from "@/components/projects/works-grid-sticky/ProjectsGridStickyShowcase";
 import CTAWithMarquee from "@/components/projects/works-grid-sticky/CTAWithMarquee";
-import Footer2 from "@/components/footers/Footer2";
+import Footer from "@/components/footers/Footer";
 import { siteCopy } from "@/data/siteCopy";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function WorkPage() {
         <ProjectsGridStickyShowcase />
         <CTAWithMarquee />
       </div>
-      <Footer2 />
+      <Footer />
     </>
   );
 }

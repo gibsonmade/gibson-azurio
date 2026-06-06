@@ -1,4 +1,4 @@
-import Footer2 from "@/components/footers/Footer2";
+import Footer from "@/components/footers/Footer";
 
 export default function LabLayout({
   children,
@@ -8,7 +8,7 @@ export default function LabLayout({
   return (
     <>
       {children}
-      <Footer2 />
+      <Footer />
     </>
   );
 }

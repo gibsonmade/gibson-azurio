@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import Footer2 from "@/components/footers/Footer2";
+import Footer from "@/components/footers/Footer";
 import { siteCopy } from "@/data/siteCopy";
 
 import { AboutImageStrip } from "@/components/other-pages/about-me/AboutVisualBreaks";
@@ -19,7 +19,7 @@ export default function AboutPage() {
         <Resume />
         <AboutImageStrip />
       </div>
-      <Footer2 />
+      <Footer />
     </>
   );
 }

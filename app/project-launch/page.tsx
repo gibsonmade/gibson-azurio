@@ -1,4 +1,4 @@
-import Footer2 from "@/components/footers/Footer2";
+import Footer from "@/components/footers/Footer";
 import { projectLaunch, type LaunchTaskStatus } from "@/data/projectLaunch";
 import { siteCopy } from "@/data/siteCopy";
 import type { Metadata } from "next";
@@ -85,7 +85,7 @@ export default function ProjectLaunchPage() {
           ))}
         </section>
       </main>
-      <Footer2 />
+      <Footer />
     </>
   );
 }
