@@ -16,78 +16,35 @@
  * ------------------------------------------------
  *  01. Fonts
  *  02. Variables
- *  03. Template Backgrounds
- *  04. Basic Styles
- *  05. Elements - Page Structure
- *  06. Elements - Typography
- *  07. Elements - Cursor
- *  08. Elements - Controls
- *  09. Elements - Forms
+ *  03. Basic Styles
+ *  04. Elements - Page Structure
+ *  05. Elements - Typography
+ *  06. Elements - Cursor
+ *  07. Elements - Controls
+ *  08. Elements - Forms
  *  09. Core - Header
  *  10. Core - Menu
  *  11. Core - Footer
  *  12. Core - Inner Headline
  *  13. Core - 404
- *  14. Hero - Hero #01
- *  15. Hero - Hero #02
- *  16. Hero - Hero #03
- *  17. Hero - Hero #04
- *  18. Hero - Hero #05
- *  19. Hero - Hero #06
- *  20. Hero - Hero #07
- *  21. Hero - Hero #08
- *  22. Hero - Hero #09
- *  22. Hero - Hero #10
- *  23. Landing - Hero
- *  24. Landing - Demo Grid
- *  25. Landing - Stack
- *  26. Landing - Marquee
- *  27. Landing - Responsive Promo
- *  28. Landing - Slider
- *  29. Landing - Components
- *  30. Landing - Features
- *  31. Landing - CTA
- *  32. Landing - Footer
- *  33. Features - Statistics Lines
- *  34. Features - Marquee
- *  35. Features - Matter.js Blocks
- *  36. Features - Accordion
- *  37. Block - About Teaser
- *  38. Block - About Images
- *  39. Block - About Process
- *  40. Block - About Mission
- *  41. Block - About Team
- *  42. Block - Description Split
- *  43. Block - Projects ClipPath
- *  44. Block - Projects Grid
- *  45. Block - Projects Stack Cards
- *  46. Block - Projects List
- *  47. Block - Services List
- *  48. Block - Services Capabilities List
- *  49. Block - Services Stack
- *  50. Block - Resume List
- *  51. Block - Awards List
- *  52. Block - Team List
- *  53. Block - Team Grid
- *  54. Block - Toolbox List
- *  55. Block - Tech Stack List
- *  56. Block - Niche Cards
- *  57. Block - Partners/Clients
- *  58. Block - Testimonials Sticky
- *  59. Block - Testimonials Slider
- *  60. Block - Testimonials Project
- *  61. Block - Next Project
- *  62. Block - Blog Preview Grid
- *  63. Block - Blog Preview List
- *  64. Block - Blog Page
- *  65. Block - Blog Article Page
- *  66. Block - CTA
- *  67. Divider - Dividers Simple
- *  68. Divider - Sticky Images
- *  69. Divider - Sticky Caption
- *  70. Block - Pricing Cards
- *  71. Block - Split Blocks
- *  72. Block - Images Grid
+ *  14. Hero - Hero #05
+ *  15. Features - Statistics Lines
+ *  16. Features - Marquee
+ *  17. Block - Projects Grid
+ *  18. Block - Projects Stack Cards
+ *  19. Block - Services Stack
+ *  20. Block - Tech Stack List
+ *  21. Block - Partners/Clients
+ *  22. Block - Testimonials Sticky
+ *  23. Block - Next Project
+ *  24. Block - Blog Page
+ *  25. Block - Blog Article Page
+ *  26. Block - CTA
+ *  27. Divider - Dividers Simple
+ *  28. Divider - Sticky Images
+ *  29. Divider - Sticky Caption
+ *  30. Block - Split Blocks
+ *  31. Block - Images Grid
  * ------------------------------------------------
  * Table of Contents End
  * ------------------------------------------------ */
@@ -131,16 +88,6 @@
   --st-muted--light: #b7b2b1;
   --st-medium--light: #949291;
   --st-bright--light: #0f0f0f;
-  --bg-demo-screen-01--light: none;
-  --bg-demo-screen-02--light: none;
-  --bg-demo-screen-03--light: none;
-  --bg-demo-screen-04--light: none;
-  --bg-demo-screen-05--light: none;
-  --bg-demo-screen-06--light: none;
-  --bg-demo-screen-07--light: none;
-  --bg-demo-screen-08--light: none;
-  --bg-demo-screen-09--light: none;
-  --bg-demo-screen-10--light: none;
   /* dark color scheme */
   --base--dark: #0f0f0f;
   --base-rgb--dark: 15, 15, 15;
@@ -163,16 +110,6 @@
   --st-muted--dark: #1f2124;
   --st-medium--dark: #313336;
   --st-bright--dark: #ffffff;
-  --bg-demo-screen-01--dark: none;
-  --bg-demo-screen-02--dark: none;
-  --bg-demo-screen-03--dark: none;
-  --bg-demo-screen-04--dark: none;
-  --bg-demo-screen-05--dark: none;
-  --bg-demo-screen-06--dark: none;
-  --bg-demo-screen-07--dark: none;
-  --bg-demo-screen-08--dark: none;
-  --bg-demo-screen-09--dark: none;
-  --bg-demo-screen-10--dark: none;
   /* permanent colors */
   --pt-base: #ffffff;
   --pt-base-dark: #0f0f0f;
@@ -213,16 +150,6 @@
     --st-muted: var(--st-muted--light);
     --st-medium: var(--st-medium--light);
     --st-bright: var(--st-bright--light);
-    --bg-demo-screen-01: var(--bg-demo-screen-01--light);
-    --bg-demo-screen-02: var(--bg-demo-screen-02--light);
-    --bg-demo-screen-03: var(--bg-demo-screen-03--light);
-    --bg-demo-screen-04: var(--bg-demo-screen-04--light);
-    --bg-demo-screen-05: var(--bg-demo-screen-05--light);
-    --bg-demo-screen-06: var(--bg-demo-screen-06--light);
-    --bg-demo-screen-07: var(--bg-demo-screen-07--light);
-    --bg-demo-screen-08: var(--bg-demo-screen-08--light);
-    --bg-demo-screen-09: var(--bg-demo-screen-09--light);
-    --bg-demo-screen-10: var(--bg-demo-screen-10--light);
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -248,16 +175,6 @@
     --st-muted: var(--st-muted--dark);
     --st-medium: var(--st-medium--dark);
     --st-bright: var(--st-bright--dark);
-    --bg-demo-screen-01: var(--bg-demo-screen-01--dark);
-    --bg-demo-screen-02: var(--bg-demo-screen-02--dark);
-    --bg-demo-screen-03: var(--bg-demo-screen-03--dark);
-    --bg-demo-screen-04: var(--bg-demo-screen-04--dark);
-    --bg-demo-screen-05: var(--bg-demo-screen-05--dark);
-    --bg-demo-screen-06: var(--bg-demo-screen-06--dark);
-    --bg-demo-screen-07: var(--bg-demo-screen-07--dark);
-    --bg-demo-screen-08: var(--bg-demo-screen-08--dark);
-    --bg-demo-screen-09: var(--bg-demo-screen-09--dark);
-    --bg-demo-screen-10: var(--bg-demo-screen-10--dark);
   }
 }
 [color-scheme="light"] {
@@ -282,16 +199,6 @@
   --st-muted: var(--st-muted--light);
   --st-medium: var(--st-medium--light);
   --st-bright: var(--st-bright--light);
-  --bg-demo-screen-01: var(--bg-demo-screen-01--light);
-  --bg-demo-screen-02: var(--bg-demo-screen-02--light);
-  --bg-demo-screen-03: var(--bg-demo-screen-03--light);
-  --bg-demo-screen-04: var(--bg-demo-screen-04--light);
-  --bg-demo-screen-05: var(--bg-demo-screen-05--light);
-  --bg-demo-screen-06: var(--bg-demo-screen-06--light);
-  --bg-demo-screen-07: var(--bg-demo-screen-07--light);
-  --bg-demo-screen-08: var(--bg-demo-screen-08--light);
-  --bg-demo-screen-09: var(--bg-demo-screen-09--light);
-  --bg-demo-screen-10: var(--bg-demo-screen-10--light);
 }
 
 [color-scheme="dark"] {
@@ -316,16 +223,6 @@
   --st-muted: var(--st-muted--dark);
   --st-medium: var(--st-medium--dark);
   --st-bright: var(--st-bright--dark);
-  --bg-demo-screen-01: var(--bg-demo-screen-01--dark);
-  --bg-demo-screen-02: var(--bg-demo-screen-02--dark);
-  --bg-demo-screen-03: var(--bg-demo-screen-03--dark);
-  --bg-demo-screen-04: var(--bg-demo-screen-04--dark);
-  --bg-demo-screen-05: var(--bg-demo-screen-05--dark);
-  --bg-demo-screen-06: var(--bg-demo-screen-06--dark);
-  --bg-demo-screen-07: var(--bg-demo-screen-07--dark);
-  --bg-demo-screen-08: var(--bg-demo-screen-08--dark);
-  --bg-demo-screen-09: var(--bg-demo-screen-09--dark);
-  --bg-demo-screen-10: var(--bg-demo-screen-10--dark);
 }
 
 /* ------------------------------------------------*/
