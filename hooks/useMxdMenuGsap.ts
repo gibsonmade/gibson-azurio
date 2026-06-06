@@ -9,7 +9,7 @@ import {
   bindMxdMenuGsap,
   type MxdMenuGsapElements,
   type MxdMenuGsapMenuRow,
-} from "@/lib/template/mxdMenuGsap";
+} from "@/lib/mxdMenuGsap";
 
 const N_HEADER = 2;
 const N_MAIN_SPANS = 10;

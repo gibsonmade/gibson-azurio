@@ -8,8 +8,8 @@ import {
   mergedCursorHitKey,
   resolveCursorHitFromTarget,
   type MergedCursorHit,
-} from "@/lib/template/cursorHitTest";
-import { getDeviceType } from "@/lib/template/deviceType";
+} from "@/lib/cursorHitTest";
+import { getDeviceType } from "@/lib/deviceType";
 
 function visualFromTop(top: CursorStackEntry | null) {
   if (!top) {

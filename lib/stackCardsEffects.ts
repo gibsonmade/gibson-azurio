@@ -3,7 +3,7 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText.js";
-import { isReducedMotionMode } from "@/lib/template/motionPreference";
+import { isReducedMotionMode } from "@/lib/motionPreference";
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 

@@ -9,7 +9,7 @@ import { Fragment, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText } from "gsap/SplitText.js";
-import { initVelocityMarqueeRows } from "@/lib/template/stackCardsEffects";
+import { initVelocityMarqueeRows } from "@/lib/stackCardsEffects";
 import { siteCopy } from "@/data/siteCopy";
 import { useReducedMotionMode } from "@/components/common/MotionPreferenceContext";
 

@@ -2,7 +2,7 @@
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { isReducedMotionMode } from "@/lib/template/motionPreference";
+import { isReducedMotionMode } from "@/lib/motionPreference";
 
 gsap.registerPlugin(ScrollTrigger);
 

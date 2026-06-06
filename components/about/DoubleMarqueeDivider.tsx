@@ -4,7 +4,7 @@ import BlurSection from "@/components/animations/BlurSection";
 import {
   initCtaMarqueeToLeft,
   initCtaMarqueeToRight,
-} from "@/lib/template/ctaMarqueeEffects";
+} from "@/lib/ctaMarqueeEffects";
 import Image from "next/image";
 import { useLayoutEffect, useRef } from "react";
 import CommonLoadAnimation, {

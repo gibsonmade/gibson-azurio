@@ -2,7 +2,7 @@
 
 import BlurSection from "@/components/animations/BlurSection";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
-import { initCtaMarqueeToLeft } from "@/lib/template/ctaMarqueeEffects";
+import { initCtaMarqueeToLeft } from "@/lib/ctaMarqueeEffects";
 import Link from "next/link";
 import Image from "next/image";
 import { useLayoutEffect, useRef } from "react";

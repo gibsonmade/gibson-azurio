@@ -16,7 +16,7 @@ import {
   getSystemReducedMotion,
   persistMotionPreference,
   type MotionPreferenceSource,
-} from "@/lib/template/motionPreference";
+} from "@/lib/motionPreference";
 
 type MotionPreferenceContextValue = {
   reducedMotion: boolean;

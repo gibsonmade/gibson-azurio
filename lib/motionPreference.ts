@@ -1,6 +1,6 @@
 "use client";
 
-import { safeLocalGet, safeLocalSet } from "@/lib/template/safeStorage";
+import { safeLocalGet, safeLocalSet } from "@/lib/safeStorage";
 
 export const MOTION_STORAGE_KEY = "template.motion";
 

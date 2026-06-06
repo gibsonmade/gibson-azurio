@@ -1,6 +1,6 @@
 "use client";
 
-import { initVelocityMarqueeRows } from "@/lib/template/stackCardsEffects";
+import { initVelocityMarqueeRows } from "@/lib/stackCardsEffects";
 import Link from "next/link";
 import Image from "next/image";
 import { useLayoutEffect, useRef } from "react";

@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
-import { safeLocalGet, safeLocalSet } from "@/lib/template/safeStorage";
+import { safeLocalGet, safeLocalSet } from "@/lib/safeStorage";
 import TextScramble from "../animations/TextScramble";
 import { CloudSun, Moon } from "pixelarticons/react";
 
