@@ -3,11 +3,11 @@ import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import type { WorkProject } from "@/data/workProjects";
 
-type SplitListProps = {
+type WorkOverviewProps = {
   project?: WorkProject;
 };
 
-export default function SplitList({ project }: SplitListProps) {
+export default function WorkOverview({ project }: WorkOverviewProps) {
   const name = project?.name ?? "Gibsooon";
   const summary =
     project?.summary ??

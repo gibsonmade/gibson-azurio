@@ -3,11 +3,11 @@ import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import { CommonScrollAnimated } from "@/components/animations/CommonScrollAnimated";
 import type { WorkProject } from "@/data/workProjects";
 
-type SplitList2Props = {
+type WorkChallengeProps = {
   project?: WorkProject;
 };
 
-export default function SplitList2({ project }: SplitList2Props) {
+export default function WorkChallenge({ project }: WorkChallengeProps) {
   const services = project?.services.slice(0, 3) ?? [];
   const serviceDetails = project?.serviceDetails ?? [];
 
