@@ -1,10 +1,13 @@
+import dynamic from "next/dynamic";
 import { Metadata } from "next";
 import Footer from "@/components/footers/Footer";
+import GibsonHero from "@/components/about/InnerHeadline";
 import { siteCopy } from "@/data/siteCopy";
 
-import { AboutImageStrip } from "@/components/about/AboutVisualBreaks";
-import GibsonHero from "@/components/about/InnerHeadline";
-import Resume from "@/components/about/Resume";
+const Resume = dynamic(() => import("@/components/about/Resume"));
+const AboutImageStrip = dynamic(() =>
+  import("@/components/about/AboutVisualBreaks").then((m) => ({ default: m.AboutImageStrip }))
+);
 
 export const metadata: Metadata = {
   title: siteCopy.about.metadataTitle,

@@ -1,12 +1,14 @@
+import dynamic from "next/dynamic";
 import Footer from "@/components/footers/Footer";
 import { Metadata } from "next";
 import Hero from "@/components/home/Hero";
-import ParallaxDividerVideo from "@/components/home/ParallaxDividerVideo";
-import About from "@/components/home/About";
-import ProjectsMarquee from "@/components/home/ProjectsMarquee";
-import ServicesDescriptionStack from "@/components/services/ServicesDescriptionStack";
-import CTAWithMarquee from "@/components/home/CTAWithMarquee";
 import { siteCopy } from "@/data/siteCopy";
+
+const ParallaxDividerVideo = dynamic(() => import("@/components/home/ParallaxDividerVideo"));
+const About = dynamic(() => import("@/components/home/About"));
+const ProjectsMarquee = dynamic(() => import("@/components/home/ProjectsMarquee"));
+const ServicesDescriptionStack = dynamic(() => import("@/components/services/ServicesDescriptionStack"));
+const CTAWithMarquee = dynamic(() => import("@/components/home/CTAWithMarquee"));
 
 export const metadata: Metadata = {
   title: siteCopy.seo.title,

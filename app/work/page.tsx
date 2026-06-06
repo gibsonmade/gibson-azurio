@@ -1,9 +1,11 @@
+import dynamic from "next/dynamic";
 import { Metadata } from "next";
 import InnerHeadline from "@/components/works/InnerHeadline";
-import ProjectsGridStickyShowcase from "@/components/works/ProjectsGridStickyShowcase";
-import CTAWithMarquee from "@/components/works/CTAWithMarquee";
 import Footer from "@/components/footers/Footer";
 import { siteCopy } from "@/data/siteCopy";
+
+const ProjectsGridStickyShowcase = dynamic(() => import("@/components/works/ProjectsGridStickyShowcase"));
+const CTAWithMarquee = dynamic(() => import("@/components/works/CTAWithMarquee"));
 
 export const metadata: Metadata = {
   title: `Work | ${siteCopy.brand.site}`,

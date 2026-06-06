@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import {
   getNextWorkProject,
   getWorkProject,
@@ -8,14 +9,15 @@ import { notFound } from "next/navigation";
 import Footer from "@/components/footers/Footer";
 import InnerHeadline from "@/components/work/InnerHeadline";
 import ParallaxDividerImage from "@/components/work/ParallaxDividerImage";
-import WorkOverview from "@/components/work/WorkOverview";
-import ImagesGrid from "@/components/work/ImagesGrid";
-import WorkChallenge from "@/components/work/WorkChallenge";
-import ImagesGrid2 from "@/components/work/ImagesGrid2";
-import WorkSolution from "@/components/work/WorkSolution";
-import ParallaxDividerImage2 from "@/components/work/ParallaxDividerImage2";
-import NextProjectLink from "@/components/work/NextProjectLink";
-import CTAWithMarquee from "@/components/work/CTAWithMarquee";
+
+const WorkOverview = dynamic(() => import("@/components/work/WorkOverview"));
+const ImagesGrid = dynamic(() => import("@/components/work/ImagesGrid"));
+const WorkChallenge = dynamic(() => import("@/components/work/WorkChallenge"));
+const ImagesGrid2 = dynamic(() => import("@/components/work/ImagesGrid2"));
+const WorkSolution = dynamic(() => import("@/components/work/WorkSolution"));
+const ParallaxDividerImage2 = dynamic(() => import("@/components/work/ParallaxDividerImage2"));
+const NextProjectLink = dynamic(() => import("@/components/work/NextProjectLink"));
+const CTAWithMarquee = dynamic(() => import("@/components/work/CTAWithMarquee"));
 
 type WorkProjectRouteProps = {
   params: Promise<{ slug: string }>;
