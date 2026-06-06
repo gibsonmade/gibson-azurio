@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import InnerHeadlineArticle from "@/components/blogs/blog-creative/InnerHeadlineArticle";
-import BlogGrid from "@/components/blogs/blog-creative/BlogGrid";
-import CTA from "@/components/blogs/blog-creative/CTA";
+import InnerHeadlineArticle from "@/components/lab/InnerHeadlineArticle";
+import BlogGrid from "@/components/lab/BlogGrid";
+import CTA from "@/components/lab/CTA";
 import { siteCopy } from "@/data/siteCopy";
 
 export const metadata: Metadata = {

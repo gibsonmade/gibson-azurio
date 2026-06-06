@@ -5,7 +5,7 @@ import Link from "next/link";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
 import CommonLoadAnimation, { CommonLoadFade } from "@/components/animations/CommonLoadAnimation";
 import TextScramble from "@/components/animations/TextScramble";
-import ContactForm from "@/components/other-pages/contact/ContactForm";
+import ContactForm from "@/components/contact/ContactForm";
 import { siteCopy } from "@/data/siteCopy";
 export default function InnerHeadline() {
   const { contact } = siteCopy;

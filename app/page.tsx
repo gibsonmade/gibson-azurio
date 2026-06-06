@@ -1,11 +1,11 @@
 import Footer from "@/components/footers/Footer";
 import { Metadata } from "next";
-import Hero from "@/components/homes/index-creative-agency/Hero";
-import ParallaxDividerVideo from "@/components/homes/index-creative-agency/ParallaxDividerVideo";
-import About from "@/components/homes/index-creative-agency/About";
-import ProjectsMarquee from "@/components/homes/index-creative-agency/ProjectsMarquee";
-import ServicesDescriptionStack from "@/components/other-pages/services/ServicesDescriptionStack";
-import CTAWithMarquee from "@/components/homes/index-creative-agency/CTAWithMarquee";
+import Hero from "@/components/home/Hero";
+import ParallaxDividerVideo from "@/components/home/ParallaxDividerVideo";
+import About from "@/components/home/About";
+import ProjectsMarquee from "@/components/home/ProjectsMarquee";
+import ServicesDescriptionStack from "@/components/services/ServicesDescriptionStack";
+import CTAWithMarquee from "@/components/home/CTAWithMarquee";
 import { siteCopy } from "@/data/siteCopy";
 
 export const metadata: Metadata = {

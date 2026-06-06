@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import InnerHeadline from "@/components/projects/works-grid-sticky/InnerHeadline";
-import ProjectsGridStickyShowcase from "@/components/projects/works-grid-sticky/ProjectsGridStickyShowcase";
-import CTAWithMarquee from "@/components/projects/works-grid-sticky/CTAWithMarquee";
+import InnerHeadline from "@/components/works/InnerHeadline";
+import ProjectsGridStickyShowcase from "@/components/works/ProjectsGridStickyShowcase";
+import CTAWithMarquee from "@/components/works/CTAWithMarquee";
 import Footer from "@/components/footers/Footer";
 import { siteCopy } from "@/data/siteCopy";
 

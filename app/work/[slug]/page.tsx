@@ -6,16 +6,16 @@ import {
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Footer from "@/components/footers/Footer";
-import InnerHeadline from "@/components/projects/project-details/InnerHeadline";
-import ParallaxDividerImage from "@/components/projects/project-details/ParallaxDividerImage";
-import SplitList from "@/components/projects/project-details/SplitList";
-import ImagesGrid from "@/components/projects/project-details/ImagesGrid";
-import SplitList2 from "@/components/projects/project-details/SplitList2";
-import ImagesGrid2 from "@/components/projects/project-details/ImagesGrid2";
-import SplitList3 from "@/components/projects/project-details/SplitList3";
-import ParallaxDividerImage2 from "@/components/projects/project-details/ParallaxDividerImage2";
-import NextProjectLink from "@/components/projects/project-details/NextProjectLink";
-import CTAWithMarquee from "@/components/projects/project-details/CTAWithMarquee";
+import InnerHeadline from "@/components/work/InnerHeadline";
+import ParallaxDividerImage from "@/components/work/ParallaxDividerImage";
+import SplitList from "@/components/work/SplitList";
+import ImagesGrid from "@/components/work/ImagesGrid";
+import SplitList2 from "@/components/work/SplitList2";
+import ImagesGrid2 from "@/components/work/ImagesGrid2";
+import SplitList3 from "@/components/work/SplitList3";
+import ParallaxDividerImage2 from "@/components/work/ParallaxDividerImage2";
+import NextProjectLink from "@/components/work/NextProjectLink";
+import CTAWithMarquee from "@/components/work/CTAWithMarquee";
 
 type WorkProjectRouteProps = {
   params: Promise<{ slug: string }>;

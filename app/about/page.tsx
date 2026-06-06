@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import Footer from "@/components/footers/Footer";
 import { siteCopy } from "@/data/siteCopy";
 
-import { AboutImageStrip } from "@/components/other-pages/about-me/AboutVisualBreaks";
-import GibsonHero from "@/components/other-pages/about-me/InnerHeadline";
-import Resume from "@/components/other-pages/about-me/Resume";
+import { AboutImageStrip } from "@/components/about/AboutVisualBreaks";
+import GibsonHero from "@/components/about/InnerHeadline";
+import Resume from "@/components/about/Resume";
 
 export const metadata: Metadata = {
   title: siteCopy.about.metadataTitle,

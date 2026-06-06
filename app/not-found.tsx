@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import NotFound from "@/components/other-pages/404/NotFound";
+import NotFound from "@/components/not-found/NotFound";
 import Footer from "@/components/footers/Footer";
 export const metadata: Metadata = {
   title: "404 | Gibsooon",

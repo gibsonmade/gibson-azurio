@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import BlogArticle from "@/components/blogs/blog-article/BlogArticle";
-import MoreOnTopic from "@/components/blogs/blog-article/MoreOnTopic";
+import BlogArticle from "@/components/lab/BlogArticle";
+import MoreOnTopic from "@/components/lab/MoreOnTopic";
 import {
   getAdjacentLabArticles,
   getLabArticle,
