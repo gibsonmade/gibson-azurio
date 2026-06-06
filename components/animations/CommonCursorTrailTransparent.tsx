@@ -5,9 +5,10 @@ import Image, { type ImageProps } from "next/image";
 import {
   createContext,
   useContext,
-  useLayoutEffect,
+  useEffect,
   useMemo,
   useRef,
+  useState,
   type ComponentPropsWithoutRef,
   type ElementType,
   type ReactNode,
@@ -42,6 +43,7 @@ type TrailContextValue = {
   registerWrapper: (el: HTMLElement | null) => void;
   registerContent: (el: HTMLElement | null) => void;
   registerImage: (index: number) => (el: HTMLImageElement | null) => void;
+  imagesActive: boolean;
 };
 
 const TrailContext = createContext<TrailContextValue | null>(null);
@@ -83,6 +85,7 @@ export default function CommonCursorTrailTransparent<
   const contentRef = useRef<HTMLElement | null>(null);
   const imageRefs = useRef<HTMLImageElement[]>([]);
   const reducedMotion = useReducedMotionMode();
+  const [imagesActive, setImagesActive] = useState(false);
 
   const registerWrapper = useMemo(
     () => (el: HTMLElement | null) => {
@@ -106,7 +109,21 @@ export default function CommonCursorTrailTransparent<
     [],
   );
 
-  useLayoutEffect(() => {
+  // Phase 1: activate images on first pointer interaction (deferred from initial load)
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section || reducedMotion || !active) return;
+    const activate = () => setImagesActive(true);
+    section.addEventListener("pointermove", activate, { once: true });
+    section.addEventListener("pointerdown", activate, { once: true });
+    return () => {
+      section.removeEventListener("pointermove", activate);
+      section.removeEventListener("pointerdown", activate);
+    };
+  }, [active, reducedMotion]);
+
+  // Phase 2: set up animation once images are in the DOM
+  useEffect(() => {
     const section = sectionRef.current;
     const wrapper = wrapperRef.current;
     const images = imageRefs.current.filter(Boolean);
@@ -296,11 +313,11 @@ export default function CommonCursorTrailTransparent<
       if (rafId) window.cancelAnimationFrame(rafId);
       images.forEach((img) => gsap.killTweensOf(img));
     };
-  }, [active, reducedMotion, threshold]);
+  }, [active, imagesActive, reducedMotion, threshold]);
 
   return (
     <TrailContext.Provider
-      value={{ registerWrapper, registerContent, registerImage }}
+      value={{ registerWrapper, registerContent, registerImage, imagesActive }}
     >
       <Tag className={className} {...rest} ref={sectionRef}>
         {children}
@@ -356,7 +373,7 @@ export function CommonCursorTrailContent<T extends ElementType = "div">({
       {...rest}
       ref={mergeRefs((rest as { ref?: Ref<HTMLElement> }).ref, context.registerContent)}
     >
-      {children}
+      {context.imagesActive ? children : null}
     </Tag>
   );
 }

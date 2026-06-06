@@ -140,7 +140,6 @@ export default function Nav({
                 src="/logos/gibson-logo-nav.jpg"
                 width={1920}
                 height={1280}
-                priority
               />
             </div>
             <div className="menu-media__blob" aria-hidden="true">
