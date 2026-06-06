@@ -107,6 +107,11 @@ body {
   color: var(--paper);
 }
 
+[color-scheme="light"] .mxd-page-transition {
+  background-color: var(--paper);
+  color: var(--ink);
+}
+
 .mxd-page-transition__content {
   display: flex;
   flex-direction: column;
@@ -2229,7 +2234,12 @@ html[data-motion="reduced"] .magic-sparkle {
 
 .home-simple-cta .mxd-promo__wrap {
   min-height: clamp(28rem, 36vh, 39rem);
+  padding-top: clamp(4rem, 7vw, 9rem);
   padding-bottom: clamp(4rem, 7vw, 9rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-cta-section {
@@ -2282,6 +2292,10 @@ html[data-motion="reduced"] .magic-sparkle {
 .no-touch .mxd-footer-promo__item:hover .mxd-footer-promo__link-title,
 .no-touch .mxd-footer-promo__item:hover .mxd-footer-promo__link-summary {
   color: var(--pink);
+}
+
+.mxd-footer-promo__list {
+  gap: 1.5rem;
 }
 
 .mxd-demo-footer__available {
@@ -3157,7 +3171,7 @@ html[data-motion="reduced"] .home-cta-section .object.object-permanent {
   vertical-align: baseline;
   line-height: var(--gibson-hero-subtitle-row);
   overflow: visible;
-  color: var(--gibson-hero-headline);
+  color: var(--muted);
   mix-blend-mode: difference;
 }
 
@@ -3358,7 +3372,7 @@ html[data-motion="reduced"] .home-cta-section .object.object-permanent {
   }
 
   .mxd-hero-special {
-    background-size: 28px 28px;
+    background-size: 28px 28px, auto;
   }
 
   .mxd-hero-05__bottom {
@@ -3381,6 +3395,12 @@ html[data-motion="reduced"] .home-cta-section .object.object-permanent {
     letter-spacing: 0;
     text-transform: uppercase;
     transform: none;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .mxd-hero-special {
+    overflow-x: hidden;
   }
 
   .hero-05-dataline__controls {
@@ -3626,11 +3646,17 @@ html[data-motion="reduced"] .home-cta-section .object.object-permanent {
 }
 
 @media only screen and (max-width: 767px) {
+  .mxd-hero-special {
+    min-height: 100svh;
+  }
+
+  .home-divider-reveal {
+    height: 200svh;
+  }
+
   .mxd-hero-05 {
-    height: 55vh;
-    height: 55svh;
-    min-height: 55vh;
-    min-height: 55svh;
+    height: calc(100svh - 6.6rem);
+    min-height: calc(100svh - 6.6rem);
     max-height: none;
   }
 
@@ -3832,4 +3858,487 @@ html[data-motion="reduced"] .btn-link {
 .mxd-divider__image.divider-image-11,
 .mxd-divider__image.divider-image-14 {
   background-image: none;
+}
+
+/* ---- Inner page: reduce top padding for all inner headline variants ---- */
+.inner-headline__content.has-large-title {
+  padding-top: 8rem;
+}
+@media only screen and (min-width: 768px) {
+  .inner-headline__content.has-large-title {
+    padding-top: 9rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .inner-headline__content.has-large-title {
+    padding-top: 8rem;
+  }
+}
+
+/* ---- Inner pages: reduce h1 size ---- */
+.inner-headline__title h1.large,
+.inner-headline__title h1.large * {
+  font-size: clamp(4rem, 9vw, 7.5rem);
+  white-space: nowrap;
+}
+@media only screen and (min-width: 768px) {
+  .inner-headline__title h1.large,
+  .inner-headline__title h1.large * {
+    font-size: 7rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .inner-headline__title h1.large,
+  .inner-headline__title h1.large * {
+    font-size: 8.5rem;
+  }
+}
+.inner-headline__title h1.medium,
+.inner-headline__title h1.medium * {
+  font-size: 4.5rem;
+  white-space: nowrap;
+}
+@media only screen and (min-width: 768px) {
+  .inner-headline__title h1.medium,
+  .inner-headline__title h1.medium * {
+    font-size: 6rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .inner-headline__title h1.medium,
+  .inner-headline__title h1.medium * {
+    font-size: 7rem;
+  }
+}
+
+.inner-headline__title h1.small,
+.inner-headline__title h1.small * {
+  font-size: 3.5rem;
+}
+@media only screen and (min-width: 768px) {
+  .inner-headline__title h1.small,
+  .inner-headline__title h1.small * {
+    font-size: 5rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .inner-headline__title h1.small,
+  .inner-headline__title h1.small * {
+    font-size: 6rem;
+  }
+}
+
+/* ---- About page: bio text sizing ---- */
+.about-intro-bio .about-bio-text,
+.about-intro-bio .about-bio-text * {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0;
+  color: var(--t-medium);
+}
+@media only screen and (min-width: 768px) {
+  .about-intro-bio .about-bio-text,
+  .about-intro-bio .about-bio-text * {
+    font-size: 1.7rem;
+  }
+}
+
+/* ---- About page: tags column aligns alongside bio on tablet+ ---- */
+@media only screen and (min-width: 768px) {
+  .inner-headline__tags.align-end-desktop {
+    padding-top: 0;
+  }
+}
+
+/* ---- About proof strip: align all items to bottom, remove first-child lift ---- */
+@media only screen and (min-width: 1200px) {
+  .about-proof-strip__item:first-child {
+    transform: none;
+  }
+  .about-proof-strip__item:first-child .about-proof-strip__image {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* ---- Testimonials: smaller, more compact cards ---- */
+.about-testimonials .mxd-testimonials-card__quote {
+  width: 5rem;
+}
+@media only screen and (min-width: 768px) {
+  .about-testimonials .mxd-testimonials-card__quote {
+    width: 6rem;
+  }
+}
+.about-testimonials .mxd-testimonials-card__descr {
+  font-size: 1.8rem;
+  letter-spacing: -0.04rem;
+}
+@media only screen and (min-width: 768px) {
+  .about-testimonials .mxd-testimonials-card__descr {
+    font-size: 2rem;
+  }
+}
+.mxd-testimonials-card__name {
+  font-size: 1.4rem;
+}
+.about-testimonials .mxd-testimonials-card__author {
+  margin-top: 2rem;
+}
+
+/* ---- Resume: work history clickable rows with image + split year/company ---- */
+.split-data__item--link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity var(--_animspeed-fast);
+}
+.no-touch .split-data__item--link:hover {
+  opacity: 0.72;
+}
+.split-data__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.6rem;
+  padding: 1.4rem 0;
+}
+.split-data__thumb {
+  flex: 0 0 7rem;
+  width: 7rem;
+  height: 4.8rem;
+  overflow: hidden;
+  border-radius: 0.4rem;
+}
+.split-data__thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.split-data__body {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.split-data__year {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.04rem;
+  text-transform: uppercase;
+  color: var(--t-muted);
+  margin-bottom: 0.3rem;
+}
+.split-data__company {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--t-bright);
+  margin-bottom: 0.4rem;
+}
+
+/* ---- Works page: project item block link + background + wrapping tags ---- */
+.work-page .mxd-project-item {
+  position: relative;
+}
+.mxd-project-item__cover-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+}
+.work-page .mxd-project-item__media {
+  position: relative;
+  z-index: 2;
+}
+.work-page .mxd-project-item__caption {
+  position: relative;
+  z-index: 2;
+}
+.work-page .mxd-project-item__tags {
+  flex-wrap: wrap;
+}
+.work-page .mxd-projects-grid__gallery {
+  padding-right: 0;
+}
+
+/* ---- Contact form: polished inputs with borders and proper spacing ---- */
+.contact-page .contact-form .mxd-grid-item {
+  padding: 0 0.6rem;
+  margin-bottom: 1.6rem;
+}
+.contact-page .contact-form .mxd-grid-item:last-of-type {
+  margin-bottom: 0;
+}
+.contact-page .mxd-form-container {
+  padding: 0 0.6rem;
+}
+.contact-page .contact-form input,
+.contact-page .contact-form textarea {
+  border: 1.5px solid rgba(var(--ink-rgb), 0.18);
+  border-radius: 0.8rem;
+  padding: 1.4rem 1.6rem;
+  height: auto;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  background-color: var(--paper);
+  color: var(--ink);
+  transition: border-color 0.2s ease;
+}
+.contact-page .contact-form input:focus,
+.contact-page .contact-form textarea:focus {
+  border-color: rgba(var(--ink-rgb), 0.5);
+}
+.contact-page .contact-form textarea {
+  height: 14rem;
+  resize: none;
+}
+[color-scheme="dark"] .contact-page .contact-form input,
+[color-scheme="dark"] .contact-page .contact-form textarea {
+  border-color: rgba(var(--paper-rgb), 0.18);
+  background-color: rgba(var(--paper-rgb), 0.06);
+  color: var(--paper);
+}
+[color-scheme="dark"] .contact-page .contact-form input:focus,
+[color-scheme="dark"] .contact-page .contact-form textarea:focus {
+  border-color: rgba(var(--paper-rgb), 0.5);
+}
+@media only screen and (min-width: 768px) {
+  .contact-page .contact-form textarea {
+    height: 18rem;
+  }
+}
+
+/* ---- Works page h1: hide col-xl-3 area since tags removed ---- */
+.work-page .inner-headline__content .col-xl-9 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* ---- TechStackList: full-width grid layout ---- */
+.mxd-tech-stack {
+  width: 100%;
+}
+
+/* ---- About page: reduce space between intro and process section ---- */
+#process.mxd-section.padding-top-manifest-m,
+#process.mxd-section {
+  padding-top: 4rem;
+}
+@media only screen and (min-width: 768px) {
+  #process.mxd-section.padding-top-manifest-m,
+  #process.mxd-section {
+    padding-top: 5rem;
+  }
+}
+
+/* ---- Work history: tighter rows, no mxd-grid-item side padding, hover bg ---- */
+.split-data__row {
+  padding: 0.8rem 0;
+}
+.no-touch .split-data__item--link:hover {
+  opacity: 1;
+  background-color: rgba(var(--ink-rgb), 0.04);
+}
+[color-scheme="dark"] .no-touch .split-data__item--link:hover {
+  background-color: rgba(var(--paper-rgb), 0.06);
+}
+.split-data__item--link {
+  padding: 0 0.8rem;
+  border-radius: 0.4rem;
+  margin: 0 -0.8rem;
+  transition: background-color 0.18s ease;
+}
+
+/* ---- TechStackList: header left-aligned, smaller ---- */
+.mxd-tech-stack__header {
+  margin-bottom: 2.4rem;
+}
+.mxd-tech-stack__header h2,
+.mxd-tech-stack__header h2 .line {
+  font-size: 2rem;
+  letter-spacing: -0.03rem;
+  text-align: left;
+}
+@media only screen and (min-width: 768px) {
+  .mxd-tech-stack__header h2,
+  .mxd-tech-stack__header h2 .line {
+    font-size: 2.4rem;
+  }
+}
+
+/* ---- TechStackList: compact items ---- */
+.mxd-tech-stack__col .mxd-tech-stack__item {
+  padding: 1.4rem 0.4rem;
+  gap: 1.2rem;
+}
+.mxd-tech-stack__col .mxd-tech-stack__logo {
+  width: 3.6rem;
+  height: 3.6rem;
+  flex-shrink: 0;
+}
+.mxd-tech-stack__col .mxd-tech-stack__name p {
+  font-size: 1.4rem;
+}
+@media only screen and (min-width: 768px) {
+  .mxd-tech-stack__col .mxd-tech-stack__name p {
+    font-size: 1.5rem;
+  }
+}
+
+/* ---- Testimonials: compact cards, space below, carousel on mobile/tablet ---- */
+.about-testimonials {
+  padding-top: 4rem;
+  padding-bottom: 10rem;
+}
+@media only screen and (min-width: 768px) {
+  .about-testimonials {
+    padding-top: 5rem;
+    padding-bottom: 12rem;
+  }
+}
+.about-testimonials .mxd-block {
+  overflow: hidden;
+}
+@media only screen and (max-width: 1199px) {
+  .about-testimonials__grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.6rem;
+    padding-bottom: 2rem;
+    margin-right: -2rem;
+    padding-right: 2rem;
+  }
+  .about-testimonials__card {
+    flex: 0 0 80vw;
+    max-width: 38rem;
+    scroll-snap-align: start;
+  }
+}
+
+/* ---- About hero: flush bottom ---- */
+.about-hero-section {
+  padding-bottom: 0 !important;
+}
+
+/* ---- Resume: flush top ---- */
+.about-resume-section {
+  padding-top: 0 !important;
+}
+
+/* ---- Image strip (proof points): carousel on mobile ---- */
+@media only screen and (max-width: 767px) {
+  .about-proof-strip {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1.2rem;
+    padding-bottom: 1.2rem;
+    margin-right: -2rem;
+    padding-right: 2rem;
+  }
+  .about-proof-strip__item {
+    flex: 0 0 75vw;
+    max-width: 28rem;
+    scroll-snap-align: start;
+  }
+}
+
+/* ---- Nav: move padding from li to toggle so the full row is the click target ---- */
+.main-menu__item {
+  padding: 0;
+}
+.main-menu__toggle {
+  padding: 2.2rem 0 2.9rem;
+}
+@media only screen and (min-width: 1600px) {
+  .main-menu__toggle {
+    padding: 2.7rem 0 3.4rem;
+  }
+}
+
+/* ---- Tablet (768–1199px): match desktop layout for hero, intro card, services cards ---- */
+@media only screen and (min-width: 768px) and (max-width: 1199px) {
+  /* Hero: desktop font sizes + full-viewport height */
+  .mxd-hero-special {
+    --gibson-hero-title-size: clamp(12.8rem, 13vw, 16rem);
+    --gibson-hero-subtitle-size: clamp(5.6rem, 5.4vw, 7.4rem);
+    --gibson-hero-subtitle-row: calc(var(--gibson-hero-subtitle-size) * 1.12);
+    height: calc(100vh - 6rem);
+    min-height: 0;
+  }
+  .mxd-hero-05 {
+    height: 100%;
+  }
+  .mxd-hero-05__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    padding: 0 6rem;
+    padding-bottom: 0;
+    margin-bottom: 3.7rem;
+  }
+  .mxd-hero-05__dataline {
+    height: 100%;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .hero-05-dataline__socials {
+    margin-bottom: 0;
+  }
+  .hero-05-dataline__caption {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    height: 3rem;
+    margin-bottom: 0;
+  }
+
+  /* Intro card "I turn ideas": match desktop title size */
+  .card__title {
+    max-width: 400px;
+  }
+  .card__title p {
+    font-size: 5rem;
+  }
+  .card__title p.small {
+    font-size: 4.4rem;
+  }
+
+  /* Services cards: desktop row layout + desktop font size */
+  .services-card__wrapper {
+    flex-direction: row;
+    gap: 6rem;
+  }
+  .services-card__content {
+    flex: 1 1 0;
+    justify-content: space-between;
+  }
+  .services-card__title {
+    margin-bottom: 4.2rem;
+  }
+  .services-card__title p,
+  .services-card__title .services-card__title-text {
+    font-size: 7.5rem;
+    letter-spacing: -0.3rem;
+  }
+  .home-services-section .services-card__image {
+    align-self: flex-start;
+    flex: 1 1 0;
+    height: 50%;
+    max-height: 50%;
+    min-height: 0;
+    margin-top: clamp(3.8rem, 2.8vw, 4.8rem);
+    margin-bottom: 0;
+  }
 }
