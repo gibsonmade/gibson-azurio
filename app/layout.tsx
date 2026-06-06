@@ -42,6 +42,33 @@ export const metadata: Metadata = {
   },
 };
 
+// eslint-disable-next-line no-useless-escape
+const UNICORN = String.raw`<!--
+
+                                     /\
+                                    /  \\
+                                   /    \\
+                                  /      \\
+                                 /  /\    \\
+                                /  /  \    \\
+                       /\      /  /    \    \\
+                      /  \____/  /      \____\\
+                     /                                \\
+                    /     __                 __        \\
+                   /     /  \               /  \        \\
+                  /      \__/      ___      \__/         \\
+                 /                 \_/                    \\
+                /                                            >
+               /       _____________________________         >
+              /_______/                             \_______>
+
+                    BUILT BY GIBSON HALL
+                    If you're reading the source,
+                    you're already qualified to hire me.
+                    gibsooon.com
+
+-->`;
+
 // Runs synchronously before React hydrates so the loader never shows the wrong theme.
 const themeInitScript = `
 (function() {
@@ -85,6 +112,8 @@ export default function RootLayout({
       <body
         className={`${geist.variable} ${jetbrainsMono.variable} app-font-vars`}
       >
+        {/* eslint-disable-next-line react/no-danger */}
+        <div dangerouslySetInnerHTML={{ __html: UNICORN }} />
         <Script
           id="theme-init"
           strategy="beforeInteractive"
